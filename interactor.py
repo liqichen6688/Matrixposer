@@ -31,6 +31,7 @@ class Column_wise_nn(nn.Module):
 
         return torch.t(output)
 
+
 class Row_wise_nn(nn.Module):
     def __init__(self, d_column, d_ff, out_row, dropout=None):
         super(Row_wise_nn, self).__init__()
@@ -49,8 +50,6 @@ class Row_wise_nn(nn.Module):
             output = self.dropout(output)
 
         return output
-
-
 
 
 class Interactor(nn.Module):

@@ -69,7 +69,7 @@ class Dataset(object):
             x.text for x in NLP.tokenizer(sent) if x.text != " ")
 
         # Creating Filed for data
-        TEXT = data.Field(tokenize=tokenizer, lower=True)
+        TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=self.config.max_sen_len)
         LABEL = data.Field(sequential=False, use_vocab=False)
         datafields = [("text", TEXT), ("label", LABEL)]
 
