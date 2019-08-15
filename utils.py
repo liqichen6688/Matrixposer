@@ -97,20 +97,21 @@ class Dataset(object):
         else:
             train_data, val_data = train_data.split(split_ratio=0.8)
 
-        TEXT.build_vocab(train_data, vectors=Vectors(w2v_file))
-        self.word_embeddings = TEXT.vocab.vectors
+        TEXT.build_vocab(train_data)
         self.vocab = TEXT.vocab
 
         self.train_iterator = data.BucketIterator(
             (train_data),
             batch_size=self.config.batch_size,
-            repeat=None,
+            sort_key=lambda x: len(x.text),
+            repeat=False,
             shuffle=True
         )
 
         self.val_iterator, self.test_iterator = data.BucketIterator.splits(
             (val_data, test_data),
             batch_size=self.config.batch_size,
+            sort_key=lambda x: len(x.text),
             repeat=False,
             shuffle=False
         )
