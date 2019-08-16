@@ -51,7 +51,7 @@ class Dataset(object):
         full_df = pd.DataFrame({"text": data_text, "label": data_label})
         return full_df
 
-    def load_data(self, w2v_file, train_file, test_file, val_file=None):
+    def load_data(self, train_file, test_file, val_file=None):
         '''
         Loads the data from files
         Sets up iterators for training, validation and test data

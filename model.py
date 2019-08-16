@@ -86,10 +86,3 @@ class Matposer(nn.Module):
                 self.train()
 
         return train_losses, val_accuracies
-
-
-
-
-
-
-
