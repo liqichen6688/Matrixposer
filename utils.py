@@ -36,7 +36,7 @@ class Dataset(object):
                 'type of label should be str. The type of label was {}'.format(
                     type(label)))
 
-        return int(label.strip()[-1]) - 1
+        return int(label.strip()[-1])
 
     def get_pandas_df(self, filename):
         '''
