@@ -3,7 +3,7 @@ class Config(object):
     d_model = 256
     d_ff = 512
     d_row = 60
-    dropout = 0.1
+    dropout = 0.5
     output_size = 4
     lr = 0.0003
     max_epochs = 35
