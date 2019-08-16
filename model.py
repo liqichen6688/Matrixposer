@@ -5,7 +5,6 @@ from train_utils import Embeddings, PositionalEncoding
 from interactor import Interactor
 from encoder import EncoderLayer, Encoder
 from feed_forward import PositionwiseFeedForward
-import numpy as np
 from utils import *
 
 class Matposer(nn.Module):
