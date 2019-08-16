@@ -24,9 +24,13 @@ class SublayerOutput(nn.Module):
 
     def __init__(self, size, dropout):
         super(SublayerOutput, self).__init__()
+        self.size = size
         self.norm = LayerNorm(size)
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x, sublayer):
         "Apply residual connection to any sublayer with the same size."
-        return x + self.dropout(sublayer(self.norm(x)))
+        if x.size(-1) == self.size:
+            return x + self.dropout(sublayer(self.norm(x)))
+        else:
+            return x + self.dropout(sublayer(self.norm(x.permute(0,2,1)).permute(0,2,1)))
