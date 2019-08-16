@@ -7,6 +7,5 @@ class Config(object):
     output_size = 4
     lr = 0.00001
     max_epochs = 35
-    lr = 0.001
     batch_size = 128
     max_sen_len = 60

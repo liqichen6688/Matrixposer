@@ -24,8 +24,9 @@ class Column_wise_nn(nn.Module):
     def forward(self, x):
         x = x.permute(0,2,1)
         d_k = x.size(-1)
+        #output = self.w_2(self.dropout(F.relu(self.w_1(x)))) / math.sqrt(d_k)
+        #output = F.softmax(output, dim=-1)
         output = self.w_2(self.dropout(F.relu(self.w_1(x)))) / math.sqrt(d_k)
-        output = F.softmax(output, dim=-1)
         if self.dropout is not None:
             output = self.dropout(output)
 
