@@ -7,6 +7,7 @@ from torch import nn
 import torch
 
 if __name__=='__main__':
+    torch.cuda.empty_cache()
     config = Config
     train_file = '../data/ag_news.train'
     if len(sys.argv) > 2:
