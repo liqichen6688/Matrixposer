@@ -23,7 +23,7 @@ if __name__=='__main__':
         model.cuda()
     model.train()
     optimizer = optim.Adam(model.parameters(), lr=config.lr)
-    NLLLoss = nn.NLLLoss
+    NLLLoss = nn.NLLLoss()
     model.add_optimizer(optimizer)
     model.add_loss_op(NLLLoss)
 

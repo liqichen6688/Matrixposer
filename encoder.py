@@ -29,10 +29,10 @@ class EncoderLayer(nn.Module):
         super(EncoderLayer, self).__init__()
         self.interactor = interactor
         self.feed_forward = feed_forward
-        self.sublayer_output = clones(SublayerOutput(size, dropout), 2)
+        self.sublayer = SublayerOutput(size, dropout)
         self.size = size
 
-    def forward(self, x, ):
+    def forward(self, x):
         "Matposer Encoder"
-        x = self.sublayer_output[0](x, self.interactor)
-        return self.sublayer_output[1](x, self.feed_forward)
+        x = self.interactor(x)
+        return self.sublayer(x, self.feed_forward)
