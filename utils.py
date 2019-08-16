@@ -76,8 +76,7 @@ class Dataset(object):
         # Load data from pd.DataFrame into torchtext.data.Dataset
         train_df = self.get_pandas_df(train_file)
         train_examples = [
-            data.Example.fromlist(
-                i, datafields) for i in train_df.values.tolist()]
+            data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
         train_data = data.Dataset(train_examples, datafields)
 
         test_df = self.get_pandas_df(test_file)
