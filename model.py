@@ -69,8 +69,9 @@ class Matposer(nn.Module):
         losses = []
 
         # Reduce learning rate as number of epochs increase
-        if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
-            self.reduce_lr()
+        if self.config.learning_method == 'reduce':
+            if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
+                self.reduce_lr()
 
         for i, batch in enumerate(train_iterator):
             if self.config.learning_method == 'trian':
