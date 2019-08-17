@@ -5,7 +5,7 @@ class Config(object):
     d_row = 60
     dropout = 0.1
     output_size = 4
-    lr = 0.01
+    lr = 0.0005
     max_epochs = 35
     batch_size = 32
     max_sen_len = 30
