@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -323,7 +322,7 @@
       <workItem from="1565833294000" duration="23000" />
       <workItem from="1565833327787" duration="172000" />
       <workItem from="1565833600742" duration="20625000" />
-      <workItem from="1565923075470" duration="19336000" />
+      <workItem from="1565923075470" duration="19428000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1565833843347</created>
@@ -654,11 +653,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566010789781</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60">
+      <created>1566011045747</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1566011045747</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42807000" />
+    <option name="totallyTimeSpent" value="42899000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
