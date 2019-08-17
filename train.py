@@ -7,6 +7,8 @@ from torch import nn
 import torch
 
 if __name__=='__main__':
+
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
     config = Config
     train_file = '../data/ag_news.train'
@@ -20,8 +22,10 @@ if __name__=='__main__':
     dataset.load_data(train_file, test_file)
 
     model = Matposer(config, len(dataset.vocab))
-    if torch.cuda.is_available():
-        model.cuda()
+    if torch.cuda.device_count() > 1:
+        print("Let's use", torch.cuda.device_count(), "GPUs!")
+        model = nn.DataParallel(model)
+    model.to(device)
     model.train()
     optimizer = optim.Adam(model.parameters(), lr=config.lr)
     NLLLoss = nn.NLLLoss()
