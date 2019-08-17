@@ -30,7 +30,4 @@ class SublayerOutput(nn.Module):
 
     def forward(self, x, sublayer):
         "Apply residual connection to any sublayer with the same size."
-        if x.size(-1) == self.size:
-            return x + self.dropout(sublayer(self.norm(x)))
-        else:
-            return x + self.dropout(sublayer(self.norm(x.permute(0,2,1)).permute(0,2,1)))
+        return x + self.dropout(sublayer(self.norm(x)))
