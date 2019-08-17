@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="" />
+    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -320,35 +322,7 @@
       <workItem from="1565833294000" duration="23000" />
       <workItem from="1565833327787" duration="172000" />
       <workItem from="1565833600742" duration="20625000" />
-      <workItem from="1565923075470" duration="19609000" />
-    </task>
-    <task id="LOCAL-00002" summary="add utils">
-      <created>1565838577052</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1565838577052</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add sublayer">
-      <created>1565840327315</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1565840327315</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add sublayer">
-      <created>1565840355183</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1565840355183</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add sublayer">
-      <created>1565848390776</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1565848390776</updated>
+      <workItem from="1565923075470" duration="19968000" />
     </task>
     <task id="LOCAL-00006" summary="add Interactor">
       <created>1565851886186</created>
@@ -665,11 +639,39 @@
       <option name="project" value="LOCAL" />
       <updated>1566011367040</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60">
+      <created>1566011725364</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1566011725364</updated>
+    </task>
+    <task id="LOCAL-00052" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60">
+      <created>1566011812683</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1566011812683</updated>
+    </task>
+    <task id="LOCAL-00053" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60">
+      <created>1566011908681</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1566011908681</updated>
+    </task>
+    <task id="LOCAL-00054" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60">
+      <created>1566011992179</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1566011992179</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43080000" />
+    <option name="totallyTimeSpent" value="43439000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -865,7 +867,7 @@
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
