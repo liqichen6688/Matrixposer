@@ -9,3 +9,9 @@ class Config(object):
     max_epochs = 50
     batch_size = 64
     max_sen_len = 60
+    # determine lr
+    learning_method = 'trian'
+    # triangle learning
+    cut_frac = 0.1
+    ratio = 32
+    max_lr = 0.01

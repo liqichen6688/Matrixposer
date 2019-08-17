@@ -49,6 +49,20 @@ class Matposer(nn.Module):
         for g in self.optimizer.param_groups:
             g['lr'] = g['lr'] / 2
 
+    def triangle_lr(self, total_iter, epoch, itr):
+        cut = self.config.max_epochs * total_iter * self.config.cut_frac
+        t = itr + epoch * total_iter
+        if t < cut:
+            p = t/cut
+        else:
+            p = 1 - (t - cut)/(cut * (1/self.config.cut_frac - 1))
+        lr = self.config.max_lr * (1 + p * (self.config.ratio - 1))/(self.config.ratio)
+
+        for g in self.optimizer.param_groups:
+            g['lr'] = lr
+
+
+
     def run_epoch(self, train_iterator, val_iterator, epoch):
         train_losses = []
         val_accuracies = []
@@ -59,6 +73,8 @@ class Matposer(nn.Module):
             self.reduce_lr()
 
         for i, batch in enumerate(train_iterator):
+            if self.config.learning_method == 'trian':
+                self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             if torch.cuda.is_available():
                 x = batch.text.cuda()
