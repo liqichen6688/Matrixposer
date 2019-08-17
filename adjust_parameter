@@ -5,3 +5,5 @@ python train.py config4 > log/config4
 python train.py config5 > log/config5
 python train.py config6 > log/config6
 python train.py config7 > log/config7
+
+
