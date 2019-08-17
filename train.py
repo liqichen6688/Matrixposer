@@ -29,15 +29,15 @@ if __name__=='__main__':
     model.train()
     optimizer = optim.Adam(model.parameters(), lr=config.lr)
     NLLLoss = nn.NLLLoss()
-    model.add_optimizer(optimizer)
-    model.add_loss_op(NLLLoss)
+    model.module.add_optimizer(optimizer)
+    model.module.add_loss_op(NLLLoss)
 
     train_losses = []
     val_accuracies = []
 
     for i in range(config.max_epochs):
         print("Epoch: {}".format(i))
-        train_loss, val_accuracy = model.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
+        train_loss, val_accuracy = model.module.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
         train_losses.append(train_loss)
         val_accuracies.append(val_accuracy)
 
