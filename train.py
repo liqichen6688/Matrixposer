@@ -12,11 +12,17 @@ if __name__=='__main__':
     torch.cuda.empty_cache()
     config = Config
     train_file = '../data/ag_news.train'
+    if len(sys.argv) > 1:
+        config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
+        print(sys.argv[1])
     if len(sys.argv) > 2:
-        train_file = sys.argv[1]
+        train_file = sys.argv[2]
     test_file = '../data/ag_news.test'
     if len(sys.argv) > 3:
-        test_file = sys.argv[2]
+        test_file = sys.argv[3]
+
+
+
 
     dataset = Dataset(config)
     dataset.load_data(train_file, test_file)
