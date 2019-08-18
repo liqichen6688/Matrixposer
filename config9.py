@@ -5,7 +5,7 @@ class Config(object):
     d_row = 60
     dropout = 0.1
     output_size = 4
-    lr = 0.005
+    lr = 0.003
     max_epochs = 50
     batch_size = 64
     max_sen_len = 60
@@ -15,9 +15,3 @@ class Config(object):
     cut_frac = 0.1
     ratio = 32
     max_lr = 0.01
-
-'''
-Iter: 1401
-        Average training loss: -0.94945
-        Val Accuracy: 0.9127
-'''

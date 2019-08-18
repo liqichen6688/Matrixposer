@@ -15,3 +15,9 @@ class Config(object):
     cut_frac = 0.1
     ratio = 32
     max_lr = 0.01
+
+'''
+Iter: 2901
+        Average training loss: -0.92257
+        Val Accuracy: 0.9021
+'''
