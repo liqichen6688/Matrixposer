@@ -47,9 +47,9 @@ if __name__=='__main__':
         train_losses.append(train_loss)
         val_accuracies.append(val_accuracy)
 
-    train_acc = evaluate_model(model, dataset.train_iterator)
-    val_acc = evaluate_model(model, dataset.val_iterator)
-    test_acc = evaluate_model(model, dataset.test_iterator)
+    train_acc = evaluate_model(model.module, dataset.train_iterator)
+    val_acc = evaluate_model(model.module, dataset.val_iterator)
+    test_acc = evaluate_model(model.module, dataset.test_iterator)
 
     print('Final Training Accuracy: {:.4f}'.format(train_acc))
     print('Final Validation Accuracy: {:.4f}'.format(val_acc))
