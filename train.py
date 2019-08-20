@@ -1,6 +1,5 @@
-from utils import *
 from model import *
-from config import Config
+from config_log.config import Config
 import sys
 import torch.optim as optim
 from torch import nn
