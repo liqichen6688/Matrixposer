@@ -1,8 +1,6 @@
-python train.py config8 > log/config8
-python train.py config9 > log/config9
-python train.py config10 > log/config10
-python train.py config11 > log/config11
-python train.py config12 > log/config12
+python train.py config13 > log/config13
+python train.py config14 > log/config14
+python train.py config15 > log/config15
 
 
 
