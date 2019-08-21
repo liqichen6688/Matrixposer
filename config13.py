@@ -15,3 +15,9 @@ class Config(object):
     cut_frac = 0.1
     ratio = 32
     max_lr = 0.01
+
+'''
+Final Training Accuracy: 0.9656
+Final Validation Accuracy: 0.9124
+Final Test Accuracy: 0.9066
+'''
