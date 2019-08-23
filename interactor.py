@@ -62,7 +62,10 @@ class ConvPoser(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
-        return self.dropout(F.relu(self.conv1(x)))
+        d_k = x.size(-1)
+        output = self.dropout(F.relu(self.conv1(x))) / math.sqrt(d_k)
+        output = F.softmax(output, dim=-1)
+        return output
 
 class Interactor(nn.Module):
     def __init__(self, d_column, d_ff, out_row=30, dropout=0.1):
