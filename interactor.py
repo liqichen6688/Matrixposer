@@ -47,11 +47,12 @@ class Row_wise_nn(nn.Module):
         else:
             self.dropout = None
 
-    def forward(self, x):
+    def forward(self, x, softmax = False):
         d_k = x.size(-1)
         output = self.w_2(self.dropout(F.relu(self.w_1(x))))
         output = self.w_3(self.dropout(F.relu(output))) / math.sqrt(d_k)
-        output = F.softmax(output, dim=-1)
+        if softmax:
+            output = F.softmax(output, dim=-1)
         if self.dropout is not None:
             output = self.dropout(output)
 
