@@ -21,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interactor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+            <state relative-caret-position="308">
+              <caret line="87" column="54" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -348,28 +348,7 @@
       <workItem from="1565833327787" duration="172000" />
       <workItem from="1565833600742" duration="20625000" />
       <workItem from="1565923075470" duration="29791000" />
-      <workItem from="1566535812077" duration="4871000" />
-    </task>
-    <task id="LOCAL-00027" summary="memory">
-      <created>1565940229768</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1565940229768</updated>
-    </task>
-    <task id="LOCAL-00028" summary="memory">
-      <created>1565943484656</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1565943484656</updated>
-    </task>
-    <task id="LOCAL-00029" summary="d_model = 512 N = 1">
-      <created>1565949286747</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1565949286747</updated>
+      <workItem from="1566535812077" duration="5780000" />
     </task>
     <task id="LOCAL-00030" summary="d_model = 512 N = 1">
       <created>1565949695677</created>
@@ -693,11 +672,32 @@
       <option name="project" value="LOCAL" />
       <updated>1566545371646</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="parameter adjust">
+      <created>1566546622578</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1566546622578</updated>
+    </task>
+    <task id="LOCAL-00077" summary="parameter adjust">
+      <created>1566546824706</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1566546824706</updated>
+    </task>
+    <task id="LOCAL-00078" summary="parameter adjust">
+      <created>1566547112969</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1566547112970</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58133000" />
+    <option name="totallyTimeSpent" value="59042000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1031,8 +1031,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interactor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        <state relative-caret-position="308">
+          <caret line="87" column="54" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
