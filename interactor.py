@@ -61,9 +61,9 @@ class ConvPoser(nn.Module):
     def __init__(self):
         super(ConvPoser, self).__init__()
         self.conv1 = nn.Sequential(
-            nn.Conv1d(in_channels=1, out_channels=6, kernel_size=3, padding=1),
+            nn.Conv2d(in_channels=1, out_channels=6, kernel_size=3, padding=1),
             nn.ReLU(),
-            nn.Conv1d(in_channels=6, out_channels=1, kernel_size=3, padding=1),
+            nn.Conv2d(in_channels=6, out_channels=1, kernel_size=3, padding=1),
             nn.ReLU()
         )
 
