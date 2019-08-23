@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config_conv_v1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_v3_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_v3_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_v3_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_v3_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_v3_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_v3_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interactor.py" beforeDir="false" afterPath="$PROJECT_DIR$/interactor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interactor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+            <state relative-caret-position="336">
+              <caret line="88" column="48" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -186,8 +181,8 @@
         <option value="$PROJECT_DIR$/config_v3_1.py" />
         <option value="$PROJECT_DIR$/config_v3_2.py" />
         <option value="$PROJECT_DIR$/config_v3_3.py" />
-        <option value="$PROJECT_DIR$/interactor.py" />
         <option value="$PROJECT_DIR$/config_conv_v1.py" />
+        <option value="$PROJECT_DIR$/interactor.py" />
       </list>
     </option>
   </component>
@@ -352,21 +347,7 @@
       <workItem from="1565833327787" duration="172000" />
       <workItem from="1565833600742" duration="20625000" />
       <workItem from="1565923075470" duration="29791000" />
-      <workItem from="1566535812077" duration="1904000" />
-    </task>
-    <task id="LOCAL-00020" summary="change column-wise nn">
-      <created>1565935607353</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1565935607353</updated>
-    </task>
-    <task id="LOCAL-00021" summary="change column-wise nn">
-      <created>1565935828770</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1565935828770</updated>
+      <workItem from="1566535812077" duration="2942000" />
     </task>
     <task id="LOCAL-00022" summary="change column-wise nn">
       <created>1565935862473</created>
@@ -697,11 +678,25 @@
       <option name="project" value="LOCAL" />
       <updated>1566356507212</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="parameter adjust">
+      <created>1566540241582</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1566540241583</updated>
+    </task>
+    <task id="LOCAL-00070" summary="parameter adjust">
+      <created>1566543024515</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1566543024515</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55166000" />
+    <option name="totallyTimeSpent" value="56204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -714,9 +709,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="866" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49392712" visible="true" weight="0.17399268" />
-      <window_info id="Structure" order="1" sideWeight="0.5060729" side_tool="true" visible="true" weight="0.17399268" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49330783" visible="true" weight="0.17399268" />
+      <window_info id="Structure" order="1" sideWeight="0.5066922" side_tool="true" visible="true" weight="0.17399268" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -729,8 +725,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.327551" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3617571" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32474226" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3617571" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.3242894" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1034,8 +1030,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interactor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+        <state relative-caret-position="336">
+          <caret line="88" column="48" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
