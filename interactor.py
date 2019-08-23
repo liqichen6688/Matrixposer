@@ -58,7 +58,7 @@ class Row_wise_nn(nn.Module):
 class ConvPoser(nn.Module):
     def __init__(self, dropout):
         super(ConvPoser, self).__init__()
-        nn.Conv2d(in_channels=1, out_channels=1, kernel_size=3, padding=1),
+        self.conv1 = nn.Conv2d(in_channels=1, out_channels=1, kernel_size=3, padding=1),
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
