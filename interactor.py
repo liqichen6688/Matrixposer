@@ -65,6 +65,7 @@ class ConvPoser(nn.Module):
         d_k = x.size(-1)
         output = self.dropout(F.relu(self.conv1(x))) / math.sqrt(d_k)
         output = F.softmax(output, dim=-1)
+        output = self.dropout(output)
         return output
 
 class Interactor(nn.Module):
