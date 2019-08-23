@@ -92,3 +92,4 @@ class Interactor(nn.Module):
         output = self.column_wise_nn(middle_term)
         #output = torch.matmul(middle_term, right_transposer.permute(0,2,1))
         return output
+
