@@ -57,6 +57,18 @@ class Row_wise_nn(nn.Module):
 
         return output
 
+class ConvPoser(nn.Module):
+    def __init__(self):
+        super(ConvPoser, self).__init__()
+        self.conv1 = nn.Sequential(
+            nn.Conv1d(in_channels=1, out_channels=6, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.Conv1d(in_channels=6, out_channels=1, kernel_size=3, padding=1),
+            nn.ReLU()
+        )
+
+    def forward(self, x):
+        return self.conv1(x)
 
 class Interactor(nn.Module):
     def __init__(self, d_column, d_ff, out_row=30, dropout=0.1):
@@ -69,9 +81,10 @@ class Interactor(nn.Module):
         super(Interactor, self).__init__()
         self.column_wise_nn = Column_wise_nn(out_row, d_ff, dropout)
         self.row_wise_nn = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.conv = ConvPoser()
 
     def forward(self, x):
-        left_transposer = self.row_wise_nn(x)
+        left_transposer = self.conv(x)
         middle_term = torch.matmul(left_transposer.permute(0,2,1), x)
 #        output = self.column_wise_nn(middle_term)
         output = self.column_wise_nn(middle_term)
