@@ -82,13 +82,13 @@ class Interactor(nn.Module):
         self.conv = ConvPoser(dropout)
 
     def forward(self, x):
-        conv_input = x.unsqueeze(1)
-        conv_output = self.conv(conv_input)
-        conv_output = conv_output.squeeze(1)
-        left_transposer = self.row_wise_nn(conv_output)
-        middle_term = torch.matmul(left_transposer.permute(0,2,1), x)
+        left_transposer = self.row_wise_nn(x)
+        output = torch.matmul(left_transposer.permute(0,2,1), x)
 #        output = self.column_wise_nn(middle_term)
-        output = self.column_wise_nn(middle_term)
+        output = self.column_wise_nn(output)
+        output = output.unsqueeze(1)
+        output = self.conv(output)
+        output = output.squeeze(1)
         #output = torch.matmul(middle_term, right_transposer.permute(0,2,1))
         return output
 

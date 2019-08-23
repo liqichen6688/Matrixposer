@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interactor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="60" column="87" lean-forward="true" selection-start-line="60" selection-start-column="87" selection-end-line="60" selection-end-column="87" />
+            <state relative-caret-position="509">
+              <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -30,16 +30,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config_log/config13.py">
+        <entry file="file://$PROJECT_DIR$/sublayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="346">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config_log/config12.py">
+        <entry file="file://$PROJECT_DIR$/encoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config_v3_1.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/miniconda3/envs/pytorch/lib/python3.7/site-packages/numpy/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4664">
+              <caret line="218" selection-start-line="218" selection-end-line="218" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config_log/config6.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="16" selection-end-column="17" />
@@ -48,19 +77,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config_log/config11.py">
+        <entry file="file://$PROJECT_DIR$/adjust_parameter">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config_log/config10.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -75,43 +95,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config_conv_v1.py">
+        <entry file="file://$PROJECT_DIR$/config_v3_row1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-914">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-147">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config_log/config14.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="374">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -147,6 +134,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="conv" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -174,21 +166,21 @@
         <option value="$PROJECT_DIR$/config10.py" />
         <option value="$PROJECT_DIR$/config11.py" />
         <option value="$PROJECT_DIR$/config12.py" />
+        <option value="$PROJECT_DIR$/adjust_parameter" />
         <option value="$PROJECT_DIR$/config13.py" />
         <option value="$PROJECT_DIR$/config14.py" />
         <option value="$PROJECT_DIR$/config15.py" />
-        <option value="$PROJECT_DIR$/adjust_parameter" />
         <option value="$PROJECT_DIR$/config_v3_1.py" />
-        <option value="$PROJECT_DIR$/config_v3_2.py" />
-        <option value="$PROJECT_DIR$/config_v3_3.py" />
-        <option value="$PROJECT_DIR$/config_conv_v1.py" />
+        <option value="$PROJECT_DIR$/log/config_v3_row1" />
+        <option value="$PROJECT_DIR$/config_v3_row1" />
+        <option value="$PROJECT_DIR$/config_v3_row1.py" />
         <option value="$PROJECT_DIR$/interactor.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="19" />
-    <option name="y" value="23" />
+    <option name="x" value="95" />
+    <option name="y" value="98" />
     <option name="width" value="1680" />
     <option name="height" value="868" />
   </component>
@@ -197,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,11 +197,20 @@
               <item name="MatPoser" type="b2602c69:ProjectViewProjectNode" />
               <item name="MatPoser" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MatPoser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MatPoser" type="462c0819:PsiDirectoryNode" />
+              <item name="config_log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MatPoser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MatPoser" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,8 +229,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/config_log" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/log" />
+      <recent name="$PROJECT_DIR$/config_log" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -321,9 +324,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.utils" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.interactor" />
         <item itemvalue="Python.utils" />
+        <item itemvalue="Python.train" />
       </list>
     </recent_temporary>
   </component>
@@ -347,8 +352,21 @@
       <workItem from="1565833294000" duration="23000" />
       <workItem from="1565833327787" duration="172000" />
       <workItem from="1565833600742" duration="20625000" />
-      <workItem from="1565923075470" duration="29791000" />
-      <workItem from="1566535812077" duration="6655000" />
+      <workItem from="1565923075470" duration="28976000" />
+    </task>
+    <task id="LOCAL-00034" summary="learning rate= 0.01">
+      <created>1565950810952</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1565950810952</updated>
+    </task>
+    <task id="LOCAL-00035" summary="learning rate= 0.01">
+      <created>1565950905410</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1565950905410</updated>
     </task>
     <task id="LOCAL-00036" summary="parallel">
       <created>1566007775658</created>
@@ -568,136 +586,122 @@
       <updated>1566355879831</updated>
     </task>
     <task id="LOCAL-00067" summary="parameter adjust">
-      <created>1566356427910</created>
+      <created>1566549288122</created>
       <option name="number" value="00067" />
       <option name="presentableId" value="LOCAL-00067" />
       <option name="project" value="LOCAL" />
-      <updated>1566356427910</updated>
+      <updated>1566549288122</updated>
     </task>
     <task id="LOCAL-00068" summary="parameter adjust">
-      <created>1566356507212</created>
+      <created>1566549311737</created>
       <option name="number" value="00068" />
       <option name="presentableId" value="LOCAL-00068" />
       <option name="project" value="LOCAL" />
-      <updated>1566356507212</updated>
+      <updated>1566549311737</updated>
     </task>
     <task id="LOCAL-00069" summary="parameter adjust">
-      <created>1566540241582</created>
+      <created>1566549570789</created>
       <option name="number" value="00069" />
       <option name="presentableId" value="LOCAL-00069" />
       <option name="project" value="LOCAL" />
-      <updated>1566540241583</updated>
+      <updated>1566549570789</updated>
     </task>
     <task id="LOCAL-00070" summary="parameter adjust">
-      <created>1566543024515</created>
+      <created>1566549650210</created>
       <option name="number" value="00070" />
       <option name="presentableId" value="LOCAL-00070" />
       <option name="project" value="LOCAL" />
-      <updated>1566543024515</updated>
+      <updated>1566549650210</updated>
     </task>
     <task id="LOCAL-00071" summary="parameter adjust">
-      <created>1566543044305</created>
+      <created>1566549698298</created>
       <option name="number" value="00071" />
       <option name="presentableId" value="LOCAL-00071" />
       <option name="project" value="LOCAL" />
-      <updated>1566543044305</updated>
+      <updated>1566549698298</updated>
     </task>
     <task id="LOCAL-00072" summary="parameter adjust">
-      <created>1566543051312</created>
+      <created>1566549773622</created>
       <option name="number" value="00072" />
       <option name="presentableId" value="LOCAL-00072" />
       <option name="project" value="LOCAL" />
-      <updated>1566543051312</updated>
+      <updated>1566549773622</updated>
     </task>
     <task id="LOCAL-00073" summary="parameter adjust">
-      <created>1566545090701</created>
+      <created>1566550231127</created>
       <option name="number" value="00073" />
       <option name="presentableId" value="LOCAL-00073" />
       <option name="project" value="LOCAL" />
-      <updated>1566545090701</updated>
+      <updated>1566550231127</updated>
     </task>
     <task id="LOCAL-00074" summary="parameter adjust">
-      <created>1566545159036</created>
+      <created>1566550460372</created>
       <option name="number" value="00074" />
       <option name="presentableId" value="LOCAL-00074" />
       <option name="project" value="LOCAL" />
-      <updated>1566545159036</updated>
+      <updated>1566550460373</updated>
     </task>
     <task id="LOCAL-00075" summary="parameter adjust">
-      <created>1566545371646</created>
+      <created>1566550564331</created>
       <option name="number" value="00075" />
       <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
-      <updated>1566545371646</updated>
+      <updated>1566550564331</updated>
     </task>
     <task id="LOCAL-00076" summary="parameter adjust">
-      <created>1566546622578</created>
+      <created>1566550689905</created>
       <option name="number" value="00076" />
       <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
-      <updated>1566546622578</updated>
+      <updated>1566550689905</updated>
     </task>
     <task id="LOCAL-00077" summary="parameter adjust">
-      <created>1566546824706</created>
+      <created>1566550827580</created>
       <option name="number" value="00077" />
       <option name="presentableId" value="LOCAL-00077" />
       <option name="project" value="LOCAL" />
-      <updated>1566546824706</updated>
+      <updated>1566550827580</updated>
     </task>
     <task id="LOCAL-00078" summary="parameter adjust">
-      <created>1566547112969</created>
+      <created>1566551022086</created>
       <option name="number" value="00078" />
       <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
-      <updated>1566547112970</updated>
+      <updated>1566551022086</updated>
     </task>
     <task id="LOCAL-00079" summary="parameter adjust">
-      <created>1566547553583</created>
+      <created>1566551204259</created>
       <option name="number" value="00079" />
       <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
-      <updated>1566547553583</updated>
+      <updated>1566551204259</updated>
     </task>
     <task id="LOCAL-00080" summary="parameter adjust">
-      <created>1566547737411</created>
+      <created>1566551469981</created>
       <option name="number" value="00080" />
       <option name="presentableId" value="LOCAL-00080" />
       <option name="project" value="LOCAL" />
-      <updated>1566547737411</updated>
+      <updated>1566551469981</updated>
     </task>
     <task id="LOCAL-00081" summary="parameter adjust">
-      <created>1566547891672</created>
+      <created>1566552510038</created>
       <option name="number" value="00081" />
       <option name="presentableId" value="LOCAL-00081" />
       <option name="project" value="LOCAL" />
-      <updated>1566547891672</updated>
+      <updated>1566552510038</updated>
     </task>
     <task id="LOCAL-00082" summary="parameter adjust">
-      <created>1566548100499</created>
+      <created>1566552647573</created>
       <option name="number" value="00082" />
       <option name="presentableId" value="LOCAL-00082" />
       <option name="project" value="LOCAL" />
-      <updated>1566548100499</updated>
+      <updated>1566552647573</updated>
     </task>
-    <task id="LOCAL-00083" summary="parameter adjust">
-      <created>1566548365144</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1566548365144</updated>
-    </task>
-    <task id="LOCAL-00084" summary="parameter adjust">
-      <created>1566548466388</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1566548466388</updated>
-    </task>
-    <option name="localTasksCounter" value="85" />
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59917000" />
+    <option name="totallyTimeSpent" value="56059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,15 +713,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="866" extended-state="0" />
-    <editor active="true" />
+    <frame x="19" y="23" width="1680" height="868" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49330783" visible="true" weight="0.17399268" />
-      <window_info id="Structure" order="1" sideWeight="0.5066922" side_tool="true" visible="true" weight="0.17399268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4935567" visible="true" weight="0.17399268" />
+      <window_info id="Structure" order="1" sideWeight="0.5064433" side_tool="true" visible="true" weight="0.17399268" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.375" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -726,8 +729,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.327551" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3617571" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.3242894" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.36082473" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3259346" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -809,16 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sublayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -863,58 +856,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/config_log/config4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2199">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-431">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/pytorch/lib/python3.7/site-packages/numpy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4664">
-          <caret line="218" selection-start-line="218" selection-end-line="218" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adjust_parameter">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_v3_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_v3_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_v3_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="132">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -925,10 +870,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config_log/config4.py">
+    <entry file="file://$PROJECT_DIR$/config_log/config7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        <state relative-caret-position="462">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2199">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -939,38 +894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config_log/config7.py">
+    <entry file="file://$PROJECT_DIR$/config_log/config10.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_log/config6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_log/config15.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_log/config14.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_log/config12.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="243">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -981,10 +908,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config_log/config10.py">
+    <entry file="file://$PROJECT_DIR$/config_log/config12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state>
+          <caret selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/config14.py" />
+    <entry file="file://$PROJECT_DIR$/log/config15.py" />
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1685">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/config13.py" />
+    <entry file="file://$PROJECT_DIR$/config_v3_1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/pytorch/lib/python3.7/site-packages/numpy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4664">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sublayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config_v3_row1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -995,44 +982,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
+    <entry file="file://$PROJECT_DIR$/adjust_parameter">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
+    <entry file="file://$PROJECT_DIR$/config_log/config6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-914">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_conv_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_log/config13.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state>
+          <caret selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interactor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="60" column="87" lean-forward="true" selection-start-line="60" selection-start-column="87" selection-end-line="60" selection-end-column="87" />
+        <state relative-caret-position="509">
+          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
