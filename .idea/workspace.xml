@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
+    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="add max pool">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interactor.py" beforeDir="false" afterPath="$PROJECT_DIR$/interactor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interactor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+            <state relative-caret-position="271">
+              <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -301,27 +302,6 @@
       <workItem from="1565833327787" duration="172000" />
       <workItem from="1565833600742" duration="20625000" />
       <workItem from="1565923075470" duration="28976000" />
-    </task>
-    <task id="LOCAL-00036" summary="parallel">
-      <created>1566007775658</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1566007775658</updated>
-    </task>
-    <task id="LOCAL-00037" summary="wrap data">
-      <created>1566008367592</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1566008367592</updated>
-    </task>
-    <task id="LOCAL-00038" summary="class Config(object):&#10;    N = 2&#10;    d_model = 256&#10;    d_ff = 512&#10;    d_row = 60&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.001&#10;    max_epochs = 35&#10;    batch_size = 128&#10;    max_sen_len = 60">
-      <created>1566008746026</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1566008746027</updated>
     </task>
     <task id="LOCAL-00039" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.001&#10;    max_epochs = 35&#10;    batch_size = 128&#10;    max_sen_len = 60">
       <created>1566009241632</created>
@@ -645,11 +625,32 @@
       <option name="project" value="LOCAL" />
       <updated>1566553387104</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="add max pool">
+      <created>1566627968023</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1566627968023</updated>
+    </task>
+    <task id="LOCAL-00086" summary="add max pool">
+      <created>1566628164133</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1566628164133</updated>
+    </task>
+    <task id="LOCAL-00087" summary="add max pool">
+      <created>1566628271347</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1566628271347</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57399000" />
+    <option name="totallyTimeSpent" value="57932000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -703,7 +704,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add sublayer" />
     <MESSAGE value="add Interactor" />
     <MESSAGE value="add tran_utils" />
     <MESSAGE value="add model" />
@@ -728,7 +728,8 @@
     <MESSAGE value="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60" />
     <MESSAGE value="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 60&#10;    dropout = 0.1&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 50&#10;    batch_size = 64&#10;    max_sen_len = 60&#10;    # determine lr&#10;    learning_method = 'trian'&#10;    # triangle learning&#10;    cut_frac = 0.1&#10;    ratio = 32&#10;    max_lr = 0.01" />
     <MESSAGE value="parameter adjust" />
-    <option name="LAST_COMMIT_MESSAGE" value="parameter adjust" />
+    <MESSAGE value="add max pool" />
+    <option name="LAST_COMMIT_MESSAGE" value="add max pool" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.3/python_stubs/-124861494/builtins.py" />
@@ -923,8 +924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interactor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        <state relative-caret-position="271">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
