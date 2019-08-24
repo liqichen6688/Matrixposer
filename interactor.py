@@ -7,7 +7,7 @@ from torch import nn
 
 
 class Column_wise_nn(nn.Module):
-    def __init__(self, d_row, d_ff, dropout=0.1):
+    def __init__(self, d_row, d_ff, d_out,dropout=0.1):
         '''
         initialize column-wise neural network
         :param d_row: input row number
@@ -17,7 +17,7 @@ class Column_wise_nn(nn.Module):
         super(Column_wise_nn, self).__init__()
         self.w_1 = nn.Linear(d_row, d_ff)
         self.w_2 = nn.Linear(d_ff, d_ff)
-        self.w_3 = nn.Linear(d_ff, d_row)
+        self.w_3 = nn.Linear(d_ff, d_out)
         if dropout is not None:
             self.dropout = nn.Dropout(dropout)
         else:
@@ -25,9 +25,11 @@ class Column_wise_nn(nn.Module):
 
     def forward(self, x):
         x = x.permute(0,2,1)
-        #d_k = x.size(-1)
+        d_k = x.size(-1)
+        #output = self.w_2(self.dropout(F.relu(self.w_1(x)))) / math.sqrt(d_k)
+        #output = F.softmax(output, dim=-1)
         output = self.w_2(self.dropout(F.relu(self.w_1(x))))
-        output = F.relu(output)
+        output = self.w_3(self.dropout(F.relu(output))) / math.sqrt(d_k)
         if self.dropout is not None:
             output = self.dropout(output)
 
@@ -35,7 +37,7 @@ class Column_wise_nn(nn.Module):
 
 
 class Row_wise_nn(nn.Module):
-    def __init__(self, d_column, d_ff, out_row, dropout=None):
+    def __init__(self, d_column, d_ff, out_row, dropout=None, softmax = False):
         super(Row_wise_nn, self).__init__()
         self.w_1 = nn.Linear(d_column, d_ff)
         self.w_2 = nn.Linear(d_ff, d_ff)
@@ -44,35 +46,19 @@ class Row_wise_nn(nn.Module):
             self.dropout = nn.Dropout(dropout)
         else:
             self.dropout = None
+        self.softmax = softmax
 
     def forward(self, x):
         d_k = x.size(-1)
         output = self.w_2(self.dropout(F.relu(self.w_1(x))))
         output = self.w_3(self.dropout(F.relu(output))) / math.sqrt(d_k)
-        output = F.softmax(output, dim=-1)
+        if self.softmax:
+            output = F.softmax(output, dim=-1)
         if self.dropout is not None:
             output = self.dropout(output)
 
         return output
 
-class ConvPoser(nn.Module):
-    def __init__(self, dropout):
-        super(ConvPoser, self).__init__()
-        self.conv1 = nn.Conv2d(1, 6, 5)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 16, 5)
-        self.fc1 = nn.Linear(16 * 5 * 5, 512)
-        self.fc2 = nn.Linear(512, 512)
-        self.fc3 = nn.Linear(512, 512)
-        self.dropout = nn.Dropout(dropout)
-    def forward(self, x):
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
-        x = x.view(-1, 16 * 5 * 5)
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-        return x
 
 class Interactor(nn.Module):
     def __init__(self, d_column, d_ff, out_row=30, dropout=0.1):
@@ -83,18 +69,14 @@ class Interactor(nn.Module):
         :param dropout: default 0.1
         '''
         super(Interactor, self).__init__()
-        self.column_wise_nn = Column_wise_nn(out_row, d_ff, dropout)
-        self.row_wise_nn = Row_wise_nn(d_column, d_ff, out_row, dropout)
-        self.conv = ConvPoser(dropout)
+        self.column_wise_nn = Column_wise_nn(out_row, d_ff, 1, dropout)
+        self.row_wise_nn1 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, d_column, dropout, softmax=True)
 
     def forward(self, x):
-        left_transposer = self.row_wise_nn(x)
+        left_transposer = self.row_wise_nn1(x)
         output = torch.matmul(left_transposer.permute(0,2,1), x)
-#        output = self.column_wise_nn(middle_term)
         output = self.column_wise_nn(output)
-        output = output.unsqueeze(1)
-        output = self.conv(output)
-        output = output.squeeze(1)
+        #output = self.column_wise_nn(output)
         #output = torch.matmul(middle_term, right_transposer.permute(0,2,1))
         return output
-
