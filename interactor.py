@@ -59,10 +59,10 @@ class ConvPoser(nn.Module):
     def __init__(self, dropout):
         super(ConvPoser, self).__init__()
         self.conv1 = nn.Sequential(
-            nn.Conv1d(in_channels=1, out_channels=6,
+            nn.Conv2d(in_channels=1, out_channels=6,
                       kernel_size=3),
             nn.ReLU(),
-            nn.MaxPool1d(58)
+            nn.MaxPool1d(3)
         )
         self.dropout = nn.Dropout(dropout)
 
