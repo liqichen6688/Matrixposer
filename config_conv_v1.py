@@ -6,7 +6,7 @@ class Config(object):
     dropout = 0.1
     output_size = 4
     lr = 0.0001
-    max_epochs = 50
+    max_epochs = 200
     batch_size = 64
     max_sen_len = 60
     # determine lr
