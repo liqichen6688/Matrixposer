@@ -30,25 +30,26 @@ if __name__=='__main__':
     if torch.cuda.device_count() > 1:
         print("Let's use", torch.cuda.device_count(), "GPUs!")
         model = nn.DataParallel(model)
+        model = model.module
     model.to(device)
     model.train()
     optimizer = optim.Adam(model.parameters(), lr=config.lr)
     NLLLoss = nn.NLLLoss()
-    model.module.add_optimizer(optimizer)
-    model.module.add_loss_op(NLLLoss)
+    model.add_optimizer(optimizer)
+    model.add_loss_op(NLLLoss)
 
     train_losses = []
     val_accuracies = []
 
     for i in range(config.max_epochs):
         print("Epoch: {}".format(i))
-        train_loss, val_accuracy = model.module.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
+        train_loss, val_accuracy = model.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
         train_losses.append(train_loss)
         val_accuracies.append(val_accuracy)
 
-    train_acc = evaluate_model(model.module, dataset.train_iterator)
-    val_acc = evaluate_model(model.module, dataset.val_iterator)
-    test_acc = evaluate_model(model.module, dataset.test_iterator)
+    train_acc = evaluate_model(model, dataset.train_iterator)
+    val_acc = evaluate_model(model, dataset.val_iterator)
+    test_acc = evaluate_model(model, dataset.test_iterator)
 
     print('Final Training Accuracy: {:.4f}'.format(train_acc))
     print('Final Validation Accuracy: {:.4f}'.format(val_acc))
