@@ -58,14 +58,16 @@ class Row_wise_nn(nn.Module):
 class ConvPoser(nn.Module):
     def __init__(self, dropout):
         super(ConvPoser, self).__init__()
-        self.conv1 = nn.Conv2d(in_channels=1, out_channels=1, kernel_size=3, padding=1)
+        self.conv1 = nn.Sequential(
+            nn.Conv1d(in_channels=1, out_channels=6,
+                      kernel_size=3),
+            nn.ReLU(),
+            nn.MaxPool1d(58)
+        )
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
-        d_k = x.size(-1)
-        output = self.dropout(F.relu(self.conv1(x))) / math.sqrt(d_k)
-        output = F.softmax(output, dim=-1)
-        output = self.dropout(output)
+        output = self.dropout(self.conv1(x))
         return output
 
 class Interactor(nn.Module):
