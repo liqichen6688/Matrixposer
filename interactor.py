@@ -62,7 +62,7 @@ class ConvPoser(nn.Module):
             nn.Conv2d(in_channels=1, out_channels=6,
                       kernel_size=3),
             nn.ReLU(),
-            nn.MaxPool1d(3)
+            nn.MaxPool2d(3)
         )
         self.dropout = nn.Dropout(dropout)
 
