@@ -3,7 +3,7 @@ class Config(object):
     d_model = 512
     d_ff = 1024
     d_row = 60
-    dropout = 0.1
+    dropout = 0.5
     output_size = 4
     lr = 0.0001
     max_epochs = 200
@@ -15,3 +15,10 @@ class Config(object):
     cut_frac = 0.1
     ratio = 32
     max_lr = 0.01
+
+'''
+dropout=0.1
+Final Training Accuracy: 0.9705
+Final Validation Accuracy: 0.9097
+Final Test Accuracy: 0.9076
+'''
