@@ -4,7 +4,7 @@ class Config(object):
     d_ff = 1024
     d_row = 60
     dropout = 0.2
-    output_size = 4
+    output_size = 20
     lr = 0.0001
     max_epochs = 200
     batch_size = 64
@@ -17,6 +17,7 @@ class Config(object):
     max_lr = 0.01
 
 '''
+
 dropout=0.1
 Final Training Accuracy: 0.9705
 Final Validation Accuracy: 0.9097
