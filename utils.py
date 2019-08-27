@@ -36,8 +36,9 @@ class Dataset(object):
             raise Exception(
                 'type of label should be str. The type of label was {}'.format(
                     type(label)))
+        begin = label.rfind('_') + 1
 
-        return int(label.strip()[-1])
+        return int(label.strip()[begin:])
 
     def get_pandas_df(self, filename):
         '''
