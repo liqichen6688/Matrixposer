@@ -4,6 +4,7 @@ from torchtext.vocab import Vectors
 import pandas as pd
 import numpy as np
 import spacy
+from torchtext.vocab import Vectors, GloVe
 from sklearn.metrics import accuracy_score
 
 
