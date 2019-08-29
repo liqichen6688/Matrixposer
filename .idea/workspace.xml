@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config_conv_v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_conv_v1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config_conv_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="176">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -102,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
@@ -160,6 +160,7 @@
       <find>get</find>
       <find>test</find>
       <find>4</find>
+      <find>parse_label</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,17 +205,17 @@
         <option value="$PROJECT_DIR$/feed_forward.py" />
         <option value="$PROJECT_DIR$/train_utils.py" />
         <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/config_conv_v1.py" />
         <option value="$PROJECT_DIR$/modifydata.py" />
         <option value="$USER_HOME$/Downloads/PTE-master/data/20ng/modifydata.py" />
         <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/config_conv_v1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-194" />
-    <option name="y" value="102" />
+    <option name="x" value="-169" />
+    <option name="y" value="71" />
     <option name="width" value="1680" />
     <option name="height" value="868" />
   </component>
@@ -385,21 +386,7 @@
       <workItem from="1565833327787" duration="172000" />
       <workItem from="1565833600742" duration="20625000" />
       <workItem from="1565923075470" duration="28976000" />
-      <workItem from="1566721964770" duration="7842000" />
-    </task>
-    <task id="LOCAL-00048" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60">
-      <created>1566011045747</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1566011045747</updated>
-    </task>
-    <task id="LOCAL-00049" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60">
-      <created>1566011314731</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1566011314731</updated>
+      <workItem from="1566721964770" duration="8487000" />
     </task>
     <task id="LOCAL-00050" summary="class Config(object):&#10;    N = 1&#10;    d_model = 512&#10;    d_ff = 1028&#10;    d_row = 120&#10;    dropout = 0.2&#10;    output_size = 4&#10;    lr = 0.005&#10;    max_epochs = 35&#10;    batch_size = 32&#10;    max_sen_len = 60">
       <created>1566011367039</created>
@@ -730,11 +717,25 @@
       <option name="project" value="LOCAL" />
       <updated>1566875495932</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="20ng_debug">
+      <created>1566876844137</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1566876844137</updated>
+    </task>
+    <task id="LOCAL-00098" summary="20ng_debug">
+      <created>1566877255465</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1566877255465</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69235000" />
+    <option name="totallyTimeSpent" value="69880000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -746,9 +747,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-194" y="102" width="1680" height="868" extended-state="0" />
+    <frame x="-169" y="71" width="1680" height="868" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49226806" visible="true" weight="0.17582418" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49226806" visible="true" weight="0.17582418" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -762,7 +764,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3273196" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36082473" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.36082473" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3234536" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -811,7 +813,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add tran_utils" />
     <MESSAGE value="add model" />
     <MESSAGE value="add train" />
     <MESSAGE value="git" />
@@ -836,7 +837,8 @@
     <MESSAGE value="parameter adjust" />
     <MESSAGE value="add max pool" />
     <MESSAGE value="20ng" />
-    <option name="LAST_COMMIT_MESSAGE" value="20ng" />
+    <MESSAGE value="20ng_debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="20ng_debug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1052,13 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config_conv_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adjust_parameter">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1110,6 +1105,13 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config_conv_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>
