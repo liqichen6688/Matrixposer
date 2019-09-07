@@ -70,7 +70,7 @@ class Interactor(nn.Module):
         '''
         super(Interactor, self).__init__()
         self.column_wise_nn1 = Column_wise_nn(out_row, d_ff, 1, dropout)
-        self.column_wise_nn2 = Column_wise_nn(out_row, d_ff, out_row, dropout)
+        self.column_wise_nn2 = Column_wise_nn(out_row, d_ff, 512, dropout)
         self.row_wise_nn1 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, out_row, dropout)
 
