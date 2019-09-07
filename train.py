@@ -34,9 +34,9 @@ if __name__=='__main__':
     model.to(device)
     model.train()
     optimizer = optim.Adam(model.parameters(), lr=config.lr)
-    NLLLoss = nn.NLLLoss()
+    Loss = nn.CrossEntropyLoss()
     model.add_optimizer(optimizer)
-    model.add_loss_op(NLLLoss)
+    model.add_loss_op(Loss)
 
     train_losses = []
     val_accuracies = []
