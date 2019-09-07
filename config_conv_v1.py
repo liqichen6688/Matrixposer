@@ -2,7 +2,7 @@ class Config(object):
     N = 1
     d_model = 512
     d_ff = 1024
-    d_row = 120
+    d_row = 32
     dropout = 0.2
     output_size = 23
     lr = 0.0001
