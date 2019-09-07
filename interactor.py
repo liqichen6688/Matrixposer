@@ -79,6 +79,7 @@ class Interactor(nn.Module):
         left_transposer2 = self.row_wise_nn2(x)
         output2 = torch.matmul(left_transposer2.permute(0,2,1), x)
         output = torch.cat((output1, output2), 0)
+        print(output.size())
 
         output = self.column_wise_nn(output)
         #output = self.column_wise_nn(output)
