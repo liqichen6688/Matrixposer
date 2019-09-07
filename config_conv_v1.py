@@ -2,13 +2,13 @@ class Config(object):
     N = 1
     d_model = 512
     d_ff = 1024
-    d_row = 120
-    dropout = 0.2
+    d_row = 16
+    dropout = 0.1
     output_size = 23
     lr = 0.0001
     max_epochs = 3000
     batch_size = 64
-    max_sen_len = 120
+    max_sen_len = 64
     # determine lr
     learning_method = 'reduce'
     # triangle learning

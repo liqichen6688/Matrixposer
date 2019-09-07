@@ -1,0 +1,212 @@
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MNKYJLTC4BL66OVPOB4X4HCJGP:/var/lib/docker/overlay2/l/345WYGZYI7FHGBUNXIKGXYWOH4:/var/lib/docker/overlay2/l/M5ZJEKLGMCUZ72YSZY753S26Z3:/var/lib/docker/overlay2/l/H6JKGXJAQ6EWHZGKCWFTDPL6IX:/var/lib/docker/overlay2/l/C2K7YBHXM7CA77SYFYZNVWGFP4:/var/lib/docker/overlay2/l/UXMBBA2DM44LKS4FSC3Z7ABV3K:/var/lib/docker/overlay2/l/LXEGNFJR7QZV6P2YO3RTXUDD57:/var/lib/docker/overlay2/l/IZ5AWTO7CR64XR3VOLU2CRHTZ5:/var/lib/docker/overlay2/l/FPBICGGRMBB2K'
+Unexpected end of /proc/mounts line `IOHHBJWXHQ7OY:/var/lib/docker/overlay2/l/M4GMTE2ZOUT5NH72ZD6LBFKDEI:/var/lib/docker/overlay2/l/ZSJ25THSNUZVSNDLCFSBN5DMKJ:/var/lib/docker/overlay2/l/AIIRKDD23QEASE73FQE5C67CF6:/var/lib/docker/overlay2/l/BTVY7RHQ7R52S7664TFFX2WQ4R:/var/lib/docker/overlay2/l/DIHGFBMJOWXXZMXZ6BOO75S6L3:/var/lib/docker/overlay2/l/YVHXX3WXTNTLMAERIBKBQSQFB3:/var/lib/docker/overlay2/l/Z54K2BIZHBZF5IHYJRVJAUUHDX:/var/lib/docker/overlay2/l/F6GQVOQMALYVD5AMN7RPJMB2BE:/var/lib/docker/overlay2/l/D464WOOU4AQZBW5ULCZWHDV454:/var/lib/do'
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Traceback (most recent call last):
+  File "train.py", line 50, in <module>
+    train_acc = evaluate_model(model, dataset.train_iterator)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 135, in evaluate_model
+    score = accuracy_score(all_y, np.array(all_preds).flatten())
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 176, in accuracy_score
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/metrics/classification.py", line 71, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/sklearn/utils/validation.py", line 235, in check_consistent_length
+    " samples: %r" % [int(l) for l in lengths])
+ValueError: Found input variables with inconsistent numbers of samples: [96000, 384000]
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/model.py:39: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self.softmax(final_out)
+Terminated
+config_conv_v1
+Traceback (most recent call last):
+  File "train.py", line 27, in <module>
+    dataset.load_data(train_file, test_file)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 79, in load_data
+    train_df = self.get_pandas_df(train_file)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 48, in get_pandas_df
+    with open(filename, 'r') as datafile:
+FileNotFoundError: [Errno 2] No such file or directory: 'log/ohsumed_60.out'
