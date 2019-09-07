@@ -1,0 +1,22 @@
+config_conv_v1
+Traceback (most recent call last):
+  File "train.py", line 27, in <module>
+    dataset.load_data(train_file, test_file)
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 81, in load_data
+    data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 81, in <listcomp>
+    data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/torchtext/data/example.py", line 52, in fromlist
+    setattr(ex, name, field.preprocess(val))
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/torchtext/data/field.py", line 179, in preprocess
+    x = self.tokenize(x.rstrip('\n'))
+  File "/root/liqichen/Sentiment/Text-Classification-Models-Pytorch/Matposer/utils.py", line 71, in tokenizer
+    x.text for x in NLP.tokenizer(sent) if x.text != " ")
+  File "tokenizer.pyx", line 103, in spacy.tokenizer.Tokenizer.__call__
+  File "tokenizer.pyx", line 157, in spacy.tokenizer.Tokenizer._tokenize
+  File "tokenizer.pyx", line 236, in spacy.tokenizer.Tokenizer._attach_tokens
+  File "vocab.pyx", line 130, in spacy.vocab.Vocab.get
+  File "vocab.pyx", line 160, in spacy.vocab.Vocab._new_lexeme
+  File "/root/anaconda3/envs/text_clsf/lib/python3.7/site-packages/spacy/lang/lex_attrs.py", line 137, in lower
+    def lower(string): return string.lower()
+KeyboardInterrupt

@@ -1,0 +1,4610 @@
+config15
+Loaded 96000 training examples
+Loaded 7600 test examples
+Loaded 24000 validation examples
+Let's use 4 GPUs!
+Epoch: 0
+Iter: 1
+	Average training loss: -0.25249
+	Val Accuracy: 0.2584
+Iter: 101
+	Average training loss: -0.24643
+	Val Accuracy: 0.2480
+Iter: 201
+	Average training loss: -0.24754
+	Val Accuracy: 0.2581
+Iter: 301
+	Average training loss: -0.42823
+	Val Accuracy: 0.6223
+Iter: 401
+	Average training loss: -0.68351
+	Val Accuracy: 0.7396
+Iter: 501
+	Average training loss: -0.75202
+	Val Accuracy: 0.8035
+Iter: 601
+	Average training loss: -0.77758
+	Val Accuracy: 0.7970
+Iter: 701
+	Average training loss: -0.81338
+	Val Accuracy: 0.8254
+Iter: 801
+	Average training loss: -0.81463
+	Val Accuracy: 0.8319
+Iter: 901
+	Average training loss: -0.82743
+	Val Accuracy: 0.8483
+Iter: 1001
+	Average training loss: -0.83551
+	Val Accuracy: 0.8247
+Iter: 1101
+	Average training loss: -0.83479
+	Val Accuracy: 0.8232
+Iter: 1201
+	Average training loss: -0.84022
+	Val Accuracy: 0.8468
+Iter: 1301
+	Average training loss: -0.84093
+	Val Accuracy: 0.8470
+Iter: 1401
+	Average training loss: -0.85912
+	Val Accuracy: 0.8554
+Epoch: 1
+Iter: 1
+	Average training loss: -0.90555
+	Val Accuracy: 0.8556
+Iter: 101
+	Average training loss: -0.86426
+	Val Accuracy: 0.8710
+Iter: 201
+	Average training loss: -0.87636
+	Val Accuracy: 0.8707
+Iter: 301
+	Average training loss: -0.86804
+	Val Accuracy: 0.8646
+Iter: 401
+	Average training loss: -0.87546
+	Val Accuracy: 0.8731
+Iter: 501
+	Average training loss: -0.88294
+	Val Accuracy: 0.8780
+Iter: 601
+	Average training loss: -0.87840
+	Val Accuracy: 0.8700
+Iter: 701
+	Average training loss: -0.87876
+	Val Accuracy: 0.8719
+Iter: 801
+	Average training loss: -0.88702
+	Val Accuracy: 0.8816
+Iter: 901
+	Average training loss: -0.88491
+	Val Accuracy: 0.8821
+Iter: 1001
+	Average training loss: -0.88641
+	Val Accuracy: 0.8850
+Iter: 1101
+	Average training loss: -0.88683
+	Val Accuracy: 0.8850
+Iter: 1201
+	Average training loss: -0.87848
+	Val Accuracy: 0.8838
+Iter: 1301
+	Average training loss: -0.88982
+	Val Accuracy: 0.8868
+Iter: 1401
+	Average training loss: -0.88713
+	Val Accuracy: 0.8826
+Epoch: 2
+Iter: 1
+	Average training loss: -0.93470
+	Val Accuracy: 0.8854
+Iter: 101
+	Average training loss: -0.89708
+	Val Accuracy: 0.8894
+Iter: 201
+	Average training loss: -0.90002
+	Val Accuracy: 0.8908
+Iter: 301
+	Average training loss: -0.90157
+	Val Accuracy: 0.8855
+Iter: 401
+	Average training loss: -0.89707
+	Val Accuracy: 0.8848
+Iter: 501
+	Average training loss: -0.90310
+	Val Accuracy: 0.8903
+Iter: 601
+	Average training loss: -0.90396
+	Val Accuracy: 0.8900
+Iter: 701
+	Average training loss: -0.89934
+	Val Accuracy: 0.8912
+Iter: 801
+	Average training loss: -0.90369
+	Val Accuracy: 0.8878
+Iter: 901
+	Average training loss: -0.90117
+	Val Accuracy: 0.8891
+Iter: 1001
+	Average training loss: -0.90389
+	Val Accuracy: 0.8879
+Iter: 1101
+	Average training loss: -0.89265
+	Val Accuracy: 0.8854
+Iter: 1201
+	Average training loss: -0.89816
+	Val Accuracy: 0.8910
+Iter: 1301
+	Average training loss: -0.90685
+	Val Accuracy: 0.8898
+Iter: 1401
+	Average training loss: -0.90797
+	Val Accuracy: 0.8850
+Epoch: 3
+Iter: 1
+	Average training loss: -0.96872
+	Val Accuracy: 0.8924
+Iter: 101
+	Average training loss: -0.91047
+	Val Accuracy: 0.8907
+Iter: 201
+	Average training loss: -0.91529
+	Val Accuracy: 0.8940
+Iter: 301
+	Average training loss: -0.90615
+	Val Accuracy: 0.8944
+Iter: 401
+	Average training loss: -0.91675
+	Val Accuracy: 0.8938
+Iter: 501
+	Average training loss: -0.91136
+	Val Accuracy: 0.8918
+Iter: 601
+	Average training loss: -0.91171
+	Val Accuracy: 0.8890
+Iter: 701
+	Average training loss: -0.90831
+	Val Accuracy: 0.8948
+Iter: 801
+	Average training loss: -0.90587
+	Val Accuracy: 0.8941
+Iter: 901
+	Average training loss: -0.91492
+	Val Accuracy: 0.8960
+Iter: 1001
+	Average training loss: -0.90968
+	Val Accuracy: 0.8930
+Iter: 1101
+	Average training loss: -0.91086
+	Val Accuracy: 0.8960
+Iter: 1201
+	Average training loss: -0.91347
+	Val Accuracy: 0.8940
+Iter: 1301
+	Average training loss: -0.90905
+	Val Accuracy: 0.8947
+Iter: 1401
+	Average training loss: -0.91309
+	Val Accuracy: 0.8943
+Epoch: 4
+Iter: 1
+	Average training loss: -0.87500
+	Val Accuracy: 0.8954
+Iter: 101
+	Average training loss: -0.92146
+	Val Accuracy: 0.8956
+Iter: 201
+	Average training loss: -0.91321
+	Val Accuracy: 0.8959
+Iter: 301
+	Average training loss: -0.91824
+	Val Accuracy: 0.8975
+Iter: 401
+	Average training loss: -0.92002
+	Val Accuracy: 0.8962
+Iter: 501
+	Average training loss: -0.91733
+	Val Accuracy: 0.8977
+Iter: 601
+	Average training loss: -0.91769
+	Val Accuracy: 0.8983
+Iter: 701
+	Average training loss: -0.91553
+	Val Accuracy: 0.8973
+Iter: 801
+	Average training loss: -0.91523
+	Val Accuracy: 0.8969
+Iter: 901
+	Average training loss: -0.91913
+	Val Accuracy: 0.8973
+Iter: 1001
+	Average training loss: -0.92183
+	Val Accuracy: 0.8968
+Iter: 1101
+	Average training loss: -0.92226
+	Val Accuracy: 0.8988
+Iter: 1201
+	Average training loss: -0.91460
+	Val Accuracy: 0.8968
+Iter: 1301
+	Average training loss: -0.91907
+	Val Accuracy: 0.8983
+Iter: 1401
+	Average training loss: -0.92200
+	Val Accuracy: 0.8980
+Epoch: 5
+Iter: 1
+	Average training loss: -0.93125
+	Val Accuracy: 0.8999
+Iter: 101
+	Average training loss: -0.92269
+	Val Accuracy: 0.8989
+Iter: 201
+	Average training loss: -0.92715
+	Val Accuracy: 0.8978
+Iter: 301
+	Average training loss: -0.92154
+	Val Accuracy: 0.8925
+Iter: 401
+	Average training loss: -0.92357
+	Val Accuracy: 0.8998
+Iter: 501
+	Average training loss: -0.92566
+	Val Accuracy: 0.8962
+Iter: 601
+	Average training loss: -0.92328
+	Val Accuracy: 0.9003
+Iter: 701
+	Average training loss: -0.92208
+	Val Accuracy: 0.8996
+Iter: 801
+	Average training loss: -0.92474
+	Val Accuracy: 0.9002
+Iter: 901
+	Average training loss: -0.92342
+	Val Accuracy: 0.9011
+Iter: 1001
+	Average training loss: -0.92169
+	Val Accuracy: 0.8981
+Iter: 1101
+	Average training loss: -0.92176
+	Val Accuracy: 0.8940
+Iter: 1201
+	Average training loss: -0.91732
+	Val Accuracy: 0.8988
+Iter: 1301
+	Average training loss: -0.92185
+	Val Accuracy: 0.9031
+Iter: 1401
+	Average training loss: -0.92548
+	Val Accuracy: 0.9004
+Epoch: 6
+Iter: 1
+	Average training loss: -0.97511
+	Val Accuracy: 0.9018
+Iter: 101
+	Average training loss: -0.92689
+	Val Accuracy: 0.8983
+Iter: 201
+	Average training loss: -0.92186
+	Val Accuracy: 0.8992
+Iter: 301
+	Average training loss: -0.93372
+	Val Accuracy: 0.8962
+Iter: 401
+	Average training loss: -0.92466
+	Val Accuracy: 0.9012
+Iter: 501
+	Average training loss: -0.92429
+	Val Accuracy: 0.9000
+Iter: 601
+	Average training loss: -0.92863
+	Val Accuracy: 0.9024
+Iter: 701
+	Average training loss: -0.93101
+	Val Accuracy: 0.9020
+Iter: 801
+	Average training loss: -0.93231
+	Val Accuracy: 0.9001
+Iter: 901
+	Average training loss: -0.92966
+	Val Accuracy: 0.8972
+Iter: 1001
+	Average training loss: -0.92603
+	Val Accuracy: 0.8982
+Iter: 1101
+	Average training loss: -0.92701
+	Val Accuracy: 0.9010
+Iter: 1201
+	Average training loss: -0.92417
+	Val Accuracy: 0.9007
+Iter: 1301
+	Average training loss: -0.92552
+	Val Accuracy: 0.8990
+Iter: 1401
+	Average training loss: -0.92308
+	Val Accuracy: 0.8992
+Epoch: 7
+Iter: 1
+	Average training loss: -0.92577
+	Val Accuracy: 0.9010
+Iter: 101
+	Average training loss: -0.93080
+	Val Accuracy: 0.8982
+Iter: 201
+	Average training loss: -0.92374
+	Val Accuracy: 0.9023
+Iter: 301
+	Average training loss: -0.93271
+	Val Accuracy: 0.9024
+Iter: 401
+	Average training loss: -0.93137
+	Val Accuracy: 0.9032
+Iter: 501
+	Average training loss: -0.93378
+	Val Accuracy: 0.9017
+Iter: 601
+	Average training loss: -0.92873
+	Val Accuracy: 0.9013
+Iter: 701
+	Average training loss: -0.92642
+	Val Accuracy: 0.9004
+Iter: 801
+	Average training loss: -0.92870
+	Val Accuracy: 0.9016
+Iter: 901
+	Average training loss: -0.93303
+	Val Accuracy: 0.9023
+Iter: 1001
+	Average training loss: -0.92617
+	Val Accuracy: 0.8991
+Iter: 1101
+	Average training loss: -0.92834
+	Val Accuracy: 0.9008
+Iter: 1201
+	Average training loss: -0.93147
+	Val Accuracy: 0.9028
+Iter: 1301
+	Average training loss: -0.92698
+	Val Accuracy: 0.9038
+Iter: 1401
+	Average training loss: -0.92779
+	Val Accuracy: 0.9024
+Epoch: 8
+Iter: 1
+	Average training loss: -0.93688
+	Val Accuracy: 0.9036
+Iter: 101
+	Average training loss: -0.93441
+	Val Accuracy: 0.9021
+Iter: 201
+	Average training loss: -0.93338
+	Val Accuracy: 0.9052
+Iter: 301
+	Average training loss: -0.93857
+	Val Accuracy: 0.9018
+Iter: 401
+	Average training loss: -0.93737
+	Val Accuracy: 0.9025
+Iter: 501
+	Average training loss: -0.93013
+	Val Accuracy: 0.9012
+Iter: 601
+	Average training loss: -0.93515
+	Val Accuracy: 0.9007
+Iter: 701
+	Average training loss: -0.93361
+	Val Accuracy: 0.8994
+Iter: 801
+	Average training loss: -0.93135
+	Val Accuracy: 0.9001
+Iter: 901
+	Average training loss: -0.93364
+	Val Accuracy: 0.9020
+Iter: 1001
+	Average training loss: -0.94130
+	Val Accuracy: 0.8995
+Iter: 1101
+	Average training loss: -0.92722
+	Val Accuracy: 0.9015
+Iter: 1201
+	Average training loss: -0.93352
+	Val Accuracy: 0.9052
+Iter: 1301
+	Average training loss: -0.92570
+	Val Accuracy: 0.9000
+Iter: 1401
+	Average training loss: -0.93042
+	Val Accuracy: 0.8985
+Epoch: 9
+Iter: 1
+	Average training loss: -0.92191
+	Val Accuracy: 0.9044
+Iter: 101
+	Average training loss: -0.94109
+	Val Accuracy: 0.9035
+Iter: 201
+	Average training loss: -0.93472
+	Val Accuracy: 0.9046
+Iter: 301
+	Average training loss: -0.93521
+	Val Accuracy: 0.9030
+Iter: 401
+	Average training loss: -0.94064
+	Val Accuracy: 0.9032
+Iter: 501
+	Average training loss: -0.93307
+	Val Accuracy: 0.9030
+Iter: 601
+	Average training loss: -0.93760
+	Val Accuracy: 0.9016
+Iter: 701
+	Average training loss: -0.93330
+	Val Accuracy: 0.9040
+Iter: 801
+	Average training loss: -0.93837
+	Val Accuracy: 0.9012
+Iter: 901
+	Average training loss: -0.93402
+	Val Accuracy: 0.9034
+Iter: 1001
+	Average training loss: -0.93376
+	Val Accuracy: 0.9017
+Iter: 1101
+	Average training loss: -0.92968
+	Val Accuracy: 0.9043
+Iter: 1201
+	Average training loss: -0.93218
+	Val Accuracy: 0.9024
+Iter: 1301
+	Average training loss: -0.92936
+	Val Accuracy: 0.9018
+Iter: 1401
+	Average training loss: -0.94017
+	Val Accuracy: 0.9035
+Epoch: 10
+Iter: 1
+	Average training loss: -0.93754
+	Val Accuracy: 0.9035
+Iter: 101
+	Average training loss: -0.94008
+	Val Accuracy: 0.9018
+Iter: 201
+	Average training loss: -0.93498
+	Val Accuracy: 0.9045
+Iter: 301
+	Average training loss: -0.93628
+	Val Accuracy: 0.9043
+Iter: 401
+	Average training loss: -0.94020
+	Val Accuracy: 0.9036
+Iter: 501
+	Average training loss: -0.93669
+	Val Accuracy: 0.9020
+Iter: 601
+	Average training loss: -0.93570
+	Val Accuracy: 0.9035
+Iter: 701
+	Average training loss: -0.93019
+	Val Accuracy: 0.8995
+Iter: 801
+	Average training loss: -0.93139
+	Val Accuracy: 0.9004
+Iter: 901
+	Average training loss: -0.93775
+	Val Accuracy: 0.9036
+Iter: 1001
+	Average training loss: -0.93910
+	Val Accuracy: 0.9055
+Iter: 1101
+	Average training loss: -0.93872
+	Val Accuracy: 0.9059
+Iter: 1201
+	Average training loss: -0.93904
+	Val Accuracy: 0.9040
+Iter: 1301
+	Average training loss: -0.93799
+	Val Accuracy: 0.9050
+Iter: 1401
+	Average training loss: -0.93667
+	Val Accuracy: 0.9039
+Epoch: 11
+Iter: 1
+	Average training loss: -0.85924
+	Val Accuracy: 0.9060
+Iter: 101
+	Average training loss: -0.93682
+	Val Accuracy: 0.9055
+Iter: 201
+	Average training loss: -0.93838
+	Val Accuracy: 0.9019
+Iter: 301
+	Average training loss: -0.94062
+	Val Accuracy: 0.9070
+Iter: 401
+	Average training loss: -0.93738
+	Val Accuracy: 0.9033
+Iter: 501
+	Average training loss: -0.93421
+	Val Accuracy: 0.9043
+Iter: 601
+	Average training loss: -0.93940
+	Val Accuracy: 0.9053
+Iter: 701
+	Average training loss: -0.94067
+	Val Accuracy: 0.9058
+Iter: 801
+	Average training loss: -0.94296
+	Val Accuracy: 0.9057
+Iter: 901
+	Average training loss: -0.94137
+	Val Accuracy: 0.9072
+Iter: 1001
+	Average training loss: -0.93997
+	Val Accuracy: 0.9075
+Iter: 1101
+	Average training loss: -0.93420
+	Val Accuracy: 0.9066
+Iter: 1201
+	Average training loss: -0.93973
+	Val Accuracy: 0.9061
+Iter: 1301
+	Average training loss: -0.93586
+	Val Accuracy: 0.9078
+Iter: 1401
+	Average training loss: -0.94076
+	Val Accuracy: 0.9061
+Epoch: 12
+Iter: 1
+	Average training loss: -0.95314
+	Val Accuracy: 0.9047
+Iter: 101
+	Average training loss: -0.94267
+	Val Accuracy: 0.9039
+Iter: 201
+	Average training loss: -0.94188
+	Val Accuracy: 0.9065
+Iter: 301
+	Average training loss: -0.94110
+	Val Accuracy: 0.9057
+Iter: 401
+	Average training loss: -0.93598
+	Val Accuracy: 0.9069
+Iter: 501
+	Average training loss: -0.94017
+	Val Accuracy: 0.9049
+Iter: 601
+	Average training loss: -0.93550
+	Val Accuracy: 0.9071
+Iter: 701
+	Average training loss: -0.93927
+	Val Accuracy: 0.9049
+Iter: 801
+	Average training loss: -0.92951
+	Val Accuracy: 0.9045
+Iter: 901
+	Average training loss: -0.93519
+	Val Accuracy: 0.9030
+Iter: 1001
+	Average training loss: -0.93783
+	Val Accuracy: 0.9049
+Iter: 1101
+	Average training loss: -0.94306
+	Val Accuracy: 0.9054
+Iter: 1201
+	Average training loss: -0.93862
+	Val Accuracy: 0.9042
+Iter: 1301
+	Average training loss: -0.93954
+	Val Accuracy: 0.9056
+Iter: 1401
+	Average training loss: -0.93632
+	Val Accuracy: 0.9041
+Epoch: 13
+Iter: 1
+	Average training loss: -0.89574
+	Val Accuracy: 0.9027
+Iter: 101
+	Average training loss: -0.94709
+	Val Accuracy: 0.9016
+Iter: 201
+	Average training loss: -0.94214
+	Val Accuracy: 0.9057
+Iter: 301
+	Average training loss: -0.93750
+	Val Accuracy: 0.9049
+Iter: 401
+	Average training loss: -0.93285
+	Val Accuracy: 0.9042
+Iter: 501
+	Average training loss: -0.94292
+	Val Accuracy: 0.9049
+Iter: 601
+	Average training loss: -0.94153
+	Val Accuracy: 0.9059
+Iter: 701
+	Average training loss: -0.93245
+	Val Accuracy: 0.9043
+Iter: 801
+	Average training loss: -0.94210
+	Val Accuracy: 0.9040
+Iter: 901
+	Average training loss: -0.93944
+	Val Accuracy: 0.9039
+Iter: 1001
+	Average training loss: -0.94071
+	Val Accuracy: 0.9059
+Iter: 1101
+	Average training loss: -0.94134
+	Val Accuracy: 0.9056
+Iter: 1201
+	Average training loss: -0.94711
+	Val Accuracy: 0.9060
+Iter: 1301
+	Average training loss: -0.94182
+	Val Accuracy: 0.9055
+Iter: 1401
+	Average training loss: -0.93786
+	Val Accuracy: 0.9056
+Epoch: 14
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9055
+Iter: 101
+	Average training loss: -0.94298
+	Val Accuracy: 0.9057
+Iter: 201
+	Average training loss: -0.94834
+	Val Accuracy: 0.9078
+Iter: 301
+	Average training loss: -0.94201
+	Val Accuracy: 0.9060
+Iter: 401
+	Average training loss: -0.94587
+	Val Accuracy: 0.9067
+Iter: 501
+	Average training loss: -0.94577
+	Val Accuracy: 0.9066
+Iter: 601
+	Average training loss: -0.94403
+	Val Accuracy: 0.9072
+Iter: 701
+	Average training loss: -0.94403
+	Val Accuracy: 0.9066
+Iter: 801
+	Average training loss: -0.94409
+	Val Accuracy: 0.9071
+Iter: 901
+	Average training loss: -0.93689
+	Val Accuracy: 0.9050
+Iter: 1001
+	Average training loss: -0.94178
+	Val Accuracy: 0.9065
+Iter: 1101
+	Average training loss: -0.94124
+	Val Accuracy: 0.9055
+Iter: 1201
+	Average training loss: -0.93830
+	Val Accuracy: 0.9050
+Iter: 1301
+	Average training loss: -0.93110
+	Val Accuracy: 0.9039
+Iter: 1401
+	Average training loss: -0.93932
+	Val Accuracy: 0.9050
+Epoch: 15
+Iter: 1
+	Average training loss: -0.93750
+	Val Accuracy: 0.9048
+Iter: 101
+	Average training loss: -0.94765
+	Val Accuracy: 0.9049
+Iter: 201
+	Average training loss: -0.94637
+	Val Accuracy: 0.9060
+Iter: 301
+	Average training loss: -0.94280
+	Val Accuracy: 0.9063
+Iter: 401
+	Average training loss: -0.93840
+	Val Accuracy: 0.9066
+Iter: 501
+	Average training loss: -0.94230
+	Val Accuracy: 0.9082
+Iter: 601
+	Average training loss: -0.94213
+	Val Accuracy: 0.9082
+Iter: 701
+	Average training loss: -0.95300
+	Val Accuracy: 0.9049
+Iter: 801
+	Average training loss: -0.94523
+	Val Accuracy: 0.9052
+Iter: 901
+	Average training loss: -0.94056
+	Val Accuracy: 0.9062
+Iter: 1001
+	Average training loss: -0.94400
+	Val Accuracy: 0.9077
+Iter: 1101
+	Average training loss: -0.94254
+	Val Accuracy: 0.9066
+Iter: 1201
+	Average training loss: -0.94041
+	Val Accuracy: 0.9062
+Iter: 1301
+	Average training loss: -0.94702
+	Val Accuracy: 0.9077
+Iter: 1401
+	Average training loss: -0.94026
+	Val Accuracy: 0.9041
+Epoch: 16
+Iter: 1
+	Average training loss: -0.95310
+	Val Accuracy: 0.9057
+Iter: 101
+	Average training loss: -0.95347
+	Val Accuracy: 0.9081
+Iter: 201
+	Average training loss: -0.93815
+	Val Accuracy: 0.9079
+Iter: 301
+	Average training loss: -0.94541
+	Val Accuracy: 0.9082
+Iter: 401
+	Average training loss: -0.94293
+	Val Accuracy: 0.9063
+Iter: 501
+	Average training loss: -0.94155
+	Val Accuracy: 0.9050
+Iter: 601
+	Average training loss: -0.93794
+	Val Accuracy: 0.9051
+Iter: 701
+	Average training loss: -0.94128
+	Val Accuracy: 0.9058
+Iter: 801
+	Average training loss: -0.95034
+	Val Accuracy: 0.9065
+Iter: 901
+	Average training loss: -0.94468
+	Val Accuracy: 0.9049
+Iter: 1001
+	Average training loss: -0.94786
+	Val Accuracy: 0.9081
+Iter: 1101
+	Average training loss: -0.94125
+	Val Accuracy: 0.9048
+Iter: 1201
+	Average training loss: -0.94124
+	Val Accuracy: 0.9030
+Iter: 1301
+	Average training loss: -0.94034
+	Val Accuracy: 0.9071
+Iter: 1401
+	Average training loss: -0.94287
+	Val Accuracy: 0.9058
+Epoch: 17
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9048
+Iter: 101
+	Average training loss: -0.94102
+	Val Accuracy: 0.9073
+Iter: 201
+	Average training loss: -0.94667
+	Val Accuracy: 0.9067
+Iter: 301
+	Average training loss: -0.94880
+	Val Accuracy: 0.9034
+Iter: 401
+	Average training loss: -0.94939
+	Val Accuracy: 0.9067
+Iter: 501
+	Average training loss: -0.94273
+	Val Accuracy: 0.9077
+Iter: 601
+	Average training loss: -0.94699
+	Val Accuracy: 0.9070
+Iter: 701
+	Average training loss: -0.94345
+	Val Accuracy: 0.9054
+Iter: 801
+	Average training loss: -0.94253
+	Val Accuracy: 0.9059
+Iter: 901
+	Average training loss: -0.95154
+	Val Accuracy: 0.9030
+Iter: 1001
+	Average training loss: -0.94580
+	Val Accuracy: 0.9067
+Iter: 1101
+	Average training loss: -0.94345
+	Val Accuracy: 0.9070
+Iter: 1201
+	Average training loss: -0.93839
+	Val Accuracy: 0.9032
+Iter: 1301
+	Average training loss: -0.94204
+	Val Accuracy: 0.9063
+Iter: 1401
+	Average training loss: -0.94638
+	Val Accuracy: 0.9054
+Epoch: 18
+Iter: 1
+	Average training loss: -0.90625
+	Val Accuracy: 0.9078
+Iter: 101
+	Average training loss: -0.94958
+	Val Accuracy: 0.9063
+Iter: 201
+	Average training loss: -0.94120
+	Val Accuracy: 0.9080
+Iter: 301
+	Average training loss: -0.94691
+	Val Accuracy: 0.9063
+Iter: 401
+	Average training loss: -0.94584
+	Val Accuracy: 0.9065
+Iter: 501
+	Average training loss: -0.94322
+	Val Accuracy: 0.9075
+Iter: 601
+	Average training loss: -0.94577
+	Val Accuracy: 0.9065
+Iter: 701
+	Average training loss: -0.94614
+	Val Accuracy: 0.9081
+Iter: 801
+	Average training loss: -0.94312
+	Val Accuracy: 0.9060
+Iter: 901
+	Average training loss: -0.94521
+	Val Accuracy: 0.9093
+Iter: 1001
+	Average training loss: -0.94250
+	Val Accuracy: 0.9090
+Iter: 1101
+	Average training loss: -0.94713
+	Val Accuracy: 0.9070
+Iter: 1201
+	Average training loss: -0.95031
+	Val Accuracy: 0.9039
+Iter: 1301
+	Average training loss: -0.95371
+	Val Accuracy: 0.9058
+Iter: 1401
+	Average training loss: -0.94896
+	Val Accuracy: 0.9081
+Epoch: 19
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9062
+Iter: 101
+	Average training loss: -0.94920
+	Val Accuracy: 0.9049
+Iter: 201
+	Average training loss: -0.94393
+	Val Accuracy: 0.9068
+Iter: 301
+	Average training loss: -0.94905
+	Val Accuracy: 0.9066
+Iter: 401
+	Average training loss: -0.94519
+	Val Accuracy: 0.9068
+Iter: 501
+	Average training loss: -0.94641
+	Val Accuracy: 0.9048
+Iter: 601
+	Average training loss: -0.94579
+	Val Accuracy: 0.9076
+Iter: 701
+	Average training loss: -0.95154
+	Val Accuracy: 0.9064
+Iter: 801
+	Average training loss: -0.94382
+	Val Accuracy: 0.9082
+Iter: 901
+	Average training loss: -0.94463
+	Val Accuracy: 0.9071
+Iter: 1001
+	Average training loss: -0.94567
+	Val Accuracy: 0.9051
+Iter: 1101
+	Average training loss: -0.94803
+	Val Accuracy: 0.9070
+Iter: 1201
+	Average training loss: -0.94709
+	Val Accuracy: 0.9084
+Iter: 1301
+	Average training loss: -0.94687
+	Val Accuracy: 0.9068
+Iter: 1401
+	Average training loss: -0.94590
+	Val Accuracy: 0.9080
+Epoch: 20
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9071
+Iter: 101
+	Average training loss: -0.95005
+	Val Accuracy: 0.9064
+Iter: 201
+	Average training loss: -0.95077
+	Val Accuracy: 0.9065
+Iter: 301
+	Average training loss: -0.94841
+	Val Accuracy: 0.9073
+Iter: 401
+	Average training loss: -0.94991
+	Val Accuracy: 0.9058
+Iter: 501
+	Average training loss: -0.94604
+	Val Accuracy: 0.9056
+Iter: 601
+	Average training loss: -0.94963
+	Val Accuracy: 0.9070
+Iter: 701
+	Average training loss: -0.94795
+	Val Accuracy: 0.9073
+Iter: 801
+	Average training loss: -0.94841
+	Val Accuracy: 0.9076
+Iter: 901
+	Average training loss: -0.94591
+	Val Accuracy: 0.9052
+Iter: 1001
+	Average training loss: -0.94419
+	Val Accuracy: 0.9058
+Iter: 1101
+	Average training loss: -0.94204
+	Val Accuracy: 0.9054
+Iter: 1201
+	Average training loss: -0.95110
+	Val Accuracy: 0.9068
+Iter: 1301
+	Average training loss: -0.94625
+	Val Accuracy: 0.9055
+Iter: 1401
+	Average training loss: -0.94513
+	Val Accuracy: 0.9053
+Epoch: 21
+Iter: 1
+	Average training loss: -0.93963
+	Val Accuracy: 0.9040
+Iter: 101
+	Average training loss: -0.94195
+	Val Accuracy: 0.9069
+Iter: 201
+	Average training loss: -0.94657
+	Val Accuracy: 0.9083
+Iter: 301
+	Average training loss: -0.94301
+	Val Accuracy: 0.9077
+Iter: 401
+	Average training loss: -0.94296
+	Val Accuracy: 0.9057
+Iter: 501
+	Average training loss: -0.94380
+	Val Accuracy: 0.9052
+Iter: 601
+	Average training loss: -0.94790
+	Val Accuracy: 0.9062
+Iter: 701
+	Average training loss: -0.95001
+	Val Accuracy: 0.9078
+Iter: 801
+	Average training loss: -0.94977
+	Val Accuracy: 0.9066
+Iter: 901
+	Average training loss: -0.94103
+	Val Accuracy: 0.9077
+Iter: 1001
+	Average training loss: -0.94848
+	Val Accuracy: 0.9071
+Iter: 1101
+	Average training loss: -0.95103
+	Val Accuracy: 0.9045
+Iter: 1201
+	Average training loss: -0.94789
+	Val Accuracy: 0.9059
+Iter: 1301
+	Average training loss: -0.95112
+	Val Accuracy: 0.9082
+Iter: 1401
+	Average training loss: -0.95024
+	Val Accuracy: 0.9071
+Epoch: 22
+Iter: 1
+	Average training loss: -0.96058
+	Val Accuracy: 0.9075
+Iter: 101
+	Average training loss: -0.94981
+	Val Accuracy: 0.9091
+Iter: 201
+	Average training loss: -0.95165
+	Val Accuracy: 0.9085
+Iter: 301
+	Average training loss: -0.94933
+	Val Accuracy: 0.9060
+Iter: 401
+	Average training loss: -0.94674
+	Val Accuracy: 0.9052
+Iter: 501
+	Average training loss: -0.95245
+	Val Accuracy: 0.9069
+Iter: 601
+	Average training loss: -0.95078
+	Val Accuracy: 0.9077
+Iter: 701
+	Average training loss: -0.95040
+	Val Accuracy: 0.9044
+Iter: 801
+	Average training loss: -0.94555
+	Val Accuracy: 0.9070
+Iter: 901
+	Average training loss: -0.95206
+	Val Accuracy: 0.9045
+Iter: 1001
+	Average training loss: -0.94711
+	Val Accuracy: 0.9077
+Iter: 1101
+	Average training loss: -0.94546
+	Val Accuracy: 0.9070
+Iter: 1201
+	Average training loss: -0.94620
+	Val Accuracy: 0.9060
+Iter: 1301
+	Average training loss: -0.94646
+	Val Accuracy: 0.9077
+Iter: 1401
+	Average training loss: -0.94815
+	Val Accuracy: 0.9072
+Epoch: 23
+Iter: 1
+	Average training loss: -0.93743
+	Val Accuracy: 0.9058
+Iter: 101
+	Average training loss: -0.95345
+	Val Accuracy: 0.9066
+Iter: 201
+	Average training loss: -0.94610
+	Val Accuracy: 0.9087
+Iter: 301
+	Average training loss: -0.95225
+	Val Accuracy: 0.9070
+Iter: 401
+	Average training loss: -0.95405
+	Val Accuracy: 0.9071
+Iter: 501
+	Average training loss: -0.94923
+	Val Accuracy: 0.9072
+Iter: 601
+	Average training loss: -0.94489
+	Val Accuracy: 0.9082
+Iter: 701
+	Average training loss: -0.94843
+	Val Accuracy: 0.9070
+Iter: 801
+	Average training loss: -0.94797
+	Val Accuracy: 0.9028
+Iter: 901
+	Average training loss: -0.95076
+	Val Accuracy: 0.9092
+Iter: 1001
+	Average training loss: -0.94823
+	Val Accuracy: 0.9070
+Iter: 1101
+	Average training loss: -0.95065
+	Val Accuracy: 0.9039
+Iter: 1201
+	Average training loss: -0.94598
+	Val Accuracy: 0.9058
+Iter: 1301
+	Average training loss: -0.94795
+	Val Accuracy: 0.9062
+Iter: 1401
+	Average training loss: -0.94713
+	Val Accuracy: 0.9087
+Epoch: 24
+Iter: 1
+	Average training loss: -0.90626
+	Val Accuracy: 0.9068
+Iter: 101
+	Average training loss: -0.94556
+	Val Accuracy: 0.9081
+Iter: 201
+	Average training loss: -0.94473
+	Val Accuracy: 0.9065
+Iter: 301
+	Average training loss: -0.95298
+	Val Accuracy: 0.9075
+Iter: 401
+	Average training loss: -0.95110
+	Val Accuracy: 0.9067
+Iter: 501
+	Average training loss: -0.94889
+	Val Accuracy: 0.9070
+Iter: 601
+	Average training loss: -0.95122
+	Val Accuracy: 0.9094
+Iter: 701
+	Average training loss: -0.94754
+	Val Accuracy: 0.9093
+Iter: 801
+	Average training loss: -0.95221
+	Val Accuracy: 0.9079
+Iter: 901
+	Average training loss: -0.95125
+	Val Accuracy: 0.9085
+Iter: 1001
+	Average training loss: -0.94948
+	Val Accuracy: 0.9072
+Iter: 1101
+	Average training loss: -0.94940
+	Val Accuracy: 0.9052
+Iter: 1201
+	Average training loss: -0.95090
+	Val Accuracy: 0.9077
+Iter: 1301
+	Average training loss: -0.94434
+	Val Accuracy: 0.9075
+Iter: 1401
+	Average training loss: -0.94873
+	Val Accuracy: 0.9085
+Epoch: 25
+Iter: 1
+	Average training loss: -0.93750
+	Val Accuracy: 0.9078
+Iter: 101
+	Average training loss: -0.94913
+	Val Accuracy: 0.9100
+Iter: 201
+	Average training loss: -0.95160
+	Val Accuracy: 0.9081
+Iter: 301
+	Average training loss: -0.94889
+	Val Accuracy: 0.9075
+Iter: 401
+	Average training loss: -0.95214
+	Val Accuracy: 0.9055
+Iter: 501
+	Average training loss: -0.94863
+	Val Accuracy: 0.9053
+Iter: 601
+	Average training loss: -0.94925
+	Val Accuracy: 0.9071
+Iter: 701
+	Average training loss: -0.95155
+	Val Accuracy: 0.9067
+Iter: 801
+	Average training loss: -0.94632
+	Val Accuracy: 0.9064
+Iter: 901
+	Average training loss: -0.95515
+	Val Accuracy: 0.9062
+Iter: 1001
+	Average training loss: -0.94696
+	Val Accuracy: 0.9067
+Iter: 1101
+	Average training loss: -0.95067
+	Val Accuracy: 0.9087
+Iter: 1201
+	Average training loss: -0.95035
+	Val Accuracy: 0.9064
+Iter: 1301
+	Average training loss: -0.94642
+	Val Accuracy: 0.9070
+Iter: 1401
+	Average training loss: -0.95251
+	Val Accuracy: 0.9067
+Epoch: 26
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9061
+Iter: 101
+	Average training loss: -0.94554
+	Val Accuracy: 0.9055
+Iter: 201
+	Average training loss: -0.95082
+	Val Accuracy: 0.9057
+Iter: 301
+	Average training loss: -0.95122
+	Val Accuracy: 0.9085
+Iter: 401
+	Average training loss: -0.95217
+	Val Accuracy: 0.9059
+Iter: 501
+	Average training loss: -0.95536
+	Val Accuracy: 0.9070
+Iter: 601
+	Average training loss: -0.95134
+	Val Accuracy: 0.9060
+Iter: 701
+	Average training loss: -0.95044
+	Val Accuracy: 0.9100
+Iter: 801
+	Average training loss: -0.94792
+	Val Accuracy: 0.9075
+Iter: 901
+	Average training loss: -0.94745
+	Val Accuracy: 0.9091
+Iter: 1001
+	Average training loss: -0.95160
+	Val Accuracy: 0.9068
+Iter: 1101
+	Average training loss: -0.95255
+	Val Accuracy: 0.9085
+Iter: 1201
+	Average training loss: -0.95142
+	Val Accuracy: 0.9071
+Iter: 1301
+	Average training loss: -0.94894
+	Val Accuracy: 0.9078
+Iter: 1401
+	Average training loss: -0.95021
+	Val Accuracy: 0.9077
+Epoch: 27
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9048
+Iter: 101
+	Average training loss: -0.95023
+	Val Accuracy: 0.9079
+Iter: 201
+	Average training loss: -0.95034
+	Val Accuracy: 0.9080
+Iter: 301
+	Average training loss: -0.95329
+	Val Accuracy: 0.9061
+Iter: 401
+	Average training loss: -0.95019
+	Val Accuracy: 0.9054
+Iter: 501
+	Average training loss: -0.95371
+	Val Accuracy: 0.9059
+Iter: 601
+	Average training loss: -0.95194
+	Val Accuracy: 0.9096
+Iter: 701
+	Average training loss: -0.94706
+	Val Accuracy: 0.9065
+Iter: 801
+	Average training loss: -0.95230
+	Val Accuracy: 0.9082
+Iter: 901
+	Average training loss: -0.95340
+	Val Accuracy: 0.9093
+Iter: 1001
+	Average training loss: -0.95069
+	Val Accuracy: 0.9081
+Iter: 1101
+	Average training loss: -0.95277
+	Val Accuracy: 0.9073
+Iter: 1201
+	Average training loss: -0.95179
+	Val Accuracy: 0.9063
+Iter: 1301
+	Average training loss: -0.94823
+	Val Accuracy: 0.9074
+Iter: 1401
+	Average training loss: -0.94901
+	Val Accuracy: 0.9074
+Epoch: 28
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9066
+Iter: 101
+	Average training loss: -0.95098
+	Val Accuracy: 0.9055
+Iter: 201
+	Average training loss: -0.95155
+	Val Accuracy: 0.9083
+Iter: 301
+	Average training loss: -0.94885
+	Val Accuracy: 0.9072
+Iter: 401
+	Average training loss: -0.95562
+	Val Accuracy: 0.9042
+Iter: 501
+	Average training loss: -0.95086
+	Val Accuracy: 0.9095
+Iter: 601
+	Average training loss: -0.95077
+	Val Accuracy: 0.9083
+Iter: 701
+	Average training loss: -0.95263
+	Val Accuracy: 0.9075
+Iter: 801
+	Average training loss: -0.95390
+	Val Accuracy: 0.9057
+Iter: 901
+	Average training loss: -0.95277
+	Val Accuracy: 0.9059
+Iter: 1001
+	Average training loss: -0.95122
+	Val Accuracy: 0.9087
+Iter: 1101
+	Average training loss: -0.95703
+	Val Accuracy: 0.9066
+Iter: 1201
+	Average training loss: -0.95010
+	Val Accuracy: 0.9087
+Iter: 1301
+	Average training loss: -0.94773
+	Val Accuracy: 0.9093
+Iter: 1401
+	Average training loss: -0.95268
+	Val Accuracy: 0.9086
+Epoch: 29
+Iter: 1
+	Average training loss: -0.96874
+	Val Accuracy: 0.9089
+Iter: 101
+	Average training loss: -0.95072
+	Val Accuracy: 0.9081
+Iter: 201
+	Average training loss: -0.95559
+	Val Accuracy: 0.9090
+Iter: 301
+	Average training loss: -0.95358
+	Val Accuracy: 0.9095
+Iter: 401
+	Average training loss: -0.95087
+	Val Accuracy: 0.9084
+Iter: 501
+	Average training loss: -0.94972
+	Val Accuracy: 0.9072
+Iter: 601
+	Average training loss: -0.95264
+	Val Accuracy: 0.9077
+Iter: 701
+	Average training loss: -0.94985
+	Val Accuracy: 0.9078
+Iter: 801
+	Average training loss: -0.95558
+	Val Accuracy: 0.9073
+Iter: 901
+	Average training loss: -0.95155
+	Val Accuracy: 0.9075
+Iter: 1001
+	Average training loss: -0.95737
+	Val Accuracy: 0.9080
+Iter: 1101
+	Average training loss: -0.95389
+	Val Accuracy: 0.9075
+Iter: 1201
+	Average training loss: -0.95184
+	Val Accuracy: 0.9080
+Iter: 1301
+	Average training loss: -0.95449
+	Val Accuracy: 0.9058
+Iter: 1401
+	Average training loss: -0.95189
+	Val Accuracy: 0.9073
+Epoch: 30
+Iter: 1
+	Average training loss: -0.98404
+	Val Accuracy: 0.9090
+Iter: 101
+	Average training loss: -0.95363
+	Val Accuracy: 0.9104
+Iter: 201
+	Average training loss: -0.95748
+	Val Accuracy: 0.9090
+Iter: 301
+	Average training loss: -0.95561
+	Val Accuracy: 0.9093
+Iter: 401
+	Average training loss: -0.95075
+	Val Accuracy: 0.9107
+Iter: 501
+	Average training loss: -0.95412
+	Val Accuracy: 0.9114
+Iter: 601
+	Average training loss: -0.95144
+	Val Accuracy: 0.9087
+Iter: 701
+	Average training loss: -0.95414
+	Val Accuracy: 0.9088
+Iter: 801
+	Average training loss: -0.95299
+	Val Accuracy: 0.9103
+Iter: 901
+	Average training loss: -0.95433
+	Val Accuracy: 0.9084
+Iter: 1001
+	Average training loss: -0.95881
+	Val Accuracy: 0.9086
+Iter: 1101
+	Average training loss: -0.95661
+	Val Accuracy: 0.9068
+Iter: 1201
+	Average training loss: -0.95326
+	Val Accuracy: 0.9097
+Iter: 1301
+	Average training loss: -0.95409
+	Val Accuracy: 0.9065
+Iter: 1401
+	Average training loss: -0.95382
+	Val Accuracy: 0.9087
+Epoch: 31
+Iter: 1
+	Average training loss: -1.00000
+	Val Accuracy: 0.9082
+Iter: 101
+	Average training loss: -0.95384
+	Val Accuracy: 0.9082
+Iter: 201
+	Average training loss: -0.95455
+	Val Accuracy: 0.9081
+Iter: 301
+	Average training loss: -0.95483
+	Val Accuracy: 0.9084
+Iter: 401
+	Average training loss: -0.95883
+	Val Accuracy: 0.9079
+Iter: 501
+	Average training loss: -0.95792
+	Val Accuracy: 0.9085
+Iter: 601
+	Average training loss: -0.95505
+	Val Accuracy: 0.9014
+Iter: 701
+	Average training loss: -0.95462
+	Val Accuracy: 0.9053
+Iter: 801
+	Average training loss: -0.94874
+	Val Accuracy: 0.9071
+Iter: 901
+	Average training loss: -0.95317
+	Val Accuracy: 0.9049
+Iter: 1001
+	Average training loss: -0.94796
+	Val Accuracy: 0.9074
+Iter: 1101
+	Average training loss: -0.95153
+	Val Accuracy: 0.9067
+Iter: 1201
+	Average training loss: -0.95051
+	Val Accuracy: 0.9065
+Iter: 1301
+	Average training loss: -0.95278
+	Val Accuracy: 0.9090
+Iter: 1401
+	Average training loss: -0.95392
+	Val Accuracy: 0.9080
+Epoch: 32
+Iter: 1
+	Average training loss: -0.94914
+	Val Accuracy: 0.9099
+Iter: 101
+	Average training loss: -0.95564
+	Val Accuracy: 0.9103
+Iter: 201
+	Average training loss: -0.95635
+	Val Accuracy: 0.9106
+Iter: 301
+	Average training loss: -0.95305
+	Val Accuracy: 0.9079
+Iter: 401
+	Average training loss: -0.95810
+	Val Accuracy: 0.9088
+Iter: 501
+	Average training loss: -0.95725
+	Val Accuracy: 0.9060
+Iter: 601
+	Average training loss: -0.94782
+	Val Accuracy: 0.9093
+Iter: 701
+	Average training loss: -0.95353
+	Val Accuracy: 0.9108
+Iter: 801
+	Average training loss: -0.95406
+	Val Accuracy: 0.9095
+Iter: 901
+	Average training loss: -0.95185
+	Val Accuracy: 0.9066
+Iter: 1001
+	Average training loss: -0.95836
+	Val Accuracy: 0.9080
+Iter: 1101
+	Average training loss: -0.95451
+	Val Accuracy: 0.9085
+Iter: 1201
+	Average training loss: -0.95518
+	Val Accuracy: 0.9084
+Iter: 1301
+	Average training loss: -0.95313
+	Val Accuracy: 0.9057
+Iter: 1401
+	Average training loss: -0.94408
+	Val Accuracy: 0.9085
+Epoch: 33
+Reducing LR
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9092
+Iter: 101
+	Average training loss: -0.95310
+	Val Accuracy: 0.9097
+Iter: 201
+	Average training loss: -0.95698
+	Val Accuracy: 0.9076
+Iter: 301
+	Average training loss: -0.95850
+	Val Accuracy: 0.9110
+Iter: 401
+	Average training loss: -0.95576
+	Val Accuracy: 0.9103
+Iter: 501
+	Average training loss: -0.95364
+	Val Accuracy: 0.9105
+Iter: 601
+	Average training loss: -0.95879
+	Val Accuracy: 0.9091
+Iter: 701
+	Average training loss: -0.95375
+	Val Accuracy: 0.9079
+Iter: 801
+	Average training loss: -0.95383
+	Val Accuracy: 0.9085
+Iter: 901
+	Average training loss: -0.95207
+	Val Accuracy: 0.9101
+Iter: 1001
+	Average training loss: -0.95929
+	Val Accuracy: 0.9108
+Iter: 1101
+	Average training loss: -0.95686
+	Val Accuracy: 0.9110
+Iter: 1201
+	Average training loss: -0.95191
+	Val Accuracy: 0.9075
+Iter: 1301
+	Average training loss: -0.95490
+	Val Accuracy: 0.9095
+Iter: 1401
+	Average training loss: -0.95503
+	Val Accuracy: 0.9090
+Epoch: 34
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9088
+Iter: 101
+	Average training loss: -0.95419
+	Val Accuracy: 0.9087
+Iter: 201
+	Average training loss: -0.95128
+	Val Accuracy: 0.9115
+Iter: 301
+	Average training loss: -0.96015
+	Val Accuracy: 0.9102
+Iter: 401
+	Average training loss: -0.95607
+	Val Accuracy: 0.9103
+Iter: 501
+	Average training loss: -0.95879
+	Val Accuracy: 0.9087
+Iter: 601
+	Average training loss: -0.95714
+	Val Accuracy: 0.9099
+Iter: 701
+	Average training loss: -0.95957
+	Val Accuracy: 0.9083
+Iter: 801
+	Average training loss: -0.95884
+	Val Accuracy: 0.9099
+Iter: 901
+	Average training loss: -0.95821
+	Val Accuracy: 0.9113
+Iter: 1001
+	Average training loss: -0.95340
+	Val Accuracy: 0.9093
+Iter: 1101
+	Average training loss: -0.95827
+	Val Accuracy: 0.9100
+Iter: 1201
+	Average training loss: -0.95319
+	Val Accuracy: 0.9083
+Iter: 1301
+	Average training loss: -0.95458
+	Val Accuracy: 0.9105
+Iter: 1401
+	Average training loss: -0.95381
+	Val Accuracy: 0.9107
+Epoch: 35
+Iter: 1
+	Average training loss: -0.98436
+	Val Accuracy: 0.9097
+Iter: 101
+	Average training loss: -0.95912
+	Val Accuracy: 0.9105
+Iter: 201
+	Average training loss: -0.95705
+	Val Accuracy: 0.9110
+Iter: 301
+	Average training loss: -0.96197
+	Val Accuracy: 0.9119
+Iter: 401
+	Average training loss: -0.96069
+	Val Accuracy: 0.9100
+Iter: 501
+	Average training loss: -0.95753
+	Val Accuracy: 0.9102
+Iter: 601
+	Average training loss: -0.95780
+	Val Accuracy: 0.9099
+Iter: 701
+	Average training loss: -0.95841
+	Val Accuracy: 0.9093
+Iter: 801
+	Average training loss: -0.95444
+	Val Accuracy: 0.9093
+Iter: 901
+	Average training loss: -0.95525
+	Val Accuracy: 0.9097
+Iter: 1001
+	Average training loss: -0.95433
+	Val Accuracy: 0.9107
+Iter: 1101
+	Average training loss: -0.95228
+	Val Accuracy: 0.9110
+Iter: 1201
+	Average training loss: -0.95852
+	Val Accuracy: 0.9108
+Iter: 1301
+	Average training loss: -0.95932
+	Val Accuracy: 0.9077
+Iter: 1401
+	Average training loss: -0.95621
+	Val Accuracy: 0.9107
+Epoch: 36
+Iter: 1
+	Average training loss: -0.93750
+	Val Accuracy: 0.9100
+Iter: 101
+	Average training loss: -0.96224
+	Val Accuracy: 0.9107
+Iter: 201
+	Average training loss: -0.96196
+	Val Accuracy: 0.9100
+Iter: 301
+	Average training loss: -0.95689
+	Val Accuracy: 0.9100
+Iter: 401
+	Average training loss: -0.95275
+	Val Accuracy: 0.9096
+Iter: 501
+	Average training loss: -0.95949
+	Val Accuracy: 0.9108
+Iter: 601
+	Average training loss: -0.95428
+	Val Accuracy: 0.9089
+Iter: 701
+	Average training loss: -0.95994
+	Val Accuracy: 0.9090
+Iter: 801
+	Average training loss: -0.96002
+	Val Accuracy: 0.9109
+Iter: 901
+	Average training loss: -0.95885
+	Val Accuracy: 0.9085
+Iter: 1001
+	Average training loss: -0.95612
+	Val Accuracy: 0.9090
+Iter: 1101
+	Average training loss: -0.95524
+	Val Accuracy: 0.9095
+Iter: 1201
+	Average training loss: -0.95774
+	Val Accuracy: 0.9102
+Iter: 1301
+	Average training loss: -0.95522
+	Val Accuracy: 0.9103
+Iter: 1401
+	Average training loss: -0.95554
+	Val Accuracy: 0.9092
+Epoch: 37
+Iter: 1
+	Average training loss: -0.90625
+	Val Accuracy: 0.9109
+Iter: 101
+	Average training loss: -0.96170
+	Val Accuracy: 0.9104
+Iter: 201
+	Average training loss: -0.96102
+	Val Accuracy: 0.9105
+Iter: 301
+	Average training loss: -0.95845
+	Val Accuracy: 0.9097
+Iter: 401
+	Average training loss: -0.96248
+	Val Accuracy: 0.9108
+Iter: 501
+	Average training loss: -0.95910
+	Val Accuracy: 0.9086
+Iter: 601
+	Average training loss: -0.95602
+	Val Accuracy: 0.9096
+Iter: 701
+	Average training loss: -0.95872
+	Val Accuracy: 0.9091
+Iter: 801
+	Average training loss: -0.95530
+	Val Accuracy: 0.9102
+Iter: 901
+	Average training loss: -0.95591
+	Val Accuracy: 0.9100
+Iter: 1001
+	Average training loss: -0.95587
+	Val Accuracy: 0.9109
+Iter: 1101
+	Average training loss: -0.95635
+	Val Accuracy: 0.9092
+Iter: 1201
+	Average training loss: -0.95340
+	Val Accuracy: 0.9113
+Iter: 1301
+	Average training loss: -0.96323
+	Val Accuracy: 0.9100
+Iter: 1401
+	Average training loss: -0.95363
+	Val Accuracy: 0.9080
+Epoch: 38
+Iter: 1
+	Average training loss: -1.00000
+	Val Accuracy: 0.9085
+Iter: 101
+	Average training loss: -0.95721
+	Val Accuracy: 0.9090
+Iter: 201
+	Average training loss: -0.95899
+	Val Accuracy: 0.9101
+Iter: 301
+	Average training loss: -0.96011
+	Val Accuracy: 0.9113
+Iter: 401
+	Average training loss: -0.96199
+	Val Accuracy: 0.9094
+Iter: 501
+	Average training loss: -0.95811
+	Val Accuracy: 0.9118
+Iter: 601
+	Average training loss: -0.95903
+	Val Accuracy: 0.9079
+Iter: 701
+	Average training loss: -0.95919
+	Val Accuracy: 0.9103
+Iter: 801
+	Average training loss: -0.95801
+	Val Accuracy: 0.9107
+Iter: 901
+	Average training loss: -0.95804
+	Val Accuracy: 0.9113
+Iter: 1001
+	Average training loss: -0.96056
+	Val Accuracy: 0.9104
+Iter: 1101
+	Average training loss: -0.95073
+	Val Accuracy: 0.9086
+Iter: 1201
+	Average training loss: -0.95269
+	Val Accuracy: 0.9114
+Iter: 1301
+	Average training loss: -0.95731
+	Val Accuracy: 0.9103
+Iter: 1401
+	Average training loss: -0.96089
+	Val Accuracy: 0.9118
+Epoch: 39
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9109
+Iter: 101
+	Average training loss: -0.95812
+	Val Accuracy: 0.9118
+Iter: 201
+	Average training loss: -0.95965
+	Val Accuracy: 0.9104
+Iter: 301
+	Average training loss: -0.95632
+	Val Accuracy: 0.9098
+Iter: 401
+	Average training loss: -0.95955
+	Val Accuracy: 0.9095
+Iter: 501
+	Average training loss: -0.96060
+	Val Accuracy: 0.9107
+Iter: 601
+	Average training loss: -0.95569
+	Val Accuracy: 0.9101
+Iter: 701
+	Average training loss: -0.95886
+	Val Accuracy: 0.9103
+Iter: 801
+	Average training loss: -0.95926
+	Val Accuracy: 0.9101
+Iter: 901
+	Average training loss: -0.95562
+	Val Accuracy: 0.9101
+Iter: 1001
+	Average training loss: -0.95834
+	Val Accuracy: 0.9112
+Iter: 1101
+	Average training loss: -0.96189
+	Val Accuracy: 0.9084
+Iter: 1201
+	Average training loss: -0.96150
+	Val Accuracy: 0.9120
+Iter: 1301
+	Average training loss: -0.96000
+	Val Accuracy: 0.9114
+Iter: 1401
+	Average training loss: -0.95846
+	Val Accuracy: 0.9120
+Epoch: 40
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9059
+Iter: 101
+	Average training loss: -0.95611
+	Val Accuracy: 0.9091
+Iter: 201
+	Average training loss: -0.95923
+	Val Accuracy: 0.9103
+Iter: 301
+	Average training loss: -0.96241
+	Val Accuracy: 0.9090
+Iter: 401
+	Average training loss: -0.95607
+	Val Accuracy: 0.9101
+Iter: 501
+	Average training loss: -0.95377
+	Val Accuracy: 0.9102
+Iter: 601
+	Average training loss: -0.95898
+	Val Accuracy: 0.9104
+Iter: 701
+	Average training loss: -0.95992
+	Val Accuracy: 0.9093
+Iter: 801
+	Average training loss: -0.95900
+	Val Accuracy: 0.9107
+Iter: 901
+	Average training loss: -0.95499
+	Val Accuracy: 0.9106
+Iter: 1001
+	Average training loss: -0.95262
+	Val Accuracy: 0.9105
+Iter: 1101
+	Average training loss: -0.95410
+	Val Accuracy: 0.9108
+Iter: 1201
+	Average training loss: -0.96011
+	Val Accuracy: 0.9111
+Iter: 1301
+	Average training loss: -0.96047
+	Val Accuracy: 0.9099
+Iter: 1401
+	Average training loss: -0.96051
+	Val Accuracy: 0.9107
+Epoch: 41
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9115
+Iter: 101
+	Average training loss: -0.95933
+	Val Accuracy: 0.9101
+Iter: 201
+	Average training loss: -0.96121
+	Val Accuracy: 0.9115
+Iter: 301
+	Average training loss: -0.95676
+	Val Accuracy: 0.9104
+Iter: 401
+	Average training loss: -0.96053
+	Val Accuracy: 0.9103
+Iter: 501
+	Average training loss: -0.95551
+	Val Accuracy: 0.9100
+Iter: 601
+	Average training loss: -0.95638
+	Val Accuracy: 0.9111
+Iter: 701
+	Average training loss: -0.95654
+	Val Accuracy: 0.9107
+Iter: 801
+	Average training loss: -0.95977
+	Val Accuracy: 0.9099
+Iter: 901
+	Average training loss: -0.95676
+	Val Accuracy: 0.9121
+Iter: 1001
+	Average training loss: -0.96232
+	Val Accuracy: 0.9105
+Iter: 1101
+	Average training loss: -0.96148
+	Val Accuracy: 0.9109
+Iter: 1201
+	Average training loss: -0.95597
+	Val Accuracy: 0.9111
+Iter: 1301
+	Average training loss: -0.96354
+	Val Accuracy: 0.9107
+Iter: 1401
+	Average training loss: -0.95755
+	Val Accuracy: 0.9100
+Epoch: 42
+Iter: 1
+	Average training loss: -0.98437
+	Val Accuracy: 0.9112
+Iter: 101
+	Average training loss: -0.95852
+	Val Accuracy: 0.9113
+Iter: 201
+	Average training loss: -0.96074
+	Val Accuracy: 0.9086
+Iter: 301
+	Average training loss: -0.96038
+	Val Accuracy: 0.9104
+Iter: 401
+	Average training loss: -0.95882
+	Val Accuracy: 0.9110
+Iter: 501
+	Average training loss: -0.95603
+	Val Accuracy: 0.9097
+Iter: 601
+	Average training loss: -0.96190
+	Val Accuracy: 0.9115
+Iter: 701
+	Average training loss: -0.95875
+	Val Accuracy: 0.9097
+Iter: 801
+	Average training loss: -0.95946
+	Val Accuracy: 0.9122
+Iter: 901
+	Average training loss: -0.96004
+	Val Accuracy: 0.9107
+Iter: 1001
+	Average training loss: -0.95742
+	Val Accuracy: 0.9120
+Iter: 1101
+	Average training loss: -0.95909
+	Val Accuracy: 0.9110
+Iter: 1201
+	Average training loss: -0.95715
+	Val Accuracy: 0.9110
+Iter: 1301
+	Average training loss: -0.96230
+	Val Accuracy: 0.9100
+Iter: 1401
+	Average training loss: -0.95841
+	Val Accuracy: 0.9109
+Epoch: 43
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9118
+Iter: 101
+	Average training loss: -0.95849
+	Val Accuracy: 0.9110
+Iter: 201
+	Average training loss: -0.96154
+	Val Accuracy: 0.9115
+Iter: 301
+	Average training loss: -0.96134
+	Val Accuracy: 0.9112
+Iter: 401
+	Average training loss: -0.95953
+	Val Accuracy: 0.9113
+Iter: 501
+	Average training loss: -0.95842
+	Val Accuracy: 0.9114
+Iter: 601
+	Average training loss: -0.95741
+	Val Accuracy: 0.9109
+Iter: 701
+	Average training loss: -0.95963
+	Val Accuracy: 0.9103
+Iter: 801
+	Average training loss: -0.95783
+	Val Accuracy: 0.9116
+Iter: 901
+	Average training loss: -0.96033
+	Val Accuracy: 0.9116
+Iter: 1001
+	Average training loss: -0.96140
+	Val Accuracy: 0.9117
+Iter: 1101
+	Average training loss: -0.95863
+	Val Accuracy: 0.9092
+Iter: 1201
+	Average training loss: -0.95947
+	Val Accuracy: 0.9101
+Iter: 1301
+	Average training loss: -0.95938
+	Val Accuracy: 0.9110
+Iter: 1401
+	Average training loss: -0.96178
+	Val Accuracy: 0.9098
+Epoch: 44
+Iter: 1
+	Average training loss: -0.93743
+	Val Accuracy: 0.9104
+Iter: 101
+	Average training loss: -0.96002
+	Val Accuracy: 0.9106
+Iter: 201
+	Average training loss: -0.95896
+	Val Accuracy: 0.9099
+Iter: 301
+	Average training loss: -0.96137
+	Val Accuracy: 0.9095
+Iter: 401
+	Average training loss: -0.96221
+	Val Accuracy: 0.9122
+Iter: 501
+	Average training loss: -0.96268
+	Val Accuracy: 0.9094
+Iter: 601
+	Average training loss: -0.95920
+	Val Accuracy: 0.9105
+Iter: 701
+	Average training loss: -0.95936
+	Val Accuracy: 0.9120
+Iter: 801
+	Average training loss: -0.95866
+	Val Accuracy: 0.9096
+Iter: 901
+	Average training loss: -0.96235
+	Val Accuracy: 0.9119
+Iter: 1001
+	Average training loss: -0.96205
+	Val Accuracy: 0.9103
+Iter: 1101
+	Average training loss: -0.95778
+	Val Accuracy: 0.9110
+Iter: 1201
+	Average training loss: -0.95554
+	Val Accuracy: 0.9107
+Iter: 1301
+	Average training loss: -0.95340
+	Val Accuracy: 0.9112
+Iter: 1401
+	Average training loss: -0.96409
+	Val Accuracy: 0.9111
+Epoch: 45
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9097
+Iter: 101
+	Average training loss: -0.95893
+	Val Accuracy: 0.9113
+Iter: 201
+	Average training loss: -0.96147
+	Val Accuracy: 0.9116
+Iter: 301
+	Average training loss: -0.95735
+	Val Accuracy: 0.9099
+Iter: 401
+	Average training loss: -0.95854
+	Val Accuracy: 0.9098
+Iter: 501
+	Average training loss: -0.95605
+	Val Accuracy: 0.9110
+Iter: 601
+	Average training loss: -0.96009
+	Val Accuracy: 0.9101
+Iter: 701
+	Average training loss: -0.96544
+	Val Accuracy: 0.9106
+Iter: 801
+	Average training loss: -0.96101
+	Val Accuracy: 0.9099
+Iter: 901
+	Average training loss: -0.96150
+	Val Accuracy: 0.9112
+Iter: 1001
+	Average training loss: -0.95828
+	Val Accuracy: 0.9106
+Iter: 1101
+	Average training loss: -0.95703
+	Val Accuracy: 0.9113
+Iter: 1201
+	Average training loss: -0.96017
+	Val Accuracy: 0.9114
+Iter: 1301
+	Average training loss: -0.96246
+	Val Accuracy: 0.9123
+Iter: 1401
+	Average training loss: -0.96262
+	Val Accuracy: 0.9108
+Epoch: 46
+Iter: 1
+	Average training loss: -1.00000
+	Val Accuracy: 0.9112
+Iter: 101
+	Average training loss: -0.95637
+	Val Accuracy: 0.9120
+Iter: 201
+	Average training loss: -0.96213
+	Val Accuracy: 0.9099
+Iter: 301
+	Average training loss: -0.96198
+	Val Accuracy: 0.9131
+Iter: 401
+	Average training loss: -0.95996
+	Val Accuracy: 0.9120
+Iter: 501
+	Average training loss: -0.96477
+	Val Accuracy: 0.9120
+Iter: 601
+	Average training loss: -0.96508
+	Val Accuracy: 0.9113
+Iter: 701
+	Average training loss: -0.96235
+	Val Accuracy: 0.9107
+Iter: 801
+	Average training loss: -0.95967
+	Val Accuracy: 0.9106
+Iter: 901
+	Average training loss: -0.96033
+	Val Accuracy: 0.9097
+Iter: 1001
+	Average training loss: -0.95843
+	Val Accuracy: 0.9109
+Iter: 1101
+	Average training loss: -0.95641
+	Val Accuracy: 0.9106
+Iter: 1201
+	Average training loss: -0.96056
+	Val Accuracy: 0.9111
+Iter: 1301
+	Average training loss: -0.96158
+	Val Accuracy: 0.9104
+Iter: 1401
+	Average training loss: -0.96058
+	Val Accuracy: 0.9087
+Epoch: 47
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9113
+Iter: 101
+	Average training loss: -0.96062
+	Val Accuracy: 0.9108
+Iter: 201
+	Average training loss: -0.95985
+	Val Accuracy: 0.9107
+Iter: 301
+	Average training loss: -0.95940
+	Val Accuracy: 0.9119
+Iter: 401
+	Average training loss: -0.96071
+	Val Accuracy: 0.9103
+Iter: 501
+	Average training loss: -0.95870
+	Val Accuracy: 0.9117
+Iter: 601
+	Average training loss: -0.96073
+	Val Accuracy: 0.9098
+Iter: 701
+	Average training loss: -0.96508
+	Val Accuracy: 0.9103
+Iter: 801
+	Average training loss: -0.96169
+	Val Accuracy: 0.9100
+Iter: 901
+	Average training loss: -0.96025
+	Val Accuracy: 0.9105
+Iter: 1001
+	Average training loss: -0.95917
+	Val Accuracy: 0.9098
+Iter: 1101
+	Average training loss: -0.96093
+	Val Accuracy: 0.9105
+Iter: 1201
+	Average training loss: -0.96532
+	Val Accuracy: 0.9103
+Iter: 1301
+	Average training loss: -0.95858
+	Val Accuracy: 0.9123
+Iter: 1401
+	Average training loss: -0.96170
+	Val Accuracy: 0.9105
+Epoch: 48
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9114
+Iter: 101
+	Average training loss: -0.96024
+	Val Accuracy: 0.9115
+Iter: 201
+	Average training loss: -0.95810
+	Val Accuracy: 0.9111
+Iter: 301
+	Average training loss: -0.96482
+	Val Accuracy: 0.9108
+Iter: 401
+	Average training loss: -0.96444
+	Val Accuracy: 0.9101
+Iter: 501
+	Average training loss: -0.95857
+	Val Accuracy: 0.9113
+Iter: 601
+	Average training loss: -0.95988
+	Val Accuracy: 0.9100
+Iter: 701
+	Average training loss: -0.96181
+	Val Accuracy: 0.9123
+Iter: 801
+	Average training loss: -0.96054
+	Val Accuracy: 0.9124
+Iter: 901
+	Average training loss: -0.95795
+	Val Accuracy: 0.9117
+Iter: 1001
+	Average training loss: -0.96239
+	Val Accuracy: 0.9103
+Iter: 1101
+	Average training loss: -0.95815
+	Val Accuracy: 0.9120
+Iter: 1201
+	Average training loss: -0.95859
+	Val Accuracy: 0.9085
+Iter: 1301
+	Average training loss: -0.96024
+	Val Accuracy: 0.9118
+Iter: 1401
+	Average training loss: -0.96311
+	Val Accuracy: 0.9126
+Epoch: 49
+Iter: 1
+	Average training loss: -0.96870
+	Val Accuracy: 0.9105
+Iter: 101
+	Average training loss: -0.96033
+	Val Accuracy: 0.9127
+Iter: 201
+	Average training loss: -0.96239
+	Val Accuracy: 0.9116
+Iter: 301
+	Average training loss: -0.96219
+	Val Accuracy: 0.9121
+Iter: 401
+	Average training loss: -0.95845
+	Val Accuracy: 0.9118
+Iter: 501
+	Average training loss: -0.96119
+	Val Accuracy: 0.9112
+Iter: 601
+	Average training loss: -0.96266
+	Val Accuracy: 0.9117
+Iter: 701
+	Average training loss: -0.96045
+	Val Accuracy: 0.9103
+Iter: 801
+	Average training loss: -0.96416
+	Val Accuracy: 0.9118
+Iter: 901
+	Average training loss: -0.96157
+	Val Accuracy: 0.9113
+Iter: 1001
+	Average training loss: -0.95746
+	Val Accuracy: 0.9093
+Iter: 1101
+	Average training loss: -0.96154
+	Val Accuracy: 0.9110
+Iter: 1201
+	Average training loss: -0.96325
+	Val Accuracy: 0.9094
+Iter: 1301
+	Average training loss: -0.96053
+	Val Accuracy: 0.9094
+Iter: 1401
+	Average training loss: -0.96236
+	Val Accuracy: 0.9126
+Epoch: 50
+Iter: 1
+	Average training loss: -0.96570
+	Val Accuracy: 0.9106
+Iter: 101
+	Average training loss: -0.95924
+	Val Accuracy: 0.9101
+Iter: 201
+	Average training loss: -0.96385
+	Val Accuracy: 0.9108
+Iter: 301
+	Average training loss: -0.96469
+	Val Accuracy: 0.9120
+Iter: 401
+	Average training loss: -0.96025
+	Val Accuracy: 0.9112
+Iter: 501
+	Average training loss: -0.96228
+	Val Accuracy: 0.9092
+Iter: 601
+	Average training loss: -0.96182
+	Val Accuracy: 0.9099
+Iter: 701
+	Average training loss: -0.96161
+	Val Accuracy: 0.9109
+Iter: 801
+	Average training loss: -0.96011
+	Val Accuracy: 0.9111
+Iter: 901
+	Average training loss: -0.95987
+	Val Accuracy: 0.9115
+Iter: 1001
+	Average training loss: -0.95805
+	Val Accuracy: 0.9110
+Iter: 1101
+	Average training loss: -0.96397
+	Val Accuracy: 0.9109
+Iter: 1201
+	Average training loss: -0.96185
+	Val Accuracy: 0.9105
+Iter: 1301
+	Average training loss: -0.96137
+	Val Accuracy: 0.9125
+Iter: 1401
+	Average training loss: -0.96521
+	Val Accuracy: 0.9105
+Epoch: 51
+Iter: 1
+	Average training loss: -0.93755
+	Val Accuracy: 0.9114
+Iter: 101
+	Average training loss: -0.96160
+	Val Accuracy: 0.9090
+Iter: 201
+	Average training loss: -0.95962
+	Val Accuracy: 0.9123
+Iter: 301
+	Average training loss: -0.96362
+	Val Accuracy: 0.9111
+Iter: 401
+	Average training loss: -0.96099
+	Val Accuracy: 0.9118
+Iter: 501
+	Average training loss: -0.96368
+	Val Accuracy: 0.9130
+Iter: 601
+	Average training loss: -0.96057
+	Val Accuracy: 0.9135
+Iter: 701
+	Average training loss: -0.96556
+	Val Accuracy: 0.9120
+Iter: 801
+	Average training loss: -0.96235
+	Val Accuracy: 0.9125
+Iter: 901
+	Average training loss: -0.96142
+	Val Accuracy: 0.9126
+Iter: 1001
+	Average training loss: -0.95897
+	Val Accuracy: 0.9119
+Iter: 1101
+	Average training loss: -0.96002
+	Val Accuracy: 0.9102
+Iter: 1201
+	Average training loss: -0.95851
+	Val Accuracy: 0.9108
+Iter: 1301
+	Average training loss: -0.95828
+	Val Accuracy: 0.9103
+Iter: 1401
+	Average training loss: -0.96145
+	Val Accuracy: 0.9112
+Epoch: 52
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9116
+Iter: 101
+	Average training loss: -0.96739
+	Val Accuracy: 0.9125
+Iter: 201
+	Average training loss: -0.96558
+	Val Accuracy: 0.9123
+Iter: 301
+	Average training loss: -0.96016
+	Val Accuracy: 0.9110
+Iter: 401
+	Average training loss: -0.95821
+	Val Accuracy: 0.9107
+Iter: 501
+	Average training loss: -0.95992
+	Val Accuracy: 0.9116
+Iter: 601
+	Average training loss: -0.96005
+	Val Accuracy: 0.9087
+Iter: 701
+	Average training loss: -0.95875
+	Val Accuracy: 0.9099
+Iter: 801
+	Average training loss: -0.95799
+	Val Accuracy: 0.9115
+Iter: 901
+	Average training loss: -0.95593
+	Val Accuracy: 0.9118
+Iter: 1001
+	Average training loss: -0.96329
+	Val Accuracy: 0.9127
+Iter: 1101
+	Average training loss: -0.96195
+	Val Accuracy: 0.9124
+Iter: 1201
+	Average training loss: -0.95985
+	Val Accuracy: 0.9106
+Iter: 1301
+	Average training loss: -0.96037
+	Val Accuracy: 0.9109
+Iter: 1401
+	Average training loss: -0.96321
+	Val Accuracy: 0.9108
+Epoch: 53
+Iter: 1
+	Average training loss: -0.93750
+	Val Accuracy: 0.9121
+Iter: 101
+	Average training loss: -0.96349
+	Val Accuracy: 0.9131
+Iter: 201
+	Average training loss: -0.95940
+	Val Accuracy: 0.9119
+Iter: 301
+	Average training loss: -0.96244
+	Val Accuracy: 0.9112
+Iter: 401
+	Average training loss: -0.95988
+	Val Accuracy: 0.9120
+Iter: 501
+	Average training loss: -0.96159
+	Val Accuracy: 0.9125
+Iter: 601
+	Average training loss: -0.96405
+	Val Accuracy: 0.9123
+Iter: 701
+	Average training loss: -0.96228
+	Val Accuracy: 0.9114
+Iter: 801
+	Average training loss: -0.96131
+	Val Accuracy: 0.9114
+Iter: 901
+	Average training loss: -0.96074
+	Val Accuracy: 0.9125
+Iter: 1001
+	Average training loss: -0.96354
+	Val Accuracy: 0.9127
+Iter: 1101
+	Average training loss: -0.95989
+	Val Accuracy: 0.9114
+Iter: 1201
+	Average training loss: -0.96710
+	Val Accuracy: 0.9105
+Iter: 1301
+	Average training loss: -0.96448
+	Val Accuracy: 0.9112
+Iter: 1401
+	Average training loss: -0.95633
+	Val Accuracy: 0.9119
+Epoch: 54
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9123
+Iter: 101
+	Average training loss: -0.96252
+	Val Accuracy: 0.9136
+Iter: 201
+	Average training loss: -0.96528
+	Val Accuracy: 0.9125
+Iter: 301
+	Average training loss: -0.95971
+	Val Accuracy: 0.9135
+Iter: 401
+	Average training loss: -0.95797
+	Val Accuracy: 0.9118
+Iter: 501
+	Average training loss: -0.96199
+	Val Accuracy: 0.9112
+Iter: 601
+	Average training loss: -0.96131
+	Val Accuracy: 0.9129
+Iter: 701
+	Average training loss: -0.96511
+	Val Accuracy: 0.9118
+Iter: 801
+	Average training loss: -0.96215
+	Val Accuracy: 0.9114
+Iter: 901
+	Average training loss: -0.96111
+	Val Accuracy: 0.9105
+Iter: 1001
+	Average training loss: -0.96277
+	Val Accuracy: 0.9117
+Iter: 1101
+	Average training loss: -0.96327
+	Val Accuracy: 0.9111
+Iter: 1201
+	Average training loss: -0.96186
+	Val Accuracy: 0.9124
+Iter: 1301
+	Average training loss: -0.96315
+	Val Accuracy: 0.9107
+Iter: 1401
+	Average training loss: -0.96079
+	Val Accuracy: 0.9099
+Epoch: 55
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9110
+Iter: 101
+	Average training loss: -0.96359
+	Val Accuracy: 0.9104
+Iter: 201
+	Average training loss: -0.96207
+	Val Accuracy: 0.9112
+Iter: 301
+	Average training loss: -0.95983
+	Val Accuracy: 0.9127
+Iter: 401
+	Average training loss: -0.96281
+	Val Accuracy: 0.9101
+Iter: 501
+	Average training loss: -0.96342
+	Val Accuracy: 0.9115
+Iter: 601
+	Average training loss: -0.96122
+	Val Accuracy: 0.9090
+Iter: 701
+	Average training loss: -0.95891
+	Val Accuracy: 0.9101
+Iter: 801
+	Average training loss: -0.96344
+	Val Accuracy: 0.9125
+Iter: 901
+	Average training loss: -0.96745
+	Val Accuracy: 0.9105
+Iter: 1001
+	Average training loss: -0.96470
+	Val Accuracy: 0.9128
+Iter: 1101
+	Average training loss: -0.95880
+	Val Accuracy: 0.9114
+Iter: 1201
+	Average training loss: -0.95807
+	Val Accuracy: 0.9112
+Iter: 1301
+	Average training loss: -0.95842
+	Val Accuracy: 0.9097
+Iter: 1401
+	Average training loss: -0.96235
+	Val Accuracy: 0.9127
+Epoch: 56
+Iter: 1
+	Average training loss: -0.97211
+	Val Accuracy: 0.9113
+Iter: 101
+	Average training loss: -0.96477
+	Val Accuracy: 0.9117
+Iter: 201
+	Average training loss: -0.96273
+	Val Accuracy: 0.9106
+Iter: 301
+	Average training loss: -0.96186
+	Val Accuracy: 0.9123
+Iter: 401
+	Average training loss: -0.96268
+	Val Accuracy: 0.9107
+Iter: 501
+	Average training loss: -0.96229
+	Val Accuracy: 0.9117
+Iter: 601
+	Average training loss: -0.96415
+	Val Accuracy: 0.9103
+Iter: 701
+	Average training loss: -0.96157
+	Val Accuracy: 0.9091
+Iter: 801
+	Average training loss: -0.96065
+	Val Accuracy: 0.9098
+Iter: 901
+	Average training loss: -0.95966
+	Val Accuracy: 0.9108
+Iter: 1001
+	Average training loss: -0.96139
+	Val Accuracy: 0.9087
+Iter: 1101
+	Average training loss: -0.96084
+	Val Accuracy: 0.9103
+Iter: 1201
+	Average training loss: -0.95893
+	Val Accuracy: 0.9100
+Iter: 1301
+	Average training loss: -0.96387
+	Val Accuracy: 0.9113
+Iter: 1401
+	Average training loss: -0.96253
+	Val Accuracy: 0.9109
+Epoch: 57
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9105
+Iter: 101
+	Average training loss: -0.95990
+	Val Accuracy: 0.9110
+Iter: 201
+	Average training loss: -0.96237
+	Val Accuracy: 0.9104
+Iter: 301
+	Average training loss: -0.96276
+	Val Accuracy: 0.9121
+Iter: 401
+	Average training loss: -0.96137
+	Val Accuracy: 0.9110
+Iter: 501
+	Average training loss: -0.96120
+	Val Accuracy: 0.9125
+Iter: 601
+	Average training loss: -0.96154
+	Val Accuracy: 0.9114
+Iter: 701
+	Average training loss: -0.96366
+	Val Accuracy: 0.9090
+Iter: 801
+	Average training loss: -0.96196
+	Val Accuracy: 0.9119
+Iter: 901
+	Average training loss: -0.96005
+	Val Accuracy: 0.9127
+Iter: 1001
+	Average training loss: -0.96335
+	Val Accuracy: 0.9113
+Iter: 1101
+	Average training loss: -0.96646
+	Val Accuracy: 0.9107
+Iter: 1201
+	Average training loss: -0.96411
+	Val Accuracy: 0.9112
+Iter: 1301
+	Average training loss: -0.96377
+	Val Accuracy: 0.9118
+Iter: 1401
+	Average training loss: -0.96020
+	Val Accuracy: 0.9122
+Epoch: 58
+Iter: 1
+	Average training loss: -0.93750
+	Val Accuracy: 0.9124
+Iter: 101
+	Average training loss: -0.96155
+	Val Accuracy: 0.9112
+Iter: 201
+	Average training loss: -0.96307
+	Val Accuracy: 0.9123
+Iter: 301
+	Average training loss: -0.96220
+	Val Accuracy: 0.9120
+Iter: 401
+	Average training loss: -0.96133
+	Val Accuracy: 0.9113
+Iter: 501
+	Average training loss: -0.96336
+	Val Accuracy: 0.9102
+Iter: 601
+	Average training loss: -0.95701
+	Val Accuracy: 0.9103
+Iter: 701
+	Average training loss: -0.95654
+	Val Accuracy: 0.9117
+Iter: 801
+	Average training loss: -0.96206
+	Val Accuracy: 0.9114
+Iter: 901
+	Average training loss: -0.95911
+	Val Accuracy: 0.9122
+Iter: 1001
+	Average training loss: -0.96531
+	Val Accuracy: 0.9128
+Iter: 1101
+	Average training loss: -0.96320
+	Val Accuracy: 0.9121
+Iter: 1201
+	Average training loss: -0.96348
+	Val Accuracy: 0.9117
+Iter: 1301
+	Average training loss: -0.96644
+	Val Accuracy: 0.9125
+Iter: 1401
+	Average training loss: -0.96331
+	Val Accuracy: 0.9127
+Epoch: 59
+Iter: 1
+	Average training loss: -0.96583
+	Val Accuracy: 0.9110
+Iter: 101
+	Average training loss: -0.96651
+	Val Accuracy: 0.9104
+Iter: 201
+	Average training loss: -0.96373
+	Val Accuracy: 0.9121
+Iter: 301
+	Average training loss: -0.96369
+	Val Accuracy: 0.9113
+Iter: 401
+	Average training loss: -0.96268
+	Val Accuracy: 0.9118
+Iter: 501
+	Average training loss: -0.96454
+	Val Accuracy: 0.9113
+Iter: 601
+	Average training loss: -0.95989
+	Val Accuracy: 0.9127
+Iter: 701
+	Average training loss: -0.96176
+	Val Accuracy: 0.9113
+Iter: 801
+	Average training loss: -0.96455
+	Val Accuracy: 0.9116
+Iter: 901
+	Average training loss: -0.96341
+	Val Accuracy: 0.9122
+Iter: 1001
+	Average training loss: -0.95953
+	Val Accuracy: 0.9113
+Iter: 1101
+	Average training loss: -0.96256
+	Val Accuracy: 0.9124
+Iter: 1201
+	Average training loss: -0.95832
+	Val Accuracy: 0.9121
+Iter: 1301
+	Average training loss: -0.96156
+	Val Accuracy: 0.9128
+Iter: 1401
+	Average training loss: -0.96382
+	Val Accuracy: 0.9107
+Epoch: 60
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9132
+Iter: 101
+	Average training loss: -0.96704
+	Val Accuracy: 0.9119
+Iter: 201
+	Average training loss: -0.96177
+	Val Accuracy: 0.9110
+Iter: 301
+	Average training loss: -0.96368
+	Val Accuracy: 0.9141
+Iter: 401
+	Average training loss: -0.96133
+	Val Accuracy: 0.9105
+Iter: 501
+	Average training loss: -0.95948
+	Val Accuracy: 0.9085
+Iter: 601
+	Average training loss: -0.96172
+	Val Accuracy: 0.9095
+Iter: 701
+	Average training loss: -0.96399
+	Val Accuracy: 0.9105
+Iter: 801
+	Average training loss: -0.96489
+	Val Accuracy: 0.9117
+Iter: 901
+	Average training loss: -0.96226
+	Val Accuracy: 0.9103
+Iter: 1001
+	Average training loss: -0.96326
+	Val Accuracy: 0.9097
+Iter: 1101
+	Average training loss: -0.96321
+	Val Accuracy: 0.9120
+Iter: 1201
+	Average training loss: -0.96276
+	Val Accuracy: 0.9121
+Iter: 1301
+	Average training loss: -0.96032
+	Val Accuracy: 0.9130
+Iter: 1401
+	Average training loss: -0.96259
+	Val Accuracy: 0.9125
+Epoch: 61
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9111
+Iter: 101
+	Average training loss: -0.96407
+	Val Accuracy: 0.9112
+Iter: 201
+	Average training loss: -0.96140
+	Val Accuracy: 0.9123
+Iter: 301
+	Average training loss: -0.96448
+	Val Accuracy: 0.9131
+Iter: 401
+	Average training loss: -0.96403
+	Val Accuracy: 0.9109
+Iter: 501
+	Average training loss: -0.95985
+	Val Accuracy: 0.9127
+Iter: 601
+	Average training loss: -0.96182
+	Val Accuracy: 0.9123
+Iter: 701
+	Average training loss: -0.96461
+	Val Accuracy: 0.9118
+Iter: 801
+	Average training loss: -0.96212
+	Val Accuracy: 0.9119
+Iter: 901
+	Average training loss: -0.96447
+	Val Accuracy: 0.9124
+Iter: 1001
+	Average training loss: -0.96490
+	Val Accuracy: 0.9115
+Iter: 1101
+	Average training loss: -0.96729
+	Val Accuracy: 0.9129
+Iter: 1201
+	Average training loss: -0.95767
+	Val Accuracy: 0.9123
+Iter: 1301
+	Average training loss: -0.95917
+	Val Accuracy: 0.9128
+Iter: 1401
+	Average training loss: -0.96235
+	Val Accuracy: 0.9107
+Epoch: 62
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9120
+Iter: 101
+	Average training loss: -0.96663
+	Val Accuracy: 0.9113
+Iter: 201
+	Average training loss: -0.95980
+	Val Accuracy: 0.9137
+Iter: 301
+	Average training loss: -0.96050
+	Val Accuracy: 0.9119
+Iter: 401
+	Average training loss: -0.95896
+	Val Accuracy: 0.9108
+Iter: 501
+	Average training loss: -0.96933
+	Val Accuracy: 0.9120
+Iter: 601
+	Average training loss: -0.96380
+	Val Accuracy: 0.9120
+Iter: 701
+	Average training loss: -0.96124
+	Val Accuracy: 0.9100
+Iter: 801
+	Average training loss: -0.96533
+	Val Accuracy: 0.9092
+Iter: 901
+	Average training loss: -0.96000
+	Val Accuracy: 0.9117
+Iter: 1001
+	Average training loss: -0.96255
+	Val Accuracy: 0.9092
+Iter: 1101
+	Average training loss: -0.96279
+	Val Accuracy: 0.9105
+Iter: 1201
+	Average training loss: -0.96226
+	Val Accuracy: 0.9122
+Iter: 1301
+	Average training loss: -0.96499
+	Val Accuracy: 0.9107
+Iter: 1401
+	Average training loss: -0.96272
+	Val Accuracy: 0.9113
+Epoch: 63
+Iter: 1
+	Average training loss: -0.92227
+	Val Accuracy: 0.9103
+Iter: 101
+	Average training loss: -0.96212
+	Val Accuracy: 0.9117
+Iter: 201
+	Average training loss: -0.96689
+	Val Accuracy: 0.9099
+Iter: 301
+	Average training loss: -0.96435
+	Val Accuracy: 0.9123
+Iter: 401
+	Average training loss: -0.96268
+	Val Accuracy: 0.9103
+Iter: 501
+	Average training loss: -0.96114
+	Val Accuracy: 0.9110
+Iter: 601
+	Average training loss: -0.96286
+	Val Accuracy: 0.9125
+Iter: 701
+	Average training loss: -0.96172
+	Val Accuracy: 0.9113
+Iter: 801
+	Average training loss: -0.96353
+	Val Accuracy: 0.9103
+Iter: 901
+	Average training loss: -0.96699
+	Val Accuracy: 0.9111
+Iter: 1001
+	Average training loss: -0.96305
+	Val Accuracy: 0.9102
+Iter: 1101
+	Average training loss: -0.96198
+	Val Accuracy: 0.9111
+Iter: 1201
+	Average training loss: -0.96130
+	Val Accuracy: 0.9105
+Iter: 1301
+	Average training loss: -0.96307
+	Val Accuracy: 0.9123
+Iter: 1401
+	Average training loss: -0.96234
+	Val Accuracy: 0.9110
+Epoch: 64
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9094
+Iter: 101
+	Average training loss: -0.96492
+	Val Accuracy: 0.9095
+Iter: 201
+	Average training loss: -0.96449
+	Val Accuracy: 0.9100
+Iter: 301
+	Average training loss: -0.96111
+	Val Accuracy: 0.9077
+Iter: 401
+	Average training loss: -0.96218
+	Val Accuracy: 0.9119
+Iter: 501
+	Average training loss: -0.96114
+	Val Accuracy: 0.9133
+Iter: 601
+	Average training loss: -0.96466
+	Val Accuracy: 0.9106
+Iter: 701
+	Average training loss: -0.96537
+	Val Accuracy: 0.9108
+Iter: 801
+	Average training loss: -0.96367
+	Val Accuracy: 0.9107
+Iter: 901
+	Average training loss: -0.96150
+	Val Accuracy: 0.9110
+Iter: 1001
+	Average training loss: -0.96567
+	Val Accuracy: 0.9130
+Iter: 1101
+	Average training loss: -0.96332
+	Val Accuracy: 0.9136
+Iter: 1201
+	Average training loss: -0.95968
+	Val Accuracy: 0.9136
+Iter: 1301
+	Average training loss: -0.96162
+	Val Accuracy: 0.9124
+Iter: 1401
+	Average training loss: -0.96464
+	Val Accuracy: 0.9116
+Epoch: 65
+Iter: 1
+	Average training loss: -0.93750
+	Val Accuracy: 0.9123
+Iter: 101
+	Average training loss: -0.96244
+	Val Accuracy: 0.9126
+Iter: 201
+	Average training loss: -0.96160
+	Val Accuracy: 0.9121
+Iter: 301
+	Average training loss: -0.96098
+	Val Accuracy: 0.9118
+Iter: 401
+	Average training loss: -0.96475
+	Val Accuracy: 0.9120
+Iter: 501
+	Average training loss: -0.96293
+	Val Accuracy: 0.9117
+Iter: 601
+	Average training loss: -0.96431
+	Val Accuracy: 0.9111
+Iter: 701
+	Average training loss: -0.96702
+	Val Accuracy: 0.9118
+Iter: 801
+	Average training loss: -0.96379
+	Val Accuracy: 0.9105
+Iter: 901
+	Average training loss: -0.96505
+	Val Accuracy: 0.9111
+Iter: 1001
+	Average training loss: -0.96187
+	Val Accuracy: 0.9135
+Iter: 1101
+	Average training loss: -0.96032
+	Val Accuracy: 0.9125
+Iter: 1201
+	Average training loss: -0.96391
+	Val Accuracy: 0.9110
+Iter: 1301
+	Average training loss: -0.96390
+	Val Accuracy: 0.9108
+Iter: 1401
+	Average training loss: -0.96251
+	Val Accuracy: 0.9127
+Epoch: 66
+Reducing LR
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9123
+Iter: 101
+	Average training loss: -0.96491
+	Val Accuracy: 0.9106
+Iter: 201
+	Average training loss: -0.96389
+	Val Accuracy: 0.9110
+Iter: 301
+	Average training loss: -0.96563
+	Val Accuracy: 0.9126
+Iter: 401
+	Average training loss: -0.96535
+	Val Accuracy: 0.9124
+Iter: 501
+	Average training loss: -0.96382
+	Val Accuracy: 0.9122
+Iter: 601
+	Average training loss: -0.96096
+	Val Accuracy: 0.9123
+Iter: 701
+	Average training loss: -0.96076
+	Val Accuracy: 0.9131
+Iter: 801
+	Average training loss: -0.96279
+	Val Accuracy: 0.9127
+Iter: 901
+	Average training loss: -0.96734
+	Val Accuracy: 0.9122
+Iter: 1001
+	Average training loss: -0.96298
+	Val Accuracy: 0.9121
+Iter: 1101
+	Average training loss: -0.96141
+	Val Accuracy: 0.9117
+Iter: 1201
+	Average training loss: -0.97076
+	Val Accuracy: 0.9122
+Iter: 1301
+	Average training loss: -0.96251
+	Val Accuracy: 0.9122
+Iter: 1401
+	Average training loss: -0.96192
+	Val Accuracy: 0.9105
+Epoch: 67
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9128
+Iter: 101
+	Average training loss: -0.96577
+	Val Accuracy: 0.9133
+Iter: 201
+	Average training loss: -0.96539
+	Val Accuracy: 0.9113
+Iter: 301
+	Average training loss: -0.96145
+	Val Accuracy: 0.9104
+Iter: 401
+	Average training loss: -0.96468
+	Val Accuracy: 0.9117
+Iter: 501
+	Average training loss: -0.96391
+	Val Accuracy: 0.9116
+Iter: 601
+	Average training loss: -0.96542
+	Val Accuracy: 0.9120
+Iter: 701
+	Average training loss: -0.96325
+	Val Accuracy: 0.9119
+Iter: 801
+	Average training loss: -0.95996
+	Val Accuracy: 0.9120
+Iter: 901
+	Average training loss: -0.96660
+	Val Accuracy: 0.9127
+Iter: 1001
+	Average training loss: -0.96570
+	Val Accuracy: 0.9140
+Iter: 1101
+	Average training loss: -0.96546
+	Val Accuracy: 0.9122
+Iter: 1201
+	Average training loss: -0.96411
+	Val Accuracy: 0.9106
+Iter: 1301
+	Average training loss: -0.96258
+	Val Accuracy: 0.9124
+Iter: 1401
+	Average training loss: -0.96720
+	Val Accuracy: 0.9117
+Epoch: 68
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9136
+Iter: 101
+	Average training loss: -0.96714
+	Val Accuracy: 0.9115
+Iter: 201
+	Average training loss: -0.96545
+	Val Accuracy: 0.9118
+Iter: 301
+	Average training loss: -0.96258
+	Val Accuracy: 0.9122
+Iter: 401
+	Average training loss: -0.96557
+	Val Accuracy: 0.9128
+Iter: 501
+	Average training loss: -0.96191
+	Val Accuracy: 0.9128
+Iter: 601
+	Average training loss: -0.96684
+	Val Accuracy: 0.9140
+Iter: 701
+	Average training loss: -0.96130
+	Val Accuracy: 0.9132
+Iter: 801
+	Average training loss: -0.96205
+	Val Accuracy: 0.9132
+Iter: 901
+	Average training loss: -0.96672
+	Val Accuracy: 0.9132
+Iter: 1001
+	Average training loss: -0.96524
+	Val Accuracy: 0.9115
+Iter: 1101
+	Average training loss: -0.96652
+	Val Accuracy: 0.9118
+Iter: 1201
+	Average training loss: -0.96107
+	Val Accuracy: 0.9119
+Iter: 1301
+	Average training loss: -0.96838
+	Val Accuracy: 0.9134
+Iter: 1401
+	Average training loss: -0.96430
+	Val Accuracy: 0.9127
+Epoch: 69
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9113
+Iter: 101
+	Average training loss: -0.96479
+	Val Accuracy: 0.9114
+Iter: 201
+	Average training loss: -0.96238
+	Val Accuracy: 0.9110
+Iter: 301
+	Average training loss: -0.96548
+	Val Accuracy: 0.9124
+Iter: 401
+	Average training loss: -0.96438
+	Val Accuracy: 0.9122
+Iter: 501
+	Average training loss: -0.96266
+	Val Accuracy: 0.9114
+Iter: 601
+	Average training loss: -0.96547
+	Val Accuracy: 0.9132
+Iter: 701
+	Average training loss: -0.96261
+	Val Accuracy: 0.9123
+Iter: 801
+	Average training loss: -0.96202
+	Val Accuracy: 0.9112
+Iter: 901
+	Average training loss: -0.96819
+	Val Accuracy: 0.9131
+Iter: 1001
+	Average training loss: -0.96862
+	Val Accuracy: 0.9131
+Iter: 1101
+	Average training loss: -0.96483
+	Val Accuracy: 0.9117
+Iter: 1201
+	Average training loss: -0.96542
+	Val Accuracy: 0.9127
+Iter: 1301
+	Average training loss: -0.96554
+	Val Accuracy: 0.9120
+Iter: 1401
+	Average training loss: -0.96652
+	Val Accuracy: 0.9117
+Epoch: 70
+Iter: 1
+	Average training loss: -0.94302
+	Val Accuracy: 0.9120
+Iter: 101
+	Average training loss: -0.96774
+	Val Accuracy: 0.9107
+Iter: 201
+	Average training loss: -0.95994
+	Val Accuracy: 0.9128
+Iter: 301
+	Average training loss: -0.97231
+	Val Accuracy: 0.9129
+Iter: 401
+	Average training loss: -0.96662
+	Val Accuracy: 0.9121
+Iter: 501
+	Average training loss: -0.96688
+	Val Accuracy: 0.9121
+Iter: 601
+	Average training loss: -0.96199
+	Val Accuracy: 0.9119
+Iter: 701
+	Average training loss: -0.96666
+	Val Accuracy: 0.9121
+Iter: 801
+	Average training loss: -0.96332
+	Val Accuracy: 0.9137
+Iter: 901
+	Average training loss: -0.96095
+	Val Accuracy: 0.9138
+Iter: 1001
+	Average training loss: -0.96940
+	Val Accuracy: 0.9108
+Iter: 1101
+	Average training loss: -0.96088
+	Val Accuracy: 0.9128
+Iter: 1201
+	Average training loss: -0.96580
+	Val Accuracy: 0.9124
+Iter: 1301
+	Average training loss: -0.96120
+	Val Accuracy: 0.9138
+Iter: 1401
+	Average training loss: -0.96390
+	Val Accuracy: 0.9110
+Epoch: 71
+Iter: 1
+	Average training loss: -0.95313
+	Val Accuracy: 0.9114
+Iter: 101
+	Average training loss: -0.96451
+	Val Accuracy: 0.9133
+Iter: 201
+	Average training loss: -0.96491
+	Val Accuracy: 0.9115
+Iter: 301
+	Average training loss: -0.95945
+	Val Accuracy: 0.9115
+Iter: 401
+	Average training loss: -0.96648
+	Val Accuracy: 0.9127
+Iter: 501
+	Average training loss: -0.96394
+	Val Accuracy: 0.9118
+Iter: 601
+	Average training loss: -0.96694
+	Val Accuracy: 0.9110
+Iter: 701
+	Average training loss: -0.96774
+	Val Accuracy: 0.9123
+Iter: 801
+	Average training loss: -0.96585
+	Val Accuracy: 0.9105
+Iter: 901
+	Average training loss: -0.96392
+	Val Accuracy: 0.9130
+Iter: 1001
+	Average training loss: -0.96619
+	Val Accuracy: 0.9137
+Iter: 1101
+	Average training loss: -0.96645
+	Val Accuracy: 0.9118
+Iter: 1201
+	Average training loss: -0.96644
+	Val Accuracy: 0.9118
+Iter: 1301
+	Average training loss: -0.96574
+	Val Accuracy: 0.9123
+Iter: 1401
+	Average training loss: -0.96431
+	Val Accuracy: 0.9125
+Epoch: 72
+Iter: 1
+	Average training loss: -0.90627
+	Val Accuracy: 0.9131
+Iter: 101
+	Average training loss: -0.96739
+	Val Accuracy: 0.9118
+Iter: 201
+	Average training loss: -0.96610
+	Val Accuracy: 0.9129
+Iter: 301
+	Average training loss: -0.96390
+	Val Accuracy: 0.9129
+Iter: 401
+	Average training loss: -0.96524
+	Val Accuracy: 0.9129
+Iter: 501
+	Average training loss: -0.96410
+	Val Accuracy: 0.9125
+Iter: 601
+	Average training loss: -0.96515
+	Val Accuracy: 0.9127
+Iter: 701
+	Average training loss: -0.96683
+	Val Accuracy: 0.9124
+Iter: 801
+	Average training loss: -0.96784
+	Val Accuracy: 0.9115
+Iter: 901
+	Average training loss: -0.96109
+	Val Accuracy: 0.9132
+Iter: 1001
+	Average training loss: -0.96482
+	Val Accuracy: 0.9140
+Iter: 1101
+	Average training loss: -0.96424
+	Val Accuracy: 0.9123
+Iter: 1201
+	Average training loss: -0.96437
+	Val Accuracy: 0.9130
+Iter: 1301
+	Average training loss: -0.96332
+	Val Accuracy: 0.9118
+Iter: 1401
+	Average training loss: -0.96544
+	Val Accuracy: 0.9120
+Epoch: 73
+Iter: 1
+	Average training loss: -0.95313
+	Val Accuracy: 0.9133
+Iter: 101
+	Average training loss: -0.96287
+	Val Accuracy: 0.9115
+Iter: 201
+	Average training loss: -0.96531
+	Val Accuracy: 0.9121
+Iter: 301
+	Average training loss: -0.96750
+	Val Accuracy: 0.9125
+Iter: 401
+	Average training loss: -0.96476
+	Val Accuracy: 0.9139
+Iter: 501
+	Average training loss: -0.96837
+	Val Accuracy: 0.9130
+Iter: 601
+	Average training loss: -0.96509
+	Val Accuracy: 0.9107
+Iter: 701
+	Average training loss: -0.96529
+	Val Accuracy: 0.9107
+Iter: 801
+	Average training loss: -0.96508
+	Val Accuracy: 0.9137
+Iter: 901
+	Average training loss: -0.96617
+	Val Accuracy: 0.9135
+Iter: 1001
+	Average training loss: -0.96467
+	Val Accuracy: 0.9130
+Iter: 1101
+	Average training loss: -0.97247
+	Val Accuracy: 0.9138
+Iter: 1201
+	Average training loss: -0.96166
+	Val Accuracy: 0.9123
+Iter: 1301
+	Average training loss: -0.96382
+	Val Accuracy: 0.9130
+Iter: 1401
+	Average training loss: -0.96309
+	Val Accuracy: 0.9128
+Epoch: 74
+Iter: 1
+	Average training loss: -0.93750
+	Val Accuracy: 0.9125
+Iter: 101
+	Average training loss: -0.96622
+	Val Accuracy: 0.9123
+Iter: 201
+	Average training loss: -0.96545
+	Val Accuracy: 0.9129
+Iter: 301
+	Average training loss: -0.96806
+	Val Accuracy: 0.9115
+Iter: 401
+	Average training loss: -0.96624
+	Val Accuracy: 0.9124
+Iter: 501
+	Average training loss: -0.95996
+	Val Accuracy: 0.9133
+Iter: 601
+	Average training loss: -0.96544
+	Val Accuracy: 0.9119
+Iter: 701
+	Average training loss: -0.96599
+	Val Accuracy: 0.9118
+Iter: 801
+	Average training loss: -0.96311
+	Val Accuracy: 0.9136
+Iter: 901
+	Average training loss: -0.96663
+	Val Accuracy: 0.9113
+Iter: 1001
+	Average training loss: -0.96528
+	Val Accuracy: 0.9126
+Iter: 1101
+	Average training loss: -0.96526
+	Val Accuracy: 0.9109
+Iter: 1201
+	Average training loss: -0.96622
+	Val Accuracy: 0.9133
+Iter: 1301
+	Average training loss: -0.96698
+	Val Accuracy: 0.9125
+Iter: 1401
+	Average training loss: -0.96871
+	Val Accuracy: 0.9129
+Epoch: 75
+Iter: 1
+	Average training loss: -0.94479
+	Val Accuracy: 0.9129
+Iter: 101
+	Average training loss: -0.96310
+	Val Accuracy: 0.9135
+Iter: 201
+	Average training loss: -0.96711
+	Val Accuracy: 0.9124
+Iter: 301
+	Average training loss: -0.96457
+	Val Accuracy: 0.9127
+Iter: 401
+	Average training loss: -0.96940
+	Val Accuracy: 0.9130
+Iter: 501
+	Average training loss: -0.96112
+	Val Accuracy: 0.9131
+Iter: 601
+	Average training loss: -0.96357
+	Val Accuracy: 0.9131
+Iter: 701
+	Average training loss: -0.96559
+	Val Accuracy: 0.9130
+Iter: 801
+	Average training loss: -0.96895
+	Val Accuracy: 0.9120
+Iter: 901
+	Average training loss: -0.96806
+	Val Accuracy: 0.9117
+Iter: 1001
+	Average training loss: -0.96228
+	Val Accuracy: 0.9120
+Iter: 1101
+	Average training loss: -0.96557
+	Val Accuracy: 0.9124
+Iter: 1201
+	Average training loss: -0.96522
+	Val Accuracy: 0.9122
+Iter: 1301
+	Average training loss: -0.96601
+	Val Accuracy: 0.9121
+Iter: 1401
+	Average training loss: -0.96598
+	Val Accuracy: 0.9137
+Epoch: 76
+Iter: 1
+	Average training loss: -0.98561
+	Val Accuracy: 0.9115
+Iter: 101
+	Average training loss: -0.96377
+	Val Accuracy: 0.9112
+Iter: 201
+	Average training loss: -0.96813
+	Val Accuracy: 0.9123
+Iter: 301
+	Average training loss: -0.96841
+	Val Accuracy: 0.9127
+Iter: 401
+	Average training loss: -0.96569
+	Val Accuracy: 0.9116
+Iter: 501
+	Average training loss: -0.96425
+	Val Accuracy: 0.9112
+Iter: 601
+	Average training loss: -0.96533
+	Val Accuracy: 0.9122
+Iter: 701
+	Average training loss: -0.96453
+	Val Accuracy: 0.9130
+Iter: 801
+	Average training loss: -0.96800
+	Val Accuracy: 0.9119
+Iter: 901
+	Average training loss: -0.96568
+	Val Accuracy: 0.9105
+Iter: 1001
+	Average training loss: -0.96585
+	Val Accuracy: 0.9143
+Iter: 1101
+	Average training loss: -0.96513
+	Val Accuracy: 0.9133
+Iter: 1201
+	Average training loss: -0.96550
+	Val Accuracy: 0.9141
+Iter: 1301
+	Average training loss: -0.96191
+	Val Accuracy: 0.9127
+Iter: 1401
+	Average training loss: -0.96564
+	Val Accuracy: 0.9129
+Epoch: 77
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9118
+Iter: 101
+	Average training loss: -0.96208
+	Val Accuracy: 0.9135
+Iter: 201
+	Average training loss: -0.96546
+	Val Accuracy: 0.9129
+Iter: 301
+	Average training loss: -0.96278
+	Val Accuracy: 0.9123
+Iter: 401
+	Average training loss: -0.96704
+	Val Accuracy: 0.9130
+Iter: 501
+	Average training loss: -0.96540
+	Val Accuracy: 0.9139
+Iter: 601
+	Average training loss: -0.96241
+	Val Accuracy: 0.9123
+Iter: 701
+	Average training loss: -0.96859
+	Val Accuracy: 0.9141
+Iter: 801
+	Average training loss: -0.96652
+	Val Accuracy: 0.9130
+Iter: 901
+	Average training loss: -0.97030
+	Val Accuracy: 0.9124
+Iter: 1001
+	Average training loss: -0.96570
+	Val Accuracy: 0.9136
+Iter: 1101
+	Average training loss: -0.96766
+	Val Accuracy: 0.9116
+Iter: 1201
+	Average training loss: -0.96550
+	Val Accuracy: 0.9130
+Iter: 1301
+	Average training loss: -0.96255
+	Val Accuracy: 0.9113
+Iter: 1401
+	Average training loss: -0.97141
+	Val Accuracy: 0.9125
+Epoch: 78
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9122
+Iter: 101
+	Average training loss: -0.96007
+	Val Accuracy: 0.9116
+Iter: 201
+	Average training loss: -0.96216
+	Val Accuracy: 0.9123
+Iter: 301
+	Average training loss: -0.96665
+	Val Accuracy: 0.9150
+Iter: 401
+	Average training loss: -0.96874
+	Val Accuracy: 0.9143
+Iter: 501
+	Average training loss: -0.96654
+	Val Accuracy: 0.9122
+Iter: 601
+	Average training loss: -0.96877
+	Val Accuracy: 0.9130
+Iter: 701
+	Average training loss: -0.96856
+	Val Accuracy: 0.9107
+Iter: 801
+	Average training loss: -0.96302
+	Val Accuracy: 0.9117
+Iter: 901
+	Average training loss: -0.96712
+	Val Accuracy: 0.9123
+Iter: 1001
+	Average training loss: -0.96737
+	Val Accuracy: 0.9104
+Iter: 1101
+	Average training loss: -0.96492
+	Val Accuracy: 0.9122
+Iter: 1201
+	Average training loss: -0.96717
+	Val Accuracy: 0.9110
+Iter: 1301
+	Average training loss: -0.96408
+	Val Accuracy: 0.9122
+Iter: 1401
+	Average training loss: -0.96796
+	Val Accuracy: 0.9100
+Epoch: 79
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9140
+Iter: 101
+	Average training loss: -0.96168
+	Val Accuracy: 0.9123
+Iter: 201
+	Average training loss: -0.97391
+	Val Accuracy: 0.9134
+Iter: 301
+	Average training loss: -0.96669
+	Val Accuracy: 0.9107
+Iter: 401
+	Average training loss: -0.96502
+	Val Accuracy: 0.9134
+Iter: 501
+	Average training loss: -0.96720
+	Val Accuracy: 0.9125
+Iter: 601
+	Average training loss: -0.96655
+	Val Accuracy: 0.9116
+Iter: 701
+	Average training loss: -0.96525
+	Val Accuracy: 0.9115
+Iter: 801
+	Average training loss: -0.96250
+	Val Accuracy: 0.9123
+Iter: 901
+	Average training loss: -0.96614
+	Val Accuracy: 0.9122
+Iter: 1001
+	Average training loss: -0.96839
+	Val Accuracy: 0.9127
+Iter: 1101
+	Average training loss: -0.96933
+	Val Accuracy: 0.9115
+Iter: 1201
+	Average training loss: -0.96344
+	Val Accuracy: 0.9132
+Iter: 1301
+	Average training loss: -0.96472
+	Val Accuracy: 0.9128
+Iter: 1401
+	Average training loss: -0.96830
+	Val Accuracy: 0.9121
+Epoch: 80
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9117
+Iter: 101
+	Average training loss: -0.96746
+	Val Accuracy: 0.9114
+Iter: 201
+	Average training loss: -0.96667
+	Val Accuracy: 0.9120
+Iter: 301
+	Average training loss: -0.96752
+	Val Accuracy: 0.9123
+Iter: 401
+	Average training loss: -0.96494
+	Val Accuracy: 0.9138
+Iter: 501
+	Average training loss: -0.96541
+	Val Accuracy: 0.9120
+Iter: 601
+	Average training loss: -0.96420
+	Val Accuracy: 0.9131
+Iter: 701
+	Average training loss: -0.96657
+	Val Accuracy: 0.9122
+Iter: 801
+	Average training loss: -0.96157
+	Val Accuracy: 0.9131
+Iter: 901
+	Average training loss: -0.96639
+	Val Accuracy: 0.9127
+Iter: 1001
+	Average training loss: -0.96418
+	Val Accuracy: 0.9115
+Iter: 1101
+	Average training loss: -0.96504
+	Val Accuracy: 0.9127
+Iter: 1201
+	Average training loss: -0.97052
+	Val Accuracy: 0.9125
+Iter: 1301
+	Average training loss: -0.96578
+	Val Accuracy: 0.9132
+Iter: 1401
+	Average training loss: -0.96846
+	Val Accuracy: 0.9132
+Epoch: 81
+Iter: 1
+	Average training loss: -1.00000
+	Val Accuracy: 0.9121
+Iter: 101
+	Average training loss: -0.96755
+	Val Accuracy: 0.9116
+Iter: 201
+	Average training loss: -0.96302
+	Val Accuracy: 0.9131
+Iter: 301
+	Average training loss: -0.96578
+	Val Accuracy: 0.9137
+Iter: 401
+	Average training loss: -0.96894
+	Val Accuracy: 0.9118
+Iter: 501
+	Average training loss: -0.96451
+	Val Accuracy: 0.9126
+Iter: 601
+	Average training loss: -0.96670
+	Val Accuracy: 0.9118
+Iter: 701
+	Average training loss: -0.96506
+	Val Accuracy: 0.9132
+Iter: 801
+	Average training loss: -0.96462
+	Val Accuracy: 0.9134
+Iter: 901
+	Average training loss: -0.96409
+	Val Accuracy: 0.9123
+Iter: 1001
+	Average training loss: -0.96412
+	Val Accuracy: 0.9121
+Iter: 1101
+	Average training loss: -0.96823
+	Val Accuracy: 0.9130
+Iter: 1201
+	Average training loss: -0.96376
+	Val Accuracy: 0.9118
+Iter: 1301
+	Average training loss: -0.96731
+	Val Accuracy: 0.9136
+Iter: 1401
+	Average training loss: -0.96532
+	Val Accuracy: 0.9093
+Epoch: 82
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9114
+Iter: 101
+	Average training loss: -0.96499
+	Val Accuracy: 0.9120
+Iter: 201
+	Average training loss: -0.96612
+	Val Accuracy: 0.9115
+Iter: 301
+	Average training loss: -0.96708
+	Val Accuracy: 0.9135
+Iter: 401
+	Average training loss: -0.96642
+	Val Accuracy: 0.9117
+Iter: 501
+	Average training loss: -0.96458
+	Val Accuracy: 0.9110
+Iter: 601
+	Average training loss: -0.96448
+	Val Accuracy: 0.9115
+Iter: 701
+	Average training loss: -0.96901
+	Val Accuracy: 0.9136
+Iter: 801
+	Average training loss: -0.96323
+	Val Accuracy: 0.9117
+Iter: 901
+	Average training loss: -0.96729
+	Val Accuracy: 0.9129
+Iter: 1001
+	Average training loss: -0.96481
+	Val Accuracy: 0.9128
+Iter: 1101
+	Average training loss: -0.96643
+	Val Accuracy: 0.9127
+Iter: 1201
+	Average training loss: -0.96338
+	Val Accuracy: 0.9126
+Iter: 1301
+	Average training loss: -0.96472
+	Val Accuracy: 0.9117
+Iter: 1401
+	Average training loss: -0.97066
+	Val Accuracy: 0.9113
+Epoch: 83
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9132
+Iter: 101
+	Average training loss: -0.96783
+	Val Accuracy: 0.9128
+Iter: 201
+	Average training loss: -0.96559
+	Val Accuracy: 0.9130
+Iter: 301
+	Average training loss: -0.96519
+	Val Accuracy: 0.9127
+Iter: 401
+	Average training loss: -0.96773
+	Val Accuracy: 0.9116
+Iter: 501
+	Average training loss: -0.96513
+	Val Accuracy: 0.9127
+Iter: 601
+	Average training loss: -0.96657
+	Val Accuracy: 0.9129
+Iter: 701
+	Average training loss: -0.96750
+	Val Accuracy: 0.9126
+Iter: 801
+	Average training loss: -0.96726
+	Val Accuracy: 0.9130
+Iter: 901
+	Average training loss: -0.96508
+	Val Accuracy: 0.9102
+Iter: 1001
+	Average training loss: -0.96144
+	Val Accuracy: 0.9130
+Iter: 1101
+	Average training loss: -0.96821
+	Val Accuracy: 0.9142
+Iter: 1201
+	Average training loss: -0.96680
+	Val Accuracy: 0.9127
+Iter: 1301
+	Average training loss: -0.96662
+	Val Accuracy: 0.9121
+Iter: 1401
+	Average training loss: -0.96781
+	Val Accuracy: 0.9123
+Epoch: 84
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9145
+Iter: 101
+	Average training loss: -0.96554
+	Val Accuracy: 0.9134
+Iter: 201
+	Average training loss: -0.96629
+	Val Accuracy: 0.9133
+Iter: 301
+	Average training loss: -0.96765
+	Val Accuracy: 0.9135
+Iter: 401
+	Average training loss: -0.96883
+	Val Accuracy: 0.9134
+Iter: 501
+	Average training loss: -0.96498
+	Val Accuracy: 0.9129
+Iter: 601
+	Average training loss: -0.96785
+	Val Accuracy: 0.9117
+Iter: 701
+	Average training loss: -0.96209
+	Val Accuracy: 0.9123
+Iter: 801
+	Average training loss: -0.96511
+	Val Accuracy: 0.9130
+Iter: 901
+	Average training loss: -0.96439
+	Val Accuracy: 0.9132
+Iter: 1001
+	Average training loss: -0.96629
+	Val Accuracy: 0.9127
+Iter: 1101
+	Average training loss: -0.96904
+	Val Accuracy: 0.9149
+Iter: 1201
+	Average training loss: -0.97036
+	Val Accuracy: 0.9124
+Iter: 1301
+	Average training loss: -0.96549
+	Val Accuracy: 0.9133
+Iter: 1401
+	Average training loss: -0.96874
+	Val Accuracy: 0.9120
+Epoch: 85
+Iter: 1
+	Average training loss: -0.98437
+	Val Accuracy: 0.9107
+Iter: 101
+	Average training loss: -0.97038
+	Val Accuracy: 0.9130
+Iter: 201
+	Average training loss: -0.96615
+	Val Accuracy: 0.9125
+Iter: 301
+	Average training loss: -0.96746
+	Val Accuracy: 0.9116
+Iter: 401
+	Average training loss: -0.96582
+	Val Accuracy: 0.9110
+Iter: 501
+	Average training loss: -0.96606
+	Val Accuracy: 0.9116
+Iter: 601
+	Average training loss: -0.96538
+	Val Accuracy: 0.9132
+Iter: 701
+	Average training loss: -0.96692
+	Val Accuracy: 0.9130
+Iter: 801
+	Average training loss: -0.96820
+	Val Accuracy: 0.9122
+Iter: 901
+	Average training loss: -0.96355
+	Val Accuracy: 0.9118
+Iter: 1001
+	Average training loss: -0.96672
+	Val Accuracy: 0.9120
+Iter: 1101
+	Average training loss: -0.96786
+	Val Accuracy: 0.9129
+Iter: 1201
+	Average training loss: -0.96711
+	Val Accuracy: 0.9121
+Iter: 1301
+	Average training loss: -0.96872
+	Val Accuracy: 0.9118
+Iter: 1401
+	Average training loss: -0.96541
+	Val Accuracy: 0.9115
+Epoch: 86
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9132
+Iter: 101
+	Average training loss: -0.96512
+	Val Accuracy: 0.9125
+Iter: 201
+	Average training loss: -0.97084
+	Val Accuracy: 0.9130
+Iter: 301
+	Average training loss: -0.96448
+	Val Accuracy: 0.9119
+Iter: 401
+	Average training loss: -0.96181
+	Val Accuracy: 0.9122
+Iter: 501
+	Average training loss: -0.96418
+	Val Accuracy: 0.9126
+Iter: 601
+	Average training loss: -0.97089
+	Val Accuracy: 0.9114
+Iter: 701
+	Average training loss: -0.96951
+	Val Accuracy: 0.9118
+Iter: 801
+	Average training loss: -0.96708
+	Val Accuracy: 0.9130
+Iter: 901
+	Average training loss: -0.96731
+	Val Accuracy: 0.9116
+Iter: 1001
+	Average training loss: -0.96509
+	Val Accuracy: 0.9131
+Iter: 1101
+	Average training loss: -0.96428
+	Val Accuracy: 0.9136
+Iter: 1201
+	Average training loss: -0.96967
+	Val Accuracy: 0.9115
+Iter: 1301
+	Average training loss: -0.96590
+	Val Accuracy: 0.9116
+Iter: 1401
+	Average training loss: -0.96434
+	Val Accuracy: 0.9113
+Epoch: 87
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9110
+Iter: 101
+	Average training loss: -0.96822
+	Val Accuracy: 0.9146
+Iter: 201
+	Average training loss: -0.96923
+	Val Accuracy: 0.9136
+Iter: 301
+	Average training loss: -0.96766
+	Val Accuracy: 0.9133
+Iter: 401
+	Average training loss: -0.96728
+	Val Accuracy: 0.9118
+Iter: 501
+	Average training loss: -0.96833
+	Val Accuracy: 0.9105
+Iter: 601
+	Average training loss: -0.96828
+	Val Accuracy: 0.9153
+Iter: 701
+	Average training loss: -0.96558
+	Val Accuracy: 0.9117
+Iter: 801
+	Average training loss: -0.96275
+	Val Accuracy: 0.9128
+Iter: 901
+	Average training loss: -0.97200
+	Val Accuracy: 0.9110
+Iter: 1001
+	Average training loss: -0.96454
+	Val Accuracy: 0.9121
+Iter: 1101
+	Average training loss: -0.96508
+	Val Accuracy: 0.9118
+Iter: 1201
+	Average training loss: -0.96559
+	Val Accuracy: 0.9110
+Iter: 1301
+	Average training loss: -0.96433
+	Val Accuracy: 0.9117
+Iter: 1401
+	Average training loss: -0.96690
+	Val Accuracy: 0.9115
+Epoch: 88
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9111
+Iter: 101
+	Average training loss: -0.96759
+	Val Accuracy: 0.9109
+Iter: 201
+	Average training loss: -0.96789
+	Val Accuracy: 0.9125
+Iter: 301
+	Average training loss: -0.96783
+	Val Accuracy: 0.9130
+Iter: 401
+	Average training loss: -0.96145
+	Val Accuracy: 0.9138
+Iter: 501
+	Average training loss: -0.96719
+	Val Accuracy: 0.9144
+Iter: 601
+	Average training loss: -0.96981
+	Val Accuracy: 0.9115
+Iter: 701
+	Average training loss: -0.96855
+	Val Accuracy: 0.9113
+Iter: 801
+	Average training loss: -0.97054
+	Val Accuracy: 0.9128
+Iter: 901
+	Average training loss: -0.96998
+	Val Accuracy: 0.9129
+Iter: 1001
+	Average training loss: -0.96294
+	Val Accuracy: 0.9137
+Iter: 1101
+	Average training loss: -0.96933
+	Val Accuracy: 0.9120
+Iter: 1201
+	Average training loss: -0.96469
+	Val Accuracy: 0.9135
+Iter: 1301
+	Average training loss: -0.96451
+	Val Accuracy: 0.9124
+Iter: 1401
+	Average training loss: -0.96208
+	Val Accuracy: 0.9118
+Epoch: 89
+Iter: 1
+	Average training loss: -0.95312
+	Val Accuracy: 0.9113
+Iter: 101
+	Average training loss: -0.96532
+	Val Accuracy: 0.9113
+Iter: 201
+	Average training loss: -0.96704
+	Val Accuracy: 0.9139
+Iter: 301
+	Average training loss: -0.96836
+	Val Accuracy: 0.9128
+Iter: 401
+	Average training loss: -0.96681
+	Val Accuracy: 0.9134
+Iter: 501
+	Average training loss: -0.96796
+	Val Accuracy: 0.9111
+Iter: 601
+	Average training loss: -0.96563
+	Val Accuracy: 0.9135
+Iter: 701
+	Average training loss: -0.96594
+	Val Accuracy: 0.9140
+Iter: 801
+	Average training loss: -0.96605
+	Val Accuracy: 0.9132
+Iter: 901
+	Average training loss: -0.96533
+	Val Accuracy: 0.9116
+Iter: 1001
+	Average training loss: -0.96856
+	Val Accuracy: 0.9143
+Iter: 1101
+	Average training loss: -0.96722
+	Val Accuracy: 0.9147
+Iter: 1201
+	Average training loss: -0.96472
+	Val Accuracy: 0.9133
+Iter: 1301
+	Average training loss: -0.96989
+	Val Accuracy: 0.9137
+Iter: 1401
+	Average training loss: -0.96926
+	Val Accuracy: 0.9131
+Epoch: 90
+Iter: 1
+	Average training loss: -0.95313
+	Val Accuracy: 0.9144
+Iter: 101
+	Average training loss: -0.96651
+	Val Accuracy: 0.9137
+Iter: 201
+	Average training loss: -0.96639
+	Val Accuracy: 0.9138
+Iter: 301
+	Average training loss: -0.96673
+	Val Accuracy: 0.9133
+Iter: 401
+	Average training loss: -0.96733
+	Val Accuracy: 0.9134
+Iter: 501
+	Average training loss: -0.96578
+	Val Accuracy: 0.9113
+Iter: 601
+	Average training loss: -0.96918
+	Val Accuracy: 0.9137
+Iter: 701
+	Average training loss: -0.96472
+	Val Accuracy: 0.9139
+Iter: 801
+	Average training loss: -0.96747
+	Val Accuracy: 0.9140
+Iter: 901
+	Average training loss: -0.96565
+	Val Accuracy: 0.9119
+Iter: 1001
+	Average training loss: -0.96700
+	Val Accuracy: 0.9114
+Iter: 1101
+	Average training loss: -0.96866
+	Val Accuracy: 0.9127
+Iter: 1201
+	Average training loss: -0.96354
+	Val Accuracy: 0.9121
+Iter: 1301
+	Average training loss: -0.96684
+	Val Accuracy: 0.9146
+Iter: 1401
+	Average training loss: -0.96529
+	Val Accuracy: 0.9145
+Epoch: 91
+Iter: 1
+	Average training loss: -1.00000
+	Val Accuracy: 0.9124
+Iter: 101
+	Average training loss: -0.96877
+	Val Accuracy: 0.9131
+Iter: 201
+	Average training loss: -0.96921
+	Val Accuracy: 0.9126
+Iter: 301
+	Average training loss: -0.96791
+	Val Accuracy: 0.9144
+Iter: 401
+	Average training loss: -0.96540
+	Val Accuracy: 0.9141
+Iter: 501
+	Average training loss: -0.96846
+	Val Accuracy: 0.9127
+Iter: 601
+	Average training loss: -0.96908
+	Val Accuracy: 0.9123
+Iter: 701
+	Average training loss: -0.96830
+	Val Accuracy: 0.9129
+Iter: 801
+	Average training loss: -0.96700
+	Val Accuracy: 0.9135
+Iter: 901
+	Average training loss: -0.96771
+	Val Accuracy: 0.9135
+Iter: 1001
+	Average training loss: -0.96326
+	Val Accuracy: 0.9147
+Iter: 1101
+	Average training loss: -0.96373
+	Val Accuracy: 0.9136
+Iter: 1201
+	Average training loss: -0.96786
+	Val Accuracy: 0.9119
+Iter: 1301
+	Average training loss: -0.96891
+	Val Accuracy: 0.9116
+Iter: 1401
+	Average training loss: -0.96923
+	Val Accuracy: 0.9129
+Epoch: 92
+Iter: 1
+	Average training loss: -0.95315
+	Val Accuracy: 0.9137
+Iter: 101
+	Average training loss: -0.96630
+	Val Accuracy: 0.9127
+Iter: 201
+	Average training loss: -0.96932
+	Val Accuracy: 0.9135
+Iter: 301
+	Average training loss: -0.96645
+	Val Accuracy: 0.9131
+Iter: 401
+	Average training loss: -0.96864
+	Val Accuracy: 0.9132
+Iter: 501
+	Average training loss: -0.96492
+	Val Accuracy: 0.9143
+Iter: 601
+	Average training loss: -0.96473
+	Val Accuracy: 0.9147
+Iter: 701
+	Average training loss: -0.96869
+	Val Accuracy: 0.9120
+Iter: 801
+	Average training loss: -0.96198
+	Val Accuracy: 0.9122
+Iter: 901
+	Average training loss: -0.97129
+	Val Accuracy: 0.9130
+Iter: 1001
+	Average training loss: -0.96431
+	Val Accuracy: 0.9124
+Iter: 1101
+	Average training loss: -0.96660
+	Val Accuracy: 0.9142
+Iter: 1201
+	Average training loss: -0.96730
+	Val Accuracy: 0.9138
+Iter: 1301
+	Average training loss: -0.97207
+	Val Accuracy: 0.9137
+Iter: 1401
+	Average training loss: -0.96868
+	Val Accuracy: 0.9125
+Epoch: 93
+Iter: 1
+	Average training loss: -0.98438
+	Val Accuracy: 0.9125
+Iter: 101
+	Average training loss: -0.96979
+	Val Accuracy: 0.9122
+Iter: 201
+	Average training loss: -0.97082
+	Val Accuracy: 0.9117
+Iter: 301
+	Average training loss: -0.96849
+	Val Accuracy: 0.9128
+Iter: 401
+	Average training loss: -0.96381
+	Val Accuracy: 0.9129
+Iter: 501
+	Average training loss: -0.96865
+	Val Accuracy: 0.9127
+Iter: 601
+	Average training loss: -0.96516
+	Val Accuracy: 0.9120
+Iter: 701
+	Average training loss: -0.96784
+	Val Accuracy: 0.9130
+Iter: 801
+	Average training loss: -0.96691
+	Val Accuracy: 0.9139
+Iter: 901
+	Average training loss: -0.96764
+	Val Accuracy: 0.9129
+Iter: 1001
+	Average training loss: -0.96647
+	Val Accuracy: 0.9123
+Iter: 1101
+	Average training loss: -0.96390
+	Val Accuracy: 0.9135
+Iter: 1201
+	Average training loss: -0.96526
+	Val Accuracy: 0.9122
+Iter: 1301
+	Average training loss: -0.96719
+	Val Accuracy: 0.9132
+Iter: 1401
+	Average training loss: -0.96676
+	Val Accuracy: 0.9125
+Epoch: 94
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9120
+Iter: 101
+	Average training loss: -0.96570
+	Val Accuracy: 0.9114
+Iter: 201
+	Average training loss: -0.96764
+	Val Accuracy: 0.9129
+Iter: 301
+	Average training loss: -0.96983
+	Val Accuracy: 0.9136
+Iter: 401
+	Average training loss: -0.96890
+	Val Accuracy: 0.9139
+Iter: 501
+	Average training loss: -0.96439
+	Val Accuracy: 0.9122
+Iter: 601
+	Average training loss: -0.96949
+	Val Accuracy: 0.9128
+Iter: 701
+	Average training loss: -0.96546
+	Val Accuracy: 0.9122
+Iter: 801
+	Average training loss: -0.97145
+	Val Accuracy: 0.9124
+Iter: 901
+	Average training loss: -0.96803
+	Val Accuracy: 0.9127
+Iter: 1001
+	Average training loss: -0.96341
+	Val Accuracy: 0.9127
+Iter: 1101
+	Average training loss: -0.96726
+	Val Accuracy: 0.9132
+Iter: 1201
+	Average training loss: -0.96650
+	Val Accuracy: 0.9120
+Iter: 1301
+	Average training loss: -0.96699
+	Val Accuracy: 0.9114
+Iter: 1401
+	Average training loss: -0.96544
+	Val Accuracy: 0.9128
+Epoch: 95
+Iter: 1
+	Average training loss: -0.98437
+	Val Accuracy: 0.9132
+Iter: 101
+	Average training loss: -0.96932
+	Val Accuracy: 0.9124
+Iter: 201
+	Average training loss: -0.96719
+	Val Accuracy: 0.9135
+Iter: 301
+	Average training loss: -0.96997
+	Val Accuracy: 0.9129
+Iter: 401
+	Average training loss: -0.96580
+	Val Accuracy: 0.9140
+Iter: 501
+	Average training loss: -0.96612
+	Val Accuracy: 0.9123
+Iter: 601
+	Average training loss: -0.96807
+	Val Accuracy: 0.9132
+Iter: 701
+	Average training loss: -0.96524
+	Val Accuracy: 0.9125
+Iter: 801
+	Average training loss: -0.96803
+	Val Accuracy: 0.9130
+Iter: 901
+	Average training loss: -0.96467
+	Val Accuracy: 0.9128
+Iter: 1001
+	Average training loss: -0.96694
+	Val Accuracy: 0.9132
+Iter: 1101
+	Average training loss: -0.96974
+	Val Accuracy: 0.9119
+Iter: 1201
+	Average training loss: -0.96715
+	Val Accuracy: 0.9120
+Iter: 1301
+	Average training loss: -0.96178
+	Val Accuracy: 0.9119
+Iter: 1401
+	Average training loss: -0.96821
+	Val Accuracy: 0.9123
+Epoch: 96
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9119
+Iter: 101
+	Average training loss: -0.96647
+	Val Accuracy: 0.9137
+Iter: 201
+	Average training loss: -0.96932
+	Val Accuracy: 0.9125
+Iter: 301
+	Average training loss: -0.96949
+	Val Accuracy: 0.9111
+Iter: 401
+	Average training loss: -0.96494
+	Val Accuracy: 0.9122
+Iter: 501
+	Average training loss: -0.96680
+	Val Accuracy: 0.9120
+Iter: 601
+	Average training loss: -0.96887
+	Val Accuracy: 0.9120
+Iter: 701
+	Average training loss: -0.96832
+	Val Accuracy: 0.9107
+Iter: 801
+	Average training loss: -0.96499
+	Val Accuracy: 0.9120
+Iter: 901
+	Average training loss: -0.96728
+	Val Accuracy: 0.9131
+Iter: 1001
+	Average training loss: -0.97009
+	Val Accuracy: 0.9118
+Iter: 1101
+	Average training loss: -0.96858
+	Val Accuracy: 0.9106
+Iter: 1201
+	Average training loss: -0.96645
+	Val Accuracy: 0.9125
+Iter: 1301
+	Average training loss: -0.96516
+	Val Accuracy: 0.9123
+Iter: 1401
+	Average training loss: -0.96364
+	Val Accuracy: 0.9111
+Epoch: 97
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9146
+Iter: 101
+	Average training loss: -0.96994
+	Val Accuracy: 0.9122
+Iter: 201
+	Average training loss: -0.96580
+	Val Accuracy: 0.9125
+Iter: 301
+	Average training loss: -0.96764
+	Val Accuracy: 0.9127
+Iter: 401
+	Average training loss: -0.96847
+	Val Accuracy: 0.9139
+Iter: 501
+	Average training loss: -0.96617
+	Val Accuracy: 0.9119
+Iter: 601
+	Average training loss: -0.97054
+	Val Accuracy: 0.9109
+Iter: 701
+	Average training loss: -0.96964
+	Val Accuracy: 0.9129
+Iter: 801
+	Average training loss: -0.96204
+	Val Accuracy: 0.9123
+Iter: 901
+	Average training loss: -0.96700
+	Val Accuracy: 0.9130
+Iter: 1001
+	Average training loss: -0.96876
+	Val Accuracy: 0.9120
+Iter: 1101
+	Average training loss: -0.96797
+	Val Accuracy: 0.9130
+Iter: 1201
+	Average training loss: -0.96549
+	Val Accuracy: 0.9133
+Iter: 1301
+	Average training loss: -0.96744
+	Val Accuracy: 0.9124
+Iter: 1401
+	Average training loss: -0.96686
+	Val Accuracy: 0.9127
+Epoch: 98
+Iter: 1
+	Average training loss: -0.96875
+	Val Accuracy: 0.9123
+Iter: 101
+	Average training loss: -0.96504
+	Val Accuracy: 0.9130
+Iter: 201
+	Average training loss: -0.96527
+	Val Accuracy: 0.9125
+Iter: 301
+	Average training loss: -0.96708
+	Val Accuracy: 0.9115
+Iter: 401
+	Average training loss: -0.96776
+	Val Accuracy: 0.9120
+Iter: 501
+	Average training loss: -0.97062
+	Val Accuracy: 0.9119
+Iter: 601
+	Average training loss: -0.96600
+	Val Accuracy: 0.9125
+Iter: 701
+	Average training loss: -0.96707
+	Val Accuracy: 0.9128
+Iter: 801
+	Average training loss: -0.97290
+	Val Accuracy: 0.9125
+Iter: 901
+	Average training loss: -0.96419
+	Val Accuracy: 0.9129
+Iter: 1001
+	Average training loss: -0.97128
+	Val Accuracy: 0.9133
+Iter: 1101
+	Average training loss: -0.96773
+	Val Accuracy: 0.9124
+Iter: 1201
+	Average training loss: -0.97139
+	Val Accuracy: 0.9112
+Iter: 1301
+	Average training loss: -0.96427
+	Val Accuracy: 0.9132
+Iter: 1401
+	Average training loss: -0.96580
+	Val Accuracy: 0.9129
+Epoch: 99
+Iter: 1
+	Average training loss: -0.93750
+	Val Accuracy: 0.9144
+Iter: 101
+	Average training loss: -0.96829
+	Val Accuracy: 0.9137
+Iter: 201
+	Average training loss: -0.96457
+	Val Accuracy: 0.9140
+Iter: 301
+	Average training loss: -0.96985
+	Val Accuracy: 0.9134
+Iter: 401
+	Average training loss: -0.96629
+	Val Accuracy: 0.9135
+Iter: 501
+	Average training loss: -0.96629
+	Val Accuracy: 0.9110
+Iter: 601
+	Average training loss: -0.96776
+	Val Accuracy: 0.9121
+Iter: 701
+	Average training loss: -0.96571
+	Val Accuracy: 0.9132
+Iter: 801
+	Average training loss: -0.96615
+	Val Accuracy: 0.9117
+Iter: 901
+	Average training loss: -0.96368
+	Val Accuracy: 0.9119
+Iter: 1001
+	Average training loss: -0.97130
+	Val Accuracy: 0.9127
+Iter: 1101
+	Average training loss: -0.96948
+	Val Accuracy: 0.9119
+Iter: 1201
+	Average training loss: -0.96922
+	Val Accuracy: 0.9116
+Iter: 1301
+	Average training loss: -0.96934
+	Val Accuracy: 0.9129
+Iter: 1401
+	Average training loss: -0.96526
+	Val Accuracy: 0.9140
+Final Training Accuracy: 0.9674
+Final Validation Accuracy: 0.9136
+Final Test Accuracy: 0.9116
