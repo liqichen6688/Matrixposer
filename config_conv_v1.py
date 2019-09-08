@@ -7,7 +7,7 @@ class Config(object):
     output_size = 2
     lr = 0.0001
     max_epochs = 3000
-    batch_size = 64
+    batch_size = 32
     max_sen_len = 120
     # determine lr
     learning_method = 'reduce'
