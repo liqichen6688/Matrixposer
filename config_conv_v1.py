@@ -1,6 +1,6 @@
 class Config(object):
     N = 1
-    d_model = 512
+    d_model = 300
     d_ff = 1024
     d_row = 32
     dropout = 0.5

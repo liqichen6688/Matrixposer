@@ -24,7 +24,7 @@ if __name__=='__main__':
 
 
     dataset = Dataset(config)
-    TEXT = dataset.load_data(train_file, test_file)
+    TEXT = dataset.load_data(train_file, test_file, config)
 
     model = Matposer(config, len(dataset.vocab))
     if torch.cuda.device_count() > 1:

@@ -53,7 +53,7 @@ class Dataset(object):
         full_df = pd.DataFrame({"text": data_text, "label": data_label})
         return full_df
 
-    def load_data(self, train_file, test_file, val_file=None):
+    def load_data(self, train_file, test_file, config,val_file=None):
         '''
         Loads the data from files
         Sets up iterators for training, validation and test data
@@ -98,7 +98,7 @@ class Dataset(object):
         else:
             train_data, val_data = train_data.split(split_ratio=0.8)
 
-        TEXT.build_vocab(train_data, vectors=GloVe(name='6B', dim=500))
+        TEXT.build_vocab(train_data, vectors=GloVe(name='6B', dim=config.d_model))
         self.vocab = TEXT.vocab
 
         self.train_iterator = data.BucketIterator(
