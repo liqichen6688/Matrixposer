@@ -98,7 +98,7 @@ class Dataset(object):
         else:
             train_data, val_data = train_data.split(split_ratio=0.8)
 
-        TEXT.build_vocab(train_data)
+        TEXT.build_vocab(train_data, vectors=GloVe(name='6B', dim=500))
         self.vocab = TEXT.vocab
 
         self.train_iterator = data.BucketIterator(
@@ -120,6 +120,8 @@ class Dataset(object):
         print ("Loaded {} training examples".format(len(train_data)))
         print ("Loaded {} test examples".format(len(test_data)))
         print ("Loaded {} validation examples".format(len(val_data)))
+
+        return TEXT
 
 
 def evaluate_model(model, iterator):

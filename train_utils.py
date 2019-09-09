@@ -14,9 +14,9 @@ class Embeddings(nn.Module):
     '''
     Usual Embedding layer with weights multiplied by sqrt(d_model)
     '''
-    def __init__(self, d_model, vocab):
+    def __init__(self, d_model, vocab, TEXT):
         super(Embeddings, self).__init__()
-        self.lut = nn.Embedding(vocab, d_model)
+        self.lut = nn.Embedding(vocab, d_model).from_pretrained(TEXT.vocab.vectors)
         self.d_model = d_model
 
 

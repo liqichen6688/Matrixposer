@@ -8,7 +8,7 @@ from feed_forward import PositionwiseFeedForward
 from utils import *
 
 class Matposer(nn.Module):
-    def __init__(self, config, src_vocab):
+    def __init__(self, config, src_vocab, TEXT):
         super(Matposer, self).__init__()
         self.config = config
 
@@ -21,7 +21,7 @@ class Matposer(nn.Module):
 
         self.encoder = Encoder(EncoderLayer(d_model, deepcopy(inter), deepcopy(ff), dropout), N)
         self.src_embed = nn.Sequential(
-            Embeddings(d_model, src_vocab), deepcopy(position)
+            Embeddings(d_model, src_vocab, TEXT), deepcopy(position)
         )
 
         self.fc = nn.Linear(
