@@ -46,6 +46,8 @@ if __name__=='__main__':
         train_loss, val_accuracy = model.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
         train_losses.append(train_loss)
         val_accuracies.append(val_accuracy)
+        if val_accuracy > 0.78:
+            break
 
     train_acc = evaluate_model(model, dataset.train_iterator)
     val_acc = evaluate_model(model, dataset.val_iterator)
