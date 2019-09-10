@@ -99,6 +99,7 @@ class Matposer(nn.Module):
                 # Evalute Accuracy on validation set
                 val_accuracy = evaluate_model(self, val_iterator)
                 print("\tVal Accuracy: {:.4f}".format(val_accuracy))
+                val_accuracies.append(val_accuracy)
                 self.train()
 
-        return train_losses, val_accuracies
+        return train_losses, np.mean(val_accuracies)
