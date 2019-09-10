@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            <state relative-caret-position="177">
+              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -204,15 +205,15 @@
         <option value="$PROJECT_DIR$/interactor.py" />
         <option value="$PROJECT_DIR$/train_utils.py" />
         <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/config_conv_v1.py" />
         <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
-    <option name="y" value="23" />
+    <option name="x" value="-122" />
+    <option name="y" value="86" />
     <option name="width" value="1680" />
     <option name="height" value="889" />
   </component>
@@ -386,21 +387,7 @@
       <workItem from="1566721964770" duration="10863000" />
       <workItem from="1567592352439" duration="1305000" />
       <workItem from="1567602488532" duration="818000" />
-      <workItem from="1567823035352" duration="13437000" />
-    </task>
-    <task id="LOCAL-00077" summary="parameter adjust">
-      <created>1566550827580</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1566550827580</updated>
-    </task>
-    <task id="LOCAL-00078" summary="parameter adjust">
-      <created>1566551022086</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1566551022086</updated>
+      <workItem from="1567823035352" duration="14068000" />
     </task>
     <task id="LOCAL-00079" summary="parameter adjust">
       <created>1566551204259</created>
@@ -731,11 +718,25 @@
       <option name="project" value="LOCAL" />
       <updated>1568100726190</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="mr">
+      <created>1568101600970</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1568101600970</updated>
+    </task>
+    <task id="LOCAL-00127" summary="mr">
+      <created>1568105969163</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1568105969163</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87816000" />
+    <option name="totallyTimeSpent" value="88447000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -747,7 +748,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="23" width="1680" height="889" extended-state="0" />
+    <frame x="-138" y="224" width="1680" height="889" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49226806" visible="true" weight="0.16849817" />
@@ -1157,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        <state relative-caret-position="177">
+          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
