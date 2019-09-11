@@ -10,13 +10,13 @@ if __name__=='__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
     config = Config
-    train_file = '../data/mr.train'
+    train_file = '../data/20ng.train'
     if len(sys.argv) > 1:
         config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
         print(sys.argv[1])
     if len(sys.argv) > 2:
         train_file = sys.argv[2]
-    test_file = '../data/mr.test'
+    test_file = '../data/20ng.test'
     if len(sys.argv) > 3:
         test_file = sys.argv[3]
 
@@ -46,8 +46,8 @@ if __name__=='__main__':
         train_loss, val_accuracy = model.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
         train_losses.append(train_loss)
         val_accuracies.append(val_accuracy)
-        if val_accuracy > 0.772:
-            break
+        #if val_accuracy > 0.772:
+          #  break
 
     train_acc = evaluate_model(model, dataset.train_iterator)
     val_acc = evaluate_model(model, dataset.val_iterator)
