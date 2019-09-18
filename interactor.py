@@ -81,7 +81,8 @@ class Mapper(nn.Module):
             filter = np.array(self.all_filters[i].tolist())
             ind = np.argpartition(filter, -self.map_size)[-self.map_size:]
             ind = ind[np.argsort(filter[ind])].tolist()
-            one_out = x[:,ind]*self.all_filters[i][ind].unsqueeze(2)
+            one_out = x[:,ind]*self.all_filters[i][ind]
+            one_out = one_out.unsqueeze(2)
             output.append(one_out)
         output = torch.cat(output, 2)
         print(self)
