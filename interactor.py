@@ -75,13 +75,13 @@ class Mapper(nn.Module):
             self.all_filters.append(Parameter(torch.rand(d_all_input)/2, requires_grad=True))
 
     def forward(self, x):
-        x = x.view(-1)
+        x = x.view(-1, self.d_all_input)
         output = []
         for i in range(self.out_row):
             filter = np.array(self.all_filters[i].tolist())
             ind = np.argpartition(filter, -self.map_size)[-self.map_size:]
             ind = ind[np.argsort(filter[ind])].tolist()
-            one_out = x[ind].unsqueeze(1)
+            one_out = x[:,ind].unsqueeze(1)
             output.append(one_out)
         output = torch.cat(output, 1)
         return output
