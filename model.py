@@ -76,20 +76,20 @@ class Matposer(nn.Module):
             if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
                 self.reduce_lr()
         for j in range(2):
+            if j == 0:
+                print('training on weights')
+                for param in self.parameters():
+                    param.requires_grad = True
+                for mapper in self.mappers:
+                    mapper.freeze_parameter()
+            else:
+                print('training on mappers')
+                for param in self.parameters():
+                    param.requires_grad = False
+                for mapper in self.mappers:
+                    mapper.unfreeze_parameter()
+                    mapper.renew_mask()
             for i, batch in enumerate(train_iterator):
-                if j == 0:
-                    print('training on weights')
-                    for param in self.parameters():
-                        param.requires_grad = True
-                    for mapper in self.mappers:
-                        mapper.freeze_parameter()
-                else:
-                    print('training on mappers')
-                    for param in self.parameters():
-                        param.requires_grad = False
-                    for mapper in self.mappers:
-                        mapper.unfreeze_parameter()
-                        mapper.renew_mask()
 
                 if self.config.learning_method == 'trian':
                     self.triangle_lr(len(train_iterator), epoch, i)
