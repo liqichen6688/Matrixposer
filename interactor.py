@@ -85,7 +85,6 @@ class Mapper(nn.Module):
             one_out = one_out.unsqueeze(2)
             output.append(one_out)
         output = torch.cat(output, 2)
-        print(self)
         return output
 
 class Interactor(nn.Module):
