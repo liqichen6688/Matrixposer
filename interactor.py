@@ -1,10 +1,12 @@
 import torch
-from torch.autograd import Variable
+from torch.nn.parameter import Parameter
 from sublayer import SublayerOutput
 import torch.nn.functional as F
 import math
 from torch import nn
-
+from torch.autograd import Variable
+from train_utils import clones
+import numpy as np
 
 class Column_wise_nn(nn.Module):
     def __init__(self, d_row, d_ff, d_out,dropout=0.1):
@@ -59,6 +61,30 @@ class Row_wise_nn(nn.Module):
 
         return output
 
+class Mapper(nn.Module):
+    def __init__(self, d_row, d_column, map_size=None,out_row=None):
+        super(Mapper, self).__init__()
+        if map_size == None:
+            self.map_size = d_row
+        if out_row == None:
+            self.out_row = d_column
+        self.d_all_input = d_all_input =d_row * d_column
+
+        self.all_filters = nn.ParameterList()
+        for _ in range(self.out_row):
+            self.all_filters.append(Parameter(torch.rand(d_all_input)/2, requires_grad=True))
+
+    def forward(self, x):
+        x = x.view(-1)
+        output = []
+        for i in range(self.out_row):
+            filter = np.array(self.all_filters[i].tolist())
+            ind = np.argpartition(filter, -self.map_size)[-self.map_size:]
+            ind = ind[np.argsort(filter[ind])].tolist()
+            one_out = x[ind].unsqueeze(1)
+            output.append(one_out)
+        output = torch.cat(output, 1)
+        return output
 
 class Interactor(nn.Module):
     def __init__(self, d_column, d_ff, out_row=30, dropout=0.1):
@@ -72,13 +98,16 @@ class Interactor(nn.Module):
         self.column_wise_nn1 = Column_wise_nn(out_row, d_ff, 1, dropout)
         self.row_wise_nn1 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.mapper = Mapper(out_row, d_column)
 
     def forward(self, x):
         left_transposer1 = self.row_wise_nn1(x)
         output1 = torch.matmul(left_transposer1.permute(0,2,1), x)
         left_transposer2 = self.row_wise_nn2(output1)
         output2 = torch.matmul(left_transposer2.permute(0, 2, 1), output1)
-        output = self.column_wise_nn1(output2)
-        #output = self.column_wise_nn(output)
+        output = self.mapper(output2)
+        output = self.column_wise_nn1(output)
+        #output = self.column_wise_nn(outp
+        #ut)
         #output = torch.matmul(middle_term, right_transposer.permute(0,2,1))
         return output

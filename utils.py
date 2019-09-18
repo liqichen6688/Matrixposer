@@ -100,6 +100,7 @@ class Dataset(object):
 
         TEXT.build_vocab(train_data, vectors=GloVe(name='6B', dim=config.d_model))
         self.vocab = TEXT.vocab
+        #len(TEXT.vocab)
 
         self.train_iterator = data.BucketIterator(
             (train_data),

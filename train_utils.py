@@ -10,6 +10,7 @@ def clones(module, N):
     return nn.ModuleList([copy.deepcopy(module) for _ in range(N)])
 
 
+
 class Embeddings(nn.Module):
     '''
     Usual Embedding layer with weights multiplied by sqrt(d_model)
