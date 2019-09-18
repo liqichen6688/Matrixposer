@@ -82,13 +82,13 @@ class Matposer(nn.Module):
                     param.requires_grad = True
                 for mapper in self.mappers:
                     mapper.freeze_parameter()
+                    mapper.renew_mask()
             else:
                 print('training on mappers')
                 for param in self.parameters():
                     param.requires_grad = False
                 for mapper in self.mappers:
                     mapper.unfreeze_parameter()
-                    mapper.renew_mask()
             for i, batch in enumerate(train_iterator):
 
                 if self.config.learning_method == 'trian':
