@@ -81,9 +81,9 @@ class Mapper(nn.Module):
             filter = np.array(self.all_filters[i].tolist())
             ind = np.argpartition(filter, -self.map_size)[-self.map_size:]
             ind = ind[np.argsort(filter[ind])].tolist()
-            one_out = x[:,ind].unsqueeze(1)
+            one_out = x[:,ind].unsqueeze(2)
             output.append(one_out)
-        output = torch.cat(output, 1)
+        output = torch.cat(output, 2)
         return output
 
 class Interactor(nn.Module):
