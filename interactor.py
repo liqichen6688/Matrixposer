@@ -77,13 +77,17 @@ class Mapper(nn.Module):
 
         self.indlist = []
         self.renew_mask()
+        self.freeze = False
 
     def forward(self, x):
         x = x.view(-1, self.d_all_input)
         output = []
         for i in range(self.out_row):
             ind = self.indlist[i]
-            one_out = x[:,ind]*self.all_filters[i][ind]
+            if self.freeze == True:
+                one_out = x[:,ind]
+            else:
+                one_out = x[:, ind] * self.all_filters[i][ind]
             one_out = one_out.unsqueeze(2)
             output.append(one_out)
         output = torch.cat(output, 2)
@@ -101,9 +105,13 @@ class Mapper(nn.Module):
         for param in self.parameters():
             param.requires_grad = False
 
+        self.freeze = True
+
     def unfreeze_parameter(self):
         for param in self.parameters():
             param.requires_grad = True
+
+        self.freeze = False
 
 class Interactor(nn.Module):
     def __init__(self, d_column, d_ff, out_row=30, dropout=0.1):
