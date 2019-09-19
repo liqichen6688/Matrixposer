@@ -67,8 +67,12 @@ class Mapper(nn.Module):
         super(Mapper, self).__init__()
         if map_size == None:
             self.map_size = d_row
+        else:
+            self.map_size = map_size
         if out_row == None:
             self.out_row = d_column
+        else:
+            self.ou  = out_row
         self.d_all_input = d_all_input =d_row * d_column
 
         self.all_filters = nn.ParameterList()
@@ -126,7 +130,7 @@ class Interactor(nn.Module):
         self.column_wise_nn1 = Column_wise_nn(2 * out_row, d_ff, 1, dropout)
         self.row_wise_nn1 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, out_row, dropout)
-        self.mapper = Mapper(out_row, d_column, map_size= 2 * out_row)
+        self.mapper = Mapper(out_row, d_column, map_size = 2 * out_row)
 
     def forward(self, x):
         left_transposer1 = self.row_wise_nn1(x)
