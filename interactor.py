@@ -93,6 +93,7 @@ class Mapper(nn.Module):
         output = torch.cat(output, 2)
         return output
 
+
     def renew_mask(self):
         for i in range(self.out_row):
             filter = np.array(self.all_filters[i].tolist())
