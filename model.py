@@ -20,9 +20,9 @@ class Matposer(nn.Module):
         position = PositionalEncoding(d_model, dropout)
 
         self.encoder = Encoder(EncoderLayer(d_model, deepcopy(inter), deepcopy(ff), dropout), N)
-        self.mappers = nn.ModuleList()
-        for one_encoder in self.encoder.layers:
-            self.mappers.append(one_encoder.interactor.mapper)
+        #self.mappers = nn.ModuleList()
+        #for one_encoder in self.encoder.layers:
+        #    self.mappers.append(one_encoder.interactor.mapper)
         self.src_embed = nn.Sequential(
             Embeddings(d_model, src_vocab, TEXT), deepcopy(position)
         )
@@ -77,48 +77,48 @@ class Matposer(nn.Module):
         if self.config.learning_method == 'reduce':
             if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
                 self.reduce_lr()
-        for j in range(2):
-            if j == 0:
-                print('training on weights')
-                for param in self.parameters():
-                    param.requires_grad = True
-                for mapper in self.mappers:
-                    mapper.freeze_parameter()
-                    mapper.renew_mask()
+        #for j in range(2):
+        #    if j == 0:
+        #        print('training on weights')
+        #        for param in self.parameters():
+        #            param.requires_grad = True
+        #        for mapper in self.mappers:
+        #            mapper.freeze_parameter()
+        #            mapper.renew_mask()
+        #    else:
+        #        print('training on mappers')
+        #        for param in self.parameters():
+        #            param.requires_grad = False
+        #        for mapper in self.mappers:
+        #            mapper.unfreeze_parameter()
+        for i, batch in enumerate(train_iterator):
+
+            if self.config.learning_method == 'trian':
+                self.triangle_lr(len(train_iterator), epoch, i)
+            self.optimizer.zero_grad()
+            if torch.cuda.is_available():
+                x = batch.text.cuda()
+                y = (batch.label - 1).type(torch.cuda.LongTensor)
             else:
-                print('training on mappers')
-                for param in self.parameters():
-                    param.requires_grad = False
-                for mapper in self.mappers:
-                    mapper.unfreeze_parameter()
-            for i, batch in enumerate(train_iterator):
+                x = batch.text
+                y = (batch.label - 1).type(torch.LongTensor)
+            y_pred = self.__call__(x)
+            loss = self.loss_op(y_pred, y)
+            loss.backward()
+            losses.append(loss.data.cpu().numpy())
+            self.optimizer.step()
 
-                if self.config.learning_method == 'trian':
-                    self.triangle_lr(len(train_iterator), epoch, i)
-                self.optimizer.zero_grad()
-                if torch.cuda.is_available():
-                    x = batch.text.cuda()
-                    y = (batch.label - 1).type(torch.cuda.LongTensor)
-                else:
-                    x = batch.text
-                    y = (batch.label - 1).type(torch.LongTensor)
-                y_pred = self.__call__(x)
-                loss = self.loss_op(y_pred, y)
-                loss.backward()
-                losses.append(loss.data.cpu().numpy())
-                self.optimizer.step()
+            if i % 100 == 0:
+                print("Iter: {}".format(i + 1))
+                avg_train_loss = np.mean(losses)
+                train_losses.append(avg_train_loss)
+                print("\tAverage training loss: {:.5f}".format(avg_train_loss))
+                losses = []
 
-                if i % 100 == 0:
-                    print("Iter: {}".format(i + 1))
-                    avg_train_loss = np.mean(losses)
-                    train_losses.append(avg_train_loss)
-                    print("\tAverage training loss: {:.5f}".format(avg_train_loss))
-                    losses = []
-
-                    # Evalute Accuracy on validation set
-                    val_accuracy = evaluate_model(self, val_iterator)
-                    print("\tVal Accuracy: {:.4f}".format(val_accuracy))
-                    val_accuracies.append(val_accuracy)
-                    self.train()
+                # Evalute Accuracy on validation set
+                val_accuracy = evaluate_model(self, val_iterator)
+                print("\tVal Accuracy: {:.4f}".format(val_accuracy))
+                val_accuracies.append(val_accuracy)
+                self.train()
 
         return train_losses, np.mean(val_accuracies)
