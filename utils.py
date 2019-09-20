@@ -112,7 +112,6 @@ class Dataset(object):
         )
 
         print ("Loaded {} training examples".format(len(train_data)))
-        print ("Loaded {} test examples".format(len(test_data)))
         print ("Loaded {} validation examples".format(len(val_data)))
 
         return TEXT
