@@ -1,4 +1,5 @@
 import torch
+import random
 from torch import nn
 from copy import deepcopy
 from train_utils import Embeddings, PositionalEncoding
@@ -29,14 +30,13 @@ class Matposer(nn.Module):
 
         self.fc = nn.Linear(
             d_model,
-            self.config.output_size
+            src_vocab
         )
 
         self.softmax = nn.Softmax()
 
 
     def forward(self, x):
-        print(x)
         embedded_sents = self.src_embed(x.permute(1, 0)) # shape = (batch_size, sen_len, d_model)
         encoded_sents = self.encoder(embedded_sents)
         final_feature_map = encoded_sents[:,-1,:]
@@ -96,12 +96,13 @@ class Matposer(nn.Module):
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
+            ind = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - 3)
             if torch.cuda.is_available():
-                x = batch.text.cuda()
-                y = (batch.label - 1).type(torch.cuda.LongTensor)
+                y = batch.text.cuda()
+                x = y[:,ind].type(torch.LongTensor)
             else:
-                x = batch.text
-                y = (batch.label - 1).type(torch.LongTensor)
+                y = batch.text
+                x = y[:,ind].type(torch.LongTensor)
             y_pred = self.__call__(x)
             loss = self.loss_op(y_pred, y)
             loss.backward()
@@ -116,9 +117,9 @@ class Matposer(nn.Module):
                 losses = []
 
                 # Evalute Accuracy on validation set
-                val_accuracy = evaluate_model(self, val_iterator)
-                print("\tVal Accuracy: {:.4f}".format(val_accuracy))
-                val_accuracies.append(val_accuracy)
+                #val_accuracy = evaluate_model(self, val_iterator)
+                #print("\tVal Accuracy: {:.4f}".format(val_accuracy))
+                #val_accuracies.append(val_accuracy)
                 self.train()
 
-        return train_losses, np.mean(val_accuracies)
+        return train_losses

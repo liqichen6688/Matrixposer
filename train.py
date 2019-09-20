@@ -43,18 +43,13 @@ if __name__=='__main__':
 
     for i in range(config.max_epochs):
         print("Epoch: {}".format(i))
-        train_loss, val_accuracy = model.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
+        train_loss= model.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
         train_losses.append(train_loss)
-        val_accuracies.append(val_accuracy)
         #if val_accuracy > 0.772:
           #  break
 
-    train_acc = evaluate_model(model, dataset.train_iterator)
-    val_acc = evaluate_model(model, dataset.val_iterator)
-    test_acc = evaluate_model(model, dataset.test_iterator)
+        if i % 100 == 0:
+            torch.save(model.state_dict(), "pretrain_model/"+str(i))
 
-    print('Final Training Accuracy: {:.4f}'.format(train_acc))
-    print('Final Validation Accuracy: {:.4f}'.format(val_acc))
-    print('Final Test Accuracy: {:.4f}'.format(test_acc))
 
 
