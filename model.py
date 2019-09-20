@@ -106,6 +106,7 @@ class Matposer(nn.Module):
             y_pred = self.__call__(x)
             y.permute(1, 0)
             y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
+            y_onehot.zero_()
             y_onehot.scatter_(1, y, 1)
             loss = self.loss_op(y_pred,y_onehot)
             loss.backward()
