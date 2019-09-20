@@ -12,7 +12,7 @@ class Matposer(nn.Module):
     def __init__(self, config, src_vocab, TEXT):
         super(Matposer, self).__init__()
         self.config = config
-
+        self.src_vocab = src_vocab
         d_row, N, dropout = self.config.d_row, self.config.N, self.config.dropout
         d_model, d_ff = self.config.d_model, self.config.d_ff
 
@@ -104,7 +104,10 @@ class Matposer(nn.Module):
                 y = batch.text
                 x = y[ind,:].type(torch.LongTensor)
             y_pred = self.__call__(x)
-            loss = self.loss_op(y_pred, y.permute(1, 0))
+            y.permute(1, 0)
+            y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
+            y_onehot.scatter_(1, y, 1)
+            loss = self.loss_op(y_pred,y_onehot)
             loss.backward()
             losses.append(loss.data.cpu().numpy())
             self.optimizer.step()
