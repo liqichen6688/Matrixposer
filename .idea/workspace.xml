@@ -61,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="107" column="14" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
+            <state relative-caret-position="207">
+              <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -392,21 +392,7 @@
       <workItem from="1567602488532" duration="818000" />
       <workItem from="1567823035352" duration="15404000" />
       <workItem from="1568700269239" duration="11841000" />
-      <workItem from="1568955214140" duration="5951000" />
-    </task>
-    <task id="LOCAL-00104" summary="mr">
-      <created>1567853591656</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1567853591657</updated>
-    </task>
-    <task id="LOCAL-00105" summary="mr">
-      <created>1567853872740</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1567853872740</updated>
+      <workItem from="1568955214140" duration="6348000" />
     </task>
     <task id="LOCAL-00106" summary="mr">
       <created>1567853938908</created>
@@ -737,11 +723,25 @@
       <option name="project" value="LOCAL" />
       <updated>1568962641331</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="mapper_no_weight">
+      <created>1568963389320</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1568963389320</updated>
+    </task>
+    <task id="LOCAL-00154" summary="mapper_no_weight">
+      <created>1568963405906</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1568963405906</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108804000" />
+    <option name="totallyTimeSpent" value="109201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -891,7 +891,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model.py</url>
-          <line>116</line>
+          <line>118</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -1169,8 +1169,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="107" column="14" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
+        <state relative-caret-position="207">
+          <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
