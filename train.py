@@ -10,7 +10,7 @@ if __name__=='__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
     config = Config
-    train_file = '../data/wiki/wiki_en.txt'
+    train_file = '../data/wiki/wiki_sentences.txt'
     if len(sys.argv) > 1:
         config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
         print(sys.argv[1])
