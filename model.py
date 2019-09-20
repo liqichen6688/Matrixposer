@@ -104,7 +104,7 @@ class Matposer(nn.Module):
                 y = batch.text
                 x = y[ind,:].type(torch.LongTensor)
             y_pred = self.__call__(x)
-            loss = self.loss_op(y_pred, y)
+            loss = self.loss_op(y_pred, y.permute(1, 0))
             loss.backward()
             losses.append(loss.data.cpu().numpy())
             self.optimizer.step()
