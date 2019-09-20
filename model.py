@@ -35,6 +35,7 @@ class Matposer(nn.Module):
         self.softmax = nn.Softmax()
 
     def forward(self, x):
+        print(x)
         embedded_sents = self.src_embed(x.permute(1, 0)) # shape = (batch_size, sen_len, d_model)
         encoded_sents = self.encoder(embedded_sents)
         final_feature_map = encoded_sents[:,-1,:]
