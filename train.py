@@ -34,7 +34,7 @@ if __name__=='__main__':
     model.to(device)
     model.train()
     optimizer = optim.Adam(model.parameters(), lr=config.lr)
-    Loss = nn.NLLLoss()
+    Loss = nn.BCELoss()
     model.add_optimizer(optimizer)
     model.add_loss_op(Loss)
 
