@@ -109,7 +109,15 @@ class Matposer(nn.Module):
             y_onehot.zero_()
             y_onehot.scatter_(1, y, 1)
             loss = self.loss_op(y_pred,y_onehot.cuda())
-            loss.backward()
+            try:
+                loss.backward()
+            except RuntimeError as e:
+                if 'out of memory' in str(e):
+                    print('| WARNING: ran out of memory')
+                    if hasattr(torch.cuda, 'empty_cache'):
+                        torch.cuda.empty_cache()
+                else:
+                    raise e
             losses.append(loss.data.cpu().numpy())
             self.optimizer.step()
 
