@@ -108,7 +108,7 @@ class Matposer(nn.Module):
             y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
             y_onehot.zero_()
             y_onehot.scatter_(1, y, 1)
-            loss = self.loss_op(y_pred,y_onehot.cuda())
+            loss = self.loss_op(y_pred,y_onehot)
             try:
                 loss.backward()
             except RuntimeError as e:
