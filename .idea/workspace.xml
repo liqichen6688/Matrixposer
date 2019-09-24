@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="mapper_no_weight">
+    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
@@ -12,6 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/MatPoser$test.coverage" NAME="test Coverage Results" MODIFIED="1569289687206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MatPoser$utils.coverage" NAME="utils Coverage Results" MODIFIED="1565833305927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MatPoser$interactor.coverage" NAME="interactor Coverage Results" MODIFIED="1565925036538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MatPoser$train.coverage" NAME="train Coverage Results" MODIFIED="1568204198828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -19,42 +20,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train.py">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="22">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sentences.txt">
+        <entry file="file://$PROJECT_DIR$/20ng_sentences">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feed_forward.py">
+        <entry file="file://$PROJECT_DIR$/20ng.test">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="4" selection-start-line="4" selection-end-line="15" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/encoder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="44">
+              <caret line="1" column="1175" selection-start-line="1" selection-start-column="1175" selection-end-line="1" selection-end-column="1175" />
             </state>
           </provider>
         </entry>
@@ -75,8 +58,15 @@
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/20ng.train">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19855" />
           </provider>
         </entry>
       </file>
@@ -211,14 +201,15 @@
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/config.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-157" />
-    <option name="y" value="236" />
-    <option name="width" value="1680" />
+    <option name="x" value="110" />
+    <option name="y" value="25" />
+    <option name="width" value="1564" />
     <option name="height" value="889" />
   </component>
   <component name="ProjectView">
@@ -281,7 +272,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.test">
     <configuration name="interactor" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MatPoser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -296,6 +287,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interactor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MatPoser" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -359,11 +372,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.utils" />
         <item itemvalue="Python.interactor" />
         <item itemvalue="Python.utils" />
-        <item itemvalue="Python.train" />
       </list>
     </recent_temporary>
   </component>
@@ -394,14 +407,8 @@
       <workItem from="1567823035352" duration="15404000" />
       <workItem from="1568700269239" duration="11841000" />
       <workItem from="1568955214140" duration="8598000" />
-      <workItem from="1569230030042" duration="602000" />
-    </task>
-    <task id="LOCAL-00114" summary="mr">
-      <created>1567930051584</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1567930051584</updated>
+      <workItem from="1569230030042" duration="759000" />
+      <workItem from="1569289528281" duration="253000" />
     </task>
     <task id="LOCAL-00115" summary="mr">
       <created>1567996786899</created>
@@ -739,11 +746,18 @@
       <option name="project" value="LOCAL" />
       <updated>1569218586224</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="mapper_no_weight">
+      <created>1569246680269</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1569246680269</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112053000" />
+    <option name="totallyTimeSpent" value="112463000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -755,10 +769,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-157" y="236" width="1680" height="889" extended-state="0" />
+    <frame x="110" y="25" width="1564" height="889" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49226806" visible="true" weight="0.17582418" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49226806" visible="true" weight="0.1911958" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -773,7 +787,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503663" side_tool="true" weight="0.32245922" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4945055" weight="0.3601004" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32245922" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" weight="0.32245922" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1063,16 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/20ng.test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="1" column="1175" selection-start-line="1" selection-start-column="1175" selection-end-line="1" selection-end-column="1175" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20ng.train">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/sublayer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
@@ -1105,9 +1109,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentences.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/feed_forward.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1172,10 +1173,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sentences.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68656" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20ng.test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="1" column="1175" selection-start-line="1" selection-start-column="1175" selection-end-line="1" selection-end-column="1175" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20ng.train">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19855" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20ng_sentences">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
