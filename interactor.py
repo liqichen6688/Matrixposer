@@ -126,6 +126,8 @@ class Interactor(nn.Module):
         self.column_wise_nn1 = Column_wise_nn(out_row, d_ff, 1, dropout)
         self.row_wise_nn1 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.row_wise_nn3 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.row_wise_nn4 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         #self.mapper = Mapper(out_row, d_column, map_size= 2 * out_row)
 
     def forward(self, x):
@@ -133,8 +135,12 @@ class Interactor(nn.Module):
         output1 = torch.matmul(left_transposer1.permute(0,2,1), x)
         left_transposer2 = self.row_wise_nn2(output1)
         output2 = torch.matmul(left_transposer2.permute(0, 2, 1), output1)
+        left_transposer3 = self.row_wise_nn3(output2)
+        output3 = torch.matmul(left_transposer3.permute(0, 2, 1), output2)
+        left_transposer4 = self.row_wise_nn4(output3)
+        output4 = torch.matmul(left_transposer4.permute(0, 2, 1), output3)
         #output = self.mapper(output2)
-        output = self.column_wise_nn1(output2)
+        output = self.column_wise_nn1(output4)
         #output = self.column_wise_nn(outp
         #ut)
         #output = torch.matmul(middle_term, right_transposer.permute(0,2,1))
