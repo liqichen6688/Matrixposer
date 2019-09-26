@@ -16,6 +16,18 @@ class LayerNorm(nn.Module):
         std = x.std(-1, keepdim=True)
         return self.a_2 * (x - mean) / (std + self.eps) + self.b_2
 
+class MatrixNorm(nn.Module):
+
+    def __init__(self, size, eps=1e-6):
+        super(MatrixNorm, self).__init__()
+        self.a_2 = nn.Parameter(torch.ones(size))
+        self.b_2 = nn.Parameter(torch.zeros(size))
+        self.eps = eps
+
+    def forward(self, x):
+        mean = x.mean()
+        std = x.std()
+        return self.a_2 * (x - mean) / (std + self.eps) + self.b_2
 
 class SublayerOutput(nn.Module):
     '''
