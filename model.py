@@ -99,10 +99,10 @@ class Matposer(nn.Module):
             ind = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - 5)
             if torch.cuda.is_available():
                 y = batch.text[-1,:]
-                x = y[:-1,:].type(torch.cuda.LongTensor)
+                x = batch.text[:-1,:].type(torch.cuda.LongTensor)
             else:
                 y = batch.text[-1,:]
-                x = y[:-1,:].type(torch.LongTensor)
+                x = batch.text[:-1,:].type(torch.LongTensor)
             y_pred = self.__call__(x)
             #y = y.permute(1, 0)
             #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
