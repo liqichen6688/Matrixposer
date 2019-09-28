@@ -34,7 +34,6 @@ class Matposer(nn.Module):
         )
 
         self.softmax = nn.Softmax()
-        self.mask = torch.rand(300)
 
 
     def forward(self, x):
@@ -99,11 +98,8 @@ class Matposer(nn.Module):
             self.optimizer.zero_grad()
             ind = random.sample(range(0, self.config.max_sen_len), 1)
             if torch.cuda.is_available():
-                y = batch.text[ind,:]
-                x = batch.text
-                print(x.size())
-                x[ind,:] = self.mask
-                x = x.type(torch.cuda.LongTensor)
+                y = batch.text[-1,:]
+                x = batch.text[:-1,:].type(torch.cuda.LongTensor)
             else:
                 y = batch.text[-1,:]
                 x = batch.text[:-1,:].type(torch.LongTensor)

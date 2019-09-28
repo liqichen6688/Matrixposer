@@ -8,7 +8,7 @@ class Config(object):
     lr = 0.001
     max_epochs = 100
     batch_size = 64
-    max_sen_len = 120
+    max_sen_len = 30
     # determine lr
     learning_method = 'reduce'
     # triangle learning
