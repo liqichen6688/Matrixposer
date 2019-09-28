@@ -103,14 +103,18 @@ class Matposer(nn.Module):
                 x[ind , :] = 0
                 x = x.type(torch.cuda.LongTensor)
             else:
-                y = batch.text[-1,:]
-                x = batch.text[:-1,:].type(torch.LongTensor)
+                y = batch.text[ind,:]
+                x = batch.text
+                x[ind , :] = 0
+                x = x.type(torch.LongTensor)
             y_pred = self.__call__(x)
             #y = y.permute(1, 0)
             #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
             #y_onehot.zero_()
             #y_onehot.scatter_(1, y, 1)
-            loss = self.loss_op(y_pred,y.cuda())
+            print(y_pred.size())
+            print(y.size())
+            loss = self.loss_op(y_pred, y.cuda())
             try:
                 loss.backward()
             except RuntimeError as e:
