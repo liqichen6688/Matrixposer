@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
+            <state relative-caret-position="302">
+              <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -219,7 +219,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="172" />
+    <option name="x" value="-20" />
     <option name="y" value="23" />
     <option name="width" value="1564" />
     <option name="height" value="889" />
@@ -446,21 +446,7 @@
       <workItem from="1569401809364" duration="1304000" />
       <workItem from="1569405601530" duration="2210000" />
       <workItem from="1569462881555" duration="3785000" />
-      <workItem from="1569651099534" duration="6113000" />
-    </task>
-    <task id="LOCAL-00136" summary="mr">
-      <created>1568793096636</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1568793096636</updated>
-    </task>
-    <task id="LOCAL-00137" summary="mr">
-      <created>1568793219313</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1568793219313</updated>
+      <workItem from="1569651099534" duration="6792000" />
     </task>
     <task id="LOCAL-00138" summary="mr">
       <created>1568793380231</created>
@@ -791,11 +777,25 @@
       <option name="project" value="LOCAL" />
       <updated>1569681738437</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="final_word_pretrain">
+      <created>1569682525956</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1569682525956</updated>
+    </task>
+    <task id="LOCAL-00186" summary="final_word_pretrain">
+      <created>1569682742597</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1569682742597</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128669000" />
+    <option name="totallyTimeSpent" value="129348000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -807,7 +807,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="23" width="1564" height="889" extended-state="0" />
+    <frame x="-20" y="23" width="1564" height="889" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49226806" visible="true" weight="0.20170827" />
@@ -815,7 +815,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.498779" visible="true" weight="0.37390214" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498779" weight="0.37390214" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -825,7 +825,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503663" side_tool="true" weight="0.32245922" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4945055" weight="0.3601004" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" weight="0.32245922" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32245922" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -945,7 +945,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model.py</url>
-          <line>132</line>
+          <line>128</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1246,8 +1246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
+        <state relative-caret-position="302">
+          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

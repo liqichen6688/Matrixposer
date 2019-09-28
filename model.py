@@ -96,7 +96,7 @@ class Matposer(nn.Module):
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
-            ind = random.sample(range(0, self.config.max_sen_len), 1)
+            #ind = random.sample(range(0, self.config.max_sen_len), 1)
             if torch.cuda.is_available():
                 y = batch.text[-1,:]
                 x = batch.text[:-1 , :]
