@@ -93,7 +93,7 @@ class Dataset(object):
 
         TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 25000)
         self.vocab = TEXT.vocab
-        print(self.vocab.itos[0])
+        print(self.vocab.itos[0,1,2])
         #len(TEXT.vocab)
 
         self.train_iterator = data.BucketIterator(
