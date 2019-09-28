@@ -98,14 +98,12 @@ class Matposer(nn.Module):
             self.optimizer.zero_grad()
             ind = random.sample(range(0, self.config.max_sen_len), 1)
             if torch.cuda.is_available():
-                y = batch.text[ind,:].squeeze(0)
-                x = batch.text
-                x[ind , :] = 0
+                y = batch.text[-1,:]
+                x = batch.text[:-1 , :]
                 x = x.type(torch.cuda.LongTensor)
             else:
-                y = batch.text[ind,:].squeeze(0)
-                x = batch.text
-                x[ind , :] = 0
+                y = batch.text[-1,:]
+                x = batch.text[:-1 , :]
                 x = x.type(torch.LongTensor)
             y_pred = self.__call__(x)
             #y = y.permute(1, 0)
