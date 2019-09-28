@@ -149,11 +149,11 @@ class Interactor(nn.Module):
         left_transposer3 = self.row_wise_nn3(output2)
         output3 = self.norm3(torch.matmul(left_transposer3.permute(0, 2, 1), output2))
 
-        #left_transposer4 = self.row_wise_nn4(output3)
-        #output4 = self.norm4(torch.matmul(left_transposer4.permute(0, 2, 1), output3))
+        left_transposer4 = self.row_wise_nn4(output3)
+        output4 = self.norm4(torch.matmul(left_transposer4.permute(0, 2, 1), output3))
 
         #output = self.mapper(output2)
-        output = self.column_wise_nn1(output3)
+        output = self.column_wise_nn1(output4)
         #output = self.column_wise_nn(outp
         #ut)
         #output = torch.matmul(middle_term, right_transposer.permute(0,2,1))

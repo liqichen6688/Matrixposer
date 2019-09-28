@@ -99,7 +99,7 @@ class Matposer(nn.Module):
             #ind = random.sample(range(0, self.config.max_sen_len), 1)
             if torch.cuda.is_available():
                 y = batch.text[-1,:]
-                x = batch.text[:-1 ,:]
+                x = batch.text[:-1,:]
                 x = x.type(torch.cuda.LongTensor)
             else:
                 y = batch.text[-1,:]
