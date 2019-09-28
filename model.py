@@ -98,17 +98,17 @@ class Matposer(nn.Module):
             self.optimizer.zero_grad()
             ind = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - 5)
             if torch.cuda.is_available():
-                y = batch.text
-                x = y[ind,:].type(torch.cuda.LongTensor)
+                y = batch.text[-1,:]
+                x = y[:-1,:].type(torch.cuda.LongTensor)
             else:
-                y = batch.text
-                x = y[ind,:].type(torch.LongTensor)
+                y = batch.text[-1,:]
+                x = y[:-1,:].type(torch.LongTensor)
             y_pred = self.__call__(x)
-            y = y.permute(1, 0)
-            y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
-            y_onehot.zero_()
-            y_onehot.scatter_(1, y, 1)
-            loss = self.loss_op(y_pred,y_onehot.cuda())
+            #y = y.permute(1, 0)
+            #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
+            #y_onehot.zero_()
+            #y_onehot.scatter_(1, y, 1)
+            loss = self.loss_op(y_pred,y.cuda())
             try:
                 loss.backward()
             except RuntimeError as e:
