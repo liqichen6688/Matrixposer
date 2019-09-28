@@ -98,12 +98,12 @@ class Matposer(nn.Module):
             self.optimizer.zero_grad()
             ind = random.sample(range(0, self.config.max_sen_len), 1)
             if torch.cuda.is_available():
-                y = batch.text[ind,:]
+                y = batch.text[ind,:].squeeze(0)
                 x = batch.text
                 x[ind , :] = 0
                 x = x.type(torch.cuda.LongTensor)
             else:
-                y = batch.text[ind,:]
+                y = batch.text[ind,:].squeeze(0)
                 x = batch.text
                 x[ind , :] = 0
                 x = x.type(torch.LongTensor)
@@ -112,8 +112,6 @@ class Matposer(nn.Module):
             #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
             #y_onehot.zero_()
             #y_onehot.scatter_(1, y, 1)
-            print(y_pred.size())
-            print(y.size())
             loss = self.loss_op(y_pred, y.cuda())
             try:
                 loss.backward()
