@@ -17,6 +17,7 @@ class Config(object):
     max_lr = 0.01
     pretrain = True
 
+
 '''
 
 dropout=0.1
