@@ -6,6 +6,7 @@ import numpy as np
 import spacy
 from torchtext.vocab import Vectors, GloVe
 from sklearn.metrics import accuracy_score
+import dill
 
 
 def get_embedding_matrix(vocab_chars):
@@ -108,7 +109,12 @@ class Dataset(object):
         else:
             train_data, val_data = train_data.split(split_ratio=0.8)
 
-        TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 25000)
+
+        if config.pretrain:
+            TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 25000)
+            with open("pretrain_model/build_vocab", "wb") as dill_file:
+                dill.dump(TEXT, dill_file)
+
         self.vocab = TEXT.vocab
         print(type(self.vocab))
         #len(TEXT.vocab)
