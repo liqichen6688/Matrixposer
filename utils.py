@@ -115,6 +115,11 @@ class Dataset(object):
             with open("pretrain_model/build_vocab", "wb") as dill_file:
                 dill.dump(TEXT, dill_file)
                 print("vocab saved")
+        else:
+            with open("pretrain_model/build_vocab", "wb") as dill_file:
+                TEXT = dill.load(dill_file)
+                print("vocab loaded")
+
 
         self.vocab = TEXT.vocab
         print(type(self.vocab))
