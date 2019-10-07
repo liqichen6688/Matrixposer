@@ -9,7 +9,7 @@ from feed_forward import PositionwiseFeedForward
 from utils import *
 
 class Matposer(nn.Module):
-    def __init__(self, config, src_vocab, TEXT):
+    def __init__(self, config, src_vocab, TEXT, pretrain=False):
         super(Matposer, self).__init__()
         self.config = config
         self.src_vocab = src_vocab
@@ -33,7 +33,15 @@ class Matposer(nn.Module):
             src_vocab
         )
 
+        self.class_fc = nn.Linear(
+            d_model,
+            config.output_size
+        )
+
+
         self.softmax = nn.Softmax()
+
+        self.pretrain = pretrain
 
 
     def forward(self, x):
@@ -41,7 +49,11 @@ class Matposer(nn.Module):
         encoded_sents = self.encoder(embedded_sents)
         final_feature_map = encoded_sents[:,-1,:]
         final_out = self.fc(final_feature_map)
-        return self.softmax(final_out)
+        class_out = self.class_fc(final_feature_map)
+        if self.pretrain:
+            return self.softmax(final_out)
+        else:
+            return self.softmax(class_out)
 
     def add_optimizer(self, optimizer):
         self.optimizer = optimizer
@@ -97,14 +109,23 @@ class Matposer(nn.Module):
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             #ind = random.sample(range(0, self.config.max_sen_len), 1)
-            if torch.cuda.is_available():
-                y = batch.text[-1,:]
-                x = batch.text[:-1,:]
-                x = x.type(torch.cuda.LongTensor)
+            if self.pretrain:
+                if torch.cuda.is_available():
+                    y = batch.text[-1,:]
+                    x = batch.text[:-1,:]
+                    x = x.type(torch.cuda.LongTensor)
+                else:
+                    y = batch.text[-1,:]
+                    x = batch.text[:-1,:]
+                    x = x.type(torch.LongTensor)
             else:
-                y = batch.text[-1,:]
-                x = batch.text[:-1,:]
-                x = x.type(torch.LongTensor)
+                if torch.cuda.is_available():
+                    x = batch.text.cuda()
+                    y = (batch.label - 1).type(torch.cuda.LongTensor)
+                else:
+                    x = batch.text
+                    y = (batch.label - 1).type(torch.LongTensor)
+
             y_pred = self.__call__(x)
             #y = y.permute(1, 0)
             #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
@@ -131,9 +152,10 @@ class Matposer(nn.Module):
                 losses = []
 
                 # Evalute Accuracy on validation set
-                #val_accuracy = evaluate_model(self, val_iterator)
-                #print("\tVal Accuracy: {:.4f}".format(val_accuracy))
-                #val_accuracies.append(val_accuracy)
+                if not self.pretrain:
+                    val_accuracy = evaluate_model(self, val_iterator)
+                    print("\tVal Accuracy: {:.4f}".format(val_accuracy))
+                    val_accuracies.append(val_accuracy)
                 self.train()
 
         return train_losses

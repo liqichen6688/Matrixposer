@@ -10,7 +10,7 @@ if __name__=='__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
     config = Config
-    train_file = '../data/wiki/wiki_sentences.txt'
+    train_file = '../data/20ng.train'
     #train_file = '20ng_sentences'
     if len(sys.argv) > 1:
         config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
@@ -27,7 +27,9 @@ if __name__=='__main__':
     dataset = Dataset(config)
     TEXT = dataset.load_data(train_file, test_file, config)
 
-    model = Matposer(config, len(dataset.vocab), TEXT)
+    pretrained_dict = torch.load('pretrain_model/14')
+
+    model = Matposer(config, len(dataset.vocab), TEXT, pretrain=config.pretrain)
     if torch.cuda.device_count() > 1:
         print("Let's use", torch.cuda.device_count(), "GPUs!")
         model = nn.DataParallel(model)
@@ -39,17 +41,24 @@ if __name__=='__main__':
     model.add_optimizer(optimizer)
     model.add_loss_op(Loss)
 
+    model_dict = model.state_dict()
+    pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
+    model_dict.update(pretrained_dict)
+    model.load_state_dict(model_dict)
+
+
+
     train_losses = []
     val_accuracies = []
 
     for i in range(config.max_epochs):
         print("Epoch: {}".format(i))
-        train_loss= model.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
+        train_loss = model.run_epoch(dataset.train_iterator, dataset.val_iterator, i)
         train_losses.append(train_loss)
         #if val_accuracy > 0.772:
           #  break
-
-        torch.save(model.state_dict(), "pretrain_model/"+str(i))
+        if config.pretrain:
+            torch.save(model.state_dict(), "pretrain_model/"+str(i))
 
 
 

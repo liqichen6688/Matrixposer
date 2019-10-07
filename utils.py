@@ -45,11 +45,20 @@ class Dataset(object):
         Load the data into Pandas.DataFrame object
         This will be used to convert data to torchtext object
         '''
-        with open(filename, 'r') as datafile:
-            data = [line.strip() for line in datafile]
+        if self.config.pretrain:
+            with open(filename, 'r') as datafile:
+                data = [line.strip() for line in datafile]
+            full_df = pd.DataFrame({"text": data})
+        else:
+            with open(filename, 'r') as datafile:
+                data = [line.strip().split(',', maxsplit=1) for line in datafile]
+                data_text = list(map(lambda x: x[1], data))
+                data_label = list(map(lambda x: self.parse_label(x[0]), data))
 
-        full_df = pd.DataFrame({"text": data})
+            full_df = pd.DataFrame({"text": data_text, "label": data_label})
+
         return full_df
+
 
     def load_data(self, train_file, test_file, config,val_file=None):
         '''
@@ -71,12 +80,20 @@ class Dataset(object):
         # Creating Filed for data
         TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=self.config.max_sen_len)
         datafields = [("text", TEXT)]
+        if not config.pretrain:
+            LABEL = data.Field(sequential=False, use_vocab=False)
+            datafields.append(("label",LABEL))
 
         # Load data from pd.DataFrame into torchtext.data.Dataset
         train_df = self.get_pandas_df(train_file)
         train_examples = [
             data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
         train_data = data.Dataset(train_examples, datafields)
+
+        if not config.pretrain:
+            test_df = self.get_pandas_df(test_file)
+            test_examples = [data.Example.fromlist(i, datafields) for i in test_df.values.tolist()]
+            test_data = data.Dataset(test_examples, datafields)
 
 
 
@@ -93,7 +110,6 @@ class Dataset(object):
 
         TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 25000)
         self.vocab = TEXT.vocab
-        print(self.vocab.itos[0:3])
         #len(TEXT.vocab)
 
         self.train_iterator = data.BucketIterator(
@@ -104,13 +120,21 @@ class Dataset(object):
             shuffle=True
         )
 
-        self.val_iterator= data.BucketIterator.splits(
-            (val_data),
-            batch_size=self.config.batch_size,
-            sort_key=lambda x: len(x.text),
-            repeat=False,
-            shuffle=False
-        )
+        if not config.pretrain:
+            self.val_iterator, self.test_iterator = data.BucketIterator.splits(
+                (val_data, test_data),
+                batch_size=self.config.batch_size,
+                sort_key=lambda x: len(x.text),
+                repeat=False,
+                shuffle=False)
+        else:
+            self.val_iterator = data.BucketIterator.splits(
+                (val_data),
+                batch_size=self.config.batch_size,
+                sort_key=lambda x: len(x.text),
+                repeat=False,
+                shuffle=False)
+
 
         print ("Loaded {} training examples".format(len(train_data)))
         print ("Loaded {} validation examples".format(len(val_data)))
