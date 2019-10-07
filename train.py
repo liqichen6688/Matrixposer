@@ -11,7 +11,7 @@ if __name__=='__main__':
     torch.cuda.empty_cache()
     config = Config
     #train_file = '../data/20ng.train'
-    train_file = '../data/sst.train'
+    train_file = '../data/wiki/wiki_sentences.txt'
     #train_file = '20ng_sentences'
     if len(sys.argv) > 1:
         config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
@@ -60,7 +60,7 @@ if __name__=='__main__':
         #if val_accuracy > 0.772:
           #  break
         if config.pretrain:
-            torch.save(model.state_dict(), "pretrain_model/20ng"+str(i))
+            torch.save(model.state_dict(), "pretrain_model/wiki"+str(i))
 
 
 
