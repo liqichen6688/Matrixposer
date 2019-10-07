@@ -15,7 +15,7 @@ class Config(object):
     cut_frac = 0.1
     ratio = 32
     max_lr = 0.01
-    pretrain = False
+    pretrain = True
 
 '''
 
