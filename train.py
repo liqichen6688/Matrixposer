@@ -60,7 +60,7 @@ if __name__=='__main__':
         #if val_accuracy > 0.772:
           #  break
         if config.pretrain:
-            torch.save(model.state_dict(), "pretrain_model/"+str(i))
+            torch.save(model.state_dict(), "pretrain_model/20ng"+str(i))
 
 
 
