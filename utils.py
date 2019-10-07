@@ -108,7 +108,8 @@ class Dataset(object):
         else:
             train_data, val_data = train_data.split(split_ratio=0.8)
 
-        TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 25000)
+        if config.pretrain:
+            TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 25000)
         self.vocab = TEXT.vocab
         #len(TEXT.vocab)
 
