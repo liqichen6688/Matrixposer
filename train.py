@@ -42,11 +42,11 @@ if __name__=='__main__':
     model.add_optimizer(optimizer)
     model.add_loss_op(Loss)
 
-    if not config.pretrain:
-        model_dict = model.state_dict()
-        pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
-        model_dict.update(pretrained_dict)
-        model.load_state_dict(model_dict)
+    #if not config.pretrain:
+    #    model_dict = model.state_dict()
+    #    pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
+    #    model_dict.update(pretrained_dict)
+    #    model.load_state_dict(model_dict)
 
 
 
