@@ -122,8 +122,7 @@ class Dataset(object):
 
 
         self.vocab = TEXT.vocab
-        print(type(self.vocab))
-        #len(TEXT.vocab)
+        print(self.vocab.itos[:3])
 
         self.train_iterator = data.BucketIterator(
             (train_data),
