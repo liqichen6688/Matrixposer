@@ -18,7 +18,7 @@ if __name__=='__main__':
         print(sys.argv[1])
     if len(sys.argv) > 2:
         train_file = sys.argv[2]
-    test_file = '../data/sst.test'
+    test_file = '../data/20ng.test'
     if len(sys.argv) > 3:
         test_file = sys.argv[3]
 
