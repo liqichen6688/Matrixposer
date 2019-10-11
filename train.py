@@ -42,14 +42,14 @@ if __name__=='__main__':
     model.add_optimizer(optimizer)
     model.add_loss_op(Loss)
 
-    if not config.pretrain:
-        model_dict = model.state_dict()
-        print(model_dict.keys())
-        pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
-        del pretrained_dict['class_fc.weight']
-        del pretrained_dict['class_fc.bias']
-        model_dict.update(pretrained_dict)
-        model.load_state_dict(model_dict)
+    #if not config.pretrain:
+    #    model_dict = model.state_dict()
+    #    print(model_dict.keys())
+    #    pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
+    #    del pretrained_dict['class_fc.weight']
+    #    del pretrained_dict['class_fc.bias']
+    #    model_dict.update(pretrained_dict)
+    #    model.load_state_dict(model_dict)
 
 
 

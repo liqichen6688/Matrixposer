@@ -132,8 +132,8 @@ class Interactor(nn.Module):
         #self.mapper = Mapper(out_row, d_column, map_size= 2 * out_row)
 
 
-        self.norm1 = MatrixNorm([out_row, d_column])
-        self.norm2 = MatrixNorm([out_row, d_column])
+        #self.norm1 = MatrixNorm([out_row, d_column])
+        #self.norm2 = MatrixNorm([out_row, d_column])
         #self.norm3 = MatrixNorm([out_row, d_column])
         #self.norm4 = MatrixNorm([out_row, d_column])
 
@@ -141,10 +141,10 @@ class Interactor(nn.Module):
 
     def forward(self, x):
         left_transposer1 = self.row_wise_nn1(x)
-        output1 = self.norm1(torch.matmul(left_transposer1.permute(0,2,1), x))
+        output1 = torch.matmul(left_transposer1.permute(0,2,1), x)
 
         left_transposer2 = self.row_wise_nn2(output1)
-        output2 = self.norm2(torch.matmul(left_transposer2.permute(0, 2, 1), output1))
+        output2 = torch.matmul(left_transposer2.permute(0, 2, 1), output1)
 
         #left_transposer3 = self.row_wise_nn3(output2)
         #output3 = self.norm3(torch.matmul(left_transposer3.permute(0, 2, 1), output2))
