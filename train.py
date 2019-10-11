@@ -28,7 +28,7 @@ if __name__=='__main__':
     dataset = Dataset(config)
     TEXT = dataset.load_data(train_file, test_file, config, val_file='../data/sst.dev')
 
-    pretrained_dict = torch.load('pretrain_model/14')
+    pretrained_dict = torch.load('pretrain_model/wiki10')
 
     model = Matposer(config, len(dataset.vocab), TEXT, pretrain=config.pretrain)
     if torch.cuda.device_count() > 1:
