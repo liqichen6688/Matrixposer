@@ -79,7 +79,13 @@ class Dataset(object):
             x.text for x in NLP.tokenizer(sent) if x.text != " ")
 
         # Creating Filed for data
-        TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=self.config.max_sen_len)
+        if config.pretrain:
+            TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=self.config.max_sen_len)
+        else:
+            with open("pretrain_model/build_vocab", "rb") as dill_file:
+                TEXT = dill.load(dill_file)
+                print("vocab loaded")
+
         datafields = [("text", TEXT)]
         if not config.pretrain:
             LABEL = data.Field(sequential=False, use_vocab=False)
@@ -115,10 +121,6 @@ class Dataset(object):
             with open("pretrain_model/build_vocab", "wb") as dill_file:
                 dill.dump(TEXT, dill_file)
                 print("vocab saved")
-        else:
-            with open("pretrain_model/build_vocab", "rb") as dill_file:
-                TEXT = dill.load(dill_file)
-                print("vocab loaded")
 
 
         self.vocab = TEXT.vocab
