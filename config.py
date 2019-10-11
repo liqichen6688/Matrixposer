@@ -18,6 +18,7 @@ class Config(object):
     pretrain = False
 
 
+
 '''
 
 dropout=0.1
