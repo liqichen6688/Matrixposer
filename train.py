@@ -10,7 +10,7 @@ if __name__=='__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
     config = Config
-    train_file = '../data/20ng.train'
+    train_file = '../data/sst.train'
     #train_file = '../data/wiki/wiki_sentences.txt'
     #train_file = '20ng_sentences'
     if len(sys.argv) > 1:
@@ -18,7 +18,7 @@ if __name__=='__main__':
         print(sys.argv[1])
     if len(sys.argv) > 2:
         train_file = sys.argv[2]
-    test_file = '../data/20ng.test'
+    test_file = '../data/sst.test'
     if len(sys.argv) > 3:
         test_file = sys.argv[3]
 
