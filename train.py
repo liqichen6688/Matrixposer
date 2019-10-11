@@ -42,6 +42,7 @@ if __name__=='__main__':
     model.add_optimizer(optimizer)
     model.add_loss_op(Loss)
 
+
     #if not config.pretrain:
     #    model_dict = model.state_dict()
     #    print(model_dict.keys())
