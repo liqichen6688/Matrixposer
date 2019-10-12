@@ -95,7 +95,7 @@ class Matposer(nn.Module):
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             if self.pretrain:
-                ind = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - 4).sort()
+                ind = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - 4)
                 ind.sort()
                 if torch.cuda.is_available():
                     x_dim = batch.text[ind,:]
