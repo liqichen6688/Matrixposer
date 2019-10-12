@@ -16,7 +16,7 @@ class Matposer(nn.Module):
         d_row, N, dropout = self.config.d_row, self.config.N, self.config.dropout
         d_model, d_ff = self.config.d_model, self.config.d_ff
 
-        inter = Interactor(d_model, d_ff, out_row=d_row, dropout=dropout)
+        inter = Interactor(d_model, d_ff, out_row=d_row, dropout=dropout, pretrain=config.pretrain)
         ff = PositionwiseFeedForward(d_model, d_ff, dropout)
         position = PositionalEncoding(d_model, dropout)
 
@@ -47,11 +47,11 @@ class Matposer(nn.Module):
     def forward(self, x):
         embedded_sents = self.src_embed(x.permute(1, 0)) # shape = (batch_size, sen_len, d_model)
         encoded_sents = self.encoder(embedded_sents)
-        final_feature_map = encoded_sents[:,-1,:]
-        final_out = self.fc(final_feature_map)
-        class_out = self.class_fc(final_feature_map)
+        final_feature_map = encoded_sents
+        #final_out = self.fc(final_feature_map)
+        class_out = self.class_fc(final_feature_map[:,-1,:])
         if self.pretrain:
-            return self.softmax(final_out)
+            return final_feature_map
         else:
             return self.softmax(class_out)
 
@@ -89,35 +89,28 @@ class Matposer(nn.Module):
         if self.config.learning_method == 'reduce':
             if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
                 self.reduce_lr()
-        #for j in range(2):
-        #    if j == 0:
-        #        print('training on weights')
-        #        for param in self.parameters():
-        #            param.requires_grad = True
-        #        for mapper in self.mappers:
-        #            mapper.freeze_parameter()
-        #            mapper.renew_mask()
-        #    else:
-        #        print('training on mappers')
-        #        for param in self.parameters():
-        #            param.requires_grad = False
-        #        for mapper in self.mappers:
-        #            mapper.unfreeze_parameter()
         for i, batch in enumerate(train_iterator):
 
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
-            #ind = random.sample(range(0, self.config.max_sen_len), 1)
             if self.pretrain:
+                ind = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - 4).sort()
+                ind.sort()
                 if torch.cuda.is_available():
-                    y = batch.text[-1,:]
-                    x = batch.text[:-1,:]
+                    x_dim = batch.text[ind,:]
+                    x = batch.text[:,:]
                     x = x.type(torch.cuda.LongTensor)
+                    x_dim = x_dim.type(torch.cuda.LongTensor)
+
                 else:
-                    y = batch.text[-1,:]
-                    x = batch.text[:-1,:]
+                    x_dim = batch.text[ind,:]
+                    x = batch.text[:,:]
                     x = x.type(torch.LongTensor)
+                    x_dim = x_dim.type(torch.cuda.LongTensor)
+                y = self.__call__(x)
+                y_dim = self.__call__(x_dim)
+                loss = torch.dist(y, y_dim, 2)
             else:
                 if torch.cuda.is_available():
                     x = batch.text.cuda()
@@ -126,12 +119,12 @@ class Matposer(nn.Module):
                     x = batch.text
                     y = (batch.label - 1).type(torch.LongTensor)
 
-            y_pred = self.__call__(x)
+                y_pred = self.__call__(x)
+                loss = self.loss_op(y_pred, y.cuda())
             #y = y.permute(1, 0)
             #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
             #y_onehot.zero_()
             #y_onehot.scatter_(1, y, 1)
-            loss = self.loss_op(y_pred, y.cuda())
             try:
                 loss.backward()
             except RuntimeError as e:

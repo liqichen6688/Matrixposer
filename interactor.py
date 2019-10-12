@@ -116,7 +116,7 @@ class Mapper(nn.Module):
         self.freeze = False
 
 class Interactor(nn.Module):
-    def __init__(self, d_column, d_ff, out_row=30, dropout=0.1):
+    def __init__(self, d_column, d_ff, out_row=30, dropout=0.1, pretrain=False):
         '''
         :param d_row: dimension of output row number
         :param d_column: dimension of input column number
@@ -127,9 +127,11 @@ class Interactor(nn.Module):
         self.column_wise_nn1 = Column_wise_nn(out_row, d_ff, 1, dropout)
         self.row_wise_nn1 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, out_row, dropout)
-        #self.row_wise_nn3 = Row_wise_nn(d_column, d_ff, out_row, dropout)
-        #self.row_wise_nn4 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.row_wise_nn3 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.row_wise_nn4 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         #self.mapper = Mapper(out_row, d_column, map_size= 2 * out_row)
+
+        self.pretrain = pretrain
 
 
         #self.norm1 = MatrixNorm([out_row, d_column])
@@ -142,9 +144,11 @@ class Interactor(nn.Module):
     def forward(self, x):
         left_transposer1 = self.row_wise_nn1(x)
         output1 = torch.matmul(left_transposer1.permute(0,2,1), x)
+        output1 = self.row_wise_nn2(output1)
 
-        left_transposer2 = self.row_wise_nn2(output1)
+        left_transposer2 = self.row_wise_nn3(output1)
         output2 = torch.matmul(left_transposer2.permute(0, 2, 1), output1)
+        output2 = self.row_wise_nn4(output2)
 
         #left_transposer3 = self.row_wise_nn3(output2)
         #output3 = self.norm3(torch.matmul(left_transposer3.permute(0, 2, 1), output2))
@@ -157,5 +161,8 @@ class Interactor(nn.Module):
         #output = self.column_wise_nn(outp
         #ut)
         #output = torch.matmul(middle_term, right_transposer.permute(0,2,1))
-        return output
+        if self.pretrain:
+            return output2
+        else:
+            return output
 
