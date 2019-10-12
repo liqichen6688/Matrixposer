@@ -126,9 +126,9 @@ class Interactor(nn.Module):
         super(Interactor, self).__init__()
         self.column_wise_nn1 = Column_wise_nn(out_row, d_ff, 1, dropout)
         self.row_wise_nn1 = Row_wise_nn(d_column, d_ff, out_row, dropout)
-        self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, d_column, dropout)
         self.row_wise_nn3 = Row_wise_nn(d_column, d_ff, out_row, dropout)
-        self.row_wise_nn4 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        self.row_wise_nn4 = Row_wise_nn(d_column, d_ff, d_column, dropout)
         #self.mapper = Mapper(out_row, d_column, map_size= 2 * out_row)
 
         self.pretrain = pretrain
