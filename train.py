@@ -11,8 +11,8 @@ if __name__=='__main__':
     torch.cuda.empty_cache()
     config = Config
     #train_file = '../data/20ng.train'
-    #train_file = '../data/wiki/wiki_sentences.txt'
-    train_file = '20ng_sentences'
+    train_file = '../data/wiki/wiki_sentences.txt'
+    #train_file = '20ng_sentences'
     if len(sys.argv) > 1:
         config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
         print(sys.argv[1])

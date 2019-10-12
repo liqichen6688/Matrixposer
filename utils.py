@@ -117,7 +117,7 @@ class Dataset(object):
 
 
         if config.pretrain:
-            TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 25000)
+            TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 45000)
             with open("pretrain_model/build_vocab", "wb") as dill_file:
                 dill.dump(TEXT, dill_file)
                 print("vocab saved")
