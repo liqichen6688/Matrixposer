@@ -10,15 +10,16 @@ if __name__=='__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
     config = Config
-    train_file = '../data/20ng.train'
+    #train_file = '../data/20ng.train'
     #train_file = '../data/wiki/wiki_sentences.txt'
     #train_file = '20ng_sentences'
+    train_file = '../data/sst.train'
     if len(sys.argv) > 1:
         config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
         print(sys.argv[1])
     if len(sys.argv) > 2:
         train_file = sys.argv[2]
-    test_file = '../data/20ng.test'
+    test_file = '../data/sst.test'
     if len(sys.argv) > 3:
         test_file = sys.argv[3]
 
@@ -26,9 +27,9 @@ if __name__=='__main__':
 
 
     dataset = Dataset(config)
-    TEXT = dataset.load_data(train_file, test_file, config)
+    TEXT = dataset.load_data(train_file, test_file, config, val_file='../data/sst.dev')
 
-    pretrained_dict = torch.load('pretrain_model/wiki_emb3')
+    pretrained_dict = torch.load('pretrain_model/wiki_emb0')
 
     model = Matposer(config, len(dataset.vocab), TEXT, pretrain=config.pretrain)
     if torch.cuda.device_count() > 1:
