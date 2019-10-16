@@ -95,7 +95,7 @@ class Dataset(object):
             train_examples = [
                 data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
         else:
-            train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")
+            train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text']
             train_examples = [
                 data.Example.fromlist([i], datafields) for i in train_df.values.tolist()]
 
