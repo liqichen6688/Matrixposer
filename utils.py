@@ -92,10 +92,13 @@ class Dataset(object):
 
         # Load data from pd.DataFrame into torchtext.data.Dataset
             train_df = self.get_pandas_df(train_file)
+            train_examples = [
+                data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
         else:
-            train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text']
-        train_examples = [
-            data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
+            train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")
+            train_examples = [
+                data.Example.fromlist([i], datafields) for i in train_df.values.tolist()]
+
         train_data = data.Dataset(train_examples, datafields)
 
 
