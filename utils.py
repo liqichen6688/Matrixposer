@@ -79,23 +79,27 @@ class Dataset(object):
             x.text for x in NLP.tokenizer(sent) if x.text != " ")
 
         # Creating Filed for data
-        if config.pretrain:
-            TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=self.config.max_sen_len)
-        else:
-            with open("pretrain_model/build_vocab", "rb") as dill_file:
-                TEXT = dill.load(dill_file)
-                print("vocab loaded")
-
+        #if config.pretrain:
+        #    TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=self.config.max_sen_len)
+        #else:
+        with open("pretrain_model/build_vocab", "rb") as dill_file:
+            TEXT = dill.load(dill_file)
+            print("vocab loaded")
         datafields = [("text", TEXT)]
         if not config.pretrain:
             LABEL = data.Field(sequential=False, use_vocab=False)
             datafields.append(("label",LABEL))
 
         # Load data from pd.DataFrame into torchtext.data.Dataset
-        train_df = self.get_pandas_df(train_file)
+            train_df = self.get_pandas_df(train_file)
+        else:
+            train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text']
         train_examples = [
             data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
         train_data = data.Dataset(train_examples, datafields)
+
+
+
 
         if not config.pretrain:
             test_df = self.get_pandas_df(test_file)
