@@ -5,7 +5,7 @@ class Config(object):
     d_row = 32
     dropout = 0.1
     output_size = 2
-    lr = 0.000001
+    lr = 0.0001
     max_epochs = 2000
     batch_size = 64
     max_sen_len = 30
@@ -15,7 +15,7 @@ class Config(object):
     cut_frac = 0.1
     ratio = 32
     max_lr = 0.01
-    pretrain = False
+    pretrain = True
 
 
 
