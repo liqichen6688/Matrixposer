@@ -7,6 +7,7 @@ import spacy
 from torchtext.vocab import Vectors, GloVe
 from sklearn.metrics import accuracy_score
 import dill
+import time
 
 
 def get_embedding_matrix(vocab_chars):
@@ -94,14 +95,15 @@ class Dataset(object):
             train_df = self.get_pandas_df(train_file)
             train_examples = [
                 data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
+            train_data = data.Dataset(train_examples, datafields)
         else:
-            train_list = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text'].values.tolist()
-            train_examples = []
-            for i in range(len(train_list)):
-                print("loading {} out of {} examples".format(i, len(train_list)), end="\r")
-                train_examples.append(data.Example.fromlist([train_list[i]], datafields))
+            #train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text']
+            #print("storing_training_csv")
+            #train_df.to_csv("../data/wiki/data/train.csv", index=False)
+            print("loading_training_data")
+            train_data = data.TabularDataset(path='../data/wiki/data/', train='train.csv',format='csv', fields=datafields)
+            print("done...")
 
-        train_data = data.Dataset(train_examples, datafields)
 
 
 
