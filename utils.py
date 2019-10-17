@@ -98,7 +98,7 @@ class Dataset(object):
             train_list = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text'].values.tolist()
             train_examples = []
             for i in range(len(train_list)):
-                print("loading"+ str(i) + "out of" + str(len(train_list)) + "examples\r")
+                print("loading {} out of {} examples".format(i, len(train_list)), end="\r")
                 train_examples.append(data.Example.fromlist(train_list[i], datafields))
 
         train_data = data.Dataset(train_examples, datafields)
