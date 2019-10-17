@@ -101,7 +101,7 @@ class Dataset(object):
             #print("storing_training_csv")
             #train_df.to_csv("../data/wiki/data/train.csv", index=False)
             print("loading_training_data")
-            train_data = data.TabularDataset(path='../data/wiki/data/', train='train.csv',format='csv', fields=datafields)
+            train_data = data.TabularDataset(train='../data/wiki/data/train.csv',format='csv', fields=datafields)
             print("done...")
 
 
