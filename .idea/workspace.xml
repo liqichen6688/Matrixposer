@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="100" column="87" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
+            <state relative-caret-position="264">
+              <caret line="100" column="91" lean-forward="true" selection-start-line="100" selection-start-column="91" selection-end-line="100" selection-end-column="91" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -219,8 +218,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="106" />
-    <option name="y" value="368" />
+    <option name="x" value="17" />
+    <option name="y" value="98" />
     <option name="width" value="1564" />
     <option name="height" value="889" />
   </component>
@@ -453,21 +452,7 @@
       <workItem from="1569405601530" duration="2210000" />
       <workItem from="1569462881555" duration="3785000" />
       <workItem from="1569651099534" duration="19793000" />
-      <workItem from="1570768578694" duration="21811000" />
-    </task>
-    <task id="LOCAL-00200" summary="pretrain 20ng">
-      <created>1570425232306</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1570425232306</updated>
-    </task>
-    <task id="LOCAL-00201" summary="pretrain 20ng">
-      <created>1570425789130</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1570425789130</updated>
+      <workItem from="1570768578694" duration="23515000" />
     </task>
     <task id="LOCAL-00202" summary="pretrain 20ng">
       <created>1570426268552</created>
@@ -798,11 +783,25 @@
       <option name="project" value="LOCAL" />
       <updated>1571215158150</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="renew pretrain">
+      <created>1571275377742</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1571275377742</updated>
+    </task>
+    <task id="LOCAL-00250" summary="renew pretrain">
+      <created>1571277654322</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1571277654322</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164160000" />
+    <option name="totallyTimeSpent" value="165864000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -814,10 +813,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="106" y="368" width="1564" height="889" extended-state="0" />
-    <editor active="true" />
+    <frame x="17" y="98" width="1564" height="889" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.20170827" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.20170827" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
       <window_info id="Favorites" order="2" sideWeight="0.5052192" side_tool="true" weight="0.20170827" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -832,7 +830,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503663" side_tool="true" weight="0.32245922" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4945055" weight="0.3601004" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32245922" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32245922" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1259,8 +1257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="100" column="87" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
+        <state relative-caret-position="264">
+          <caret line="100" column="91" lean-forward="true" selection-start-line="100" selection-start-column="91" selection-end-line="100" selection-end-column="91" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

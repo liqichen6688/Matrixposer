@@ -99,7 +99,7 @@ class Dataset(object):
             train_examples = []
             for i in range(len(train_list)):
                 print("loading {} out of {} examples".format(i, len(train_list)), end="\r")
-                train_examples.append(data.Example.fromlist(train_list[i], datafields))
+                train_examples.append(data.Example.fromlist([train_list[i]], datafields))
 
         train_data = data.Dataset(train_examples, datafields)
 
