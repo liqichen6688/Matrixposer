@@ -101,7 +101,7 @@ class Dataset(object):
             #print("storing_training_csv")
             #train_df.to_csv("../data/wiki/data/train.csv", index=False)
             print("loading_training_data")
-            train_data = data.TabularDataset(train='../data/wiki/data/train.csv',format='csv', fields=datafields)
+            train_data = data.TabularDataset(path='../data/wiki/data/train_filt.csv',format='csv', fields=datafields)
             print("done...")
 
 
@@ -127,11 +127,11 @@ class Dataset(object):
             train_data, val_data = train_data.split(split_ratio=0.8)
 
 
-        if config.pretrain:
-            TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 45000)
-            with open("pretrain_model/build_vocab", "wb") as dill_file:
-                dill.dump(TEXT, dill_file)
-                print("vocab saved")
+        #if config.pretrain:
+        #    TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 45000)
+        #    with open("pretrain_model/build_vocab", "wb") as dill_file:
+        #        dill.dump(TEXT, dill_file)
+        #        print("vocab saved")
 
 
         self.vocab = TEXT.vocab
