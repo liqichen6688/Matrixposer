@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="97" column="83" selection-start-line="97" selection-start-column="83" selection-end-line="97" selection-end-column="83" />
+            <state relative-caret-position="202">
+              <caret line="100" column="87" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -219,8 +219,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="131" />
-    <option name="y" value="82" />
+    <option name="x" value="106" />
+    <option name="y" value="368" />
     <option name="width" value="1564" />
     <option name="height" value="889" />
   </component>
@@ -453,14 +453,7 @@
       <workItem from="1569405601530" duration="2210000" />
       <workItem from="1569462881555" duration="3785000" />
       <workItem from="1569651099534" duration="19793000" />
-      <workItem from="1570768578694" duration="20590000" />
-    </task>
-    <task id="LOCAL-00199" summary="pretrain 20ng">
-      <created>1570425183091</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1570425183091</updated>
+      <workItem from="1570768578694" duration="21811000" />
     </task>
     <task id="LOCAL-00200" summary="pretrain 20ng">
       <created>1570425232306</created>
@@ -798,11 +791,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571214321592</updated>
     </task>
-    <option name="localTasksCounter" value="248" />
+    <task id="LOCAL-00248" summary="renew pretrain">
+      <created>1571215158150</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1571215158150</updated>
+    </task>
+    <option name="localTasksCounter" value="249" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162939000" />
+    <option name="totallyTimeSpent" value="164160000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -814,7 +814,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="131" y="82" width="1564" height="889" extended-state="0" />
+    <frame x="106" y="368" width="1564" height="889" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.20170827" />
@@ -957,12 +957,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils.py</url>
-          <line>139</line>
+          <line>141</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils.py</url>
-          <line>135</line>
+          <line>137</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -1259,8 +1259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="97" column="83" selection-start-line="97" selection-start-column="83" selection-end-line="97" selection-end-column="83" />
+        <state relative-caret-position="202">
+          <caret line="100" column="87" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
