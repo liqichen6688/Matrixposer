@@ -111,7 +111,7 @@ class Matposer(nn.Module):
                     x_dim = x_dim.type(torch.cuda.LongTensor)
                 y = self.__call__(x)
                 y_dim = self.__call__(x_dim)
-                loss = torch.dist(y, y_dim, 2)
+                loss = torch.log(torch.dist(y, y_dim, 2) / y.norm())
             else:
                 if torch.cuda.is_available():
                     x = batch.text.cuda()
