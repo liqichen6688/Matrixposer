@@ -101,6 +101,7 @@ class Matposer(nn.Module):
                 if torch.cuda.is_available():
                     x_dim = batch.text[ind,:]
                     x_false = batch.text.clone()
+                    x = batch.text.clone()
                     x_false[ind,:] = torch.LongTensor(self.config.max_sen_len - delete_size, x_false.size()[1]).random_(0, 25002)
                     x = x.type(torch.cuda.LongTensor)
                     x_dim = x_dim.type(torch.cuda.LongTensor)
@@ -109,6 +110,7 @@ class Matposer(nn.Module):
                     x_dim = batch.text[ind,:]
                     x_false = batch.text.clone()
                     x_false[ind,:] = torch.LongTensor(self.config.max_sen_len - delete_size, x_false.size()[1]).random_(0, 25002)
+                    x = batch.text.clone()
                     x = x.type(torch.LongTensor)
                     x_dim = x_dim.type(torch.LongTensor)
                     x_false = x_false.type(torch.LongTensor)
