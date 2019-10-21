@@ -95,23 +95,27 @@ class Matposer(nn.Module):
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             if self.pretrain:
-                delete_size = min(random.randint(0, 5 + epoch * 2), 15)
+                delete_size = min(random.randint(5 - epoch * 2, 5 + epoch * 2), 15)
                 ind = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - delete_size)
                 ind.sort()
                 if torch.cuda.is_available():
                     x_dim = batch.text[ind,:]
-                    x = batch.text[:,:]
+                    x_false = batch.text.clone()
+                    x_false[ind,:] = torch.LongTensor(self.config.max_sen_len - delete_size, x_false.size()[1]).random_(0, 25002)
                     x = x.type(torch.cuda.LongTensor)
                     x_dim = x_dim.type(torch.cuda.LongTensor)
-
+                    x_false = x_false.type(torch.cuda.LongTensor)
                 else:
                     x_dim = batch.text[ind,:]
-                    x = batch.text[:,:]
+                    x_false = batch.text.clone()
+                    x_false[ind,:] = torch.LongTensor(self.config.max_sen_len - delete_size, x_false.size()[1]).random_(0, 25002)
                     x = x.type(torch.LongTensor)
-                    x_dim = x_dim.type(torch.cuda.LongTensor)
+                    x_dim = x_dim.type(torch.LongTensor)
+                    x_false = x_false.type(torch.LongTensor)
                 y = self.__call__(x)
+                y_false = self.__call__(x_false)
                 y_dim = self.__call__(x_dim)
-                loss = torch.log(torch.dist(y, y_dim, 2) / y.norm())
+                loss = torch.log(torch.dist(y, y_dim, 2) / torch.dist(y, y_false, 2))
             else:
                 if torch.cuda.is_available():
                     x = batch.text.cuda()
