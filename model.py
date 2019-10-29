@@ -95,14 +95,14 @@ class Matposer(nn.Module):
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             if self.pretrain:
-                delete_size = min(random.randint(1, epoch * 2), 10)
-                ind_false = random.sample(range(0, self.config.max_sen_len), delete_size)
+                delete_size = min(random.randint(1, epoch * 2 + 2), 10)
+                ind_false = random.sample(range(0, self.config.max_sen_len - delete_size), delete_size)
                 ind_false.sort()
                 ind_delete = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - delete_size)
                 ind_delete.sort()
                 if torch.cuda.is_available():
                     x_dim = batch.text.clone()[ind_delete, :]
-                    x_false = batch.text.clone()
+                    x_false = x_dim.clone()
                     x = batch.text.clone()
                     x_false[ind_false,:] = torch.LongTensor(delete_size, x_false.size()[1]).random_(0, 25002)
                     x = x.type(torch.cuda.LongTensor)
@@ -110,12 +110,12 @@ class Matposer(nn.Module):
                     x_dim = x_dim.type(torch.cuda.LongTensor)
                 else:
                     x_dim = batch.text.clone()[ind_delete, :]
-                    x_false = batch.text.clone()
+                    x_false = x_dim.clone()
                     x = batch.text.clone()
                     x_false[ind_false,:] = torch.LongTensor(delete_size, x_false.size()[1]).random_(0, 25002)
-                    x = x.type(torch.cuda.LongTensor)
-                    x_false = x_false.type(torch.cuda.LongTensor)
-                    x_dim = x_dim.type(torch.cuda.LongTensor)
+                    x = x.type(torch.LongTensor)
+                    x_false = x_false.type(torch.LongTensor)
+                    x_dim = x_dim.type(torch.LongTensor)
                 y_dim = self.__call__(x_dim)
                 y = self.__call__(x)
                 y_false = self.__call__(x_false)
