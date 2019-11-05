@@ -80,7 +80,7 @@ class Dataset(object):
             x.text for x in NLP.tokenizer(sent) if x.text != " ")
 
         # Creating Filed for data
-        if config.pretrain:
+        if config.reset_text:
             TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
         else:
             with open("pretrain_model/build_vocab", "rb") as dill_file:
@@ -127,7 +127,7 @@ class Dataset(object):
             train_data, val_data = train_data.split(split_ratio=0.8)
 
 
-        if config.pretrain:
+        if config.reset_text:
             TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 45000)
             with open("pretrain_model/build_vocab", "wb") as dill_file:
                 dill.dump(TEXT, dill_file)

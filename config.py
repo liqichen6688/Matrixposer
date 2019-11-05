@@ -16,6 +16,7 @@ class Config(object):
     ratio = 32
     max_lr = 0.01
     pretrain = True
+    reset_text = True
 
 
 
