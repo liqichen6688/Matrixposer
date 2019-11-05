@@ -7,6 +7,7 @@ from interactor import Interactor
 from encoder import EncoderLayer, Encoder
 from feed_forward import PositionwiseFeedForward
 from utils import *
+import numpy as np
 
 class Matposer(nn.Module):
     def __init__(self, config, src_vocab, TEXT, pretrain=False):
@@ -30,10 +31,12 @@ class Matposer(nn.Module):
 
         self.fc = nn.Linear(
             d_model,
+            d_model,
             src_vocab
         )
 
         self.class_fc = nn.Linear(
+            d_model,
             d_model,
             config.output_size
         )
@@ -95,34 +98,27 @@ class Matposer(nn.Module):
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             if self.pretrain:
-                delete_size = min(random.randint(1, epoch * 2 + 2), 10)
-                ind_false = random.sample(range(0, self.config.max_sen_len - delete_size), delete_size)
-                ind_false.sort()
-                ind_delete = random.sample(range(0, self.config.max_sen_len), self.config.max_sen_len - delete_size)
-                ind_delete.sort()
+                x = batch.text.clone()
+                y = []
+                delete_list = []
+                for i in range(x.size()[1]):
+                    delete_ind = np.random.randint(0, x.size()[0])
+                    y.append(x[delete_ind, i])
+                    delete_list.append(delete_ind)
+                    if np.random.binomial(1, p=0.3) == 0:
+                        x[delete_ind, i] = 0
+                y = torch.LongTensor(y)
                 if torch.cuda.is_available():
-                    x_dim = batch.text.clone()[ind_delete, :]
-                    x_false = x_dim.clone()
-                    x = batch.text.clone()
-                    x_false[ind_false,:] = torch.LongTensor(delete_size, x_false.size()[1]).random_(0, 25002)
                     x = x.type(torch.cuda.LongTensor)
-                    x_false = x_false.type(torch.cuda.LongTensor)
-                    x_dim = x_dim.type(torch.cuda.LongTensor)
+                    y = y.type(torch.cuda.LongTensor)
                 else:
-                    x_dim = batch.text.clone()[ind_delete, :]
-                    x_false = x_dim.clone()
-                    x = batch.text.clone()
-                    x_false[ind_false,:] = torch.LongTensor(delete_size, x_false.size()[1]).random_(0, 25002)
                     x = x.type(torch.LongTensor)
-                    x_false = x_false.type(torch.LongTensor)
-                    x_dim = x_dim.type(torch.LongTensor)
-                y_dim = self.__call__(x_dim)
-                y = self.__call__(x)
-                y_false = self.__call__(x_false)
-                loss = torch.log(torch.dist(y, y_dim, 2) / torch.dist(y, y_false, 2))
+                    y = y.type(torch.LongTensor)
+                y_pred = self.softmax(self.fc(self.__call__(x)[:, delete_list, :]))
+                loss = self.loss_op(y_pred, y.cuda())
             else:
                 if torch.cuda.is_available():
-                    x = batch.text.cuda()
+                    x = x.cuda()
                     y = (batch.label - 1).type(torch.cuda.LongTensor)
                 else:
                     x = batch.text

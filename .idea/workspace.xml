@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
+    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="renew pretrain">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interactor.py" beforeDir="false" afterPath="$PROJECT_DIR$/interactor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interactor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="149" column="86" selection-start-line="149" selection-start-column="86" selection-end-line="149" selection-end-column="86" />
+            <state relative-caret-position="715">
+              <caret line="147" column="44" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -38,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
+            <state relative-caret-position="-1019">
+              <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -50,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="-130">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
@@ -76,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-806">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="1316">
+              <caret line="132" column="42" lean-forward="true" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -100,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sublayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="598">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -112,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="67" column="69" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
+            <state relative-caret-position="287">
+              <caret line="42" column="13" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="13" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -132,9 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
-      <find>eval</find>
-      <find>eva</find>
       <find>column_wi</find>
       <find>val_ac</find>
       <find>model.</find>
@@ -157,11 +156,14 @@
       <find>evaluate</find>
       <find>permu</find>
       <find>test</find>
-      <find>build</find>
       <find>vector</find>
       <find>val_file</find>
       <find>data</find>
       <find>epoch</find>
+      <find>bu</find>
+      <find>max_sen</find>
+      <find>build</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,17 +211,17 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/circle.py" />
         <option value="$PROJECT_DIR$/sublayer.py" />
-        <option value="$PROJECT_DIR$/interactor.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/interactor.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="112" />
-    <option name="y" value="58" />
+    <option name="x" value="7" />
+    <option name="y" value="23" />
     <option name="width" value="1564" />
     <option name="height" value="889" />
   </component>
@@ -455,14 +457,9 @@
       <workItem from="1570768578694" duration="27286000" />
       <workItem from="1571359645525" duration="1030000" />
       <workItem from="1571369407754" duration="406000" />
-      <workItem from="1571377884657" duration="14782000" />
-    </task>
-    <task id="LOCAL-00219" summary="pretrain 20ng">
-      <created>1570782883048</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1570782883048</updated>
+      <workItem from="1571377884657" duration="15614000" />
+      <workItem from="1572831151853" duration="1041000" />
+      <workItem from="1572939425441" duration="4039000" />
     </task>
     <task id="LOCAL-00220" summary="pretrain 20ng">
       <created>1570783064150</created>
@@ -800,11 +797,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572272445542</updated>
     </task>
-    <option name="localTasksCounter" value="268" />
+    <task id="LOCAL-00268" summary="renew pretrain">
+      <created>1572308849032</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1572308849033</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185853000" />
+    <option name="totallyTimeSpent" value="191765000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -816,10 +820,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="112" y="58" width="1564" height="889" extended-state="0" />
+    <frame x="7" y="23" width="1564" height="889" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" weight="0.20959264" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.21222076" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
       <window_info id="Favorites" order="2" sideWeight="0.5052192" side_tool="true" weight="0.20170827" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -954,7 +958,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model.py</url>
-          <line>151</line>
+          <line>147</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1188,15 +1192,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/config_v3_1.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/train_utils.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1208,35 +1205,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config_v3_1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/sublayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="598">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-806">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="67" column="69" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1248,20 +1222,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interactor.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="149" column="86" selection-start-line="149" selection-start-column="86" selection-end-line="149" selection-end-column="86" />
+        <state relative-caret-position="1316">
+          <caret line="132" column="42" lean-forward="true" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="147" column="44" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="117" column="45" selection-start-line="117" selection-start-column="45" selection-end-line="117" selection-end-column="45" />
+        <state relative-caret-position="-1019">
+          <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

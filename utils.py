@@ -80,12 +80,12 @@ class Dataset(object):
             x.text for x in NLP.tokenizer(sent) if x.text != " ")
 
         # Creating Filed for data
-        #if config.pretrain:
-        #    TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=self.config.max_sen_len)
-        #else:
-        with open("pretrain_model/build_vocab", "rb") as dill_file:
-            TEXT = dill.load(dill_file)
-            print("vocab loaded")
+        if config.pretrain:
+            TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
+        else:
+            with open("pretrain_model/build_vocab", "rb") as dill_file:
+                TEXT = dill.load(dill_file)
+                print("vocab loaded")
         datafields = [("text", TEXT)]
         if not config.pretrain:
             LABEL = data.Field(sequential=False, use_vocab=False)
@@ -127,11 +127,11 @@ class Dataset(object):
             train_data, val_data = train_data.split(split_ratio=0.8)
 
 
-        #if config.pretrain:
-        #    TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 45000)
-        #    with open("pretrain_model/build_vocab", "wb") as dill_file:
-        #        dill.dump(TEXT, dill_file)
-        #        print("vocab saved")
+        if config.pretrain:
+            TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 45000)
+            with open("pretrain_model/build_vocab", "wb") as dill_file:
+                dill.dump(TEXT, dill_file)
+                print("vocab saved")
 
 
         self.vocab = TEXT.vocab

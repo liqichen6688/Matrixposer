@@ -129,6 +129,7 @@ class Interactor(nn.Module):
         self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, d_column, dropout)
         self.row_wise_nn3 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         self.row_wise_nn4 = Row_wise_nn(d_column, d_ff, d_column, dropout)
+        self.column_wise_nn2 = Column_wise_nn(out_row, d_ff, out_row, dropout)
         #self.mapper = Mapper(out_row, d_column, map_size= 2 * out_row)
 
         self.pretrain = pretrain
@@ -142,12 +143,10 @@ class Interactor(nn.Module):
 
 
     def forward(self, x):
-        left_transposer1 = self.row_wise_nn1(x)
-        output1 = self.norm1(torch.matmul(left_transposer1.permute(0,2,1), x))
+        left_transposer = self.row_wise_nn1(x)
+        output1 = self.norm1(torch.matmul(left_transposer.permute(0,2,1), x))
         output1 = self.row_wise_nn2(output1)
-
-        left_transposer2 = self.row_wise_nn3(output1)
-        output2 = self.norm2(torch.matmul(left_transposer2.permute(0, 2, 1), output1))
+        output2 = self.column_wise_nn2(output1)
         output2 = self.row_wise_nn4(output2)
 
         #left_transposer3 = self.row_wise_nn3(output2)
@@ -162,7 +161,8 @@ class Interactor(nn.Module):
         #ut)
         #output = torch.matmul(middle_term, right_transposer.permute(0,2,1))
         if self.pretrain:
-            return output2
+            pretrain_sent = torch.matmul(left_transposer, output2)
+            return pretrain_sent
         else:
             return output
 
