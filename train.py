@@ -29,7 +29,6 @@ if __name__=='__main__':
     dataset = Dataset(config)
     TEXT = dataset.load_data(train_file, test_file, config, val_file='../data/sst.dev')
 
-    pretrained_dict = torch.load('pretrain_model/wiki_emb_frac0')
 
     model = Matposer(config, len(dataset.vocab), TEXT, pretrain=config.pretrain)
     if torch.cuda.device_count() > 1:
@@ -46,6 +45,7 @@ if __name__=='__main__':
 
     if not config.pretrain:
         model_dict = model.state_dict()
+        pretrained_dict = torch.load('pretrain_model/wiki_emb_frac0')
         print(model_dict.keys())
         pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
         del pretrained_dict['class_fc.weight']
