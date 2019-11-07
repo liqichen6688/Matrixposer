@@ -48,7 +48,7 @@ class Matposer(nn.Module):
 
 
     def forward(self, x):
-        embedded_sents = self.src_embed() # shape = (batch_size, sen_len, d_model)
+        embedded_sents = self.src_embed(x) # shape = (batch_size, sen_len, d_model)
         encoded_sents = self.encoder(embedded_sents)
         final_feature_map = encoded_sents
         #final_out = self.fc(final_feature_map)
