@@ -12,7 +12,6 @@ import numpy as np
 class Matposer(nn.Module):
     def __init__(self, config, src_vocab, TEXT, pretrain=False):
         super(Matposer, self).__init__()
-        print("src",src_vocab)
         self.config = config
         self.src_vocab = src_vocab
         d_row, N, dropout = self.config.d_row, self.config.N, self.config.dropout
@@ -117,6 +116,7 @@ class Matposer(nn.Module):
                     y = y.type(torch.LongTensor)
                 y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
                 loss = self.loss_op(y_pred, y.cuda())
+                print(y)
             else:
                 if torch.cuda.is_available():
                     x = x.cuda()
