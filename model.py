@@ -48,7 +48,7 @@ class Matposer(nn.Module):
 
 
     def forward(self, x):
-        embedded_sents = self.src_embed(x.permute(1, 0)) # shape = (batch_size, sen_len, d_model)
+        embedded_sents = self.src_embed() # shape = (batch_size, sen_len, d_model)
         encoded_sents = self.encoder(embedded_sents)
         final_feature_map = encoded_sents
         #final_out = self.fc(final_feature_map)
@@ -98,16 +98,15 @@ class Matposer(nn.Module):
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             if self.pretrain:
-                x = batch.text.clone()
-                print(x.size())
+                x = batch.text.clone().permute(1, 0)
                 y = []
                 delete_list = []
-                for i in range(x.size()[1]):
-                    delete_ind = np.random.randint(0, x.size()[0])
-                    y.append(x[delete_ind, i])
+                for i in range(x.size()[0]):
+                    delete_ind = np.random.randint(0, x.size()[1])
+                    y.append(x[i, delete_ind])
                     delete_list.append(delete_ind)
                     if np.random.binomial(1, p=0.3) == 0:
-                        x[delete_ind, i] = 0
+                        x[i, delete_ind] = 0
                 y = torch.LongTensor(y)
                 if torch.cuda.is_available():
                     x = x.type(torch.cuda.LongTensor)
@@ -115,7 +114,7 @@ class Matposer(nn.Module):
                 else:
                     x = x.type(torch.LongTensor)
                     y = y.type(torch.LongTensor)
-                y_pred = self.softmax(self.fc(self.__call__(x)[:, delete_list, :]))
+                y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
                 loss = self.loss_op(y_pred, y.cuda())
             else:
                 if torch.cuda.is_available():
