@@ -99,6 +99,7 @@ class Matposer(nn.Module):
             self.optimizer.zero_grad()
             if self.pretrain:
                 x = batch.text.clone()
+                print(x.size())
                 y = []
                 delete_list = []
                 for i in range(x.size()[1]):
