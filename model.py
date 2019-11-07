@@ -93,7 +93,6 @@ class Matposer(nn.Module):
             if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
                 self.reduce_lr()
         for i, batch in enumerate(train_iterator):
-
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
@@ -114,6 +113,11 @@ class Matposer(nn.Module):
                 else:
                     x = x.type(torch.LongTensor)
                     y = y.type(torch.LongTensor)
+                print('----index----')
+                print(delete_ind)
+                print('----X----')
+                print(x)
+                print('----y----')
                 print(y)
                 y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
                 loss = self.loss_op(y_pred, y.cuda())
