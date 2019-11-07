@@ -115,6 +115,7 @@ class Matposer(nn.Module):
                     x = x.type(torch.LongTensor)
                     y = y.type(torch.LongTensor)
                 y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
+                print(y)
                 loss = self.loss_op(y_pred, y.cuda())
             else:
                 if torch.cuda.is_available():
