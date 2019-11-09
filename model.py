@@ -29,16 +29,10 @@ class Matposer(nn.Module):
             Embeddings(d_model, src_vocab, TEXT), deepcopy(position)
         )
 
-        self.fc = nn.Linear(
-            d_model,
-            d_model,
-            src_vocab
-        )
+        self.fc = nn.Sequential(nn.Linear(d_model,d_model),nn.Linear(d_model,src_vocab))
 
-        self.class_fc = nn.Linear(
-            d_model,
-            d_model,
-            config.output_size
+        self.class_fc = nn.Sequential(
+            nn.Linear(d_model,d_model),nn.Linear(d_model,config.output_size)
         )
 
 
@@ -114,12 +108,14 @@ class Matposer(nn.Module):
                     x = x.type(torch.LongTensor)
                     y = y.type(torch.LongTensor)
                 print('----index----')
-                print(delete_ind)
+                print(delete_list)
                 print('----X----')
                 print(x)
                 print('----y----')
                 print(y)
                 y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
+                print('----y_pred----')
+                print(y_pred.size())
                 loss = self.loss_op(y_pred, y.cuda())
             else:
                 if torch.cuda.is_available():
