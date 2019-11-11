@@ -29,10 +29,10 @@ class Column_wise_nn(nn.Module):
     def forward(self, x):
         x = x.permute(0,2,1)
         d_k = x.size(-1)
-        #output = self.w_2(self.dropout(F.relu(self.w_1(x)))) / math.sqrt(d_k)
+        #output = self.w_2(self.dropout(F.sigmoid(self.w_1(x)))) / math.sqrt(d_k)
         #output = F.softmax(output, dim=-1)
-        output = self.w_2(self.dropout(F.relu(self.w_1(x))))
-        output = self.w_3(self.dropout(F.relu(output))) / math.sqrt(d_k)
+        output = self.w_2(self.dropout(F.sigmoid(self.w_1(x))))
+        output = self.w_3(self.dropout(F.sigmoid(output))) / math.sqrt(d_k)
         if self.dropout is not None:
             output = self.dropout(output)
 
@@ -53,8 +53,8 @@ class Row_wise_nn(nn.Module):
 
     def forward(self, x):
         d_k = x.size(-1)
-        output = self.w_2(self.dropout(F.relu(self.w_1(x))))
-        output = self.w_3(self.dropout(F.relu(output))) / math.sqrt(d_k)
+        output = self.w_2(self.dropout(F.sigmoid(self.w_1(x))))
+        output = self.w_3(self.dropout(F.sigmoid(output))) / math.sqrt(d_k)
         if self.softmax:
             output = F.softmax(output, dim=-1)
         if self.dropout is not None:

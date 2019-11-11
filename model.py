@@ -29,10 +29,10 @@ class Matposer(nn.Module):
             Embeddings(d_model, src_vocab, TEXT), deepcopy(position)
         )
 
-        self.fc = nn.Sequential(nn.Linear(d_model,d_model),nn.Linear(d_model,src_vocab))
+        self.fc = nn.Sequential(nn.Linear(d_model,d_model),nn.ReLU(),nn.Linear(d_model,src_vocab))
 
         self.class_fc = nn.Sequential(
-            nn.Linear(d_model,d_model),nn.Linear(d_model,config.output_size)
+            nn.Linear(d_model,d_model),nn.ReLU(), nn.Linear(d_model,config.output_size)
         )
 
 
