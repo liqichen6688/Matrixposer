@@ -90,8 +90,8 @@ class Matposer(nn.Module):
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
+            x = batch.text.clone().permute(1, 0)
             if self.pretrain:
-                x = batch.text.clone().permute(1, 0)
                 y = []
                 delete_list = []
                 for i in range(x.size()[0]):
