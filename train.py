@@ -45,7 +45,7 @@ if __name__=='__main__':
 
     if not config.pretrain:
         model_dict = model.state_dict()
-        pretrained_dict = torch.load('pretrain_model/wiki_false3')
+        pretrained_dict = torch.load('pretrain_model/wiki_false0')
         print(model_dict.keys())
         pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
         del pretrained_dict['class_fc.0.weight']

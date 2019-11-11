@@ -176,7 +176,6 @@ def evaluate_model(model, iterator):
         else:
             x = batch.text
         y_pred = model(x)
-        print(y_pred.size())
         predicted = torch.max(y_pred.cpu().data, 1)[1] + 1
         all_preds.extend(predicted.numpy())
         all_y.extend(batch.label.numpy())
