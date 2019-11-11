@@ -179,5 +179,7 @@ def evaluate_model(model, iterator):
         predicted = torch.max(y_pred.cpu().data, 1)[1] + 1
         all_preds.extend(predicted.numpy())
         all_y.extend(batch.label.numpy())
+        print(predicted.size())
+        print(batch.label.size())
     score = accuracy_score(all_y, np.array(all_preds).flatten())
     return score
