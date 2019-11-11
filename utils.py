@@ -172,7 +172,7 @@ def evaluate_model(model, iterator):
     all_y = []
     for idx, batch in enumerate(iterator):
         if torch.cuda.is_available():
-            x = batch.text.cuda()
+            x = batch.text.permute(1, 0).cuda()
         else:
             x = batch.text
         y_pred = model(x)
