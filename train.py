@@ -48,8 +48,10 @@ if __name__=='__main__':
         pretrained_dict = torch.load('pretrain_model/wiki_false3')
         print(model_dict.keys())
         pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
-        del pretrained_dict['class_fc.weight']
-        del pretrained_dict['class_fc.bias']
+        del pretrained_dict['class_fc.0.weight']
+        del pretrained_dict['class_fc.0.bias']
+        del pretrained_dict['class_fc.1.weight']
+        del pretrained_dict['class_fc.1.bias']
         model_dict.update(pretrained_dict)
         model.load_state_dict(model_dict)
 
