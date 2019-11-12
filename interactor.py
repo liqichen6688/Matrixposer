@@ -19,7 +19,7 @@ class Column_wise_nn(nn.Module):
         '''
         super(Column_wise_nn, self).__init__()
         self.w_1 = nn.Linear(d_row, d_ff)
-        self.w_2 = nn.Linear(d_ff, d_ff)
+        self.w_2 = nn.Linear(d_ff, d_out)
         #self.w_3 = nn.Linear(d_ff, d_out)
         if dropout is not None:
             self.dropout = nn.Dropout(dropout)
@@ -43,7 +43,7 @@ class Row_wise_nn(nn.Module):
     def __init__(self, d_column, d_ff, out_row, dropout=None, softmax = False):
         super(Row_wise_nn, self).__init__()
         self.w_1 = nn.Linear(d_column, d_ff)
-        self.w_2 = nn.Linear(d_ff, d_ff)
+        self.w_2 = nn.Linear(d_ff, out_row)
         #self.w_3 = nn.Linear(d_ff, out_row)
         if dropout is not None:
             self.dropout = nn.Dropout(dropout)
