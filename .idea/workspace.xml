@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interactor.py" beforeDir="false" afterPath="$PROJECT_DIR$/interactor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interactor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-358">
-              <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
+            <state relative-caret-position="135">
+              <caret line="128" column="74" lean-forward="true" selection-start-line="128" selection-start-column="74" selection-end-line="128" selection-end-column="74" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -59,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="374">
               <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
@@ -112,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
+            <state relative-caret-position="277">
               <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -436,28 +435,7 @@
       <workItem from="1571377884657" duration="15614000" />
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
-      <workItem from="1573465957732" duration="3918000" />
-    </task>
-    <task id="LOCAL-00248" summary="renew pretrain">
-      <created>1571215158150</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1571215158150</updated>
-    </task>
-    <task id="LOCAL-00249" summary="renew pretrain">
-      <created>1571275377742</created>
-      <option name="number" value="00249" />
-      <option name="presentableId" value="LOCAL-00249" />
-      <option name="project" value="LOCAL" />
-      <updated>1571275377742</updated>
-    </task>
-    <task id="LOCAL-00250" summary="renew pretrain">
-      <created>1571277654322</created>
-      <option name="number" value="00250" />
-      <option name="presentableId" value="LOCAL-00250" />
-      <option name="project" value="LOCAL" />
-      <updated>1571277654322</updated>
+      <workItem from="1573465957732" duration="4491000" />
     </task>
     <task id="LOCAL-00251" summary="renew pretrain">
       <created>1571284553149</created>
@@ -781,11 +759,32 @@
       <option name="project" value="LOCAL" />
       <updated>1573555936901</updated>
     </task>
-    <option name="localTasksCounter" value="297" />
+    <task id="LOCAL-00297" summary="syntax recover and fix length cancel">
+      <created>1573556723022</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1573556723022</updated>
+    </task>
+    <task id="LOCAL-00298" summary="syntax recover and fix length cancel">
+      <created>1573556882075</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1573556882075</updated>
+    </task>
+    <task id="LOCAL-00299" summary="syntax recover and fix length cancel">
+      <created>1573557090864</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1573557090864</updated>
+    </task>
+    <option name="localTasksCounter" value="300" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203183000" />
+    <option name="totallyTimeSpent" value="203756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -798,7 +797,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="100" width="1564" height="889" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" weight="0.21222076" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
@@ -1207,27 +1205,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="103" column="80" selection-start-line="103" selection-start-column="80" selection-end-line="103" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="128" column="74" lean-forward="true" selection-start-line="128" selection-start-column="74" selection-end-line="128" selection-end-column="74" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -1244,13 +1235,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interactor.py">
+    <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-358">
-          <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
+        <state relative-caret-position="277">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>
