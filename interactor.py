@@ -20,7 +20,7 @@ class Column_wise_nn(nn.Module):
         super(Column_wise_nn, self).__init__()
         self.w_1 = nn.Linear(d_row, d_ff)
         self.w_2 = nn.Linear(d_ff, d_ff)
-        self.w_3 = nn.Linear(d_ff, d_out)
+        #self.w_3 = nn.Linear(d_ff, d_out)
         if dropout is not None:
             self.dropout = nn.Dropout(dropout)
         else:
@@ -31,8 +31,8 @@ class Column_wise_nn(nn.Module):
         d_k = x.size(-1)
         #output = self.w_2(self.dropout(F.sigmoid(self.w_1(x)))) / math.sqrt(d_k)
         #output = F.softmax(output, dim=-1)
-        output = self.w_2(self.dropout(F.leaky_relu(self.w_1(x))))
-        output = self.w_3(self.dropout(F.leaky_relu(output))) / math.sqrt(d_k)
+        output = self.w_2(self.dropout(F.leaky_relu(self.w_1(x)))) / math.sqrt(d_k)
+        #output = self.w_3(self.dropout(F.leaky_relu(output))) / math.sqrt(d_k)
         if self.dropout is not None:
             output = self.dropout(output)
 
@@ -44,7 +44,7 @@ class Row_wise_nn(nn.Module):
         super(Row_wise_nn, self).__init__()
         self.w_1 = nn.Linear(d_column, d_ff)
         self.w_2 = nn.Linear(d_ff, d_ff)
-        self.w_3 = nn.Linear(d_ff, out_row)
+        #self.w_3 = nn.Linear(d_ff, out_row)
         if dropout is not None:
             self.dropout = nn.Dropout(dropout)
         else:
@@ -53,8 +53,8 @@ class Row_wise_nn(nn.Module):
 
     def forward(self, x):
         d_k = x.size(-1)
-        output = self.w_2(self.dropout(F.leaky_relu(self.w_1(x))))
-        output = self.w_3(self.dropout(F.leaky_relu(output))) / math.sqrt(d_k)
+        output = self.w_2(self.dropout(F.leaky_relu(self.w_1(x)))) / math.sqrt(d_k)
+        #output = self.w_3(self.dropout(F.leaky_relu(output))) / math.sqrt(d_k)
         if self.softmax:
             output = F.softmax(output, dim=-1)
         if self.dropout is not None:
@@ -127,16 +127,16 @@ class Interactor(nn.Module):
         self.column_wise_nn1 = Column_wise_nn(out_row, d_ff, 1, dropout)
         self.row_wise_nn1 = Row_wise_nn(d_column, d_ff, out_row, dropout)
         self.row_wise_nn2 = Row_wise_nn(d_column, d_ff, d_column, dropout)
-        self.row_wise_nn3 = Row_wise_nn(d_column, d_ff, out_row, dropout)
-        self.row_wise_nn4 = Row_wise_nn(d_column, d_ff, d_column, dropout)
+        #self.row_wise_nn3 = Row_wise_nn(d_column, d_ff, out_row, dropout)
+        #self.row_wise_nn4 = Row_wise_nn(d_column, d_ff, d_column, dropout)
         self.column_wise_nn2 = Column_wise_nn(out_row, d_ff, out_row, dropout)
         #self.mapper = Mapper(out_row, d_column, map_size= 2 * out_row)
 
         self.pretrain = pretrain
 
 
-        self.norm1 = MatrixNorm([out_row, d_column])
-        self.norm2 = MatrixNorm([out_row, d_column])
+        #self.norm1 = MatrixNorm([out_row, d_column])
+        #self.norm2 = MatrixNorm([out_row, d_column])
         #self.norm3 = MatrixNorm([out_row, d_column])
         #self.norm4 = MatrixNorm([out_row, d_column])
 
@@ -147,7 +147,7 @@ class Interactor(nn.Module):
         output1 = self.norm1(torch.matmul(left_transposer.permute(0,2,1), x))
         output1 = self.row_wise_nn2(output1)
         output2 = self.column_wise_nn2(output1)
-        output2 = self.row_wise_nn4(output2)
+        #output2 = self.row_wise_nn4(output2)
 
         #left_transposer3 = self.row_wise_nn3(output2)
         #output3 = self.norm3(torch.matmul(left_transposer3.permute(0, 2, 1), output2))
