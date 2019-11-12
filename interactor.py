@@ -135,8 +135,8 @@ class Interactor(nn.Module):
         self.pretrain = pretrain
 
 
-        #self.norm1 = MatrixNorm([out_row, d_column])
-        #self.norm2 = MatrixNorm([out_row, d_column])
+        self.norm1 = MatrixNorm([out_row, d_column])
+        self.norm2 = MatrixNorm([out_row, d_column])
         #self.norm3 = MatrixNorm([out_row, d_column])
         #self.norm4 = MatrixNorm([out_row, d_column])
 
@@ -146,7 +146,7 @@ class Interactor(nn.Module):
         left_transposer = self.row_wise_nn1(x)
         output1 = self.norm1(torch.matmul(left_transposer.permute(0,2,1), x))
         output1 = self.row_wise_nn2(output1)
-        output2 = self.column_wise_nn2(output1)
+        output2 = self.norm2(self.column_wise_nn2(output1))
         #output2 = self.row_wise_nn4(output2)
 
         #left_transposer3 = self.row_wise_nn3(output2)
