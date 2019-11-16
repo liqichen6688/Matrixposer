@@ -30,7 +30,7 @@ if __name__=='__main__':
     TEXT1, TEXT2 = dataset.load_data(train_file, test_file, config)
 
 
-    model = Matposer(config, len(dataset.vocab), TEXT1, TEXT2, pretrain=config.pretrain)
+    model = Matposer(config, len(dataset.vocab1), TEXT1, TEXT2, pretrain=config.pretrain)
     if torch.cuda.device_count() > 1:
         print("Let's use", torch.cuda.device_count(), "GPUs!")
         model = nn.DataParallel(model)
