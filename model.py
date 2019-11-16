@@ -53,9 +53,9 @@ class Matposer(nn.Module):
         self.pretrain = pretrain
 
 
-    def forward(self, x):
-        embedded_sents1 = self.src_embed1(x) # shape = (batch_size, sen_len, d_model)
-        embedded_sents2 = self.src_embed2(x)
+    def forward(self, x1, x2):
+        embedded_sents1 = self.src_embed1(x1) # shape = (batch_size, sen_len, d_model)
+        embedded_sents2 = self.src_embed2(x2)
         #encoded_sents = self.encoder(embedded_sents)
         encoded_sents = torch.matmul(embedded_sents2.permute(0,2,1), embedded_sents1)
         final_feature_map = encoded_sents
@@ -104,7 +104,8 @@ class Matposer(nn.Module):
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
-            x = batch.text.clone().permute(1, 0)
+            x1 = batch.text1.clone().permute(1, 0)
+            x2 = batch.text2.clone().permute(1, 0)
             if self.pretrain:
                 y = []
                 delete_list = []
@@ -116,22 +117,24 @@ class Matposer(nn.Module):
                         x[i, delete_ind] = 0
                 y = torch.LongTensor(y)
                 if torch.cuda.is_available():
-                    x = x.type(torch.cuda.LongTensor)
+                    x1 = x1.type(torch.cuda.LongTensor)
+                    x2 = x2.type(torch.cuda.LongTensor)
                     y = y.type(torch.cuda.LongTensor)
                 else:
-                    x = x.type(torch.LongTensor)
+                    x1 = x1.type(torch.LongTensor)
+                    x2 = x2.type(torch.LongTensor)
                     y = y.type(torch.LongTensor)
                 y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
                 loss = self.loss_op(y_pred, y.cuda())
             else:
                 if torch.cuda.is_available():
-                    x = x.cuda()
+                    x1 = x1.cuda()
+                    x2 = x2.cuda()
                     y = (batch.label - 1).type(torch.cuda.LongTensor)
                 else:
-                    x = batch.text
                     y = (batch.label - 1).type(torch.LongTensor)
 
-                y_pred = self.__call__(x)
+                y_pred = self.__call__(x1, x2)
                 loss = self.loss_op(y_pred, y.cuda())
             #y = y.permute(1, 0)
             #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
