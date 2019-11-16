@@ -170,10 +170,12 @@ def evaluate_model(model, iterator):
     all_y = []
     for idx, batch in enumerate(iterator):
         if torch.cuda.is_available():
-            x = batch.text.permute(1, 0).cuda()
+            x1 = batch.text1.permute(1, 0).cuda()
+            x2 = batch.text2.permute(1, 0).cuda()
         else:
-            x = batch.text
-        y_pred = model(x)
+            x1 = batch.text1.permute(1, 0)
+            x2 = batch.text2.permute(1, 0)
+        y_pred = model(x1, x2)
         predicted = torch.max(y_pred.cpu().data, 1)[1] + 1
         all_preds.extend(predicted.numpy())
         all_y.extend(batch.label.numpy())
