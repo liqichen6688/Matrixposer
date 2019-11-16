@@ -125,8 +125,8 @@ class Dataset(object):
             train_data, val_data = train_data.split(split_ratio=0.8)
 
 
-        TEXT1.build_vocab(train_data, vectors=GloVe(name='6B', dim=300), max_size = 45000)
-        TEXT2.build_vocab(train_data, vectors=GloVe(name='6B', dim=50), max_size=45000)
+        TEXT1.build_vocab(train_data, vectors=GloVe(name='6B', dim=300))
+        TEXT2.build_vocab(train_data, vectors=GloVe(name='6B', dim=50))
             #with open("pretrain_model/build_vocab", "wb") as dill_file:
             #    dill.dump(TEXT, dill_file)
             #    print("vocab saved")
