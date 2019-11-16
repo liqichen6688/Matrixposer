@@ -81,9 +81,8 @@ class Dataset(object):
             x.text for x in NLP.tokenizer(sent) if x.text != " ")
 
         # Creating Filed for data
-        if config.reset_text:
-            TEXT1 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
-            TEXT2 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
+        TEXT1 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
+        TEXT2 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
         else:
             with open("pretrain_model/build_vocab", "rb") as dill_file:
                 TEXT = dill.load(dill_file)
