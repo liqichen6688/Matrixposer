@@ -13,13 +13,13 @@ if __name__=='__main__':
     #train_file = '../data/20ng.train'
     #train_file = '../data/wiki/wiki_sentences.txt'
     #train_file = '20ng_sentences'
-    train_file = '../data/sst.train'
+    train_file = '../data/ag_news.train'
     if len(sys.argv) > 1:
         config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
         print(sys.argv[1])
     if len(sys.argv) > 2:
         train_file = sys.argv[2]
-    test_file = '../data/sst.test'
+    test_file = '../data/ag_news.test'
     if len(sys.argv) > 3:
         test_file = sys.argv[3]
 
@@ -27,10 +27,10 @@ if __name__=='__main__':
 
 
     dataset = Dataset(config)
-    TEXT = dataset.load_data(train_file, test_file, config, val_file='../data/sst.dev')
+    TEXT1, TEXT2 = dataset.load_data(train_file, test_file, config)
 
 
-    model = Matposer(config, len(dataset.vocab), TEXT, pretrain=config.pretrain)
+    model = Matposer(config, len(dataset.vocab), TEXT1, TEXT2, pretrain=config.pretrain)
     if torch.cuda.device_count() > 1:
         print("Let's use", torch.cuda.device_count(), "GPUs!")
         model = nn.DataParallel(model)

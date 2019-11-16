@@ -10,29 +10,37 @@ from utils import *
 import numpy as np
 
 class Matposer(nn.Module):
-    def __init__(self, config, src_vocab, TEXT, pretrain=False):
+    def __init__(self, config, src_vocab, TEXT1, TEXT2, pretrain=False):
         super(Matposer, self).__init__()
         self.config = config
         self.src_vocab = src_vocab
         d_row, N, dropout = self.config.d_row, self.config.N, self.config.dropout
-        d_model, d_ff = self.config.d_model, self.config.d_ff
+        d_ff =  self.config.d_ff
+        d_model1 = 300
+        d_model2 = 50
 
         inter = Interactor(d_model, d_ff, out_row=d_row, dropout=dropout, pretrain=config.pretrain)
-        ff = PositionwiseFeedForward(d_model, d_ff, dropout)
-        position = PositionalEncoding(d_model, dropout)
+        ff = PositionwiseFeedForward(d_model1, d_ff, dropout)
+        position1 = PositionalEncoding(d_model1, dropout)
+        position2 = PositionalEncoding(d_model2, dropout)
 
-        self.encoder = Encoder(EncoderLayer(d_model, deepcopy(inter), deepcopy(ff), dropout), N)
+
+        #self.encoder = Encoder(EncoderLayer(d_model, deepcopy(inter), deepcopy(ff), dropout), N)
         #self.mappers = nn.ModuleList()
         #for one_encoder in self.encoder.layers:
         #    self.mappers.append(one_encoder.interactor.mapper)
-        self.src_embed = nn.Sequential(
-            Embeddings(d_model, src_vocab, TEXT), deepcopy(position)
+        self.src_embed1 = nn.Sequential(
+            Embeddings(d_model1, src_vocab, TEXT1), deepcopy(position1)
         )
 
-        self.fc = nn.Sequential(nn.Linear(d_model,d_model),nn.ReLU(),nn.Linear(d_model,src_vocab))
+        self.src_embed2 = nn.Sequential(
+            Embeddings(d_model2, src_vocab, TEXT2), deepcopy(position1)
+        )
+
+        self.fc = nn.Sequential(nn.Linear(d_model1,d_model1),nn.ReLU(),nn.Linear(d_model1,src_vocab))
 
         self.class_fc = nn.Sequential(
-            nn.Linear(d_model,d_model),nn.ReLU(), nn.Linear(d_model,config.output_size)
+            nn.Linear(d_model1,d_model1),nn.ReLU(), nn.Linear(d_model1,config.output_size)
         )
 
 
@@ -42,8 +50,10 @@ class Matposer(nn.Module):
 
 
     def forward(self, x):
-        embedded_sents = self.src_embed(x) # shape = (batch_size, sen_len, d_model)
-        encoded_sents = self.encoder(embedded_sents)
+        embedded_sents1 = self.src_embed1(x) # shape = (batch_size, sen_len, d_model)
+        embedded_sents2 = self.src_embed2(x)
+        #encoded_sents = self.encoder(embedded_sents)
+        encoded_sents = torch.matmul(embedded_sents2.permute(0,2,1), embedded_sents1)
         final_feature_map = encoded_sents
         #final_out = self.fc(final_feature_map)
         class_out = self.class_fc(final_feature_map[:,-1,:])

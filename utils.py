@@ -54,10 +54,11 @@ class Dataset(object):
         else:
             with open(filename, 'r') as datafile:
                 data = [line.strip().split(',', maxsplit=1) for line in datafile]
-                data_text = list(map(lambda x: x[1], data))
+                data_text1 = list(map(lambda x: x[1], data))
+                data_text2 = list(map(lambda x: x[2], data))
                 data_label = list(map(lambda x: self.parse_label(x[0]), data))
 
-            full_df = pd.DataFrame({"text": data_text, "label": data_label})
+            full_df = pd.DataFrame({"text1": data_text1, "text2":data_text2,"label": data_label})
 
         return full_df
 
@@ -81,12 +82,13 @@ class Dataset(object):
 
         # Creating Filed for data
         if config.reset_text:
-            TEXT = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
+            TEXT1 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
+            TEXT2 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
         else:
             with open("pretrain_model/build_vocab", "rb") as dill_file:
                 TEXT = dill.load(dill_file)
                 print("vocab loaded")
-        datafields = [("text", TEXT)]
+        datafields = [("text1", TEXT1), ("text2", TEXT2)]
         if not config.pretrain:
             LABEL = data.Field(sequential=False, use_vocab=False)
             datafields.append(("label",LABEL))
@@ -127,14 +129,15 @@ class Dataset(object):
             train_data, val_data = train_data.split(split_ratio=0.8)
 
 
-        if config.reset_text:
-            TEXT.build_vocab(train_data, vectors=GloVe(name='840B', dim=config.d_model), max_size = 45000)
-            with open("pretrain_model/build_vocab", "wb") as dill_file:
-                dill.dump(TEXT, dill_file)
-                print("vocab saved")
+        TEXT1.build_vocab(train_data, vectors=GloVe(name='6B', dim=300), max_size = 45000)
+        TEXT2.build_vocab(train_data, vectors=GloVe(name='6B', dim=50), max_size=45000)
+            #with open("pretrain_model/build_vocab", "wb") as dill_file:
+            #    dill.dump(TEXT, dill_file)
+            #    print("vocab saved")
 
 
-        self.vocab = TEXT.vocab
+        self.vocab1 = TEXT1.vocab
+        self.vocab2 = TEXT2.vocab
         print(self.vocab.itos[:3])
 
         self.train_iterator = data.BucketIterator(
@@ -164,7 +167,7 @@ class Dataset(object):
         print ("Loaded {} training examples".format(len(train_data)))
         print ("Loaded {} validation examples".format(len(val_data)))
 
-        return TEXT
+        return TEXT1, TEXT2
 
 
 def evaluate_model(model, iterator):
