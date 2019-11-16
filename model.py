@@ -34,7 +34,7 @@ class Matposer(nn.Module):
         )
 
         self.src_embed2 = nn.Sequential(
-            Embeddings(d_model2, src_vocab, TEXT2), deepcopy(position1)
+            Embeddings(d_model2, src_vocab, TEXT2), deepcopy(position2)
         )
 
         self.fc = nn.Sequential(nn.Linear(d_model1,d_model1),nn.ReLU(),nn.Linear(d_model1,src_vocab))
