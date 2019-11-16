@@ -134,7 +134,6 @@ class Dataset(object):
 
         self.vocab1 = TEXT1.vocab
         self.vocab2 = TEXT2.vocab
-        print(self.vocab.itos[:3])
 
         self.train_iterator = data.BucketIterator(
             (train_data),
