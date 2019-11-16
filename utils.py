@@ -83,10 +83,7 @@ class Dataset(object):
         # Creating Filed for data
         TEXT1 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
         TEXT2 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
-        else:
-            with open("pretrain_model/build_vocab", "rb") as dill_file:
-                TEXT = dill.load(dill_file)
-                print("vocab loaded")
+
         datafields = [("text1", TEXT1), ("text2", TEXT2)]
         if not config.pretrain:
             LABEL = data.Field(sequential=False, use_vocab=False)
