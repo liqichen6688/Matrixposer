@@ -19,7 +19,7 @@ class Matposer(nn.Module):
         d_model1 = 300
         d_model2 = 50
 
-        inter = Interactor(d_model, d_ff, out_row=d_row, dropout=dropout, pretrain=config.pretrain)
+        #inter = Interactor(d_model, d_ff, out_row=d_row, dropout=dropout, pretrain=config.pretrain)
         ff = PositionwiseFeedForward(d_model1, d_ff, dropout)
         position1 = PositionalEncoding(d_model1, dropout)
         position2 = PositionalEncoding(d_model2, dropout)
