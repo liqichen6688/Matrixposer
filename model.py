@@ -39,7 +39,8 @@ class Matposer(nn.Module):
 
         a = nn.Linear(d_model1,d_model1)
         b = nn.ReLU()
-        c = nn.Linear(d_model1,src_vocab)
+        print(src_vocab)
+        c = nn.Linear(d_model1, src_vocab)
         self.fc = nn.Sequential(a, b, c)
 
         self.class_fc = nn.Sequential(
