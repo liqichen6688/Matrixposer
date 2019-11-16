@@ -55,7 +55,7 @@ class Dataset(object):
             with open(filename, 'r') as datafile:
                 data = [line.strip().split(',', maxsplit=1) for line in datafile]
                 data_text1 = list(map(lambda x: x[1], data))
-                data_text2 = list(map(lambda x: x[2], data))
+                data_text2 = list(map(lambda x: x[1], data))
                 data_label = list(map(lambda x: self.parse_label(x[0]), data))
 
             full_df = pd.DataFrame({"text1": data_text1, "text2":data_text2,"label": data_label})
