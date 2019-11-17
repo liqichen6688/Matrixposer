@@ -126,7 +126,7 @@ class Dataset(object):
 
 
         TEXT1.build_vocab(train_data, vectors=GloVe(name='6B', dim=300))
-        TEXT2.build_vocab(train_data, vectors=GloVe(name='6B', dim=300))
+        TEXT2.build_vocab(train_data, vectors=GloVe(name='6B', dim=50))
             #with open("pretrain_model/build_vocab", "wb") as dill_file:
             #    dill.dump(TEXT, dill_file)
             #    print("vocab saved")

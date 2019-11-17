@@ -30,11 +30,11 @@ class Matposer(nn.Module):
         #for one_encoder in self.encoder.layers:
         #    self.mappers.append(one_encoder.interactor.mapper)
         self.src_embed1 = nn.Sequential(
-            Embeddings(d_model1, src_vocab, TEXT1), deepcopy(position1)
+            Embeddings(d_model1, src_vocab, None), deepcopy(position1)
         )
 
         self.src_embed2 = nn.Sequential(
-            Embeddings(d_model1, src_vocab, TEXT2), deepcopy(position2)
+            Embeddings(d_model2, src_vocab, None), deepcopy(position2)
         )
 
         a = nn.Linear(d_model1,d_model1)
