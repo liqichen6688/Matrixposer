@@ -60,8 +60,8 @@ class Matposer(nn.Module):
         encoded_sents = torch.matmul(embedded_sents2.permute(0,2,1), embedded_sents1)
         final_feature_map = encoded_sents
         #final_out = self.fc(final_feature_map)
-        #class_out = self.class_fc(final_feature_map[:,-1,:])
-        class_out = self.class_fc(final_feature_map.sum(dim = 1))
+        class_out = self.class_fc(final_feature_map[:,-1,:])
+        #class_out = self.class_fc(final_feature_map.sum(dim = 1))
         if self.pretrain:
             return final_feature_map
         else:
