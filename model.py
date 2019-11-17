@@ -22,7 +22,7 @@ class Matposer(nn.Module):
         #inter = Interactor(d_model, d_ff, out_row=d_row, dropout=dropout, pretrain=config.pretrain)
         ff = PositionwiseFeedForward(d_model1, d_ff, dropout)
         position1 = PositionalEncoding(d_model1, dropout)
-        position2 = PositionalEncoding(d_model2, dropout)
+        position2 = PositionalEncoding(d_model1, dropout)
 
 
         #self.encoder = Encoder(EncoderLayer(d_model, deepcopy(inter), deepcopy(ff), dropout), N)
@@ -34,7 +34,7 @@ class Matposer(nn.Module):
         )
 
         self.src_embed2 = nn.Sequential(
-            Embeddings(d_model2, src_vocab, None), deepcopy(position2)
+            Embeddings(d_model1, src_vocab, None), deepcopy(position2)
         )
 
         a = nn.Linear(d_model1,d_model1)
