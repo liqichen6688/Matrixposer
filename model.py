@@ -56,14 +56,12 @@ class Matposer(nn.Module):
     def forward(self, x1, x2):
         embedded_sents1 = self.src_embed1(x1) # shape = (batch_size, sen_len, d_model)
         embedded_sents2 = self.src_embed2(x2)
-        print(embedded_sents1.size())
-        print(embedded_sents2.size())
         #encoded_sents = self.encoder(embedded_sents)
         encoded_sents = torch.matmul(embedded_sents2.permute(0,2,1), embedded_sents1)
         final_feature_map = encoded_sents
         #final_out = self.fc(final_feature_map)
         #class_out = self.class_fc(final_feature_map[:,-1,:])
-        class_out = self.class_fc(final_feature_map.diagonal())
+        class_out = self.class_fc(final_feature_map.diagonal(dim1=-2, dim2=-1))
         if self.pretrain:
             return final_feature_map
         else:
