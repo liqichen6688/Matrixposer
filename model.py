@@ -34,7 +34,7 @@ class Matposer(nn.Module):
         )
 
         self.src_embed2 = nn.Sequential(
-            Embeddings(d_model2, src_vocab, TEXT2), deepcopy(position2)
+            Embeddings(d_model1, src_vocab, TEXT1), deepcopy(position2)
         )
 
         a = nn.Linear(d_model1,d_model1)
@@ -60,7 +60,8 @@ class Matposer(nn.Module):
         encoded_sents = torch.matmul(embedded_sents2.permute(0,2,1), embedded_sents1)
         final_feature_map = encoded_sents
         #final_out = self.fc(final_feature_map)
-        class_out = self.class_fc(final_feature_map[:,-1,:])
+        #class_out = self.class_fc(final_feature_map[:,-1,:])
+        class_out = self.class_fc(final_feature_map.diagonal())
         if self.pretrain:
             return final_feature_map
         else:

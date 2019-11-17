@@ -17,7 +17,10 @@ class Embeddings(nn.Module):
     '''
     def __init__(self, d_model, vocab, TEXT):
         super(Embeddings, self).__init__()
-        self.lut = nn.Embedding(vocab, d_model).from_pretrained(TEXT.vocab.vectors)
+        if TEXT == None:
+            self.lut = nn.Embedding(vocab, d_model)
+        else:
+            self.lut = nn.Embedding(vocab, d_model).from_pretrained(TEXT.vocab.vectors)
         self.d_model = d_model
 
 
