@@ -61,7 +61,6 @@ class Matposer(nn.Module):
         final_feature_map = encoded_sents
         #final_out = self.fc(final_feature_map)
         class_out = self.class_fc(final_feature_map[:,-1,:])
-        #class_out = self.class_fc(final_feature_map.sum(dim = 1))
         if self.pretrain:
             return final_feature_map
         else:
