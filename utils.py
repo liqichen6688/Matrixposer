@@ -163,7 +163,7 @@ class Dataset(object):
             shuffle=True
         )
 
-        if not config.pretrain and config.translate:
+        if not config.pretrain and not config.translate:
             self.val_iterator, self.test_iterator = data.BucketIterator.splits(
                 (val_data, test_data),
                 batch_size=self.config.batch_size,
