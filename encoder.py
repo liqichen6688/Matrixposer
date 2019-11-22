@@ -50,7 +50,7 @@ class Decoder(nn.Module):
     def forward(self, x, matrix_embed):
         print(x.shape)
         print(matrix_embed.shape)
-        print(torch.bmm(x, matrix_embed).shape)
+        print(torch.matmul(x, matrix_embed).shape)
         return self.out(torch.matmul(x, matrix_embed))
 
 
