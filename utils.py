@@ -206,7 +206,8 @@ def evaluate_model(model, iterator, is_translate):
             x3 = batch.text3.clone.permute(1, 0)
             embed_matrix = y_pred
             for i in range(1, x3.shape[1]):
-                output = model.decoder(x3[:, i - 1], embed_matrix)
+                x3_sent = model.dst_embed(x3[:, i - 1])
+                output = model.decoder(x3_sent, embed_matrix)
                 all_preds.extend(output.max(1)[1].numpy())
                 all_y.extend(x3[:, i-1].numpy())
                 right, left = model.matrix_embedding(x3[:, i - 1])
