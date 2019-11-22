@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="185" column="56" selection-start-line="185" selection-start-column="56" selection-end-line="185" selection-end-column="56" />
+            <state relative-caret-position="271">
+              <caret line="137" column="30" selection-start-line="137" selection-start-column="30" selection-end-line="137" selection-end-column="30" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -79,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="168" column="71" selection-start-line="168" selection-start-column="71" selection-end-line="168" selection-end-column="71" />
+            <state relative-caret-position="248">
+              <caret line="206" column="48" selection-start-line="206" selection-start-column="48" selection-end-line="206" selection-end-column="48" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -227,8 +227,8 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/encoder.py" />
         <option value="$PROJECT_DIR$/train_utils.py" />
-        <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/model.py" />
       </list>
     </option>
   </component>
@@ -474,27 +474,6 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-    </task>
-    <task id="LOCAL-00325" summary="fast">
-      <created>1573981317944</created>
-      <option name="number" value="00325" />
-      <option name="presentableId" value="LOCAL-00325" />
-      <option name="project" value="LOCAL" />
-      <updated>1573981317944</updated>
-    </task>
-    <task id="LOCAL-00326" summary="fast">
-      <created>1573984440161</created>
-      <option name="number" value="00326" />
-      <option name="presentableId" value="LOCAL-00326" />
-      <option name="project" value="LOCAL" />
-      <updated>1573984440161</updated>
-    </task>
-    <task id="LOCAL-00327" summary="fast">
-      <created>1573985162689</created>
-      <option name="number" value="00327" />
-      <option name="presentableId" value="LOCAL-00327" />
-      <option name="project" value="LOCAL" />
-      <updated>1573985162689</updated>
     </task>
     <task id="LOCAL-00328" summary="fast">
       <created>1573985400959</created>
@@ -818,11 +797,32 @@
       <option name="project" value="LOCAL" />
       <updated>1574419365001</updated>
     </task>
-    <option name="localTasksCounter" value="374" />
+    <task id="LOCAL-00374" summary="fast-translate">
+      <created>1574419514227</created>
+      <option name="number" value="00374" />
+      <option name="presentableId" value="LOCAL-00374" />
+      <option name="project" value="LOCAL" />
+      <updated>1574419514227</updated>
+    </task>
+    <task id="LOCAL-00375" summary="fast-translate">
+      <created>1574419579358</created>
+      <option name="number" value="00375" />
+      <option name="presentableId" value="LOCAL-00375" />
+      <option name="project" value="LOCAL" />
+      <updated>1574419579358</updated>
+    </task>
+    <task id="LOCAL-00376" summary="fast-translate">
+      <created>1574419643108</created>
+      <option name="number" value="00376" />
+      <option name="presentableId" value="LOCAL-00376" />
+      <option name="project" value="LOCAL" />
+      <updated>1574419643108</updated>
+    </task>
+    <option name="localTasksCounter" value="377" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229425000" />
+    <option name="totallyTimeSpent" value="229698000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -972,7 +972,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model.py</url>
-          <line>179</line>
+          <line>180</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -987,7 +987,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model.py</url>
-          <line>154</line>
+          <line>155</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
@@ -1277,16 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="185" column="56" selection-start-line="185" selection-start-column="56" selection-end-line="185" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -1299,8 +1289,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="168" column="71" selection-start-line="168" selection-start-column="71" selection-end-line="168" selection-end-column="71" />
+        <state relative-caret-position="248">
+          <caret line="206" column="48" selection-start-line="206" selection-start-column="48" selection-end-line="206" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="137" column="30" selection-start-line="137" selection-start-column="30" selection-end-line="137" selection-end-column="30" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>

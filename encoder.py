@@ -44,7 +44,8 @@ class Decoder(nn.Module):
         self.out = nn.Sequential(
             nn.Linear(d_model1, d_model1),
             nn.ReLU(),
-            nn.Linear(d_model1, output_size)
+            nn.Linear(d_model1, output_size),
+            nn.Softmax()
         )
 
     def forward(self, x, matrix_embed):
