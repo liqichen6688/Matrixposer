@@ -172,6 +172,7 @@ class Dataset(object):
                 repeat=False,
                 shuffle=False)
         else:
+            print('right!')
             self.val_iterator = data.BucketIterator.splits(
                 (val_data),
                 batch_size=self.config.batch_size,
