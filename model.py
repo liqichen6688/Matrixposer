@@ -135,6 +135,7 @@ class Matposer(nn.Module):
                 for i in range(1, x3.shape[1]):
                     output = self.decoder(x3_sent[:, i-1:i].float(), embed_matrix.float()).squeeze(1)
                     loss += self.loss_op(output, x3[:,i].type(torch.cuda.LongTensor))
+                    print(loss)
                     right, left = self.matrix_embedding(x3[:, i - 1])
                     embed_matrix = torch.matmul(left.cuda(), (torch.matmul(embed_matrix, right.cuda())))
             #if self.pretrain:
