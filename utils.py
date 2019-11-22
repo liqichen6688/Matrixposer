@@ -210,7 +210,7 @@ def evaluate_model(model, iterator, is_translate):
             for i in range(1, x3.shape[1]):
                 output = model.decoder(x3_sent[:, i-1], embed_matrix)
                 print(output.cpu().max(1)[1])
-                all_preds.extend(output.cpu().max(1)[1].numpy())
+                all_preds.extend(output.cpu().max(1)[1].numpy().size())
                 all_y.extend(x3[:, i-1].cpu().numpy())
                 right, left = model.matrix_embedding(x3[:, i - 1])
                 embed_matrix = torch.matmul(left, (torch.matmul(embed_matrix, right)))
