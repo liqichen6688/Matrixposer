@@ -122,13 +122,13 @@ class Matposer(nn.Module):
             else:
                 x3 = batch.text3.clone().permute(1, 0)
                 if torch.cuda.is_available():
-                    x1 = x1.cuda()
-                    x2 = x2.cuda()
-                    x3 = x3.cuda()
+                    x1 = x1.type(torch.cuda.LongTensor)
+                    x2 = x2.type(torch.cuda.LongTensor)
+                    x3 = x3.type(torch.cuda.LongTensor)
                 loss = 0
                 embed_matrix = self.__call__(x1, x2)
                 for i in range(1, x3.shape[1]):
-                    output = self.decoder(x3[:, i - 1], embed_matrix)
+                    output = self.decoder(x3[:, i-1], embed_matrix)
                     loss += self.loss_op(output.cuda(), x3[:,i].cuda())
                     right, left = self.matrix_embedding(x3[:, i - 1])
                     embed_matrix = torch.matmul(left, (torch.matmul(embed_matrix, right)))
