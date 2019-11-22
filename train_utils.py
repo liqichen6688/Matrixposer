@@ -15,7 +15,7 @@ class Matrix_Embedding(nn.Module):
         self.d1_dict = nn.Parameter(torch.rand(vocab,d_model1, d_model1))
         self.d2_dict = nn.Parameter(torch.rand(vocab,d_model2, d_model2))
     def forward(self, x):
-        return self.d1_dict1[x], self.d1_dict1[x]
+        return self.d1_dict1[x], self.d2_dict[x]
 
 
 
