@@ -111,7 +111,7 @@ class Dataset(object):
             train_examples = [
                 data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
             train_data = data.Dataset(train_examples, datafields)
-        else:
+        elif config.pretrain:
             #train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text']
             #print("storing_training_csv")
             #train_df.to_csv("../data/wiki/data/train.csv", index=False)
