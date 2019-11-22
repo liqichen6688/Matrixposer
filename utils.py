@@ -133,13 +133,14 @@ class Dataset(object):
 
         # If validation file exists, load it. Otherwise get validation data
         # from training data
-        if val_file:
+        if val_file != None:
             val_df = self.get_pandas_df(val_file)
             val_examples = [
                 data.Example.fromlist(
                     i, datafields) for i in val_df.values.tolist()]
             val_data = data.Dataset(val_examples, datafields)
         else:
+            print('right!')
             train_data, val_data = train_data.split(split_ratio=0.8)
 
 
@@ -172,7 +173,6 @@ class Dataset(object):
                 repeat=False,
                 shuffle=False)
         else:
-            print('right!')
             self.val_iterator = data.BucketIterator.splits(
                 (val_data),
                 batch_size=self.config.batch_size,
