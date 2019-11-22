@@ -136,9 +136,6 @@ class Matposer(nn.Module):
                     output = self.decoder(x3_sent[:, i-1:i].float(), embed_matrix.float()).squeeze(1)
                     loss += self.loss_op(output, x3[:,i].type(torch.cuda.LongTensor))
                     right, left = self.matrix_embedding(x3[:, i - 1])
-                    print(right.shape)
-                    print(left.shape)
-                    print(embed_matrix.shape)
                     embed_matrix = torch.matmul(left.cuda(), (torch.matmul(embed_matrix, right.cuda())))
             #if self.pretrain:
             #    y = []
@@ -190,5 +187,4 @@ class Matposer(nn.Module):
                     print("\tVal Accuracy: {:.4f}".format(val_accuracy))
                     val_accuracies.append(val_accuracy)
                 self.train()
-
         return train_losses

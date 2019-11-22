@@ -23,6 +23,7 @@ class Matrix_Embedding(nn.Module):
         for i in x:
             all_d1.append(self.d1_dict[int(i)].unsqueeze(0))
             all_d2.append(self.d2_dict[int(i)].unsqueeze(0))
+        print(self.d1_dict[4])
         return torch.cat(all_d1, 0), torch.cat(all_d2, 0)
 
 
