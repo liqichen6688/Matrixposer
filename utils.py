@@ -102,16 +102,17 @@ class Dataset(object):
 
             TEXT3 = data.Field(sequential=True, tokenize=tokenizer2, lower=True, fix_length=None, init_token='<init>')
             datafields.append(("text3", TEXT3))
-        if not config.pretrain and not config.translate:
+        if config.classification:
             LABEL = data.Field(sequential=False, use_vocab=False)
             datafields.append(("label",LABEL))
 
         # Load data from pd.DataFrame into torchtext.data.Dataset
+        if not config.pretrain:
             train_df = self.get_pandas_df(train_file, filename2=dst_file)
             train_examples = [
                 data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
             train_data = data.Dataset(train_examples, datafields)
-        elif config.pretrain:
+        else:
             #train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text']
             #print("storing_training_csv")
             #train_df.to_csv("../data/wiki/data/train.csv", index=False)

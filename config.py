@@ -18,6 +18,7 @@ class Config(object):
     pretrain = False
     reset_text = False
     translate = True
+    classification = False
 
 
 
