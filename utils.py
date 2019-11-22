@@ -204,7 +204,7 @@ def evaluate_model(model, iterator, is_translate):
             all_preds.extend(predicted.numpy())
             all_y.extend(batch.label.numpy())
         else:
-            x3 = batch.text3.clone.permute(1, 0)
+            x3 = batch.text3.permute(1, 0)
             embed_matrix = y_pred
             x3_sent = model.dst_embed(x3)
             for i in range(1, x3.shape[1]):
