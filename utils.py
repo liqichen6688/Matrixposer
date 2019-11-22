@@ -166,14 +166,14 @@ class Dataset(object):
         )
 
         if not config.pretrain and not config.translate:
-            self.val_iterator, self.test_iterator = data.BucketIterator.splits(
+            self.val_iterator, self.test_iterator = data.BucketIterator(
                 (val_data, test_data),
                 batch_size=self.config.batch_size,
                 sort_key=lambda x: len(x.text),
                 repeat=False,
                 shuffle=False)
         else:
-            self.val_iterator = data.BucketIterator.splits(
+            self.val_iterator = data.BucketIterator(
                 (val_data),
                 batch_size=self.config.batch_size,
                 sort_key=lambda x: len(x.text),
