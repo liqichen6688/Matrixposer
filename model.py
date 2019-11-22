@@ -120,7 +120,7 @@ class Matposer(nn.Module):
                 y_pred = self.__call__(x1, x2)
                 loss = self.loss_op(y_pred, y.cuda())
             else:
-                x3 = batch.text3.clone.permute(1, 0)
+                x3 = batch.text3.clone().permute(1, 0)
                 loss = 0
                 embed_matrix = self.__call__(x1, x2)
                 for i in range(1, x3.shape[1]):
