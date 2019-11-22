@@ -17,6 +17,7 @@ class Config(object):
     max_lr = 0.01
     pretrain = False
     reset_text = False
+    translate = True
 
 
 

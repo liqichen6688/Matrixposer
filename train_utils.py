@@ -9,6 +9,22 @@ def clones(module, N):
     "Produce N identical layers"
     return nn.ModuleList([copy.deepcopy(module) for _ in range(N)])
 
+class Matrix_Embedding(nn.Module):
+    def __init__(self, d_model1, d_model2, vocab):
+        super(Matrix_Embedding, self).__init__()
+        self.d1_dict = {}
+        self.d2_dict = {}
+        for i in range(vocab):
+            self.d1_dict[i] = nn.Parameter(torch.rand(d_model1, d_model1))
+            self.d2_dict[i] = nn.Parameter(torch.rand(d_model2, d_model2))
+    def forward(self, x):
+        all_d1 = []
+        all_d2 = []
+        for i in x:
+            all_d1.append(self.d1_dict[int(i)])
+            all_d2.append(self.d2_dict[int(i)])
+        return torch.cat(all_d1, 0), torch.cat(all_d2, 0)
+
 
 
 class Embeddings(nn.Module):

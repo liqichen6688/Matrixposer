@@ -1,5 +1,6 @@
 from torch import nn
-from train_utils import clones
+import torch
+from train_utils import clones, Matrix_Embedding
 from sublayer import LayerNorm, SublayerOutput
 
 class Encoder(nn.Module):
@@ -36,3 +37,18 @@ class EncoderLayer(nn.Module):
         "Matposer Encoder"
         x = self.interactor(x)
         return self.sublayer(x, self.feed_forward)
+
+class Decoder(nn.Module):
+    def __init__(self, output_size, d_model1):
+        super(Decoder, self).__init__()
+        self.out = nn.Sequential(
+            nn.Linear(d_model1, d_model1),
+            nn.ReLU(),
+            nn.Linear(d_model1, output_size)
+        )
+
+    def forward(self, x, matrix_embed):
+        return self.out(torch.matmul(x, matrix_embed))
+
+
+

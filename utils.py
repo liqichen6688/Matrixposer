@@ -9,7 +9,6 @@ from sklearn.metrics import accuracy_score
 import dill
 import time
 
-
 def get_embedding_matrix(vocab_chars):
     # return one hot emdding
     vocabulary_size = len(vocab_chars)
@@ -42,7 +41,7 @@ class Dataset(object):
 
         return int(label.strip()[begin:])
 
-    def get_pandas_df(self, filename):
+    def get_pandas_df(self, filename, filename2 = None):
         '''
         Load the data into Pandas.DataFrame object
         This will be used to convert data to torchtext object
@@ -51,6 +50,14 @@ class Dataset(object):
             with open(filename, 'r') as datafile:
                 data = [line.strip() for line in datafile]
             full_df = pd.DataFrame({"text": data})
+        elif self.config.translate:
+            with open(filename, 'r') as datafile, open(filename2, 'r') as datafile2:
+                ori_data = [line.strip() for line in datafile]
+                data_text1 = list(map(lambda x: x, ori_data))
+                data_text2 = list(map(lambda x: x, ori_data))
+                dst_data = [line.strip() for line in datafile2]
+                data_text3 = list(map(lambda x: x, dst_data))
+                full_df = pd.DataFrame({"text1": data_text1, "text2": data_text2, "text3": data_text3})
         else:
             with open(filename, 'r') as datafile:
                 data = [line.strip().split(',', maxsplit=1) for line in datafile]
@@ -63,7 +70,7 @@ class Dataset(object):
         return full_df
 
 
-    def load_data(self, train_file, test_file, config,val_file=None):
+    def load_data(self, train_file, test_file, config,val_file=None, dst_file = None):
         '''
         Loads the data from files
         Sets up iterators for training, validation and test data
@@ -77,6 +84,7 @@ class Dataset(object):
         # Loading Tokenizer
         NLP = spacy.load('en')
 
+
         def tokenizer(sent): return list(
             x.text for x in NLP.tokenizer(sent) if x.text != " ")
 
@@ -85,12 +93,21 @@ class Dataset(object):
         TEXT2 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
 
         datafields = [("text1", TEXT1), ("text2", TEXT2)]
+
+        if self.config.translate:
+            NLP2 = spacy.load('de')
+
+            def tokenizer2(sent): return list(
+                x.text for x in NLP2.tokenizer(sent) if x.text != " ")
+
+            TEXT3 = data.Field(sequential=True, tokenize=tokenizer2, lower=True, fix_length=None)
+            datafields.append(("text3", TEXT3))
         if not config.pretrain:
             LABEL = data.Field(sequential=False, use_vocab=False)
             datafields.append(("label",LABEL))
 
         # Load data from pd.DataFrame into torchtext.data.Dataset
-            train_df = self.get_pandas_df(train_file)
+            train_df = self.get_pandas_df(train_file, filename2=dst_file)
             train_examples = [
                 data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
             train_data = data.Dataset(train_examples, datafields)
@@ -127,6 +144,8 @@ class Dataset(object):
 
         TEXT1.build_vocab(train_data, vectors=GloVe(name='6B', dim=300))
         TEXT2.build_vocab(train_data, vectors=GloVe(name='6B', dim=50))
+        if self.config.translate:
+            TEXT3.build_vocab(train_data)
             #with open("pretrain_model/build_vocab", "wb") as dill_file:
             #    dill.dump(TEXT, dill_file)
             #    print("vocab saved")
@@ -134,6 +153,7 @@ class Dataset(object):
 
         self.vocab1 = TEXT1.vocab
         self.vocab2 = TEXT2.vocab
+        self.vocab3 = TEXT3.vocab
 
         self.train_iterator = data.BucketIterator(
             (train_data),
@@ -162,10 +182,11 @@ class Dataset(object):
         print ("Loaded {} training examples".format(len(train_data)))
         print ("Loaded {} validation examples".format(len(val_data)))
 
+
         return TEXT1, TEXT2
 
 
-def evaluate_model(model, iterator):
+def evaluate_model(model, iterator, is_translate):
     all_preds = []
     all_y = []
     for idx, batch in enumerate(iterator):
@@ -176,8 +197,18 @@ def evaluate_model(model, iterator):
             x1 = batch.text1.permute(1, 0)
             x2 = batch.text2.permute(1, 0)
         y_pred = model(x1, x2)
-        predicted = torch.max(y_pred.cpu().data, 1)[1] + 1
-        all_preds.extend(predicted.numpy())
-        all_y.extend(batch.label.numpy())
+        if not is_translate:
+            predicted = torch.max(y_pred.cpu().data, 1)[1] + 1
+            all_preds.extend(predicted.numpy())
+            all_y.extend(batch.label.numpy())
+        else:
+            x3 = batch.text3.clone.permute(1, 0)
+            embed_matrix = y_pred
+            for i in range(1, x3.shape[1]):
+                output = model.decoder(x3[:, i - 1], embed_matrix)
+                all_preds.extend(output.max(1)[1].numpy())
+                all_y.extend(x3[:, i-1].numpy())
+                right, left = model.matrix_embedding(x3[:, i - 1])
+                embed_matrix = torch.matmul(left, (torch.matmul(embed_matrix, right)))
     score = accuracy_score(all_y, np.array(all_preds).flatten())
     return score

@@ -2,15 +2,15 @@ import torch
 import random
 from torch import nn
 from copy import deepcopy
-from train_utils import Embeddings, PositionalEncoding
+from train_utils import Embeddings, PositionalEncoding, Matrix_Embedding
 from interactor import Interactor
-from encoder import EncoderLayer, Encoder
+from encoder import EncoderLayer, Encoder, Decoder
 from feed_forward import PositionwiseFeedForward
 from utils import *
 import numpy as np
 
 class Matposer(nn.Module):
-    def __init__(self, config, src_vocab, TEXT1, TEXT2, pretrain=False):
+    def __init__(self, config, src_vocab, TEXT1, TEXT2, pretrain=False, dst_vocab = None):
         super(Matposer, self).__init__()
         self.config = config
         self.src_vocab = src_vocab
@@ -51,6 +51,8 @@ class Matposer(nn.Module):
         self.softmax = nn.Softmax()
 
         self.pretrain = pretrain
+        self.decoder = Decoder(dst_vocab, d_model1)
+        self.matrix_embedding = Matrix_Embedding(d_model1, d_model2, dst_vocab)
 
 
     def forward(self, x1, x2):
@@ -62,7 +64,7 @@ class Matposer(nn.Module):
         #final_out = self.fc(final_feature_map)
         #class_out = self.class_fc(final_feature_map[:,-1,:])
         class_out = self.class_fc(final_feature_map.mean(dim=-2))
-        if self.pretrain:
+        if self.pretrain or self.config.translate:
             return final_feature_map
         else:
             return self.softmax(class_out)
@@ -107,27 +109,7 @@ class Matposer(nn.Module):
             self.optimizer.zero_grad()
             x1 = batch.text1.clone().permute(1, 0)
             x2 = batch.text2.clone().permute(1, 0)
-            if self.pretrain:
-                y = []
-                delete_list = []
-                for i in range(x.size()[0]):
-                    delete_ind = np.random.randint(0, x.size()[1])
-                    y.append(x[i, delete_ind])
-                    delete_list.append(delete_ind)
-                    if np.random.binomial(1, p=0.3) == 0:
-                        x[i, delete_ind] = 0
-                y = torch.LongTensor(y)
-                if torch.cuda.is_available():
-                    x1 = x1.type(torch.cuda.LongTensor)
-                    x2 = x2.type(torch.cuda.LongTensor)
-                    y = y.type(torch.cuda.LongTensor)
-                else:
-                    x1 = x1.type(torch.LongTensor)
-                    x2 = x2.type(torch.LongTensor)
-                    y = y.type(torch.LongTensor)
-                y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
-                loss = self.loss_op(y_pred, y.cuda())
-            else:
+            if not self.config.translate:
                 if torch.cuda.is_available():
                     x1 = x1.cuda()
                     x2 = x2.cuda()
@@ -137,6 +119,36 @@ class Matposer(nn.Module):
 
                 y_pred = self.__call__(x1, x2)
                 loss = self.loss_op(y_pred, y.cuda())
+            else:
+                x3 = batch.text3.clone.permute(1, 0)
+                loss = 0
+                embed_matrix = self.__call__(x1, x2)
+                for i in range(1, x3.shape[1]):
+                    output = self.decoder(x3[:, i - 1], embed_matrix)
+                    loss += self.loss_op(output.cuda(), x3[:,i].cuda())
+                    right, left = self.matrix_embedding(x3[:, i - 1])
+                    embed_matrix = torch.matmul(left, (torch.matmul(embed_matrix, right)))
+            #if self.pretrain:
+            #    y = []
+            #    delete_list = []
+            #    for i in range(x.size()[0]):
+            #        delete_ind = np.random.randint(0, x.size()[1])
+            #        y.append(x[i, delete_ind])
+            #        delete_list.append(delete_ind)
+            #        if np.random.binomial(1, p=0.3) == 0:
+            #            x[i, delete_ind] = 0
+            #    y = torch.LongTensor(y)
+            #    if torch.cuda.is_available():
+            #        x1 = x1.type(torch.cuda.LongTensor)
+            #        x2 = x2.type(torch.cuda.LongTensor)
+            #        y = y.type(torch.cuda.LongTensor)
+            #    else:
+            #        x1 = x1.type(torch.LongTensor)
+            #        x2 = x2.type(torch.LongTensor)
+            #        y = y.type(torch.LongTensor)
+            #    y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
+            #    loss = self.loss_op(y_pred, y.cuda())
+            #else:
             #y = y.permute(1, 0)
             #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
             #y_onehot.zero_()
@@ -162,7 +174,7 @@ class Matposer(nn.Module):
 
                 # Evalute Accuracy on validation set
                 if not self.pretrain:
-                    val_accuracy = evaluate_model(self, val_iterator)
+                    val_accuracy = evaluate_model(self, val_iterator, self.config.translate)
                     print("\tVal Accuracy: {:.4f}".format(val_accuracy))
                     val_accuracies.append(val_accuracy)
                 self.train()
