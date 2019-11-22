@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="59" />
+            <state relative-caret-position="-709">
+              <caret line="136" column="85" selection-start-line="136" selection-start-column="85" selection-end-line="136" selection-end-column="85" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -83,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="211" column="34" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
+            <state relative-caret-position="238">
+              <caret line="149" column="40" lean-forward="true" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="56" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -148,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
       <find>loading_tr</find>
       <find>config.tar</find>
       <find>self.fc</find>
@@ -171,13 +169,14 @@
       <find>label</find>
       <find>loading</find>
       <find>val</find>
-      <find>print</find>
       <find>split</find>
       <find>mat</find>
       <find>spli</find>
-      <find>cpu</find>
-      <find>softmax</find>
       <find>relu</find>
+      <find>cpu</find>
+      <find>print</find>
+      <find>softmax</find>
+      <find>text1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -227,8 +226,8 @@
         <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/train_utils.py" />
-        <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/encoder.py" />
+        <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/utils.py" />
       </list>
     </option>
@@ -475,41 +474,6 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-    </task>
-    <task id="LOCAL-00340" summary="fast-translate">
-      <created>1574414180319</created>
-      <option name="number" value="00340" />
-      <option name="presentableId" value="LOCAL-00340" />
-      <option name="project" value="LOCAL" />
-      <updated>1574414180319</updated>
-    </task>
-    <task id="LOCAL-00341" summary="fast-translate">
-      <created>1574414316524</created>
-      <option name="number" value="00341" />
-      <option name="presentableId" value="LOCAL-00341" />
-      <option name="project" value="LOCAL" />
-      <updated>1574414316524</updated>
-    </task>
-    <task id="LOCAL-00342" summary="fast-translate">
-      <created>1574414402330</created>
-      <option name="number" value="00342" />
-      <option name="presentableId" value="LOCAL-00342" />
-      <option name="project" value="LOCAL" />
-      <updated>1574414402330</updated>
-    </task>
-    <task id="LOCAL-00343" summary="fast-translate">
-      <created>1574414505611</created>
-      <option name="number" value="00343" />
-      <option name="presentableId" value="LOCAL-00343" />
-      <option name="project" value="LOCAL" />
-      <updated>1574414505611</updated>
-    </task>
-    <task id="LOCAL-00344" summary="fast-translate">
-      <created>1574414572391</created>
-      <option name="number" value="00344" />
-      <option name="presentableId" value="LOCAL-00344" />
-      <option name="project" value="LOCAL" />
-      <updated>1574414572391</updated>
     </task>
     <task id="LOCAL-00345" summary="fast-translate">
       <created>1574415041515</created>
@@ -819,11 +783,46 @@
       <option name="project" value="LOCAL" />
       <updated>1574435275910</updated>
     </task>
-    <option name="localTasksCounter" value="389" />
+    <task id="LOCAL-00389" summary="fast-translate">
+      <created>1574435492280</created>
+      <option name="number" value="00389" />
+      <option name="presentableId" value="LOCAL-00389" />
+      <option name="project" value="LOCAL" />
+      <updated>1574435492280</updated>
+    </task>
+    <task id="LOCAL-00390" summary="fast-translate">
+      <created>1574435569839</created>
+      <option name="number" value="00390" />
+      <option name="presentableId" value="LOCAL-00390" />
+      <option name="project" value="LOCAL" />
+      <updated>1574435569839</updated>
+    </task>
+    <task id="LOCAL-00391" summary="fast-translate">
+      <created>1574435642821</created>
+      <option name="number" value="00391" />
+      <option name="presentableId" value="LOCAL-00391" />
+      <option name="project" value="LOCAL" />
+      <updated>1574435642821</updated>
+    </task>
+    <task id="LOCAL-00392" summary="fast-translate">
+      <created>1574435701709</created>
+      <option name="number" value="00392" />
+      <option name="presentableId" value="LOCAL-00392" />
+      <option name="project" value="LOCAL" />
+      <updated>1574435701709</updated>
+    </task>
+    <task id="LOCAL-00393" summary="fast-translate">
+      <created>1574436092022</created>
+      <option name="number" value="00393" />
+      <option name="presentableId" value="LOCAL-00393" />
+      <option name="project" value="LOCAL" />
+      <updated>1574436092022</updated>
+    </task>
+    <option name="localTasksCounter" value="394" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231025000" />
+    <option name="totallyTimeSpent" value="231529000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -838,7 +837,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.21184371" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.21184371" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
       <window_info id="Favorites" order="2" sideWeight="0.5052192" side_tool="true" weight="0.20170827" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -853,7 +852,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503663" side_tool="true" weight="0.32245922" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4945055" weight="0.29285714" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32244897" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32244897" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -973,7 +972,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model.py</url>
-          <line>180</line>
+          <line>179</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -988,7 +987,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/model.py</url>
-          <line>155</line>
+          <line>154</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
@@ -1224,13 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/miniconda3/envs/pytorch/lib/python3.7/site-packages/torchtext/data/field.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -1261,12 +1253,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="59" />
+        <state relative-caret-position="440">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/pytorch/lib/python3.7/site-packages/torchtext/data/field.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed_forward.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1281,27 +1287,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feed_forward.py">
+    <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        <state relative-caret-position="-709">
+          <caret line="136" column="85" selection-start-line="136" selection-start-column="85" selection-end-line="136" selection-end-column="85" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="211" column="34" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
+        <state relative-caret-position="238">
+          <caret line="149" column="40" lean-forward="true" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="56" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
