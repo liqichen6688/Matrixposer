@@ -12,19 +12,10 @@ def clones(module, N):
 class Matrix_Embedding(nn.Module):
     def __init__(self, d_model1, d_model2, vocab):
         super(Matrix_Embedding, self).__init__()
-        self.d1_dict = {}
-        self.d2_dict = {}
-        for i in range(vocab):
-            self.d1_dict[i] = nn.Parameter(torch.rand(d_model1, d_model1))
-            self.d2_dict[i] = nn.Parameter(torch.rand(d_model2, d_model2))
+        self.d1_dict = nn.Parameter(torch.rand(vocab,d_model1, d_model1))
+        self.d2_dict = nn.Parameter(torch.rand(vocab,d_model2, d_model2))
     def forward(self, x):
-        all_d1 = []
-        all_d2 = []
-        for i in x:
-            all_d1.append(self.d1_dict[int(i)].unsqueeze(0))
-            all_d2.append(self.d2_dict[int(i)].unsqueeze(0))
-        print(self.d1_dict[4])
-        return torch.cat(all_d1, 0), torch.cat(all_d2, 0)
+        return self.d1_dict1[x], self.d1_dict1[x]
 
 
 
