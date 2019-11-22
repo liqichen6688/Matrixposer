@@ -102,7 +102,7 @@ class Dataset(object):
 
             TEXT3 = data.Field(sequential=True, tokenize=tokenizer2, lower=True, fix_length=None, init_token='<init>')
             datafields.append(("text3", TEXT3))
-        if not config.pretrain:
+        if not config.pretrain and not config.translate:
             LABEL = data.Field(sequential=False, use_vocab=False)
             datafields.append(("label",LABEL))
 

@@ -110,7 +110,6 @@ class Matposer(nn.Module):
             x1 = batch.text1.clone().permute(1, 0)
             x2 = batch.text2.clone().permute(1, 0)
             if not self.config.translate:
-                print('bug!')
                 if torch.cuda.is_available():
                     x1 = x1.cuda()
                     x2 = x2.cuda()
