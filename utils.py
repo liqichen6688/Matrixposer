@@ -100,7 +100,7 @@ class Dataset(object):
             def tokenizer2(sent): return list(
                 x.text for x in NLP2.tokenizer(sent) if x.text != " ")
 
-            TEXT3 = data.Field(sequential=True, tokenize=tokenizer2, lower=True, fix_length=None)
+            TEXT3 = data.Field(sequential=True, tokenize=tokenizer2, lower=True, fix_length=None, init_token='<init>')
             datafields.append(("text3", TEXT3))
         if not config.pretrain:
             LABEL = data.Field(sequential=False, use_vocab=False)
