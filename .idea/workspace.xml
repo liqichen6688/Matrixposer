@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="" />
+    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="54" column="20" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="20" />
+            <state relative-caret-position="313">
+              <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="59" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -47,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="403">
+              <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -80,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="212" column="70" selection-start-line="212" selection-start-column="70" selection-end-line="212" selection-end-column="70" />
+            <state relative-caret-position="394">
+              <caret line="211" column="34" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -172,8 +175,8 @@
       <find>split</find>
       <find>mat</find>
       <find>spli</find>
-      <find>softmax</find>
       <find>cpu</find>
+      <find>softmax</find>
       <find>relu</find>
     </findStrings>
   </component>
@@ -472,27 +475,6 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-    </task>
-    <task id="LOCAL-00337" summary="fast-translate">
-      <created>1574413974570</created>
-      <option name="number" value="00337" />
-      <option name="presentableId" value="LOCAL-00337" />
-      <option name="project" value="LOCAL" />
-      <updated>1574413974570</updated>
-    </task>
-    <task id="LOCAL-00338" summary="fast-translate">
-      <created>1574414021392</created>
-      <option name="number" value="00338" />
-      <option name="presentableId" value="LOCAL-00338" />
-      <option name="project" value="LOCAL" />
-      <updated>1574414021393</updated>
-    </task>
-    <task id="LOCAL-00339" summary="fast-translate">
-      <created>1574414114416</created>
-      <option name="number" value="00339" />
-      <option name="presentableId" value="LOCAL-00339" />
-      <option name="project" value="LOCAL" />
-      <updated>1574414114416</updated>
     </task>
     <task id="LOCAL-00340" summary="fast-translate">
       <created>1574414180319</created>
@@ -816,11 +798,32 @@
       <option name="project" value="LOCAL" />
       <updated>1574434808427</updated>
     </task>
-    <option name="localTasksCounter" value="386" />
+    <task id="LOCAL-00386" summary="fast-translate">
+      <created>1574434992053</created>
+      <option name="number" value="00386" />
+      <option name="presentableId" value="LOCAL-00386" />
+      <option name="project" value="LOCAL" />
+      <updated>1574434992053</updated>
+    </task>
+    <task id="LOCAL-00387" summary="fast-translate">
+      <created>1574435147504</created>
+      <option name="number" value="00387" />
+      <option name="presentableId" value="LOCAL-00387" />
+      <option name="project" value="LOCAL" />
+      <updated>1574435147504</updated>
+    </task>
+    <task id="LOCAL-00388" summary="fast-translate">
+      <created>1574435275910</created>
+      <option name="number" value="00388" />
+      <option name="presentableId" value="LOCAL-00388" />
+      <option name="project" value="LOCAL" />
+      <updated>1574435275910</updated>
+    </task>
+    <option name="localTasksCounter" value="389" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230510000" />
+    <option name="totallyTimeSpent" value="231025000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1228,53 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed_forward.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interactor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="42" column="69" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="54" column="20" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -1295,10 +1251,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interactor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="843">
+          <caret line="42" column="69" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="135" column="42" lean-forward="true" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed_forward.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="212" column="70" selection-start-line="212" selection-start-column="70" selection-end-line="212" selection-end-column="70" />
+        <state relative-caret-position="394">
+          <caret line="211" column="34" selection-start-line="211" selection-start-column="34" selection-end-line="211" selection-end-column="34" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
