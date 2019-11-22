@@ -123,7 +123,7 @@ class Dataset(object):
 
 
 
-        if not config.pretrain:
+        if not config.pretrain and not config.translate:
             test_df = self.get_pandas_df(test_file)
             test_examples = [data.Example.fromlist(i, datafields) for i in test_df.values.tolist()]
             test_data = data.Dataset(test_examples, datafields)
@@ -163,7 +163,7 @@ class Dataset(object):
             shuffle=True
         )
 
-        if not config.pretrain:
+        if not config.pretrain and config.translate:
             self.val_iterator, self.test_iterator = data.BucketIterator.splits(
                 (val_data, test_data),
                 batch_size=self.config.batch_size,
