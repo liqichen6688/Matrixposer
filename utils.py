@@ -89,7 +89,7 @@ class Dataset(object):
             x.text for x in NLP.tokenizer(sent) if x.text != " ")
 
         # Creating Filed for data
-        TEXT1 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
+        TEXT1 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None, )
         TEXT2 = data.Field(sequential=True, tokenize=tokenizer, lower=True, fix_length=None)
 
         datafields = [("text1", TEXT1), ("text2", TEXT2)]
@@ -147,7 +147,7 @@ class Dataset(object):
         TEXT1.build_vocab(train_data, vectors=GloVe(name='6B', dim=300))
         TEXT2.build_vocab(train_data, vectors=GloVe(name='6B', dim=50))
         if self.config.translate:
-            TEXT3.build_vocab(train_data)
+            TEXT3.build_vocab(train_data, max_size=50000)
             #with open("pretrain_model/build_vocab", "wb") as dill_file:
             #    dill.dump(TEXT, dill_file)
             #    print("vocab saved")
