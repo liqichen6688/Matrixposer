@@ -112,6 +112,11 @@ class Dataset(object):
             train_examples = [
                 data.Example.fromlist(i, datafields) for i in train_df.values.tolist()]
             train_data = data.Dataset(train_examples, datafields)
+
+            vocab_df = self.get_pandas_df("../data/translate/English-German/vocab/vocab.50K.en", filename2="../data/translate/English-German/vocab/vocab.50K.de")
+            vocab_examples = [
+                data.Example.fromlist(i, datafields) for i in vocab_df.values.tolist()]
+            vocab_data = data.Dataset(vocab_examples, datafields)
         else:
             #train_df = pd.read_csv("../data/wiki/data/ruwiki_2018_09_25.csv")['text']
             #print("storing_training_csv")
@@ -144,13 +149,14 @@ class Dataset(object):
             train_data, val_data = train_data.split(split_ratio=0.5)
 
 
-        TEXT1.build_vocab(train_data, vectors=GloVe(name='6B', dim=300))
-        TEXT2.build_vocab(train_data, vectors=GloVe(name='6B', dim=50))
+        TEXT1.build_vocab(vocab_data, vectors=GloVe(name='6B', dim=300))
+        TEXT2.build_vocab(vocab_data, vectors=GloVe(name='6B', dim=50))
         if self.config.translate:
-            TEXT3.build_vocab(train_data, max_size=50000)
+            TEXT3.build_vocab(vocab_data, max_size=50000)
             #with open("pretrain_model/build_vocab", "wb") as dill_file:
             #    dill.dump(TEXT, dill_file)
             #    print("vocab saved")
+        print("vocab loading done!")
 
 
         self.vocab1 = TEXT1.vocab
