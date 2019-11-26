@@ -38,7 +38,8 @@ if __name__=='__main__':
         print("Let's use", torch.cuda.device_count(), "GPUs!")
         model = nn.DataParallel(model, device_ids=[0,1,2])
         model = model.module
-    #model.to(device)
+    model.to(device)
+    torch.cuda.empty_cache()
     model.train()
     optimizer = optim.Adam(model.parameters(), lr=config.lr)
     Loss = nn.NLLLoss()
