@@ -7,7 +7,7 @@ import torch
 
 if __name__=='__main__':
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:3" if torch.cuda.is_available() else "cpu")
     torch.cuda.empty_cache()
     config = Config
     #train_file = '../data/20ng.train'
@@ -36,7 +36,7 @@ if __name__=='__main__':
         model = Matposer(config, len(dataset.vocab1), TEXT1, TEXT2, pretrain=config.pretrain)
     if torch.cuda.device_count() > 1:
         print("Let's use", torch.cuda.device_count(), "GPUs!")
-        model = nn.DataParallel(model)
+        model = nn.DataParallel(model, device_ids=[0,1,2])
         model = model.module
     #model.to(device)
     model.train()
