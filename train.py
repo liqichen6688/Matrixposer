@@ -36,7 +36,7 @@ if __name__=='__main__':
         model = Matposer(config, len(dataset.vocab1), TEXT1, TEXT2, pretrain=config.pretrain)
     if torch.cuda.device_count() > 1:
         print("Let's use", torch.cuda.device_count(), "GPUs!")
-        model = nn.DataParallel(model, device_ids=[0,1,2])
+        model = nn.DataParallel(model)
         model = model.module
     torch.cuda.empty_cache()
     model.to(device)
