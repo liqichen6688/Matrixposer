@@ -217,7 +217,7 @@ def evaluate_model(model, iterator, is_translate):
                 output = model.decoder(x3_sent[:, i-1:i], embed_matrix).squeeze(1)
                 all_preds.extend(output.cpu().max(1)[1].numpy())
                 all_y.extend(x3[:, i-1].cpu().numpy())
-                right, left = model.matrix_embedding(x3[:, i - 1])
-                embed_matrix = torch.matmul(left, (torch.matmul(embed_matrix, right)))
+                #right, left = model.matrix_embedding(x3[:, i - 1])
+                #embed_matrix = torch.matmul(left, (torch.matmul(embed_matrix, right)))
     score = accuracy_score(all_y, np.array(all_preds).flatten())
     return score
