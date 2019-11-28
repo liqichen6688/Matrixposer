@@ -69,7 +69,7 @@ class Matposer(nn.Module):
         #class_out = self.class_fc(final_feature_map[:,-1,:])
         class_out = self.class_fc(final_feature_map.mean(dim=-2))
         if self.pretrain or self.config.translate:
-            return final_feature_map
+            return final_feature_map / x1.shape[1]
         else:
             return self.softmax(class_out)
 
