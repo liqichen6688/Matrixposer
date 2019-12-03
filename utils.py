@@ -6,6 +6,7 @@ import numpy as np
 import spacy
 from torchtext.vocab import Vectors, GloVe
 from sklearn.metrics import accuracy_score
+import torch.nn.functional as F
 import dill
 import time
 
@@ -146,7 +147,7 @@ class Dataset(object):
             val_data = data.Dataset(val_examples, datafields)
         else:
             print('right!')
-            train_data, val_data = train_data.split(split_ratio=0.5)
+            train_data, val_data = train_data.split(split_ratio=0.9)
 
 
         TEXT1.build_vocab(vocab_data, vectors=GloVe(name='6B', dim=300))
@@ -214,7 +215,9 @@ def evaluate_model(model, iterator, is_translate):
             embed_matrix = y_pred
             x3_sent = model.dst_embed(x3)
             for i in range(1, x3.shape[1]):
-                output = model.decoder(x3_sent[:, i-1:i], embed_matrix).squeeze(1)
+                filter = model.matrix_embedding(x3[:, i - 1])
+                info_matrix = F.relu(torch.matmul(filter, embed_matrix))
+                output = model.decoder(x3_sent[:, i-1:i], info_matrix).squeeze(1)
                 all_preds.extend(output.cpu().max(1)[1].numpy())
                 all_y.extend(x3[:, i-1].cpu().numpy())
                 #right, left = model.matrix_embedding(x3[:, i - 1])
