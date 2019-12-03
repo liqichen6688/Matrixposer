@@ -57,7 +57,7 @@ class Matposer(nn.Module):
 
         self.pretrain = pretrain
         self.decoder = Decoder(dst_vocab, d_model1)
-        self.matrix_embedding = Matrix_Embedding(d_model1, dst_vocab)
+        self.matrix_embedding = Matrix_Embedding(d_model2, dst_vocab)
 
 
     def forward(self, x1, x2):
