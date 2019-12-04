@@ -164,8 +164,8 @@ class Dataset(object):
         self.vocab2 = TEXT2.vocab
         self.vocab3 = TEXT3.vocab
 
-        print(self.vocab1.itos[0:10])
-        print(self.vocab2.itos[0:10])
+        print(self.vocab1.itos[:])
+        print(self.vocab2.itos[:])
 
         self.train_iterator = data.BucketIterator(
             (train_data),
