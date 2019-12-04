@@ -177,7 +177,7 @@ class Matposer(nn.Module):
             losses.append(loss.data.cpu().numpy()/x3.shape[1])
             self.optimizer.step()
 
-            if i % 1 == 0:
+            if i % 100 == 0:
                 print("Iter: {}".format(i + 1))
                 avg_train_loss = np.mean(losses)
                 train_losses.append(avg_train_loss)
@@ -185,9 +185,9 @@ class Matposer(nn.Module):
                 losses = []
 
                 # Evalute Accuracy on validation set
-                if not self.pretrain:
-                    val_accuracy = evaluate_model(self, val_iterator, self.config.translate)
-                    print("\tVal Accuracy: {:.4f}".format(val_accuracy))
-                    val_accuracies.append(val_accuracy)
+                #if not self.pretrain:
+                #    val_accuracy = evaluate_model(self, val_iterator, self.config.translate)
+                #    print("\tVal Accuracy: {:.4f}".format(val_accuracy))
+                #    val_accuracies.append(val_accuracy)
                 self.train()
         return train_losses
