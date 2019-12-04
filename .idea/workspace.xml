@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="154" column="53" selection-start-line="154" selection-start-column="53" selection-end-line="154" selection-end-column="53" />
+            <state relative-caret-position="96">
+              <caret line="89" column="32" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="167" column="25" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
+            <state relative-caret-position="1892">
+              <caret line="165" selection-start-line="165" selection-end-line="165" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -167,9 +167,9 @@
       <find>iter</find>
       <find>i</find>
       <find>relu</find>
-      <find>i</find>
       <find>softmax</find>
       <find>right</find>
+      <find>i</find>
       <find>pad</find>
     </findStrings>
   </component>
@@ -244,11 +244,6 @@
             <path>
               <item name="MatPoser" type="b2602c69:ProjectViewProjectNode" />
               <item name="MatPoser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MatPoser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MatPoser" type="462c0819:PsiDirectoryNode" />
-              <item name="pretrain_model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -464,20 +459,6 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-    </task>
-    <task id="LOCAL-00373" summary="fast-translate">
-      <created>1574419365001</created>
-      <option name="number" value="00373" />
-      <option name="presentableId" value="LOCAL-00373" />
-      <option name="project" value="LOCAL" />
-      <updated>1574419365001</updated>
-    </task>
-    <task id="LOCAL-00374" summary="fast-translate">
-      <created>1574419514227</created>
-      <option name="number" value="00374" />
-      <option name="presentableId" value="LOCAL-00374" />
-      <option name="project" value="LOCAL" />
-      <updated>1574419514227</updated>
     </task>
     <task id="LOCAL-00375" summary="fast-translate">
       <created>1574419579358</created>
@@ -808,11 +789,25 @@
       <option name="project" value="LOCAL" />
       <updated>1575469697186</updated>
     </task>
-    <option name="localTasksCounter" value="422" />
+    <task id="LOCAL-00422" summary="fast-translate">
+      <created>1575469948828</created>
+      <option name="number" value="00422" />
+      <option name="presentableId" value="LOCAL-00422" />
+      <option name="project" value="LOCAL" />
+      <updated>1575469948828</updated>
+    </task>
+    <task id="LOCAL-00423" summary="fast-translate">
+      <created>1575470329660</created>
+      <option name="number" value="00423" />
+      <option name="presentableId" value="LOCAL-00423" />
+      <option name="project" value="LOCAL" />
+      <updated>1575470329660</updated>
+    </task>
+    <option name="localTasksCounter" value="424" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243268000" />
+    <option name="totallyTimeSpent" value="243829000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -825,9 +820,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.21184371" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.21184371" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
       <window_info id="Favorites" order="2" sideWeight="0.5052192" side_tool="true" weight="0.20170827" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -842,7 +836,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503663" side_tool="true" weight="0.32245922" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4945055" weight="0.29285714" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32244897" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32244897" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -967,12 +961,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils.py</url>
-          <line>173</line>
+          <line>171</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils.py</url>
-          <line>169</line>
+          <line>167</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1276,8 +1270,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="167" column="25" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
+        <state relative-caret-position="1892">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -1286,8 +1280,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="154" column="53" selection-start-line="154" selection-start-column="53" selection-end-line="154" selection-end-column="53" />
+        <state relative-caret-position="96">
+          <caret line="89" column="32" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
