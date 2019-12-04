@@ -87,7 +87,7 @@ class Matposer(nn.Module):
 
         one_hot = torch.zeros_like(pred).scatter(1, gold.view(-1, 1), 1)
         one_hot = one_hot * (1 - eps) + (1 - one_hot) * eps / (n_class - 1)
-        print(pred)
+        print(F.softmax(pred))
         log_prb = F.log_softmax(pred, dim=1)
 
         non_pad_mask = gold.ne(1)
