@@ -80,6 +80,21 @@ class Matposer(nn.Module):
     def add_loss_op(self, loss_op):
         self.loss_op = loss_op
 
+    def loss_with_smoothing(self, pred, gold):
+        gold = gold.contiguous().view(-1)
+        eps = 0.1
+        n_class = pred.size(1)
+
+        one_hot = torch.zeros_like(pred).scatter(1, gold.view(-1, 1), 1)
+        one_hot = one_hot * (1 - eps) + (1 - one_hot) * eps / (n_class - 1)
+        log_prb = torch.log(pred, dim=1)
+
+        non_pad_mask = gold.ne(0)
+        loss = -(one_hot * log_prb).sum(dim=1)
+        loss = loss.masked_select(non_pad_mask).sum()  # average later
+
+        return loss
+
     def reduce_lr(self):
         print("Reducing LR")
         for g in self.optimizer.param_groups:
