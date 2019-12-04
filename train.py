@@ -71,8 +71,8 @@ if __name__=='__main__':
         train_losses.append(train_loss)
         #if val_accuracy > 0.772:
           #  break
-        if config.pretrain:
-            torch.save(model.state_dict(), "pretrain_model/wiki_recover"+str(i))
+        #if config.pretrain:
+        torch.save(model.state_dict(), "pretrain_model/wiki_recover"+str(i))
 
 
 
