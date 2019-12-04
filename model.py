@@ -176,7 +176,6 @@ class Matposer(nn.Module):
                     raise e
             losses.append(loss.data.cpu().numpy()/x3.shape[1])
             self.optimizer.step()
-            print(i)
 
             if i % 100 == 0:
                 print("Iter: {}".format(i + 1))
