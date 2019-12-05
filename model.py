@@ -82,12 +82,12 @@ class Matposer(nn.Module):
 
     def loss_with_smoothing(self, pred, gold):
         gold = gold.contiguous().view(-1)
-        eps = 0.1
+        #eps = 0.1
         n_class = pred.size(1)
 
         one_hot = torch.zeros_like(pred).scatter(1, gold.view(-1, 1), 1)
-        one_hot = one_hot * (1 - eps) + (1 - one_hot) * eps / (n_class - 1)
-        log_prb = F.log_softmax(pred, dim=1)
+        #one_hot = one_hot * (1 - eps) + (1 - one_hot) * eps / (n_class - 1)
+        log_prb = F.softmax(pred, dim=1)
 
         non_pad_mask = gold.ne(1)
         loss = -(one_hot * log_prb).sum(dim=1)
@@ -152,8 +152,8 @@ class Matposer(nn.Module):
                     filter = self.matrix_embedding(x3[:, j - 1])
                     info_matrix = F.relu(torch.matmul(filter, embed_matrix))
                     output = self.decoder(x3_sent[:, j-1:j].float(), info_matrix.float()).squeeze(1)
-                    loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor)) / x3.shape[0]
-                    #loss += self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor))/x3.shape[0]
+                    #loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor)) / x3.shape[0]
+                    loss += self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor))
                     #right, left = self.matrix_embedding(x3[:, i - 1])
                     #embed_matrix = torch.matmul(left.cuda(), (torch.matmul(embed_matrix, right.cuda())))
             #if self.pretrain:
