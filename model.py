@@ -88,10 +88,11 @@ class Matposer(nn.Module):
         one_hot = torch.zeros_like(pred).scatter(1, gold.view(-1, 1), 1)
         #one_hot = one_hot * (1 - eps) + (1 - one_hot) * eps / (n_class - 1)
         log_prb = F.softmax(pred, dim=1)
+        print(log_prb)
 
         non_pad_mask = gold.ne(1)
         loss = -(one_hot * log_prb).sum(dim=1)
-        print(loss.masked_select(non_pad_mask))
+        #print(loss.masked_select(non_pad_mask))
         loss = loss.masked_select(non_pad_mask).sum()  # average later
 
         return loss
