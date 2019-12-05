@@ -91,13 +91,11 @@ class Matposer(nn.Module):
         #print(log_prb)
 
         non_pad_mask = gold.ne(1)
-        print(pred)
-        print(pred.size())
-        loss = self.loss_op(pred, gold)
+        loss = self.loss_op(pred.masked_select(non_pad_mask), gold.masked_select(non_pad_mask))
         #loss = (one_hot * pred).sum(dim=1)
         print(loss)
         #print(loss.masked_select(non_pad_mask))
-        loss = loss.masked_select(non_pad_mask).sum()  # average later
+        #loss = loss.masked_select(non_pad_mask).sum()  # average later
 
         return loss
 
@@ -158,6 +156,7 @@ class Matposer(nn.Module):
                     filter = self.matrix_embedding(x3[:, j - 1])
                     info_matrix = F.relu(torch.matmul(filter, embed_matrix))
                     output = self.decoder(x3_sent[:, j-1:j].float(), info_matrix.float()).squeeze(1)
+                    print(output)
                     loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor)) / x3.shape[0]
                     #loss += self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor))
                     #print(self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor)) / x3.shape[0])
