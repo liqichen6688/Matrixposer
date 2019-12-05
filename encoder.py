@@ -45,7 +45,7 @@ class Decoder(nn.Module):
             nn.Linear(d_model1, d_model1),
             nn.ReLU(),
             nn.Linear(d_model1, output_size),
-            #nn.Softmax(dim=-1)
+            nn.Softmax(dim=-1)
         )
 
     def forward(self, x, matrix_embed):
