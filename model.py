@@ -190,7 +190,7 @@ class Matposer(nn.Module):
                         torch.cuda.empty_cache()
                 else:
                     raise e
-            losses.append(loss.data.cpu().numpy()/x3.shape[1])
+            losses.append(loss.data.cpu().numpy()/x3.shape[1]/x3.shape[0])
             self.optimizer.step()
 
             if i % 100 == 0:

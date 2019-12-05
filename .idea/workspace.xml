@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="98" column="13" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="13" />
+            <state relative-caret-position="304">
+              <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -88,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1958">
+            <state relative-caret-position="2748">
               <caret line="165" selection-start-line="165" selection-end-line="165" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -118,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+            <state relative-caret-position="-254">
+              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -166,11 +166,11 @@
       <find>iter</find>
       <find>i</find>
       <find>softmax</find>
-      <find>pad</find>
-      <find>right</find>
       <find>i</find>
       <find>relu</find>
+      <find>pad</find>
       <find>print</find>
+      <find>right</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -218,11 +218,11 @@
         <option value="$PROJECT_DIR$/sublayer.py" />
         <option value="$PROJECT_DIR$/interactor.py" />
         <option value="$PROJECT_DIR$/train_utils.py" />
-        <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/encoder.py" />
-        <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/model.py" />
       </list>
     </option>
   </component>
@@ -459,13 +459,6 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-    </task>
-    <task id="LOCAL-00380" summary="fast-translate">
-      <created>1574434453128</created>
-      <option name="number" value="00380" />
-      <option name="presentableId" value="LOCAL-00380" />
-      <option name="project" value="LOCAL" />
-      <updated>1574434453128</updated>
     </task>
     <task id="LOCAL-00381" summary="fast-translate">
       <created>1574434571112</created>
@@ -803,11 +796,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575471361231</updated>
     </task>
-    <option name="localTasksCounter" value="429" />
+    <task id="LOCAL-00429" summary="fast-translate">
+      <created>1575471567044</created>
+      <option name="number" value="00429" />
+      <option name="presentableId" value="LOCAL-00429" />
+      <option name="project" value="LOCAL" />
+      <updated>1575471567045</updated>
+    </task>
+    <option name="localTasksCounter" value="430" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244801000" />
+    <option name="totallyTimeSpent" value="246641000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,7 +820,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.21184371" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
@@ -1232,16 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1958">
-          <caret line="165" selection-start-line="165" selection-end-line="165" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed_forward.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1269,10 +1258,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="98" column="13" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="13" />
+        <state relative-caret-position="2748">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -1281,10 +1270,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+        <state relative-caret-position="-254">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
