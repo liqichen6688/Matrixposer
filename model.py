@@ -91,6 +91,7 @@ class Matposer(nn.Module):
 
         non_pad_mask = gold.ne(1)
         loss = -(one_hot * log_prb).sum(dim=1)
+        print(loss.masked_select(non_pad_mask))
         loss = loss.masked_select(non_pad_mask).sum()  # average later
 
         return loss
@@ -154,6 +155,7 @@ class Matposer(nn.Module):
                     output = self.decoder(x3_sent[:, j-1:j].float(), info_matrix.float()).squeeze(1)
                     #loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor)) / x3.shape[0]
                     loss += self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor))
+                    print(self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor)) / x3.shape[0])
                     #right, left = self.matrix_embedding(x3[:, i - 1])
                     #embed_matrix = torch.matmul(left.cuda(), (torch.matmul(embed_matrix, right.cuda())))
             #if self.pretrain:
