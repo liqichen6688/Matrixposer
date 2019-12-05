@@ -92,6 +92,7 @@ class Matposer(nn.Module):
 
         non_pad_mask = gold.ne(1)
         print(pred)
+        print(pred.size())
         loss = self.loss_op(pred, gold)
         #loss = (one_hot * pred).sum(dim=1)
         print(loss)
