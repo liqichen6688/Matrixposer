@@ -89,10 +89,10 @@ class Matposer(nn.Module):
         #one_hot = one_hot * (1 - eps) + (1 - one_hot) * eps / (n_class - 1)
         #log_prb = F.log_softmax(pred, dim=1)
         #print(log_prb)
-        print(gold)
 
         non_pad_mask = gold.ne(1)
         loss = -(one_hot * pred).sum(dim=1)
+        print(loss)
         #print(loss.masked_select(non_pad_mask))
         loss = loss.masked_select(non_pad_mask).sum()  # average later
 
