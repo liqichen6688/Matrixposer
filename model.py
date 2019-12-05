@@ -92,7 +92,7 @@ class Matposer(nn.Module):
 
         non_pad_mask = gold.ne(1)
         #loss = self.loss_op(pred, gold)
-        loss = (one_hot * pred).sum(dim=1)
+        loss = -(one_hot * pred).sum(dim=1)
         print(loss)
         #print(loss.masked_select(non_pad_mask))
         loss = loss.masked_select(non_pad_mask).sum()  # average later
