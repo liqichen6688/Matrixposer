@@ -6,8 +6,8 @@ class Config(object):
     dropout = 0.1
     output_size = 20
     lr = 0.0001
-    max_epochs = 2000
-    batch_size = 200
+    max_epochs = 100
+    batch_size = 64
     max_sen_len = 30
     # determine lr
     learning_method = 'reduce'
