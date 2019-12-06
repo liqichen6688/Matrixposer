@@ -101,7 +101,6 @@ class Matposer(nn.Module):
         return loss
 
     def reduce_lr(self):
-        print("Reducing LR")
         for g in self.optimizer.param_groups:
             g['lr'] = 30 ** -0.5 * min(self.step ** -0.5, self.step * 4000 ** -1.5)
 
