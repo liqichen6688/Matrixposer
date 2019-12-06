@@ -13,6 +13,7 @@ import numpy as np
 class Matposer(nn.Module):
     def __init__(self, config, src_vocab, TEXT1, TEXT2, pretrain=False, dst_vocab = None):
         super(Matposer, self).__init__()
+        self.step = 0
         self.config = config
         self.src_vocab = src_vocab
         d_row, N, dropout = self.config.d_row, self.config.N, self.config.dropout
@@ -102,7 +103,7 @@ class Matposer(nn.Module):
     def reduce_lr(self):
         print("Reducing LR")
         for g in self.optimizer.param_groups:
-            g['lr'] = g['lr'] / 2
+            g['lr'] = 30 ** -0.5 * min(self.step ** -0.5, self.step * 4000 ** -1.5)
 
     def triangle_lr(self, total_iter, epoch, itr):
         cut = self.config.max_epochs * total_iter * self.config.cut_frac
@@ -124,10 +125,12 @@ class Matposer(nn.Module):
         losses = []
 
         # Reduce learning rate as number of epochs increase
-        if self.config.learning_method == 'reduce':
-            if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
-                self.reduce_lr()
+        #if self.config.learning_method == 'reduce':
+        #    if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
+        #        self.reduce_lr()
         for i, batch in enumerate(train_iterator):
+            self.step += 1
+
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()

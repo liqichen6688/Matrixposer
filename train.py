@@ -42,7 +42,7 @@ if __name__=='__main__':
     model.to(device)
     #torch.cuda.empty_cache()
     model.train()
-    optimizer = optim.Adam(model.parameters(), lr=config.lr)
+    optimizer = optim.Adam(model.parameters(), lr=config.lr,  betas=(0.9, 0.98), eps=1e-09)
     Loss = nn.NLLLoss()
     model.add_optimizer(optimizer)
     model.add_loss_op(Loss)
