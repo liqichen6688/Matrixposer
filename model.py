@@ -132,7 +132,6 @@ class Matposer(nn.Module):
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             x1 = batch.text1.clone().permute(1, 0)
-            print(x1)
             x2 = batch.text2.clone().permute(1, 0)
             if not self.config.translate:
                 if torch.cuda.is_available():
@@ -146,6 +145,7 @@ class Matposer(nn.Module):
                 loss = self.loss_op(y_pred, y.cuda())
             else:
                 x3 = batch.text3.clone().permute(1, 0)
+                print(x3)
                 if torch.cuda.is_available():
                     x1 = x1.type(torch.cuda.LongTensor)
                     x2 = x2.type(torch.cuda.LongTensor)
