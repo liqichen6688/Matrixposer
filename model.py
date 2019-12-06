@@ -130,7 +130,7 @@ class Matposer(nn.Module):
         #        self.reduce_lr()
         for i, batch in enumerate(train_iterator):
             self.step += 1
-
+            self.reduce_lr()
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
