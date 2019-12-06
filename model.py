@@ -102,7 +102,7 @@ class Matposer(nn.Module):
 
     def reduce_lr(self):
         for g in self.optimizer.param_groups:
-            g['lr'] = 30 ** -0.5 * min(self.step ** -0.5, self.step * 4000 ** -1.5)
+            g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 4000 ** -1.5)
 
     def triangle_lr(self, total_iter, epoch, itr):
         cut = self.config.max_epochs * total_iter * self.config.cut_frac
