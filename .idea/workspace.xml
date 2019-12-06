@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
+            <state relative-caret-position="255">
+              <caret line="104" column="71" selection-start-line="104" selection-start-column="71" selection-end-line="104" selection-end-column="71" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -451,13 +451,6 @@
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
     </task>
-    <task id="LOCAL-00436" summary="fast-translate">
-      <created>1575520393458</created>
-      <option name="number" value="00436" />
-      <option name="presentableId" value="LOCAL-00436" />
-      <option name="project" value="LOCAL" />
-      <updated>1575520393458</updated>
-    </task>
     <task id="LOCAL-00437" summary="fast-translate">
       <created>1575520478261</created>
       <option name="number" value="00437" />
@@ -794,11 +787,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575611120877</updated>
     </task>
-    <option name="localTasksCounter" value="485" />
+    <task id="LOCAL-00485" summary="fast-translate">
+      <created>1575611271583</created>
+      <option name="number" value="00485" />
+      <option name="presentableId" value="LOCAL-00485" />
+      <option name="project" value="LOCAL" />
+      <updated>1575611271583</updated>
+    </task>
+    <option name="localTasksCounter" value="486" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254770000" />
+    <option name="totallyTimeSpent" value="255139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1272,8 +1272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
+        <state relative-caret-position="255">
+          <caret line="104" column="71" selection-start-line="104" selection-start-column="71" selection-end-line="104" selection-end-column="71" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
