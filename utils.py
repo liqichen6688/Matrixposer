@@ -147,7 +147,7 @@ class Dataset(object):
             val_data = data.Dataset(val_examples, datafields)
         else:
             print('right!')
-            train_data, val_data = train_data.split(split_ratio=0.9)
+            train_data, val_data = train_data.split(split_ratio=0.999)
 
 
         TEXT1.build_vocab(vocab_data, vectors=GloVe(name='6B', dim=300))
