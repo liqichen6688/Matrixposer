@@ -132,6 +132,7 @@ class Matposer(nn.Module):
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
             x1 = batch.text1.clone().permute(1, 0)
+            print(x1)
             x2 = batch.text2.clone().permute(1, 0)
             if not self.config.translate:
                 if torch.cuda.is_available():
