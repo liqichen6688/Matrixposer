@@ -101,7 +101,7 @@ class Dataset(object):
             def tokenizer2(sent): return list(
                 x.text for x in NLP2.tokenizer(sent) if x.text != " ")
 
-            TEXT3 = data.Field(sequential=True, tokenize=tokenizer2, lower=True, fix_length=None, init_token='<init>')
+            TEXT3 = data.Field(sequential=True, tokenize=tokenizer2, lower=True, fix_length=None, init_token='<init>', eos_token='<EOS>')
             datafields.append(("text3", TEXT3))
         if config.classification:
             LABEL = data.Field(sequential=False, use_vocab=False)
@@ -147,7 +147,7 @@ class Dataset(object):
             val_data = data.Dataset(val_examples, datafields)
         else:
             print('right!')
-            train_data, val_data = train_data.split(split_ratio=0.8)
+            train_data, val_data = train_data.split(split_ratio=0.8d)
 
 
         TEXT1.build_vocab(vocab_data, vectors=GloVe(name='6B', dim=300))
