@@ -58,9 +58,9 @@ class Matposer(nn.Module):
 
         self.pretrain = pretrain
         self.decoder = Decoder(dst_vocab, d_model1)
-        self.matrix_embedding = Matrix_Embedding(d_model2,dst_vocab)
-        #self.ma_weight = nn.Parameter(torch.empty((d_model2, d_model2)).normal_(mean=0, std=0.0001))
-        #self.ma_bias = nn.Parameter(torch.empty((d_model2, d_model1)).normal_(mean=0, std=0.0001))
+        #self.matrix_embedding = Matrix_Embedding(d_model2,dst_vocab)
+        self.ma_weight = nn.Parameter(torch.empty((d_model2, d_model2)).normal_(mean=0, std=0.0001))
+        self.ma_bias = nn.Parameter(torch.empty((d_model2, d_model1)).normal_(mean=0, std=0.0001))
 
 
     def forward(self, x1, x2):
@@ -93,7 +93,7 @@ class Matposer(nn.Module):
         #log_prb = F.log_softmax(pred, dim=1)
         #print(log_prb)
 
-        non_pad_mask = gold.ne(1)
+        non_pad_mask = gold.ne(2)
         #loss = self.loss_op(pred.masked_select(non_pad_mask), gold.masked_select(non_pad_mask))
         loss = -(one_hot * pred).sum(dim=1)
         #print(loss)
@@ -157,13 +157,10 @@ class Matposer(nn.Module):
                     x3 = x3.type(torch.cuda.LongTensor)
                 loss = 0
                 embed_matrix = self.__call__(x1, x2)
-                #embed_matrix += F.tanh(embed_matrix)
                 x3_sent = self.dst_embed(x3)
-                #x3_sent = F.tanh(x3)
-                print(x3)
                 for j in range(1, x3.shape[1]):
-                    filter = self.matrix_embedding(x3[:, j - 1])
-                    info_matrix = F.tanh(torch.matmul(filter, embed_matrix))
+                    #filter = self.matrix_embedding(x3[:, j - 1])
+                    info_matrix = F.tanh(torch.matmul(self.ma_weight, embed_matrix) + self.ma_bias)
                     output = self.decoder(x3_sent[:, j-1:j].float(), info_matrix.float()).squeeze(1)
                     #print(output)
                     loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
