@@ -157,7 +157,7 @@ class Matposer(nn.Module):
                     x3 = x3.type(torch.cuda.LongTensor)
                 loss = 0
                 embed_matrix = self.__call__(x1, x2)
-                embed_matrix += F.tanh(embed_matrix)
+                #embed_matrix += F.tanh(embed_matrix)
                 x3_sent = self.dst_embed(x3)
                 #x3_sent = F.tanh(x3)
                 print(x3)
