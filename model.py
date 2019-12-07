@@ -131,8 +131,8 @@ class Matposer(nn.Module):
         #    if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
         #        self.reduce_lr()
         for i, batch in enumerate(train_iterator):
-            #self.step += 1
-            #self.reduce_lr()
+            self.step += 1
+            self.reduce_lr()
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
@@ -158,6 +158,7 @@ class Matposer(nn.Module):
                 loss = 0
                 embed_matrix = self.__call__(x1, x2)
                 embed_matrix += F.tanh(embed_matrix)
+                print(x3)
 
                 x3_sent = self.dst_embed(x3)
                 for j in range(1, x3.shape[1]):
