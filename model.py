@@ -93,7 +93,7 @@ class Matposer(nn.Module):
         log_prb = F.log_softmax(pred, dim=1)
         #print(log_prb)
 
-        non_pad_mask = gold.ne(2)
+        non_pad_mask = gold.ne(1)
         #loss = self.loss_op(pred.masked_select(non_pad_mask), gold.masked_select(non_pad_mask))
         loss = -(one_hot * log_prb).sum(dim=1)
         #print(loss)
@@ -105,7 +105,7 @@ class Matposer(nn.Module):
 
     def reduce_lr(self):
         for g in self.optimizer.param_groups:
-            g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 2000 ** -1.5)
+            g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 4000 ** -1.5)
 
     def triangle_lr(self, total_iter, epoch, itr):
         cut = self.config.max_epochs * total_iter * self.config.cut_frac
@@ -158,7 +158,6 @@ class Matposer(nn.Module):
                 loss = 0
                 embed_matrix = self.__call__(x1, x2)
                 embed_matrix += F.tanh(embed_matrix)
-                print(x3)
 
                 x3_sent = self.dst_embed(x3)
                 for j in range(1, x3.shape[1]):
