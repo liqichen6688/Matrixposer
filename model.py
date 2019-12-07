@@ -128,8 +128,8 @@ class Matposer(nn.Module):
         #    if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
         #        self.reduce_lr()
         for i, batch in enumerate(train_iterator):
-            self.step += 1
-            self.reduce_lr()
+            #self.step += 1
+            #self.reduce_lr()
             if self.config.learning_method == 'trian':
                 self.triangle_lr(len(train_iterator), epoch, i)
             self.optimizer.zero_grad()
