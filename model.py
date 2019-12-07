@@ -159,6 +159,7 @@ class Matposer(nn.Module):
                 embed_matrix = self.__call__(x1, x2)
                 #x3_sent = self.dst_embed(x3)
                 x3_sent = F.tanh(x3_sent)
+                print(x3)
                 for j in range(1, x3.shape[1]):
                     filter = self.matrix_embedding(x3[:, j - 1])
                     info_matrix = F.tanh(torch.matmul(filter, embed_matrix))
