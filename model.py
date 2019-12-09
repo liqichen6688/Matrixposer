@@ -192,7 +192,9 @@ class Matposer(nn.Module):
             #y_onehot.zero_()
             #y_onehot.scatter_(1, y, 1)
             try:
-                print(self.state_dict().keys())
+                for key in self.state_dict().keys():
+                    print(key)
+                    print(self.state_dict()[key].requires_grad == True)
                 loss.backward()
                 print(self.src_embed1[0].lut.weight.grad)
             except RuntimeError as e:
