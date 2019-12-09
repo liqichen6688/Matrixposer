@@ -192,7 +192,7 @@ class Matposer(nn.Module):
             #y_onehot.zero_()
             #y_onehot.scatter_(1, y, 1)
             try:
-                for key in self.state_dict().keys():
+                for key in self.state_dict(keep_vars=True).keys():
                     print(key)
                     print(self.state_dict()[key].requires_grad == True)
                 loss.backward()
