@@ -194,6 +194,7 @@ class Matposer(nn.Module):
             try:
                 for key in self.state_dict(keep_vars=True).keys():
                     print(key)
+                    self.state_dict()[key].requires_grad = True
                     print(self.state_dict()[key].requires_grad == True)
                 loss.backward()
                 print(self.src_embed1[0].lut.weight.grad)
