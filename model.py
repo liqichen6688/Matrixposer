@@ -164,7 +164,6 @@ class Matposer(nn.Module):
                     #filter = self.matrix_embedding(x3[:, j - 1])
                     info_matrix = F.tanh(torch.matmul(self.ma_weight, embed_matrix) + self.ma_bias)
                     output = self.decoder(x3_sent[:, j-1:j].float(), info_matrix.float())[:,0,:]
-                    #print(output)
                     loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
                     #loss += self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor))
                     #print(self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor)) / x3.shape[0])
@@ -196,6 +195,7 @@ class Matposer(nn.Module):
             #y_onehot.zero_()
             #y_onehot.scatter_(1, y, 1)
             try:
+                print(self.parameters())
                 loss.backward()
                 print(self.src_embed1[0].lut.weight.grad)
             except RuntimeError as e:
