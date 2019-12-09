@@ -66,11 +66,8 @@ class Matposer(nn.Module):
     def forward(self, x1, x2):
         embedded_sents1 = self.src_embed1(x1) # shape = (batch_size, sen_len, d_model)
         embedded_sents2 = self.src_embed2(x2)
-        #encoded_sents = self.encoder(embedded_sents)
         encoded_sents = torch.matmul(embedded_sents2.permute(0,2,1), embedded_sents1)
         final_feature_map = encoded_sents
-        #final_out = self.fc(final_feature_map)
-        #class_out = self.class_fc(final_feature_map[:,-1,:])
         class_out = self.class_fc(final_feature_map.mean(dim=-2))
         if self.pretrain or self.config.translate:
             return final_feature_map / x1.shape[1]
@@ -195,7 +192,7 @@ class Matposer(nn.Module):
             #y_onehot.zero_()
             #y_onehot.scatter_(1, y, 1)
             try:
-                print(self.parameters())
+                print(self.optimizer.param_groups)
                 loss.backward()
                 print(self.src_embed1[0].lut.weight.grad)
             except RuntimeError as e:
