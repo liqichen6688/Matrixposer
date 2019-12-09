@@ -72,7 +72,7 @@ if __name__=='__main__':
         #if val_accuracy > 0.772:
           #  break
         #if config.pretrain:
-        torch.save(model.state_dict(), "translate_par/translation"+str(i))
+        torch.save(model.state_dict(), "translate_par/translation_all"+str(i))
 
 
 
