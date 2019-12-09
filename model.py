@@ -197,6 +197,7 @@ class Matposer(nn.Module):
             #y_onehot.scatter_(1, y, 1)
             try:
                 loss.backward()
+                print(self.src_embed1[0].lut.weight.grad)
             except RuntimeError as e:
                 if 'out of memory' in str(e):
                     print('| WARNING: ran out of memory')
