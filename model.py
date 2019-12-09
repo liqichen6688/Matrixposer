@@ -195,7 +195,6 @@ class Matposer(nn.Module):
                 loss.backward()
                 self.src_embed1[0].lut.weight.grad[1] = 0
                 self.src_embed2[0].lut.weight.grad[1] = 0
-                print(self.src_embed1[0].lut.weight)
             except RuntimeError as e:
                 if 'out of memory' in str(e):
                     print('| WARNING: ran out of memory')
