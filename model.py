@@ -103,14 +103,13 @@ class Matposer(nn.Module):
     def reduce_lr(self):
         for g in self.optimizer.param_groups:
             g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 2000 ** -1.5)
+        if self.step >= 50:
+            self.unfreeze_glove()
 
     def unfreeze_glove(self):
         print("unfreeze glove")
         self.src_embed1[0].lut.weight.requires_grad_(True)
         self.src_embed2[0].lut.weight.requires_grad_(True)
-        self.src_embed1[0].lut.weight.grad[1] = 0
-        self.src_embed2[0].lut.weight.grad[1] = 0
-        print(self.src_embed1[0].lut.weight)
 
 
     def triangle_lr(self, total_iter, epoch, itr):
@@ -173,7 +172,9 @@ class Matposer(nn.Module):
             try:
                 loss.backward()
                 if self.step >= 50:
-                    self.unfreeze_glove()
+                    self.src_embed1[0].lut.weight.grad[1] = 0
+                    self.src_embed2[0].lut.weight.grad[1] = 0
+                    print(self.src_embed1[0].lut.weight)
             except RuntimeError as e:
                 if 'out of memory' in str(e):
                     print('| WARNING: ran out of memory')
