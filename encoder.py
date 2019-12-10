@@ -49,7 +49,7 @@ class Decoder(nn.Module):
         )
 
     def forward(self, x, matrix_embed):
-        return self.out(torch.matmul(x, matrix_embed))
+        return self.out(torch.tanh(torch.matmul(x, matrix_embed)))
 
 
 
