@@ -70,7 +70,7 @@ class Matposer(nn.Module):
         final_feature_map = encoded_sents
         class_out = self.class_fc(final_feature_map.mean(dim=-2))
         if self.pretrain or self.config.translate:
-            return final_feature_map / x1.ne(1).type(torch.FloatTensor).sum(1, keepdim=True)[:,None,:]
+            return final_feature_map / x1.ne(1).type(torch.cuda.FloatTensor).sum(1, keepdim=True)[:,None,:]
         else:
             return self.softmax(class_out)
 
