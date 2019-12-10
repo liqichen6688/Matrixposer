@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="" />
+    <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_utils.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="204" column="69" selection-start-line="204" selection-start-column="69" selection-end-line="204" selection-end-column="69" />
+            <state relative-caret-position="415">
+              <caret line="204" column="56" selection-start-line="204" selection-start-column="56" selection-end-line="204" selection-end-column="56" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -57,12 +61,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feed_forward.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2354">
+              <caret line="149" column="69" selection-start-line="149" selection-start-column="69" selection-end-line="149" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state relative-caret-position="212">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -95,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="40" />
+            <state relative-caret-position="306">
+              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -135,16 +160,16 @@
       <find>x3.shape</find>
       <find>pad</find>
       <find>Embedding</find>
-      <find>print</find>
       <find>relu</find>
       <find>right</find>
       <find>tran</find>
       <find>squueze</find>
       <find>squeeze</find>
-      <find>view</find>
       <find>clone</find>
       <find>grad</find>
       <find>requires</find>
+      <find>view</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -192,11 +217,11 @@
         <option value="$PROJECT_DIR$/sublayer.py" />
         <option value="$PROJECT_DIR$/encoder.py" />
         <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/interactor.py" />
         <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/interactor.py" />
-        <option value="$PROJECT_DIR$/train_utils.py" />
         <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/train_utils.py" />
       </list>
     </option>
   </component>
@@ -433,35 +458,7 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-      <workItem from="1575903716667" duration="3205000" />
-    </task>
-    <task id="LOCAL-00487" summary="fast-translate">
-      <created>1575612114142</created>
-      <option name="number" value="00487" />
-      <option name="presentableId" value="LOCAL-00487" />
-      <option name="project" value="LOCAL" />
-      <updated>1575612114142</updated>
-    </task>
-    <task id="LOCAL-00488" summary="fast-translate">
-      <created>1575618660789</created>
-      <option name="number" value="00488" />
-      <option name="presentableId" value="LOCAL-00488" />
-      <option name="project" value="LOCAL" />
-      <updated>1575618660789</updated>
-    </task>
-    <task id="LOCAL-00489" summary="fast-translate">
-      <created>1575618704063</created>
-      <option name="number" value="00489" />
-      <option name="presentableId" value="LOCAL-00489" />
-      <option name="project" value="LOCAL" />
-      <updated>1575618704063</updated>
-    </task>
-    <task id="LOCAL-00490" summary="fast-translate">
-      <created>1575618797392</created>
-      <option name="number" value="00490" />
-      <option name="presentableId" value="LOCAL-00490" />
-      <option name="project" value="LOCAL" />
-      <updated>1575618797392</updated>
+      <workItem from="1575903716667" duration="4386000" />
     </task>
     <task id="LOCAL-00491" summary="fast-translate">
       <created>1575689116207</created>
@@ -778,11 +775,39 @@
       <option name="project" value="LOCAL" />
       <updated>1575907574697</updated>
     </task>
-    <option name="localTasksCounter" value="536" />
+    <task id="LOCAL-00536" summary="fast-translate">
+      <created>1575907747559</created>
+      <option name="number" value="00536" />
+      <option name="presentableId" value="LOCAL-00536" />
+      <option name="project" value="LOCAL" />
+      <updated>1575907747559</updated>
+    </task>
+    <task id="LOCAL-00537" summary="fast-translate">
+      <created>1575907809340</created>
+      <option name="number" value="00537" />
+      <option name="presentableId" value="LOCAL-00537" />
+      <option name="project" value="LOCAL" />
+      <updated>1575907809340</updated>
+    </task>
+    <task id="LOCAL-00538" summary="fast-translate">
+      <created>1575907830784</created>
+      <option name="number" value="00538" />
+      <option name="presentableId" value="LOCAL-00538" />
+      <option name="project" value="LOCAL" />
+      <updated>1575907830784</updated>
+    </task>
+    <task id="LOCAL-00539" summary="fast-translate">
+      <created>1575908032088</created>
+      <option name="number" value="00539" />
+      <option name="presentableId" value="LOCAL-00539" />
+      <option name="project" value="LOCAL" />
+      <updated>1575908032088</updated>
+    </task>
+    <option name="localTasksCounter" value="540" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263370000" />
+    <option name="totallyTimeSpent" value="264551000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -797,7 +822,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.21184371" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.21184371" />
       <window_info id="Structure" order="1" sideWeight="0.507732" side_tool="true" weight="0.17582418" />
       <window_info id="Favorites" order="2" sideWeight="0.5052192" side_tool="true" weight="0.20170827" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -812,7 +837,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503663" side_tool="true" weight="0.32245922" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4945055" weight="0.29285714" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32244897" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.496337" visible="true" weight="0.32244897" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1180,33 +1205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="149" column="67" selection-start-line="149" selection-start-column="67" selection-end-line="149" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sublayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed_forward.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1227,6 +1225,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sublayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2354">
+          <caret line="149" column="69" selection-start-line="149" selection-start-column="69" selection-end-line="149" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/interactor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1673">
@@ -1237,30 +1272,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
+    <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state relative-caret-position="415">
+          <caret line="204" column="56" selection-start-line="204" selection-start-column="56" selection-end-line="204" selection-end-column="56" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
+    <entry file="file://$PROJECT_DIR$/train_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="204" column="69" selection-start-line="204" selection-start-column="69" selection-end-line="204" selection-end-column="69" />
+        <state relative-caret-position="212">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
