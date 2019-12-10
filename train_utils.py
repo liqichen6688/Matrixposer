@@ -30,7 +30,6 @@ class Embeddings(nn.Module):
         else:
             self.lut = nn.Embedding(vocab, d_model).from_pretrained(TEXT.vocab.vectors)
             self.lut.weight[1] = 0
-            self.lut.weight.requires_grad_(False)
 
         self.d_model = d_model
 

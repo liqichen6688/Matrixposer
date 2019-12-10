@@ -105,7 +105,12 @@ class Matposer(nn.Module):
 
     def reduce_lr(self):
         for g in self.optimizer.param_groups:
-            g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 4000 ** -1.5)
+            g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 2000 ** -1.5)
+        if self.step == 4000:
+            print("unfreeze glove")
+            self.src_embed1[0].lut.weight.requires_grad_(True)
+            self.src_embed2[0].lut.weight.requires_grad_(True)
+
 
     def triangle_lr(self, total_iter, epoch, itr):
         cut = self.config.max_epochs * total_iter * self.config.cut_frac
@@ -165,35 +170,6 @@ class Matposer(nn.Module):
                     info_matrix = F.tanh(torch.matmul(self.ma_weight, embed_matrix) + self.ma_bias)
                     output = self.decoder(x3_sent[:, j-1:j].float(), info_matrix.float())[:,0,:]
                     loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
-                    #loss += self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor))
-                    #print(self.loss_op(output, x3[:,j].type(torch.cuda.LongTensor)) / x3.shape[0])
-                    #right, left = self.matrix_embedding(x3[:, i - 1])
-                    #embed_matrix = torch.matmul(left.cuda(), (torch.matmul(embed_matrix, right.cuda())))
-            #if self.pretrain:
-            #    y = []
-            #    delete_list = []
-            #    for i in range(x.size()[0]):
-            #        delete_ind = np.random.randint(0, x.size()[1])
-            #        y.append(x[i, delete_ind])
-            #        delete_list.append(delete_ind)
-            #        if np.random.binomial(1, p=0.3) == 0:
-            #            x[i, delete_ind] = 0
-            #    y = torch.LongTensor(y)
-            #    if torch.cuda.is_available():
-            #        x1 = x1.type(torch.cuda.LongTensor)
-            #        x2 = x2.type(torch.cuda.LongTensor)
-            #        y = y.type(torch.cuda.LongTensor)
-            #    else:
-            #        x1 = x1.type(torch.LongTensor)
-            #        x2 = x2.type(torch.LongTensor)
-            #        y = y.type(torch.LongTensor)
-            #    y_pred = self.softmax(self.fc(self.__call__(x)[list(range(0, x.size()[0])), delete_list, :]))
-            #    loss = self.loss_op(y_pred, y.cuda())
-            #else:
-            #y = y.permute(1, 0)
-            #y_onehot = torch.FloatTensor(y.size()[0], self.src_vocab)
-            #y_onehot.zero_()
-            #y_onehot.scatter_(1, y, 1)
             try:
                 loss.backward()
             except RuntimeError as e:
@@ -206,7 +182,7 @@ class Matposer(nn.Module):
             losses.append(loss.data.cpu().numpy()/x3[:, 1:].ne(1).sum())
             self.optimizer.step()
 
-            if i % 1 == 0:
+            if i % 100 == 0:
                 print("Iter: {}".format(i + 1))
                 avg_train_loss = np.mean(losses)
                 train_losses.append(avg_train_loss)
