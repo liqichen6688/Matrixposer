@@ -109,6 +109,7 @@ class Matposer(nn.Module):
             self.src_embed2[0].lut.weight.requires_grad_(True)
             self.src_embed1[0].lut.weight.grad[1] = 0
             self.src_embed2[0].lut.weight.grad[1] = 0
+            print(self.src_embed1[0].lut.weight)
 
 
     def triangle_lr(self, total_iter, epoch, itr):
