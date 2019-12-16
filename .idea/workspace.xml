@@ -50,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+            <state relative-caret-position="391">
+              <caret line="65" column="46" lean-forward="true" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -457,35 +457,7 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-      <workItem from="1575903716667" duration="22732000" />
-    </task>
-    <task id="LOCAL-00557" summary="fast-translate">
-      <created>1575967679175</created>
-      <option name="number" value="00557" />
-      <option name="presentableId" value="LOCAL-00557" />
-      <option name="project" value="LOCAL" />
-      <updated>1575967679175</updated>
-    </task>
-    <task id="LOCAL-00558" summary="fast-translate">
-      <created>1575968007882</created>
-      <option name="number" value="00558" />
-      <option name="presentableId" value="LOCAL-00558" />
-      <option name="project" value="LOCAL" />
-      <updated>1575968007882</updated>
-    </task>
-    <task id="LOCAL-00559" summary="fast-translate">
-      <created>1575968058410</created>
-      <option name="number" value="00559" />
-      <option name="presentableId" value="LOCAL-00559" />
-      <option name="project" value="LOCAL" />
-      <updated>1575968058410</updated>
-    </task>
-    <task id="LOCAL-00560" summary="fast-translate">
-      <created>1576028966822</created>
-      <option name="number" value="00560" />
-      <option name="presentableId" value="LOCAL-00560" />
-      <option name="project" value="LOCAL" />
-      <updated>1576028966822</updated>
+      <workItem from="1575903716667" duration="23194000" />
     </task>
     <task id="LOCAL-00561" summary="fast-translate">
       <created>1576464771750</created>
@@ -802,11 +774,39 @@
       <option name="project" value="LOCAL" />
       <updated>1576502512639</updated>
     </task>
-    <option name="localTasksCounter" value="606" />
+    <task id="LOCAL-00606" summary="fast-translate">
+      <created>1576503821337</created>
+      <option name="number" value="00606" />
+      <option name="presentableId" value="LOCAL-00606" />
+      <option name="project" value="LOCAL" />
+      <updated>1576503821337</updated>
+    </task>
+    <task id="LOCAL-00607" summary="fast-translate">
+      <created>1576503915801</created>
+      <option name="number" value="00607" />
+      <option name="presentableId" value="LOCAL-00607" />
+      <option name="project" value="LOCAL" />
+      <updated>1576503915801</updated>
+    </task>
+    <task id="LOCAL-00608" summary="fast-translate">
+      <created>1576503974429</created>
+      <option name="number" value="00608" />
+      <option name="presentableId" value="LOCAL-00608" />
+      <option name="project" value="LOCAL" />
+      <updated>1576503974429</updated>
+    </task>
+    <task id="LOCAL-00609" summary="fast-translate">
+      <created>1576504031418</created>
+      <option name="number" value="00609" />
+      <option name="presentableId" value="LOCAL-00609" />
+      <option name="project" value="LOCAL" />
+      <updated>1576504031418</updated>
+    </task>
+    <option name="localTasksCounter" value="610" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282897000" />
+    <option name="totallyTimeSpent" value="283359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1278,8 +1278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/encoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+        <state relative-caret-position="391">
+          <caret line="65" column="46" lean-forward="true" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

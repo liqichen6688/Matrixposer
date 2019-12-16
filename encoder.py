@@ -62,9 +62,8 @@ class Decoder(nn.Module):
         past_state = torch.matmul(past_state, self.weightre) + self.biasre
         reattention = torch.sigmoid(torch.matmul(token, past_state_true.permute(0, 2, 1)))
         pre_state = torch.tanh(torch.matmul(reattention, past_state))
-        concate_state = torch.cat((token, pre_state), 1)
-        wholeattention = torch.sigmoid(torch.matmul(token, concate_state.permute(0, 2, 1)))
-        filter_token = torch.matmul(wholeattention, concate_state)
+        wholeattention = torch.sigmoid(torch.matmul(token, pre_state.permute(0, 2, 1)))
+        filter_token =  torch.matmul((1 - wholeattention), token) + torch.matmul(wholeattention, pre_state)
         #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
