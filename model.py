@@ -165,9 +165,9 @@ class Matposer(nn.Module):
                     loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
             try:
                 loss.backward()
-                #if self.step >= 8000:
-                #    self.src_embed1[0].lut.weight.grad[1] = 0
-                #    self.src_embed2[0].lut.weight.grad[1] = 0
+                if self.step >= 1:
+                    self.src_embed1[0].lut.weight.grad[1] = 0
+                    self.src_embed2[0].lut.weight.grad[1] = 0
             except RuntimeError as e:
                 if 'out of memory' in str(e):
                     print('| WARNING: ran out of memory')
