@@ -164,8 +164,6 @@ class Matposer(nn.Module):
                 x3_sent = self.dst_embed(x3)
                 for j in range(1, x3.shape[1]):
                     info_matrix = torch.tanh(torch.matmul(self.filter(x3[:, j-1]), embed_matrix))
-                    print(info_matrix.shape)
-
                     output = self.decoder(self.position2(x3_sent[:, j-1:j].float(), j), info_matrix.float())[:,0,:]
                     loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
             try:
