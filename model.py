@@ -99,8 +99,8 @@ class Matposer(nn.Module):
     def reduce_lr(self):
         for g in self.optimizer.param_groups:
             g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 8000 ** -1.5)
-        #if self.step == 8000:
-        self.unfreeze_glove()
+        if self.step == 1:
+            self.unfreeze_glove()
 
     def unfreeze_glove(self):
         print("unfreeze glove")
