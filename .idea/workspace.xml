@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/encoder.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="70" />
+            <state relative-caret-position="408">
+              <caret line="63" column="90" selection-start-line="63" selection-start-column="90" selection-end-line="63" selection-end-column="90" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -456,35 +457,7 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-      <workItem from="1575903716667" duration="20658000" />
-    </task>
-    <task id="LOCAL-00549" summary="fast-translate">
-      <created>1575960446495</created>
-      <option name="number" value="00549" />
-      <option name="presentableId" value="LOCAL-00549" />
-      <option name="project" value="LOCAL" />
-      <updated>1575960446495</updated>
-    </task>
-    <task id="LOCAL-00550" summary="fast-translate">
-      <created>1575960601233</created>
-      <option name="number" value="00550" />
-      <option name="presentableId" value="LOCAL-00550" />
-      <option name="project" value="LOCAL" />
-      <updated>1575960601233</updated>
-    </task>
-    <task id="LOCAL-00551" summary="fast-translate">
-      <created>1575960877200</created>
-      <option name="number" value="00551" />
-      <option name="presentableId" value="LOCAL-00551" />
-      <option name="project" value="LOCAL" />
-      <updated>1575960877200</updated>
-    </task>
-    <task id="LOCAL-00552" summary="fast-translate">
-      <created>1575961117566</created>
-      <option name="number" value="00552" />
-      <option name="presentableId" value="LOCAL-00552" />
-      <option name="project" value="LOCAL" />
-      <updated>1575961117566</updated>
+      <workItem from="1575903716667" duration="21168000" />
     </task>
     <task id="LOCAL-00553" summary="fast-translate">
       <created>1575967367532</created>
@@ -801,11 +774,39 @@
       <option name="project" value="LOCAL" />
       <updated>1576495569987</updated>
     </task>
-    <option name="localTasksCounter" value="598" />
+    <task id="LOCAL-00598" summary="fast-translate">
+      <created>1576495900606</created>
+      <option name="number" value="00598" />
+      <option name="presentableId" value="LOCAL-00598" />
+      <option name="project" value="LOCAL" />
+      <updated>1576495900606</updated>
+    </task>
+    <task id="LOCAL-00599" summary="fast-translate">
+      <created>1576495957967</created>
+      <option name="number" value="00599" />
+      <option name="presentableId" value="LOCAL-00599" />
+      <option name="project" value="LOCAL" />
+      <updated>1576495957967</updated>
+    </task>
+    <task id="LOCAL-00600" summary="fast-translate">
+      <created>1576495999450</created>
+      <option name="number" value="00600" />
+      <option name="presentableId" value="LOCAL-00600" />
+      <option name="project" value="LOCAL" />
+      <updated>1576495999450</updated>
+    </task>
+    <task id="LOCAL-00601" summary="fast-translate">
+      <created>1576496135398</created>
+      <option name="number" value="00601" />
+      <option name="presentableId" value="LOCAL-00601" />
+      <option name="project" value="LOCAL" />
+      <updated>1576496135398</updated>
+    </task>
+    <option name="localTasksCounter" value="602" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280823000" />
+    <option name="totallyTimeSpent" value="281333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1277,8 +1278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/encoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="70" />
+        <state relative-caret-position="408">
+          <caret line="63" column="90" selection-start-line="63" selection-start-column="90" selection-end-line="63" selection-end-column="90" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
