@@ -13,7 +13,6 @@ class Matrix_Embedding(nn.Module):
     def __init__(self, d_model1,vocab):
         super(Matrix_Embedding, self).__init__()
         self.d1_dict = nn.Parameter(torch.empty((vocab,d_model1, d_model1)).normal_(mean=0,std=0.0001))
-        #self.d2_dict = nn.Parameter(torch.empty((vocab, d_model1, d_model2)).normal_(mean=0, std=0.0001))
     def forward(self, x):
         return self.d1_dict[x]
 
