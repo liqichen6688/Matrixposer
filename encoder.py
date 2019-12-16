@@ -51,7 +51,7 @@ class Decoder(nn.Module):
         self.bias = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0000001))
         self.dropout = nn.Dropout(dropout)
         self.norm = LayerNorm(300)
-        self.weightre = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0000001))
+        self.weightre = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0000001))
         self.biasre = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0000001))
 
 
