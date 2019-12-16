@@ -39,7 +39,7 @@ class Embeddings(nn.Module):
 
 class PositionalEncoding(nn.Module):
     "Implement the PE function"
-    def __init__(self, d_model, dropout, max_len=5000):
+    def __init__(self, d_model, max_len=5000, dropout = 0.1):
         super(PositionalEncoding, self).__init__()
         self.dropout = nn.Dropout(p=dropout)
 
@@ -53,8 +53,15 @@ class PositionalEncoding(nn.Module):
         pe = pe.unsqueeze(0)
         self.register_buffer('pe', pe)
 
-    def forward(self, x):
-        x = x + Variable(self.pe[:, :x.size(1)],
-                         requires_grad=False)
+    def forward(self, x, position = None):
+        if position == None:
+            x = x + Variable(self.pe[:, :x.size(1)],
+                             requires_grad=False)
+        else:
+            x = x + Variable(self.pe[:, position:position+1],
+                             requires_grad=False)
+
         return self.dropout(x)
+
+
 

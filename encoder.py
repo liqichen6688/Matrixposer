@@ -39,13 +39,14 @@ class EncoderLayer(nn.Module):
         return self.sublayer(x, self.feed_forward)
 
 class Decoder(nn.Module):
-    def __init__(self, output_size, d_model1):
+    def __init__(self, output_size, d_model1, dropout=0.1):
         super(Decoder, self).__init__()
         self.out = nn.Sequential(
             nn.Linear(d_model1, d_model1),
             nn.ReLU(),
             nn.Linear(d_model1, output_size),
             #nn.Softmax(dim=-1)
+            nn.Dropout(dropout)
         )
 
     def forward(self, x, matrix_embed):

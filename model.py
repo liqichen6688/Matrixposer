@@ -23,8 +23,8 @@ class Matposer(nn.Module):
 
         #inter = Interactor(d_model, d_ff, out_row=d_row, dropout=dropout, pretrain=config.pretrain)
         ff = PositionwiseFeedForward(d_model1, d_ff, dropout)
-        position1 = PositionalEncoding(d_model1, dropout)
-        position2 = PositionalEncoding(d_model2, dropout)
+        self.position1 = PositionalEncoding(d_model1, dropout)
+        self.position2 = PositionalEncoding(d_model2, dropout)
 
 
         #self.encoder = Encoder(EncoderLayer(d_model, deepcopy(inter), deepcopy(ff), dropout), N)
@@ -32,15 +32,15 @@ class Matposer(nn.Module):
         #for one_encoder in self.encoder.layers:
         #    self.mappers.append(one_encoder.interactor.mapper)
         self.src_embed1 = nn.Sequential(
-            Embeddings(d_model1, src_vocab, TEXT1), deepcopy(position1)
+            Embeddings(d_model1, src_vocab, TEXT1), deepcopy(self.position1)
         )
 
         self.src_embed2 = nn.Sequential(
-            Embeddings(d_model2, src_vocab, TEXT2), deepcopy(position2)
+            Embeddings(d_model2, src_vocab, TEXT2), deepcopy(self.position2)
         )
 
         self.dst_embed = nn.Sequential(
-            Embeddings(d_model2, dst_vocab), deepcopy(position2)
+            Embeddings(d_model2, dst_vocab)
         )
 
         a = nn.Linear(d_model1,d_model1)
@@ -58,9 +58,7 @@ class Matposer(nn.Module):
 
         self.pretrain = pretrain
         self.decoder = Decoder(dst_vocab, d_model1)
-        #self.matrix_embedding = Matrix_Embedding(d_model2,dst_vocab)
-        self.ma_weight = nn.Parameter(torch.empty((d_model2, d_model2)).normal_(mean=0, std=0.0001))
-        self.ma_bias = nn.Parameter(torch.empty((d_model2, d_model1)).normal_(mean=0, std=0.0001))
+
 
 
     def forward(self, x1, x2):
@@ -165,7 +163,7 @@ class Matposer(nn.Module):
                 x3_sent = self.dst_embed(x3)
                 for j in range(1, x3.shape[1]):
                     info_matrix = embed_matrix
-                    output = self.decoder(x3_sent[:, j-1:j].float(), info_matrix.float())[:,0,:]
+                    output = self.decoder(self.position2(x3_sent[:, j-1:j].float(), j), info_matrix.float())[:,0,:]
                     loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
             try:
                 loss.backward()
