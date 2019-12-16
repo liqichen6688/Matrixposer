@@ -50,7 +50,7 @@ class Decoder(nn.Module):
         self.weight = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0000001))
         self.bias = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0000001))
         self.dropout = nn.Dropout(dropout)
-        self.norm = LayerNorm(size=300)
+        self.norm = LayerNorm(300)
 
     def forward(self, x, matrix_embed):
         #print(matrix_embed)
