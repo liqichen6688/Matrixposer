@@ -159,6 +159,8 @@ class Matposer(nn.Module):
                 loss = 0
                 embed_matrix = self.__call__(x1, x2)
                 x3_sent = self.dst_embed(x3)
+                print(x3)
+                print(x3_sent)
                 for j in range(1, x3.shape[1]):
                     info_matrix = embed_matrix
                     output = self.decoder(self.position2(x3_sent[:, j-1:j].float(), j), info_matrix.float())[:,0,:]
