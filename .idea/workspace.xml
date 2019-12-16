@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="40454741-4221-42f9-9c70-8918deea5489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/encoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="129">
               <caret line="163" column="121" selection-start-line="163" selection-start-column="121" selection-end-line="163" selection-end-column="121" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -47,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+            <state relative-caret-position="540">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="70" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -167,8 +166,8 @@
       <find>view</find>
       <find>requires</find>
       <find>grad</find>
-      <find>4000</find>
       <find>squeeze</find>
+      <find>4000</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,8 +218,8 @@
         <option value="$PROJECT_DIR$/train_utils.py" />
         <option value="$PROJECT_DIR$/sublayer.py" />
         <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/encoder.py" />
         <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/encoder.py" />
       </list>
     </option>
   </component>
@@ -457,21 +456,7 @@
       <workItem from="1572831151853" duration="1041000" />
       <workItem from="1572939425441" duration="11539000" />
       <workItem from="1573465957732" duration="12695000" />
-      <workItem from="1575903716667" duration="20232000" />
-    </task>
-    <task id="LOCAL-00547" summary="fast-translate">
-      <created>1575959989076</created>
-      <option name="number" value="00547" />
-      <option name="presentableId" value="LOCAL-00547" />
-      <option name="project" value="LOCAL" />
-      <updated>1575959989076</updated>
-    </task>
-    <task id="LOCAL-00548" summary="fast-translate">
-      <created>1575960421248</created>
-      <option name="number" value="00548" />
-      <option name="presentableId" value="LOCAL-00548" />
-      <option name="project" value="LOCAL" />
-      <updated>1575960421248</updated>
+      <workItem from="1575903716667" duration="20658000" />
     </task>
     <task id="LOCAL-00549" summary="fast-translate">
       <created>1575960446495</created>
@@ -802,11 +787,25 @@
       <option name="project" value="LOCAL" />
       <updated>1576482481142</updated>
     </task>
-    <option name="localTasksCounter" value="596" />
+    <task id="LOCAL-00596" summary="fast-translate">
+      <created>1576495472023</created>
+      <option name="number" value="00596" />
+      <option name="presentableId" value="LOCAL-00596" />
+      <option name="project" value="LOCAL" />
+      <updated>1576495472024</updated>
+    </task>
+    <task id="LOCAL-00597" summary="fast-translate">
+      <created>1576495569987</created>
+      <option name="number" value="00597" />
+      <option name="presentableId" value="LOCAL-00597" />
+      <option name="project" value="LOCAL" />
+      <updated>1576495569987</updated>
+    </task>
+    <option name="localTasksCounter" value="598" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280397000" />
+    <option name="totallyTimeSpent" value="280823000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1266,22 +1265,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/encoder.py">
+    <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+        <state relative-caret-position="129">
+          <caret line="163" column="121" selection-start-line="163" selection-start-column="121" selection-end-line="163" selection-end-column="121" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
+    <entry file="file://$PROJECT_DIR$/encoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="163" column="121" selection-start-line="163" selection-start-column="121" selection-end-line="163" selection-end-column="121" />
+        <state relative-caret-position="540">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="70" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
