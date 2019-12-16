@@ -83,7 +83,6 @@ class Matposer(nn.Module):
         gold = gold.contiguous().view(-1)
         eps = 0.1
         n_class = pred.size(1)
-        print(pred)
 
         one_hot = torch.zeros_like(pred).scatter(1, gold.view(-1, 1), 1)
         one_hot = one_hot * (1 - eps) + (1 - one_hot) * eps / (n_class - 1)
@@ -92,8 +91,6 @@ class Matposer(nn.Module):
         non_pad_mask = gold.ne(1)
         #loss = self.loss_op(pred.masked_select(non_pad_mask), gold.masked_select(non_pad_mask))
         loss = -(one_hot * log_prb).sum(dim=1)
-        #print(loss)
-        #print(loss.masked_select(non_pad_mask))
         loss = loss.masked_select(non_pad_mask).sum()  # average later
 
 
