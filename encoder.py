@@ -54,7 +54,7 @@ class Decoder(nn.Module):
 
     def forward(self, x, matrix_embed):
         #print(matrix_embed)
-        token = torch.matmul(x, matrix_embed)
+        token = self.norm(torch.matmul(x, matrix_embed))
         filter_token = token + torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
