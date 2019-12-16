@@ -70,7 +70,7 @@ class Matposer(nn.Module):
         final_feature_map = encoded_sents
         class_out = self.class_fc(final_feature_map.mean(dim=-2))
         if self.pretrain or self.config.translate:
-            return final_feature_map / x1.shape[1]
+            return final_feature_map / x1.ne(1).type(torch.FloatTensor).sum(1, keepdim=True)[:,None,:]
         else:
             return self.softmax(class_out)
 
@@ -103,8 +103,8 @@ class Matposer(nn.Module):
     def reduce_lr(self):
         for g in self.optimizer.param_groups:
             g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 8000 ** -1.5)
-        if self.step == 8000:
-            self.unfreeze_glove()
+        #if self.step == 8000:
+        #    self.unfreeze_glove()
 
     def unfreeze_glove(self):
         print("unfreeze glove")
@@ -162,18 +162,16 @@ class Matposer(nn.Module):
                     x3 = x3.type(torch.cuda.LongTensor)
                 loss = 0
                 embed_matrix = self.__call__(x1, x2)
-                embed_matrix += F.tanh(embed_matrix)
-
                 x3_sent = self.dst_embed(x3)
                 for j in range(1, x3.shape[1]):
-                    info_matrix = F.tanh(torch.matmul(self.ma_weight, embed_matrix) + self.ma_bias)
+                    info_matrix = embed_matrix
                     output = self.decoder(x3_sent[:, j-1:j].float(), info_matrix.float())[:,0,:]
                     loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
             try:
                 loss.backward()
-                if self.step >= 8000:
-                    self.src_embed1[0].lut.weight.grad[1] = 0
-                    self.src_embed2[0].lut.weight.grad[1] = 0
+                #if self.step >= 8000:
+                #    self.src_embed1[0].lut.weight.grad[1] = 0
+                #    self.src_embed2[0].lut.weight.grad[1] = 0
             except RuntimeError as e:
                 if 'out of memory' in str(e):
                     print('| WARNING: ran out of memory')
