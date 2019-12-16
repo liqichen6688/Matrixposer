@@ -54,14 +54,17 @@ class Decoder(nn.Module):
         self.weightre = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0000001))
         self.biasre = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0000001))
 
+        self.weightpast = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0000001))
+        self.biaspast = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0000001))
+
     def forward(self, x, matrix_embed, past_state):
         #print(matrix_embed)
         token = self.norm(torch.matmul(x, matrix_embed))
+        past_state = torch.matmul(past_state, self.weightpast) + self.biaspast
         print(past_state.shape)
         reattention = torch.softmax(torch.matmul(token, past_state.permute(0, 2, 1)), dim=-1)
-        past_encode = torch.matmul(reattention, past_state)
-        state = torch.tanh(torch.matmul(past_encode, self.weightre) + self.biasre)
-        filter_token = token + torch.tanh(torch.matmul(x, self.weight) + self.bias)
+        state = torch.matmul(reattention, past_state)
+        filter_token = token + torch.tanh(torch.matmul(x, self.weight) + self.bias) + state
         return self.dropout(self.out(filter_token))
 
 
