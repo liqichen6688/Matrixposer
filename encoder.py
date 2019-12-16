@@ -1,7 +1,7 @@
 from torch import nn
 import torch
 from train_utils import clones, Matrix_Embedding
-from sublayer import LayerNorm, SublayerOutput, MatrixNorm
+from sublayer import LayerNorm, SublayerOutput
 
 class Encoder(nn.Module):
     '''
@@ -50,14 +50,13 @@ class Decoder(nn.Module):
         self.weight = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0000001))
         self.bias = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0000001))
         self.dropout = nn.Dropout(dropout)
-        self.norm = MatrixNorm(size=(50,300))
+        self.norm = LayerNorm(size=300)
 
     def forward(self, x, matrix_embed):
         #print(matrix_embed)
         token = self.norm(torch.matmul(x, matrix_embed))
         filter_token = token + torch.tanh(torch.matmul(x, self.weight) + self.bias)
-        print(filter_token.shape)
-        return self.out(filter_token)
+        return self.dropout(self.out(filter_token))
 
 
 
