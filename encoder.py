@@ -47,8 +47,8 @@ class Decoder(nn.Module):
             nn.Linear(d_model1, output_size),
             #nn.Softmax(dim=-1)
         )
-        self.weight = nn.Parameter(torch.empty((d_model1, d_model1)).normal_(mean=0,std=0.0001))
-        self.bias = nn.Parameter(torch.empty((1, d_model1)).normal_(mean=0,std=0.0001))
+        self.weight = nn.Parameter(torch.empty((500, 500)).normal_(mean=0,std=0.0001))
+        self.bias = nn.Parameter(torch.empty((1, 500)).normal_(mean=0,std=0.0001))
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x, matrix_embed):
