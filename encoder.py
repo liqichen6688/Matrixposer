@@ -58,7 +58,7 @@ class Decoder(nn.Module):
     def forward(self, x, matrix_embed, past_state):
         #print(matrix_embed)
         token = self.norm(torch.matmul(x, matrix_embed))
-        past_state_true = torch.matmul(past_state, matrix_embed)
+        past_state_true = self.norm(torch.matmul(past_state, matrix_embed))
         past_state = torch.matmul(past_state, self.weightre) + self.biasre
         reattention = torch.softmax(torch.matmul(token, past_state_true.permute(0, 2, 1)), dim=-1)
         pre_state = torch.tanh(torch.matmul(reattention, past_state))
