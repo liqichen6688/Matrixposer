@@ -52,10 +52,10 @@ class Decoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x, matrix_embed):
-        print(matrix_embed)
+        #print(matrix_embed)
+        print(x.shape)
         print(x)
         token = torch.matmul(x, matrix_embed)
-        print(token)
         filter_token = token + torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
