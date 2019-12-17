@@ -52,6 +52,9 @@ class Decoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.norm = LayerNorm(300)
 
+        self.weightpasttoken = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
+        self.biaspasttoken = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+
         self.weightpastgate = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
         self.biaspastgate = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
 
@@ -67,7 +70,7 @@ class Decoder(nn.Module):
         #print(matrix_embed)
         token = self.norm(torch.matmul(x, matrix_embed))
 
-        past_token = torch.tanh(torch.matmul(x, self.weightpastgate) + self.biaspastgate)
+        past_token = torch.tanh(torch.matmul(x, self.weightpasttoken) + self.biaspasttoken)
         past_vector = torch.tanh(torch.matmul(past, self.weightpastgate) + self.biaspastgate)
         past_gate = torch.sigmoid(torch.matmul(past_token, past_vector.permute(0, 2, 1)))
 
