@@ -67,8 +67,9 @@ class Decoder(nn.Module):
         #print(matrix_embed)
         token = self.norm(torch.matmul(x, matrix_embed))
 
+        past_token = torch.tanh(torch.matmul(x, self.weightpastgate) + self.biaspastgate)
         past_vector = torch.tanh(torch.matmul(past, self.weightpastgate) + self.biaspastgate)
-        past_gate = torch.sigmoid(torch.matmul(token, past_vector.permute(0, 2, 1)))
+        past_gate = torch.sigmoid(torch.matmul(past_token, past_vector.permute(0, 2, 1)))
 
         past_state = torch.tanh(torch.matmul(past, self.weightpaststate) + self.biaspaststate)
         pre_state = torch.matmul(past_gate, past_state)
