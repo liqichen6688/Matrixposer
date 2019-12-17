@@ -121,7 +121,7 @@ class NewDecoder(nn.Module):
         x_retoken = torch.tanh(torch.matmul(x, self.weightpre) + self.biaspre)
         x_expose = torch.tanh(torch.matmul(token, self.weightexpose) + self.biasexpose)
         pre_key = self.norm1(torch.matmul(x_retoken, past_embeding))
-        pre_expose = self.sigmoid(torch.matmul(x_expose, pre_key.permute(0, 2, 1)))
+        pre_expose = torch.sigmoid(torch.matmul(x_expose, pre_key.permute(0, 2, 1)))
 
 
 
