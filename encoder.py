@@ -84,5 +84,51 @@ class Decoder(nn.Module):
         #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
+class NewDecoder(nn.Module):
+    def __init__(self, output_size, d_model1, dropout=0.1):
+        super(NewDecoder, self).__init__()
+        self.out = nn.Sequential(
+            nn.Linear(d_model1, d_model1),
+            nn.ReLU(),
+            nn.Linear(d_model1, output_size),
+            #nn.Softmax(dim=-1)
+        )
+        self.weight = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
+        self.bias = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0001))
+        self.dropout = nn.Dropout(dropout)
+        self.norm1 = LayerNorm(300)
+        self.norm2 = LayerNorm(300)
+
+        self.weightretoken = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
+        self.biasretoken = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+
+        self.weightpre = nn.Parameter(torch.empty((50, 50)).normal_(mean=0,std=0.0001))
+        self.biaspre = nn.Parameter(torch.empty((1, 50)).normal_(mean=0, std=0.0001))
+
+        self.weightexpose= nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
+        self.biasexpose = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+
+
+
+
+    def forward(self, x, matrix_embed, past):
+        #print(matrix_embed)
+        token = self.norm1(torch.matmul(x, matrix_embed))
+
+        past_retoken = torch.tanh(torch.matmul(past, self.weightretoken) + self.biasretoken)
+        past_embeding = torch.matmul(past.permute(0, 2, 1), past_retoken) / past.shape[1]
+
+        x_retoken = torch.tanh(torch.matmul(x, self.weightpre) + self.biaspre)
+        x_expose = torch.tanh(torch.matmul(token, self.weightexpose) + self.biasexpose)
+        pre_key = self.norm1(torch.matmul(x_retoken, past_embeding))
+        pre_expose = self.sigmoid(torch.matmul(x_expose, pre_key.permute(0, 2, 1)))
+
+
+
+
+        filter_token = token + torch.matmul(pre_expose, pre_key)
+        #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
+        return self.dropout(self.out(filter_token))
+
 
 

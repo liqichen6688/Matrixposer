@@ -4,7 +4,7 @@ from torch import nn
 from copy import deepcopy
 from train_utils import Embeddings, PositionalEncoding, Matrix_Embedding
 from interactor import Interactor
-from encoder import EncoderLayer, Encoder, Decoder
+from encoder import EncoderLayer, Encoder, Decoder, NewDecoder
 from feed_forward import PositionwiseFeedForward
 import torch.nn.functional as F
 from utils import *
@@ -57,7 +57,7 @@ class Matposer(nn.Module):
         self.softmax = nn.Softmax()
 
         self.pretrain = pretrain
-        self.decoder = Decoder(dst_vocab, d_model1)
+        self.decoder = NewDecoder(dst_vocab, d_model1)
         self.filter = Matrix_Embedding(d_model2, dst_vocab)
 
 
