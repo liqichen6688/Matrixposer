@@ -51,18 +51,32 @@ class Decoder(nn.Module):
         self.bias = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0001))
         self.dropout = nn.Dropout(dropout)
         self.norm = LayerNorm(300)
-        self.weightre = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
-        self.biasre = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+
+        self.weightpastgate = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
+        self.biaspastgate = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+
+        self.weightpaststate = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
+        self.biaspaststate = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+
+        self.weightexpose = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
+        self.biasexpose = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
 
 
-    def forward(self, x, matrix_embed, past_state):
+
+    def forward(self, x, matrix_embed, past):
         #print(matrix_embed)
         token = self.norm(torch.matmul(x, matrix_embed))
-        past_state = torch.matmul(past_state, self.weightre) + self.biasre
-        reattention = torch.sigmoid(torch.matmul(token, past_state.permute(0, 2, 1)))
-        pre_state = torch.tanh(torch.matmul(reattention, past_state))
-        wholeattention = torch.sigmoid(torch.matmul(token, pre_state.permute(0, 2, 1)))
-        filter_token = token + torch.matmul(wholeattention, pre_state)
+
+        past_vector = torch.tanh(torch.matmul(past, self.weightpastgate) + self.biaspastgate)
+        past_gate = torch.sigmoid(torch.matmul(token, past_vector.permute(0, 2, 1)))
+
+        past_state = torch.tanh(torch.matmul(past, self.weightpaststate) + self.biaspaststate)
+        pre_state = torch.matmul(past_gate, past_state)
+
+        expose_vector = torch.tanh(torch.matmul(x, self.weightexpose) + self.biasexpose)
+        expose_gate = torch.sigmoid(torch.matmul(expose_vector, pre_state.permute(0, 2, 1)))
+
+        filter_token = token + torch.matmul(expose_gate, pre_state)
         #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
