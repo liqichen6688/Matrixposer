@@ -129,7 +129,7 @@ class NewDecoder(nn.Module):
 
 
 
-        filter_token = token + torch.matmul(pre_expose, pre_key)
+        filter_token = token + pre_expose
         #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
