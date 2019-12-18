@@ -100,36 +100,40 @@ class NewDecoder(nn.Module):
         self.norm2 = LayerNorm(300)
         self.norm3 = LayerNorm(300)
 
-        self.weightretoken = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
-        self.biasretoken = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+        self.weightpast = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
+        self.biaspast = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
 
-        self.weightpre = nn.Parameter(torch.empty((50, 50)).normal_(mean=0,std=0.0001))
-        self.biaspre = nn.Parameter(torch.empty((1, 50)).normal_(mean=0, std=0.0001))
+        self.weightpaexpose = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
+        self.biaspaexpose = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
 
-        self.weightexpose= nn.Parameter(torch.empty((50, 50)).normal_(mean=0,std=0.0001))
-        self.biasexpose = nn.Parameter(torch.empty((1, 50)).normal_(mean=0, std=0.0001))
+        self.weightpre = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
+        self.biaspre = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+
+        self.weightpreexpose = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
+        self.biaspreexpose = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
 
 
 
 
     def forward(self, x, matrix_embed, past):
         #print(matrix_embed)
-        token = self.norm1(torch.matmul(x, matrix_embed))
-
-        past_retoken = torch.tanh(torch.matmul(past, self.weightretoken) + self.biasretoken)
-        past_embeding = torch.matmul(past.permute(0, 2, 1), past_retoken) / past.shape[1]
-
-        x_retoken = torch.tanh(torch.matmul(x, self.weightpre) + self.biaspre)
-        x_expose = torch.tanh(torch.matmul(x, self.weightexpose) + self.biasexpose)
-
-        pre_key = self.norm2(torch.matmul(x_retoken, past_embeding))
-        expose = torch.sigmoid(self.norm3(torch.matmul(x_expose, past_embeding)))
-        pre_expose = expose * pre_key
 
 
+        past_represent = torch.tanh(torch.matmul(past, self.weightretoken) + self.biasretoken)
+        past_embeding = torch.matmul(past.permute(0, 2, 1), past_represent) / past.shape[1]
+
+        past_base = self.norm2(torch.matmul(x, past_embeding))
+        past_content = torch.tanh(torch.matmul(past_base, self.weightpast) + self.biaspast)
+        past_expose = torch.sigmoid(torch.matmul(past_base, self.weightpaexpose) + self.biaspaexpose)
+        past_token = past_content * past_expose
+
+        present_base = self.norm1(torch.matmul(x, matrix_embed))
+        present_content = torch.tanh(torch.matmul(present_base, self.weightpre) + self.biaspre)
+        present_expose = torch.sigmoid(torch.matmul(past_base, self.weightpreexpose) + self.biaspreexpose)
+        present_token = present_content * present_expose
 
 
-        filter_token = token + pre_expose
+        filter_token = present_token + past_token
         #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
