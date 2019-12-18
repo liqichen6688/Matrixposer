@@ -105,8 +105,8 @@ class NewDecoder(nn.Module):
         self.weightpre = nn.Parameter(torch.empty((50, 50)).normal_(mean=0,std=0.0001))
         self.biaspre = nn.Parameter(torch.empty((1, 50)).normal_(mean=0, std=0.0001))
 
-        self.weightexpose= nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
-        self.biasexpose = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+        self.weightexpose= nn.Parameter(torch.empty((50, 50)).normal_(mean=0,std=0.0001))
+        self.biasexpose = nn.Parameter(torch.empty((1, 50)).normal_(mean=0, std=0.0001))
 
 
 
@@ -119,9 +119,11 @@ class NewDecoder(nn.Module):
         past_embeding = torch.matmul(past.permute(0, 2, 1), past_retoken) / past.shape[1]
 
         x_retoken = torch.tanh(torch.matmul(x, self.weightpre) + self.biaspre)
-        x_expose = torch.tanh(torch.matmul(token, self.weightexpose) + self.biasexpose)
+        x_expose = torch.tanh(torch.matmul(x, self.weightexpose) + self.biasexpose)
+
         pre_key = self.norm2(torch.matmul(x_retoken, past_embeding))
-        pre_expose = torch.softmax(torch.matmul(x_expose, pre_key.permute(0, 2, 1)), dim=-1)
+        expose = torch.sigmoid(self.norm3(torch.matmul(x_expose, past_embeding)))
+        pre_expose = expose * pre_key
 
 
 
