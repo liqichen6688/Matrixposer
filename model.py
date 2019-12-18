@@ -132,42 +132,58 @@ class Matposer(nn.Module):
         #    if (epoch == int(self.config.max_epochs / 3)) or (epoch == int(2 * self.config.max_epochs / 3)):
         #        self.reduce_lr()
         for i, batch in enumerate(train_iterator):
-            self.step += 1
-            self.reduce_lr()
-            if self.config.learning_method == 'trian':
-                self.triangle_lr(len(train_iterator), epoch, i)
-            self.optimizer.zero_grad()
-            x1 = batch.text1.clone().permute(1, 0)
-            x2 = batch.text2.clone().permute(1, 0)
-            if not self.config.translate:
-                if torch.cuda.is_available():
-                    x1 = x1.cuda()
-                    x2 = x2.cuda()
-                    y = (batch.label - 1).type(torch.cuda.LongTensor)
-                else:
-                    y = (batch.label - 1).type(torch.LongTensor)
-
-                y_pred = self.__call__(x1, x2)
-                loss = self.loss_op(y_pred, y.cuda())
-            else:
-                x3 = batch.text3.clone().permute(1, 0)
-
-                if torch.cuda.is_available():
-                    x1 = x1.type(torch.cuda.LongTensor)
-                    x2 = x2.type(torch.cuda.LongTensor)
-                    x3 = x3.type(torch.cuda.LongTensor)
-                loss = 0
-                embed_matrix = self.__call__(x1, x2)
-                x3_sent = self.dst_embed(x3)
-                for j in range(1, x3.shape[1]):
-                    info_matrix = embed_matrix
-                    output = self.decoder(self.position2(x3_sent[:, j-1:j].float(), j), info_matrix.float(), x3_sent[:, :j])[:,0,:]
-                    loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
             try:
-                loss.backward()
-                if self.step >= 1:
-                    self.src_embed1[0].lut.weight.grad[1] = 0
-                    self.src_embed2[0].lut.weight.grad[1] = 0
+                self.step += 1
+                self.reduce_lr()
+                if self.config.learning_method == 'trian':
+                    self.triangle_lr(len(train_iterator), epoch, i)
+                self.optimizer.zero_grad()
+                x1 = batch.text1.clone().permute(1, 0)
+                x2 = batch.text2.clone().permute(1, 0)
+                if not self.config.translate:
+                    if torch.cuda.is_available():
+                        x1 = x1.cuda()
+                        x2 = x2.cuda()
+                        y = (batch.label - 1).type(torch.cuda.LongTensor)
+                    else:
+                        y = (batch.label - 1).type(torch.LongTensor)
+
+                    y_pred = self.__call__(x1, x2)
+                    loss = self.loss_op(y_pred, y.cuda())
+                else:
+                    x3 = batch.text3.clone().permute(1, 0)
+
+                    if torch.cuda.is_available():
+                        x1 = x1.type(torch.cuda.LongTensor)
+                        x2 = x2.type(torch.cuda.LongTensor)
+                        x3 = x3.type(torch.cuda.LongTensor)
+                    loss = 0
+                    embed_matrix = self.__call__(x1, x2)
+                    x3_sent = self.dst_embed(x3)
+                    for j in range(1, x3.shape[1]):
+                        info_matrix = embed_matrix
+                        output = self.decoder(self.position2(x3_sent[:, j-1:j].float(), j), info_matrix.float(), x3_sent[:, :j])[:,0,:]
+                        loss += self.loss_with_smoothing(output, x3[:, j].type(torch.cuda.LongTensor))
+                    loss.backward()
+                    if self.step >= 1:
+                        self.src_embed1[0].lut.weight.grad[1] = 0
+                        self.src_embed2[0].lut.weight.grad[1] = 0
+                losses.append(loss.data.cpu().numpy()/x3[:, 1:].ne(1).sum())
+                self.optimizer.step()
+
+                if i % 100 == 0:
+                    print("Iter: {}".format(i + 1))
+                    avg_train_loss = np.mean(losses)
+                    train_losses.append(avg_train_loss)
+                    print("\tAverage training loss: {:.5f}".format(avg_train_loss))
+                    losses = []
+
+                    # Evalute Accuracy on validation set
+                    #if not self.pretrain:
+                    #    val_accuracy = evaluate_model(self, val_iterator, self.config.translate)
+                    #    print("\tVal Accuracy: {:.4f}".format(val_accuracy))
+                    #    val_accuracies.append(val_accuracy)
+                    self.train()
             except RuntimeError as e:
                 if 'out of memory' in str(e):
                     print('| WARNING: ran out of memory')
@@ -175,20 +191,4 @@ class Matposer(nn.Module):
                         torch.cuda.empty_cache()
                 else:
                     raise e
-            losses.append(loss.data.cpu().numpy()/x3[:, 1:].ne(1).sum())
-            self.optimizer.step()
-
-            if i % 100 == 0:
-                print("Iter: {}".format(i + 1))
-                avg_train_loss = np.mean(losses)
-                train_losses.append(avg_train_loss)
-                print("\tAverage training loss: {:.5f}".format(avg_train_loss))
-                losses = []
-
-                # Evalute Accuracy on validation set
-                #if not self.pretrain:
-                #    val_accuracy = evaluate_model(self, val_iterator, self.config.translate)
-                #    print("\tVal Accuracy: {:.4f}".format(val_accuracy))
-                #    val_accuracies.append(val_accuracy)
-                self.train()
         return train_losses
