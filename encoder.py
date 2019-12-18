@@ -98,7 +98,6 @@ class NewDecoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.norm1 = LayerNorm(300)
         self.norm2 = LayerNorm(300)
-        self.norm3 = LayerNorm(300)
 
         self.weightpast = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
         self.biaspast = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
