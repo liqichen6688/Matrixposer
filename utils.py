@@ -151,7 +151,7 @@ class Dataset(object):
 
 
         TEXT1.build_vocab(vocab_data, vectors=GloVe(name='6B', dim=300))
-        TEXT2.build_vocab(vocab_data, vectors=GloVe(name='6B', dim=300))
+        TEXT2.build_vocab(vocab_data, vectors=GloVe(name='6B', dim=100))
         if self.config.translate:
             TEXT3.build_vocab(vocab_data, max_size=50000)
             #with open("pretrain_model/build_vocab", "wb") as dill_file:
