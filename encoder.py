@@ -133,6 +133,8 @@ class NewDecoder(nn.Module):
         #past_token = past_content * past_expose
 
         present_token = torch.tanh(torch.matmul(x, self.weightpre) + self.biaspre)
+        print(matrix_embed.shape)
+        print(present_token.shape)
         present = self.norm2(torch.matmul(present_token, matrix_embed))
 
         #present_base = self.norm1(torch.matmul(x, matrix_embed))
