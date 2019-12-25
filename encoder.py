@@ -142,7 +142,7 @@ class NewDecoder(nn.Module):
 
 
         #filter_token = present + past
-        filter_token = torch.cat((present, past), -2)
+        filter_token = torch.cat((present, past), -1)
         #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
