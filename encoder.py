@@ -136,7 +136,7 @@ class NewDecoder(nn.Module):
 
 
     def forward(self, x, matrix_embed, past):
-        #print(matrix_embed)
+        print(matrix_embed.shape)
 
 
         past_represent = self.retoken(past)
