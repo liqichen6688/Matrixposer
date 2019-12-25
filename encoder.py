@@ -93,23 +93,41 @@ class NewDecoder(nn.Module):
             nn.Linear(2 * d_model1, output_size),
             #nn.Softmax(dim=-1)
         )
-        self.weight = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
-        self.bias = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0001))
-        self.dropout = nn.Dropout(dropout)
-        self.norm1 = LayerNorm(300)
-        self.norm2 = LayerNorm(300)
 
-        self.weightretoken = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
-        self.biasretoken = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0001))
+        self.retoken = nn.Sequential(
+            nn.Linear(300, 300),
+            nn.ReLU(),
+            nn.Linear(300, 300)
+        )
 
-        self.weightpast = nn.Parameter(torch.empty((50, 50)).normal_(mean=0,std=0.0001))
-        self.biaspast = nn.Parameter(torch.empty((1, 50)).normal_(mean=0, std=0.0001))
+        self.past_key = nn.Sequential(
+            nn.Linear(300, 300),
+            nn.ReLU(),
+            nn.Linear(300, 300)
+        )
 
-        #self.weightpaexpose = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
-        #self.biaspaexpose = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
-
-        self.weightpre = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
-        self.biaspre = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+        self.pre_key = nn.Sequential(
+            nn.Linear(300, 300),
+            nn.ReLU(),
+            nn.Linear(300, 300)
+        )
+        #self.weight = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
+        #self.bias = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0001))
+        #self.dropout = nn.Dropout(dropout)
+        #self.norm1 = LayerNorm(300)
+        #self.norm2 = LayerNorm(300)
+#
+        #self.weightretoken = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
+        #self.biasretoken = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0001))
+#
+        #self.weightpast = nn.Parameter(torch.empty((50, 50)).normal_(mean=0,std=0.0001))
+        #self.biaspast = nn.Parameter(torch.empty((1, 50)).normal_(mean=0, std=0.0001))
+#
+        ##self.weightpaexpose = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
+        ##self.biaspaexpose = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
+#
+        #self.weightpre = nn.Parameter(torch.empty((50, 300)).normal_(mean=0,std=0.0001))
+        #self.biaspre = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
 
         #self.weightpreexpose = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
         #self.biaspreexpose = nn.Parameter(torch.empty((1, 300)).normal_(mean=0, std=0.0001))
@@ -121,10 +139,10 @@ class NewDecoder(nn.Module):
         #print(matrix_embed)
 
 
-        past_represent = torch.tanh(torch.matmul(past, self.weightretoken) + self.biasretoken)
+        past_represent = self.retoken(past)
         past_embeding = torch.matmul(past.permute(0, 2, 1), past_represent) #/ past.shape[1]
 
-        past_token = torch.tanh(torch.matmul(x, self.weightpast) + self.biaspast)
+        past_token = self.past_key(x)
         past = self.norm2(torch.matmul(past_token, past_embeding))
 
 
@@ -132,7 +150,7 @@ class NewDecoder(nn.Module):
         #past_expose = torch.sigmoid(torch.matmul(past_base, self.weightpaexpose) + self.biaspaexpose)
         #past_token = past_content * past_expose
 
-        present_token = torch.tanh(torch.matmul(x, self.weightpre) + self.biaspre)
+        present_token = self.pre_key(x)
         present = self.norm2(torch.matmul(present_token, matrix_embed))
 
         #present_base = self.norm1(torch.matmul(x, matrix_embed))
@@ -142,7 +160,7 @@ class NewDecoder(nn.Module):
 
 
         #filter_token = present + past
-        filter_token = torch.cat((present, past), -1)
+        filter_token = torch.tanh(torch.cat((present, past), -1))
         #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
