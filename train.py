@@ -13,8 +13,8 @@ if __name__=='__main__':
     #train_file = '../data/20ng.train'
     #train_file = '../data/wiki/wiki_sentences.txt'
     #train_file = '20ng_sentences'
-    train_file = '../data/translate/English-German/train_400000.en'
-    dst_file = '../data/translate/English-German/train_400000.de'
+    train_file = '../data/translate/English-German/train_simple.en'
+    dst_file = '../data/translate/English-German/train_simple.de'
     if len(sys.argv) > 1:
         config = getattr(__import__(sys.argv[1], fromlist=["Config"]), "Config")
         print(sys.argv[1])

@@ -88,9 +88,9 @@ class NewDecoder(nn.Module):
     def __init__(self, output_size, d_model1, dropout=0.1):
         super(NewDecoder, self).__init__()
         self.out = nn.Sequential(
-            nn.Linear(d_model1, d_model1),
+            nn.Linear(2 * d_model1, 2 * d_model1),
             nn.ReLU(),
-            nn.Linear(d_model1, output_size),
+            nn.Linear(2 * d_model1, output_size),
             #nn.Softmax(dim=-1)
         )
         self.weight = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
@@ -141,7 +141,8 @@ class NewDecoder(nn.Module):
         #present_token = present_content * present_expose
 
 
-        filter_token = present + past
+        #filter_token = present + past
+        filter_token = torch.cat((present, past), -2)
         #filter_token = token + pre_state #+ torch.tanh(torch.matmul(x, self.weight) + self.bias)
         return self.dropout(self.out(filter_token))
 
