@@ -98,7 +98,7 @@ class Matposer(nn.Module):
 
     def reduce_lr(self):
         for g in self.optimizer.param_groups:
-            g['lr'] = 50 ** -0.5 * min(self.step ** -0.5, self.step * 8000 ** -1.5)
+            g['lr'] = 300 ** -0.5 * min(self.step ** -0.5, self.step * 8000 ** -1.5)
         if self.step == 1:
             self.unfreeze_glove()
 
@@ -171,7 +171,7 @@ class Matposer(nn.Module):
                 losses.append(loss.data.cpu().numpy()/x3[:, 1:].ne(1).sum())
                 self.optimizer.step()
 
-                if i % 100 == 0:
+                if i % 10000 == 0:
                     print("Iter: {}".format(i + 1))
                     avg_train_loss = np.mean(losses)
                     train_losses.append(avg_train_loss)
