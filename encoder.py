@@ -107,9 +107,9 @@ class NewDecoder(nn.Module):
         )
 
         self.pre_key = nn.Sequential(
-            nn.Linear(100, 300),
+            nn.Linear(100, 100),
             nn.ReLU(),
-            nn.Linear(300, 300)
+            nn.Linear(100, 100)
         )
         #self.weight = nn.Parameter(torch.empty((300, 300)).normal_(mean=0,std=0.0001))
         #self.bias = nn.Parameter(torch.empty((1, 300)).normal_(mean=0,std=0.0001))
