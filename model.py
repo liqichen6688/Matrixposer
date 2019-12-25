@@ -40,7 +40,7 @@ class Matposer(nn.Module):
         )
 
         self.dst_embed = nn.Sequential(
-            Embeddings(d_model2, dst_vocab)
+            Embeddings(d_model1, dst_vocab)
         )
 
         a = nn.Linear(d_model1,d_model1)

@@ -95,19 +95,19 @@ class NewDecoder(nn.Module):
         )
 
         self.retoken = nn.Sequential(
-            nn.Linear(100, 300),
+            nn.Linear(300, 300),
             nn.ReLU(),
-            nn.Linear(300, 300)
+            nn.Linear(300, 100)
         )
 
         self.past_key = nn.Sequential(
-            nn.Linear(100, 100),
+            nn.Linear(300, 100),
             nn.ReLU(),
             nn.Linear(100, 100)
         )
 
         self.pre_key = nn.Sequential(
-            nn.Linear(100, 100),
+            nn.Linear(300, 100),
             nn.ReLU(),
             nn.Linear(100, 100)
         )
@@ -139,7 +139,7 @@ class NewDecoder(nn.Module):
 
 
         past_represent = self.retoken(past)
-        past_embeding = torch.matmul(past.permute(0, 2, 1), past_represent) #/ past.shape[1]
+        past_embeding = torch.matmul(past_represent.permute(0, 2, 1), past) #/ past.shape[1]
 
         past_token = self.past_key(x)
         past = self.norm2(torch.matmul(past_token, past_embeding))
