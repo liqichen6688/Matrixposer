@@ -122,7 +122,7 @@ class NewDecoder(nn.Module):
 
 
         past_represent = torch.tanh(torch.matmul(past, self.weightretoken) + self.biasretoken)
-        past_embeding = torch.matmul(past.permute(0, 2, 1), past_represent) / past.shape[1]
+        past_embeding = torch.matmul(past.permute(0, 2, 1), past_represent) #/ past.shape[1]
 
         past_token = torch.tanh(torch.matmul(x, self.weightpast) + self.biaspast)
         past = self.norm2(torch.matmul(past_token, past_embeding))
