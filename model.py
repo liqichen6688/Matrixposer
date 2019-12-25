@@ -19,7 +19,7 @@ class Matposer(nn.Module):
         d_row, N, dropout = self.config.d_row, self.config.N, self.config.dropout
         d_ff =  self.config.d_ff
         d_model1 = 300
-        d_model2 = 300
+        d_model2 = 100
 
         #inter = Interactor(d_model, d_ff, out_row=d_row, dropout=dropout, pretrain=config.pretrain)
         ff = PositionwiseFeedForward(d_model1, d_ff, dropout)

@@ -95,19 +95,19 @@ class NewDecoder(nn.Module):
         )
 
         self.retoken = nn.Sequential(
-            nn.Linear(300, 300),
+            nn.Linear(100, 300),
             nn.ReLU(),
             nn.Linear(300, 300)
         )
 
         self.past_key = nn.Sequential(
-            nn.Linear(300, 300),
+            nn.Linear(100, 100),
             nn.ReLU(),
-            nn.Linear(300, 300)
+            nn.Linear(100, 100)
         )
 
         self.pre_key = nn.Sequential(
-            nn.Linear(300, 300),
+            nn.Linear(100, 300),
             nn.ReLU(),
             nn.Linear(300, 300)
         )
