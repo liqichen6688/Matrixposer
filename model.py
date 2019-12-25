@@ -171,7 +171,7 @@ class Matposer(nn.Module):
                 losses.append(loss.data.cpu().numpy()/x3[:, 1:].ne(1).sum())
                 self.optimizer.step()
 
-                if i % 10000 == 0:
+                if i % 1000 == 0:
                     print("Iter: {}".format(i + 1))
                     avg_train_loss = np.mean(losses)
                     train_losses.append(avg_train_loss)
