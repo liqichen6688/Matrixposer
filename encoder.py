@@ -142,7 +142,7 @@ class NewDecoder(nn.Module):
         past_embeding = torch.matmul(past_represent.permute(0, 2, 1), past) #/ past.shape[1]
 
         past_token = self.past_key(x)
-        past = self.norm2(torch.matmul(past_token, past_embeding))
+        past = self.norm1(torch.matmul(past_token, past_embeding))
 
 
         #past_content = torch.tanh(torch.matmul(past_base, self.weightpast) + self.biaspast)
